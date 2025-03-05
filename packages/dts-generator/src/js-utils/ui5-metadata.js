@@ -61,7 +61,7 @@ export async function getSAPUI5LibsMeta(version) {
 export async function getOpenUI5PossibleLibNames() {
   const fetch = (await import("node-fetch")).default;
   const openUI5OrgResponse = await fetch(
-    `https://registry.npmjs.com/-/v1/search?text=scope:openui5&size=100`,
+    `https://registry.npmjs.com/-/v1/search?text=@openui5&size=250`,
     {
       headers: {
         "User-Agent": "@ui5-dts-generator",
@@ -74,9 +74,10 @@ export async function getOpenUI5PossibleLibNames() {
   }
   const openUI5OrgSearchText = await openUI5OrgResponse.text();
   const openUI5OrgSearch = JSON.parse(openUI5OrgSearchText);
-  const possibleOpenUI5LibNames = map(openUI5OrgSearch.objects, (_) =>
-    _.package.name.substr("@openui5/".length),
-  );
+  const possibleOpenUI5LibNames = openUI5OrgSearch.objects
+    .map((packageObject) => packageObject.package.name)
+    .filter((name) => name.startsWith("@openui5/sap"))
+    .map((name) => name.replace("@openui5/", ""));
   return possibleOpenUI5LibNames;
 }
 
