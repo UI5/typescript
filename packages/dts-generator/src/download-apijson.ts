@@ -17,11 +17,12 @@ import {
  * Automatically also downloads the api.json files for transitive dependencies.
  * These files are needed for using the dts-generator on an own library.
  *
- * @param libs the OpenUI5 libraries which are direct dependencies (usually sap.ui.core, but could be more)
- * @param version the version of UI5 on which this library depends (example: 1.120.2)
- * @param targetDir the directory into which the api.json files of the dependencies should be downloaded.
+ * @param libs - the OpenUI5 libraries which are direct dependencies (usually sap.ui.core, but could be more)
+ * @param version - the version of UI5 on which this library depends (example: 1.120.2)
+ * @param targetDir - the directory into which the api.json files of the dependencies should be downloaded.
  *    The directory must be non-existing or empty. Files that end with *api.json or *.dtsgenrc are ok, but will be deleted.
  *    If no directory is given, "./temp/dependency-apijson" is used.
+ * @public
  */
 export async function download(
   libs: string[],
