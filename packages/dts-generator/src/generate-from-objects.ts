@@ -82,7 +82,7 @@ export interface Directives {
    * mapped to TypeScript and cannot be changed in a compatible way.
    */
   overlays: {
-    [libraryName: string]: ConcreteSymbol[];
+    [libraryName: string]: (ConcreteSymbol & { esmOnly?: boolean })[];
   };
 
   /**
@@ -160,6 +160,7 @@ export async function generateFromObjects(config: GenerateFromObjectsConfig) {
     apiObject,
     actualOptions.dependencyApiObjects,
     actualOptions.directives,
+    actualOptions.generateGlobals,
   );
 
   // Phase 2 - jsonToAst:

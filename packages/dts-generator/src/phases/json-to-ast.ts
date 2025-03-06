@@ -1197,7 +1197,10 @@ const buildNestedTypedefs = _.partialRight(
  * @returns
  */
 function buildVariable(property: ObjProperty): Variable {
-  assertKnownProps(["examples", "name", "type", "value", "optional"], property);
+  assertKnownProps(
+    ["examples", "name", "type", "value", "optional", "esmOnly", "readonly"],
+    property,
+  );
 
   const astNode: Variable = {
     kind: "Variable",
@@ -1205,6 +1208,7 @@ function buildVariable(property: ObjProperty): Variable {
     static: property.static === true,
     type: buildType(property.type),
     visibility: property.visibility,
+    readonly: property.readonly === true,
     optional: property.optional === true,
   };
 

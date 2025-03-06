@@ -129,6 +129,7 @@ export interface Variable extends AstNode, UI5JSDocs {
   static?: boolean;
   type: Type;
   visibility: UI5Visibility;
+  readonly?: boolean;
   optional: boolean;
 }
 

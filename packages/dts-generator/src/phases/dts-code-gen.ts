@@ -630,6 +630,7 @@ function genField(ast: Variable) {
   text += JSDOC(ast) + NL;
   text += applyTsIgnore(ast);
   text += ast.static ? "static " : "";
+  text += ast.readonly ? "readonly " : "";
   text +=
     `${ast.name} : ${ast.type ? genType(ast.type, "property") : "any"}` + NL;
   return text;

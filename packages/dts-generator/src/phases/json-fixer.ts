@@ -31,7 +31,11 @@ const preparedCache = new Map();
  * @param apijson
  * @param directives
  */
-function mergeOverlays(apijson: ApiJSON, directives: Directives) {
+function mergeOverlays(
+  apijson: ApiJSON,
+  directives: Directives,
+  options = { generateGlobals: false },
+) {
   const overlays = directives.overlays && directives.overlays[apijson.library];
   if (overlays == null) {
     return; // no overlays defined
@@ -81,6 +85,10 @@ function mergeOverlays(apijson: ApiJSON, directives: Directives) {
   }
 
   overlays.forEach((overlay) => {
+    // do not generate esm-only symbols if generateGlobals is set
+    if (overlay.esmOnly && options.generateGlobals) {
+      return;
+    }
     log.verbose(`  ${overlay.name}`);
     const symbol = find(overlay.name);
     if (symbol == null) {
@@ -88,18 +96,25 @@ function mergeOverlays(apijson: ApiJSON, directives: Directives) {
       apijson.symbols.push(overlay);
       return;
     }
-    // overlay
+    // overlay needs to be merged into existing symbol
     Object.keys(overlay).forEach((prop) => {
       if (prop == "name") {
         return; // ignore name property, it's the 'primary key' and can't be changed
       }
       if (mapLikeProperties.has(prop)) {
-        if (!Array.isArray(symbol[prop])) {
-          symbol[prop] = overlay[prop];
+        // = methods, properties
+        if (!Array.isArray(symbol[prop]) && Array.isArray(overlay[prop])) {
+          symbol[prop] = overlay[prop].filter(
+            (item) => !options.generateGlobals || !item.esmOnly,
+          );
           return;
         }
         const symbolItems: ConcreteSymbol[] = symbol[prop];
         overlay[prop].forEach((overlayItem: ConcreteSymbol) => {
+          if (overlayItem.esmOnly && options.generateGlobals) {
+            // skip esm-only ones in globals mode
+            return;
+          }
           const item = symbolItems.find(
             (symbolItem) =>
               symbolItem.name === overlayItem.name &&
@@ -864,9 +879,9 @@ function markDeprecatedAliasesForEnums(
 function _prepareApiJson(
   json: ApiJSON,
   directives: Directives,
-  options = { mainLibrary: false },
+  options = { mainLibrary: false, generateGlobals: false },
 ) {
-  mergeOverlays(json, directives);
+  mergeOverlays(json, directives, { generateGlobals: options.generateGlobals });
   substituteSapClassInfoTypedef(json);
   convertCoreAndConfigurationIntoANamespace(json, directives);
   moveTypeParametersFromConstructorToClass(json);
@@ -904,10 +919,12 @@ export function fixApiJsons(
   targetLibJson: ApiJSON,
   dependencies: ApiJSON[],
   directives: Directives,
+  generateGlobals?: boolean,
 ) {
   // Part 1: "prepare JSON"
   let targetLibFixedJson = _prepareApiJson(targetLibJson, directives, {
     mainLibrary: true,
+    generateGlobals,
   });
 
   let depsFixedJsons: ApiJSON[] = dependencies.map((depjson) => {
