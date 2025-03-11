@@ -4,6 +4,7 @@ import ts from "typescript";
 import log from "loglevel";
 import { generateInterfaces } from "../../interfaceGenerationHelper";
 import { getAllKnownGlobals, GlobalToModuleMapping } from "../../typeScriptEnvironment";
+import { getProgramInfo } from "../../generateTSInterfacesAPI";
 
 const testCasesDir = path.resolve(__dirname);
 
@@ -34,6 +35,18 @@ describe("Single Testcases", () => {
       return;
     }
 
+    function parseConfig(tsConfigPath: string) {
+      let config: ts.CompilerOptions;
+      if (fs.existsSync(tsConfigPath)) {
+        const json: unknown = ts.parseConfigFileTextToJson(tsConfigPath, fs.readFileSync(tsConfigPath).toString()).config || {};
+        config = ts.parseJsonConfigFileContent(json, ts.sys, path.dirname(tsConfigPath)).options;
+      } else {
+        config = {...standardTsConfig};
+      }
+      config.baseUrl = testCaseDir;
+      return config;
+    }
+
     test(`Interface generation for ${testCase}`, async () => {
       // setup TypeScript program
       const tsConfigPath = path.join(testCaseDir, "tsconfig.json");
@@ -42,15 +55,13 @@ describe("Single Testcases", () => {
         .filter((file) => file.endsWith(".ts") && !file.endsWith(".d.ts"))
         .map((file) => path.join(testCaseDir, file));
 
-      const tsConfig = fs.existsSync(tsConfigPath)
-        ? { configFilePath: tsConfigPath }
-        : standardTsConfig;
-      const program = ts.createProgram(tsFiles, tsConfig);
+      const program = ts.createProgram(tsFiles, parseConfig(tsConfigPath));
       const typeChecker = program.getTypeChecker();
+      const programInfo = getProgramInfo(program, typeChecker);
       const allKnownGlobals: GlobalToModuleMapping = getAllKnownGlobals(typeChecker);
 
       const sourceFiles = program.getSourceFiles().filter((sourceFile) => {
-        return !sourceFile.isDeclarationFile;
+        return !sourceFile.isDeclarationFile && path.basename(sourceFile.fileName) !== "library.ts";
       });
 
       const runGenerateInterfaces = async (
@@ -68,7 +79,7 @@ describe("Single Testcases", () => {
           generateInterfaces(
             sourceFile,
             typeChecker,
-            allKnownGlobals,
+            Object.assign({}, programInfo.allKnownLocalExports, allKnownGlobals),
             resultProcessor,
           );
         });
