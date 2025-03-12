@@ -257,6 +257,7 @@ export interface ObjProperty {
   export?: string;
   resource?: string;
   visibility?: "public" | "protected" | "private" | "restricted";
+  readonly?: boolean;
   static?: boolean;
   type: string;
   description?: string;

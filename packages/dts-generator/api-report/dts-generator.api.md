@@ -52,7 +52,9 @@ export interface Directives {
         [orgNamespace: string]: true | [true] | [true, "keep_original_ns"];
     };
     overlays: {
-        [libraryName: string]: ConcreteSymbol[];
+        [libraryName: string]: (ConcreteSymbol & {
+            esmOnly?: boolean;
+        })[];
     };
     typeTyposMap: {
         [orgType: string]: string;
