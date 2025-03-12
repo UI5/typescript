@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.9.0...@ui5/ts-interface-generator@0.10.0) (2025-03-12)
+
+### Features
+
+- **ts-interface-generator:** support ts path mappings with configDir template variable ([#492](https://github.com/SAP/ui5-typescript/issues/492)) ([4d3aafe](https://github.com/SAP/ui5-typescript/commit/4d3aafeb04517bdd5bc20317fe8210a464ea58dc)), closes [#484](https://github.com/SAP/ui5-typescript/issues/484)
+
 # [0.9.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.8.4...@ui5/ts-interface-generator@0.9.0) (2024-09-26)
 
 ### Bug Fixes

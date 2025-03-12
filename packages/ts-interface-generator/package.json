@@ -1,6 +1,6 @@
 {
   "name": "@ui5/ts-interface-generator",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Generator for TypeScript type definitions for custom UI5 controls implemented in TypeScript",
   "author": "SAP SE",
   "license": "Apache-2.0",
