@@ -225,6 +225,7 @@ export default function checkDtslint(
   spawnSync(
     `"${nodePath}"`,
     [
+      `--max-old-space-size=8192`, // increase memory limit to 8 GB, as dtslint crashes with the default 4 GB in case of many errors
       `"${binaryPath}"`,
       `"${path.relative(process.cwd(), tempDir)}"`,
       "2>",
