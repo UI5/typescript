@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.6.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.5.0...@ui5/dts-generator@3.6.0) (2025-03-12)
+
+### Bug Fixes
+
+- **dts-generator:** fix download-apijson by querying differently ([#489](https://github.com/SAP/ui5-typescript/issues/489)) ([0e7e951](https://github.com/SAP/ui5-typescript/commit/0e7e9514e42747c6bf517af7c94e5ae3ebe7f582))
+
+### Features
+
+- **dts-generator:** allow "esmOnly" in directives and "readonly" props ([#491](https://github.com/SAP/ui5-typescript/issues/491)) ([b2c4d50](https://github.com/SAP/ui5-typescript/commit/b2c4d509e51bf2ecb9e820175c391d22955d35ab))
+
 # [3.5.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.4.1...@ui5/dts-generator@3.5.0) (2025-02-08)
 
 ### Features
