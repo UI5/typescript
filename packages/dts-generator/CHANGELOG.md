@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.6.1](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.6.0...@ui5/dts-generator@3.6.1) (2025-03-12)
+
+### Bug Fixes
+
+- **dts-generator:** adapt eslintrc rules to what is in dt repo ([#495](https://github.com/SAP/ui5-typescript/issues/495)) ([e361741](https://github.com/SAP/ui5-typescript/commit/e361741341359e1a61d853213cba51966687c7e4))
+
 # [3.6.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.5.0...@ui5/dts-generator@3.6.0) (2025-03-12)
 
 ### Bug Fixes
