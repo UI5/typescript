@@ -36,7 +36,7 @@ function addSourceExports(
   const filePath = path.normalize(fileName); // e.g. 'c:\SAPDevelop\git\ui5-typescript-control-library\src-ts\com\myorg\myUI5Library\Example.ts
   let globalName: string, moduleFileName: string;
   for (let i = 0; i < allPathMappings.length; i++) {
-    const fullTargetPath = path.join(basePath, allPathMappings[i].target);
+    const fullTargetPath = path.resolve(basePath, allPathMappings[i].target);
     if (filePath.indexOf(fullTargetPath) === 0) {
       const restPath = filePath.replace(fullTargetPath, "");
       moduleFileName = path

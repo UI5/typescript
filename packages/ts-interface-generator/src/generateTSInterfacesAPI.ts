@@ -60,23 +60,14 @@ export function main(args: Args) {
 }
 
 /**
- * Whenever the code changes, this is called, in oder to re-generate the interfaces
+ * Extracts known local exports and relevant source files from program.
  *
- *
- * TODO: can we use the knowledge about the changed files to limit the scope here?
- *       A Problem is that also a change in a different file could influence the generation of an unchanged file. E.g. when an update of the
- *       UI5 type definitions changes the base class of sap.m.Button to something where API methods are not generated, then
- *       the next generation run would no longer create a *.gen.d.ts file for Controls deriving from Button (ok, extreme example...)
  * @param program
  * @param typeChecker
- * @param changedFiles
- * @param allKnownGlobals
  */
-function onTSProgramUpdate(
+export function getProgramInfo(
   program: ts.Program,
   typeChecker: ts.TypeChecker,
-  changedFiles: string[], // is an empty array in non-watch case; is at least one file in watch case - but overall not reliable!
-  allKnownGlobals: GlobalToModuleMapping,
 ) {
   // this block collects all path mappings from the compiler configuration, so we can find out the logical name for a concrete file path
   const paths = program.getCompilerOptions().paths;
@@ -133,6 +124,33 @@ function onTSProgramUpdate(
         allKnownLocalExports,
       ); // extract all local exports
     });
+
+  return { allRelevantSourceFiles, allKnownLocalExports };
+}
+
+/**
+ * Whenever the code changes, this is called, in oder to re-generate the interfaces
+ *
+ *
+ * TODO: can we use the knowledge about the changed files to limit the scope here?
+ *       A Problem is that also a change in a different file could influence the generation of an unchanged file. E.g. when an update of the
+ *       UI5 type definitions changes the base class of sap.m.Button to something where API methods are not generated, then
+ *       the next generation run would no longer create a *.gen.d.ts file for Controls deriving from Button (ok, extreme example...)
+ * @param program
+ * @param typeChecker
+ * @param changedFiles
+ * @param allKnownGlobals
+ */
+function onTSProgramUpdate(
+  program: ts.Program,
+  typeChecker: ts.TypeChecker,
+  changedFiles: string[], // is an empty array in non-watch case; is at least one file in watch case - but overall not reliable!
+  allKnownGlobals: GlobalToModuleMapping,
+) {
+  const { allRelevantSourceFiles, allKnownLocalExports } = getProgramInfo(
+    program,
+    typeChecker,
+  );
 
   // now actually generate the interface files for all source files
   allRelevantSourceFiles.forEach((sourceFile) => {
