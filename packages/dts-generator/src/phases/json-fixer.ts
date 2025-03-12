@@ -931,7 +931,10 @@ export function fixApiJsons(
     const key = `${depjson.library}-${depjson.version}`;
     let preparedjson = preparedCache.get(key);
     if (!preparedjson) {
-      preparedjson = _prepareApiJson(depjson, directives);
+      preparedjson = _prepareApiJson(depjson, directives, {
+        mainLibrary: false,
+        generateGlobals,
+      });
       preparedCache.set(key, preparedjson);
     }
     return JSON.parse(JSON.stringify(preparedjson)); // cloning needed to avoid multiple processing within the subsequent steps; // TODO: but this can likely be improved
