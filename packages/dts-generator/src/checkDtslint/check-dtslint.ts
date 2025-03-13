@@ -133,15 +133,15 @@ function prepareTempDir(): string {
 }
 
 const MIN_TYPESCRIPT_VERSION_LINES = `/**
-* Copyright (c) 2024 SAP SE or an SAP affiliate company and OpenUI5 contributors.
+* Copyright (c) 2025 SAP SE or an SAP affiliate company and OpenUI5 contributors.
 */
 
 /**
 * For important notes, please read README.md!
 *
 * These *.d.ts files are generated. In case of issues, either the generator or the JSDoc in the original
-* OpenUI5 repository must be fixed. While the latest version of the generator is not yet available at
-* GitHub, you can contribute to OpenUI5: https://github.com/SAP/openui5/blob/master/CONTRIBUTING.md
+* OpenUI5 repository must be fixed. The generator is developed at https://github.com/SAP/ui5-typescript/tree/main/packages/dts-generator
+* and you can contribute to OpenUI5, see: https://github.com/SAP/openui5/blob/master/CONTRIBUTING.md
 */
 
 /// <reference types="jquery" />
