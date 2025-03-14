@@ -632,7 +632,8 @@ function genField(ast: Variable) {
   text += ast.static ? "static " : "";
   text += ast.readonly ? "readonly " : "";
   text +=
-    `${ast.name} : ${ast.type ? genType(ast.type, "property") : "any"}` + NL;
+    `${ast.name}${ast.optional ? "?" : ""} : ${ast.type ? genType(ast.type, "property") : "any"}` +
+    NL;
   return text;
 }
 
