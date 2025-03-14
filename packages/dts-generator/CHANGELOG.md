@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.6.1...@ui5/dts-generator@3.7.0) (2025-03-14)
+
+### Features
+
+- **dts-generator:** support optional fields (class properties) ([#497](https://github.com/SAP/ui5-typescript/issues/497)) ([90e66c7](https://github.com/SAP/ui5-typescript/commit/90e66c74fa048ba00e157f32076638306556329d))
+
 ## [3.6.1](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.6.0...@ui5/dts-generator@3.6.1) (2025-03-12)
 
 ### Bug Fixes
