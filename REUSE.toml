@@ -1,0 +1,10 @@
+version = 1
+SPDX-PackageName = "ui5-typescript"
+SPDX-PackageSupplier = "Shachar Soel <shachar.soel@sap.com>"
+SPDX-PackageDownloadLocation = "https://github.com/SAP/ui5-typescript"
+
+[[annotations]]
+path = "**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2019-2024 SAP SE or an SAP affiliate company and UI5-TypeScript contributors"
+SPDX-License-Identifier = "Apache-2.0"
