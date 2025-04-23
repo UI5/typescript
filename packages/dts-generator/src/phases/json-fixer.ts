@@ -135,6 +135,35 @@ function mergeOverlays(
 }
 
 /**
+ * Does some rudimentary validation of method names.
+ * The method names are expected to be valid TypeScript identifiers.
+ * This is not a full validation, but catches errors that happened in real life and were hard to debug.
+ *
+ * @param symbols
+ */
+function validateNames(symbols: ConcreteSymbol[]) {
+  const invalid_characters = /[{}\[\]()<>]/;
+  symbols.forEach((symbol) => {
+    switch (symbol.kind) {
+      case "class":
+      case "namespace":
+        if (symbol.methods) {
+          symbol.methods.forEach((method) => {
+            if (invalid_characters.test(method.name)) {
+              throw new Error(
+                `Invalid method name "${method.name}" in ${symbol.name}: ` +
+                  "Method names must not contain square brackets. " +
+                  "This might be caused by using unsupported notation in the source code - check it! " +
+                  "Also check the generated api.json, which is used as input here, whether it also contains such a broken name.",
+              );
+            }
+          });
+        }
+    }
+  });
+}
+
+/**
  *
  * @param apijson
  * @deprecated
@@ -882,6 +911,7 @@ function _prepareApiJson(
   options = { mainLibrary: false, generateGlobals: false },
 ) {
   mergeOverlays(json, directives, { generateGlobals: options.generateGlobals });
+  validateNames(json.symbols);
   substituteSapClassInfoTypedef(json);
   convertCoreAndConfigurationIntoANamespace(json, directives);
   moveTypeParametersFromConstructorToClass(json);
