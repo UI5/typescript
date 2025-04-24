@@ -44,6 +44,7 @@ The generator works in several phases, which are reflected as modules in [`src/p
 Using `directives` as input and the information whether modules or globals should be generated, this phase does plenty of adjustments in the original api.json files:
 
 - `mergeOverlays` merges in the overlays from directives
+- `validateNames` does some rudimentary sanity checks for real-world issues which are otherwise hard to debug
 - `substituteSapClassInfoTypedef` adds the sap.ClassInfo typedef
 - `convertCoreAndConfigurationIntoANamespace` converts `sap.ui.core.Core` and `sap.ui.core.Configuration` from a class (needed as such in the SDK) into a namespace because the module export of both is an _instance_, not the class
 - `moveTypeParametersFromConstructorToClass` moves any type parameters from a class's constructor to the class itself. It is more common to build a generic class than building a constructor that has a generic parameter. Newer versions of UI5 (starting with 1.113) will already export the api.json like that, the code in `moveTypeParametersFromConstructorToClass` can handle this.
