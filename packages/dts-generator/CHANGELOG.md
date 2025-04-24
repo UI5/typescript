@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.1](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.7.0...@ui5/dts-generator@3.7.1) (2025-04-24)
+
+### Bug Fixes
+
+- **dts-generator:** detect broken method names and throw error ([bb26fd6](https://github.com/SAP/ui5-typescript/commit/bb26fd62b34f270b18630813f3cd8e7e1ed958dd))
+
 # [3.7.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.6.1...@ui5/dts-generator@3.7.0) (2025-03-14)
 
 ### Features
