@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.2](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.7.1...@ui5/dts-generator@3.7.2) (2025-05-15)
+
+### Bug Fixes
+
+- **dts-generator:** handle enum values properly which are quoted strings ([#504](https://github.com/SAP/ui5-typescript/issues/504)) ([4a24f25](https://github.com/SAP/ui5-typescript/commit/4a24f259af2ea13f4dd516b9c9b14941233464fc))
+
 ## [3.7.1](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.7.0...@ui5/dts-generator@3.7.1) (2025-04-24)
 
 ### Bug Fixes
