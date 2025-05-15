@@ -742,7 +742,11 @@ function genEnumValue(ast: Variable, withValue = false) {
   let text = "";
   text += JSDOC(ast) + NL;
   if (withValue) {
-    text += `${ast.name} = "${(ast as VariableWithValue).value}",`; // TODO string escaping
+    let astVal = (ast as VariableWithValue).value;
+    if (typeof astVal !== "string" || !astVal.match(/^".*"$/)) {
+      astVal = `"${astVal}"`; // TODO string escaping
+    }
+    text += `${ast.name} = ${astVal},`;
   } else {
     text += `${ast.name},`;
   }
