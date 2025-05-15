@@ -1,43 +1,43 @@
 {
   "sap.ui.core": {
     "npmPackageName": "@openui5/sap.ui.core",
-    "version": "1.120.12",
-    "gav": "com.sap.ui5:core:1.120.12:jar",
+    "version": "1.120.30",
+    "gav": "com.sap.ui5:core:1.120.30:jar",
     "dependencies": [],
     "optionalDependencies": []
   },
   "sap.m": {
     "npmPackageName": "@openui5/sap.m",
-    "version": "1.120.12",
-    "gav": "com.sap.ui5:mobile:1.120.12:jar",
+    "version": "1.120.30",
+    "gav": "com.sap.ui5:mobile:1.120.30:jar",
     "dependencies": ["sap.ui.core", "sap.ui.layout", "sap.ui.unified"],
     "optionalDependencies": []
   },
   "sap.f": {
     "npmPackageName": "@openui5/sap.f",
-    "version": "1.120.12",
-    "gav": "com.sap.ui5:fiori:1.120.12:jar",
+    "version": "1.120.30",
+    "gav": "com.sap.ui5:fiori:1.120.30:jar",
     "dependencies": ["sap.m", "sap.ui.core", "sap.ui.layout"],
     "optionalDependencies": []
   },
   "sap.tnt": {
     "npmPackageName": "@openui5/sap.tnt",
-    "version": "1.120.12",
-    "gav": "com.sap.ui5:tnt:1.120.12:jar",
+    "version": "1.120.30",
+    "gav": "com.sap.ui5:tnt:1.120.30:jar",
     "dependencies": ["sap.m", "sap.ui.core"],
     "optionalDependencies": []
   },
   "sap.ui.layout": {
     "npmPackageName": "@openui5/sap.ui.layout",
-    "version": "1.120.12",
-    "gav": "com.sap.ui5:layout:1.120.12:jar",
+    "version": "1.120.30",
+    "gav": "com.sap.ui5:layout:1.120.30:jar",
     "dependencies": ["sap.ui.core"],
     "optionalDependencies": []
   },
   "sap.ui.unified": {
     "npmPackageName": "@openui5/sap.ui.unified",
-    "version": "1.120.12",
-    "gav": "com.sap.ui5:unified:1.120.12:jar",
+    "version": "1.120.30",
+    "gav": "com.sap.ui5:unified:1.120.30:jar",
     "dependencies": ["sap.ui.core"],
     "optionalDependencies": []
   }

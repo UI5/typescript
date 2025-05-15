@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.120.12",
+  "version": "1.120.30",
   "library": "sap.ui.unified",
   "symbols": [
     {
@@ -75,7 +75,7 @@
             "group": "Appearance",
             "visibility": "public",
             "since": "1.28.9",
-            "description": "If set, the provided weekdays are displayed as non-working days. Valid values inside the array are 0 to 6. If not set, the weekend defined in the locale settings is displayed as non-working days.\n\n<b>Note:</b> Keep in mind that this property sets only weekly-recurring days as non-working. If you need specific dates or dates ranges, such as national holidays, use the <code>specialDates</code> aggregation to set them. Both the non-working days (from property) and dates (from aggregation) are visualized the same.",
+            "description": "This property sets chosen days of the week as non-working days, and overrides the weekend days defined in the locale settings. If set, the provided weekdays are displayed as non-working days.\n\n<ul>Users could override the non-working days for each week. Valid values inside the array are from 0 to 6. For example: <li>A single day for each week - <code>[3]</code>.</li> <li>All days for each week - <code>[0,1,2,3,4,5,6]</code>.</li> <li>None of the days for each week - <code>[]</code>. In this case all weekdays are working days.</li> <ul>\n\n<b>Note:</b> Keep in mind that this property sets only weekly-recurring days as non-working. If you need specific dates or dates ranges, such as national holidays, use the <code>specialDates</code> aggregation to set them. Both the non-working days (from property) and dates (from aggregation) are visualized the same.",
             "methods": ["getNonWorkingDays", "setNonWorkingDays"]
           },
           {
@@ -1079,7 +1079,7 @@
             "type": "int[]",
             "description": "Value of property <code>nonWorkingDays</code>"
           },
-          "description": "Gets current value of property {@link #getNonWorkingDays nonWorkingDays}.\n\nIf set, the provided weekdays are displayed as non-working days. Valid values inside the array are 0 to 6. If not set, the weekend defined in the locale settings is displayed as non-working days.\n\n<b>Note:</b> Keep in mind that this property sets only weekly-recurring days as non-working. If you need specific dates or dates ranges, such as national holidays, use the <code>specialDates</code> aggregation to set them. Both the non-working days (from property) and dates (from aggregation) are visualized the same."
+          "description": "Gets current value of property {@link #getNonWorkingDays nonWorkingDays}.\n\nThis property sets chosen days of the week as non-working days, and overrides the weekend days defined in the locale settings. If set, the provided weekdays are displayed as non-working days.\n\n<ul>Users could override the non-working days for each week. Valid values inside the array are from 0 to 6. For example: <li>A single day for each week - <code>[3]</code>.</li> <li>All days for each week - <code>[0,1,2,3,4,5,6]</code>.</li> <li>None of the days for each week - <code>[]</code>. In this case all weekdays are working days.</li> <ul>\n\n<b>Note:</b> Keep in mind that this property sets only weekly-recurring days as non-working. If you need specific dates or dates ranges, such as national holidays, use the <code>specialDates</code> aggregation to set them. Both the non-working days (from property) and dates (from aggregation) are visualized the same."
         },
         {
           "name": "getPrimaryCalendarType",
@@ -1553,7 +1553,7 @@
               "description": "New value for property <code>nonWorkingDays</code>"
             }
           ],
-          "description": "Sets a new value for property {@link #getNonWorkingDays nonWorkingDays}.\n\nIf set, the provided weekdays are displayed as non-working days. Valid values inside the array are 0 to 6. If not set, the weekend defined in the locale settings is displayed as non-working days.\n\n<b>Note:</b> Keep in mind that this property sets only weekly-recurring days as non-working. If you need specific dates or dates ranges, such as national holidays, use the <code>specialDates</code> aggregation to set them. Both the non-working days (from property) and dates (from aggregation) are visualized the same.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
+          "description": "Sets a new value for property {@link #getNonWorkingDays nonWorkingDays}.\n\nThis property sets chosen days of the week as non-working days, and overrides the weekend days defined in the locale settings. If set, the provided weekdays are displayed as non-working days.\n\n<ul>Users could override the non-working days for each week. Valid values inside the array are from 0 to 6. For example: <li>A single day for each week - <code>[3]</code>.</li> <li>All days for each week - <code>[0,1,2,3,4,5,6]</code>.</li> <li>None of the days for each week - <code>[]</code>. In this case all weekdays are working days.</li> <ul>\n\n<b>Note:</b> Keep in mind that this property sets only weekly-recurring days as non-working. If you need specific dates or dates ranges, such as national holidays, use the <code>specialDates</code> aggregation to set them. Both the non-working days (from property) and dates (from aggregation) are visualized the same.\n\nWhen called with a value of <code>null</code> or <code>undefined</code>, the default value of the property will be restored."
         },
         {
           "name": "setPrimaryCalendarType",

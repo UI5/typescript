@@ -1,4 +1,4 @@
-// For Library Version: 1.120.12
+// For Library Version: 1.120.30
 
 declare module "sap/tnt/library" {
   export interface IToolHeader {
@@ -20723,6 +20723,11 @@ declare module "sap/f/ShellBar" {
      * Reference to the button that has been pressed
      */
     image?: Image;
+
+    /**
+     * Reference to the button that has been pressed
+     */
+    button?: Button;
   }
 
   /**

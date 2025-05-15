@@ -1,6 +1,6 @@
 {
   "$schema-ref": "http://schemas.sap.com/sapui5/designtime/api.json/1.0",
-  "version": "1.120.12",
+  "version": "1.120.30",
   "library": "sap.f",
   "symbols": [
     {
@@ -20446,6 +20446,12 @@
               "image": {
                 "name": "image",
                 "type": "sap.m.Image",
+                "description": "Reference to the button that has been pressed",
+                "deprecated": { "since": "1.120" }
+              },
+              "button": {
+                "name": "button",
+                "type": "sap.m.Button",
                 "description": "Reference to the button that has been pressed"
               }
             },
@@ -20596,6 +20602,12 @@
                     "image": {
                       "name": "image",
                       "type": "sap.m.Image",
+                      "optional": false,
+                      "description": "Reference to the button that has been pressed"
+                    },
+                    "button": {
+                      "name": "button",
+                      "type": "sap.m.Button",
                       "optional": false,
                       "description": "Reference to the button that has been pressed"
                     }
@@ -21365,6 +21377,12 @@
                 "image": {
                   "name": "image",
                   "type": "sap.m.Image",
+                  "optional": true,
+                  "description": "Reference to the button that has been pressed"
+                },
+                "button": {
+                  "name": "button",
+                  "type": "sap.m.Button",
                   "optional": true,
                   "description": "Reference to the button that has been pressed"
                 }

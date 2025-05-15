@@ -279,7 +279,7 @@ declare namespace sap {
     "sap/ui/thirdparty/qunit-2": undefined;
   }
 }
-// For Library Version: 1.120.12
+// For Library Version: 1.120.30
 
 declare module "sap/base/assert" {
   /**
@@ -3021,15 +3021,14 @@ declare module "sap/base/util/merge" {
 
 declare module "sap/base/util/now" {
   /**
-   * Returns a high resolution timestamp in microseconds if supported by the environment, otherwise in milliseconds.
-   * The timestamp is based on 01/01/1970 00:00:00 (UNIX epoch) as float with microsecond precision or with
-   * millisecond precision, if high resolution timestamps are not available. The fractional part of the timestamp
-   * represents fractions of a millisecond. Converting to a `Date` is possible by using `require(["sap/base/util/now"],
-   * function(now){new Date(now());}`
+   * Returns a high resolution timestamp in microseconds. The timestamp is based on 01/01/1970 00:00:00 (UNIX
+   * epoch) as float with microsecond precision. The fractional part of the timestamp represents fractions
+   * of a millisecond. Converting to a `Date` is possible by using `require(["sap/base/util/now"], function(now){new
+   * Date(now());}`
    *
    * @since 1.58
    *
-   * @returns timestamp in microseconds if supported by the environment otherwise in milliseconds
+   * @returns timestamp in microseconds
    */
   export default function now(): float;
 }
@@ -13174,7 +13173,7 @@ declare module "sap/ui/core/library" {
   /**
    * Specifies possible message types.
    *
-   * @deprecated As of version 1.120. Please use {@link sap.ui.core.message.MessageType} instead.
+   * @deprecated As of version 1.120. Please use {@link module:sap/ui/core/message/MessageType} instead.
    */
   export enum MessageType {
     /**
@@ -13889,7 +13888,7 @@ declare module "sap/ui/core/CalendarType" {
   /**
    * The types of `Calendar`.
    *
-   * @deprecated As of version 1.120. Please use {@link module:sap/base/18n/date/CalendarType} instead.
+   * @deprecated As of version 1.120. Please use {@link module:sap/base/i18n/date/CalendarType} instead.
    */
   enum CalendarType {
     /**
@@ -19258,7 +19257,7 @@ declare module "sap/ui/core/Core" {
     /**
      * Returns the Configuration of the Core.
      *
-     * @deprecated As of version 1.120. Please see {@link sap.ui.core.Configuration Configuration} for the corrsponding
+     * @deprecated As of version 1.120. Please see {@link sap.ui.core.Configuration Configuration} for the corresponding
      * replacements.
      *
      * @returns the Configuration of the current Core.
@@ -19912,7 +19911,7 @@ declare module "sap/ui/core/Core" {
      *
      * @since 1.10
      * @deprecated As of version 1.119. without replacement. The need to define the location for a theme should
-     * be fully covered with the capabiltites of the {@link sap/base/config base configuration}.
+     * be fully covered with the capabilities of the {@link sap/base/config base configuration}.
      *
      * @returns the Core, to allow method chaining
      */
@@ -19983,7 +19982,7 @@ declare module "sap/ui/core/Core" {
      *
      * @since 1.10
      * @deprecated As of version 1.119. without replacement. The need to define the location for a theme should
-     * be fully covered with the capabiltites of the {@link sap/base/config base configuration}.
+     * be fully covered with the capabilities of the {@link sap/base/config base configuration}.
      *
      * @returns the Core, to allow method chaining
      */
@@ -20315,7 +20314,7 @@ declare module "sap/ui/core/date/CalendarWeekNumbering" {
    * 	 - the first week of the year.
    *
    * @since 1.108.0
-   * @deprecated As of version 1.120. Please use {@link module:sap/base/18n/date/CalendarWeekNumbering} instead.
+   * @deprecated As of version 1.120. Please use {@link module:sap/base/i18n/date/CalendarWeekNumbering} instead.
    */
   enum CalendarWeekNumbering {
     /**
@@ -20796,6 +20795,11 @@ declare module "sap/ui/core/delegate/ScrollEnablement" {
          * Native scrolling does not need content wrapper. In this case, ID of the container element should be provided.
          */
         scrollContainerId?: string;
+        /**
+         * if true, the delegate event listeners are called before the event listeners of the element; default is
+         * "false".
+         */
+        callBefore?: boolean;
       }
     );
 
@@ -32679,14 +32683,64 @@ declare module "sap/ui/core/mvc/ControllerExtension" {
      * **Note:** This static method is automatically propagated to subclasses of `ControllerExtension`.
      *
      *
-     * @returns A controller extension class
+     * @returns The adapted controller extension class
      */
-    static override(
+    static override<
+      TheExtension extends new () => ControllerExtension,
+      AddtlProps extends object,
+    >(
+      this: TheExtension,
       /**
        * The custom extension definition
        */
-      oExtension: Record<string, Function>
-    ): Function;
+      customExtension: AddtlProps
+    ): new () => InstanceType<TheExtension> & AddtlProps;
+    /**
+     * A marker method for applying controller extensions to controller class members in TypeScript code.
+     * This method is only used to make TypeScript usage compatible to the UI5 runtime behavior, where an extension
+     * *class* is assigned when the controller is defined, but each controller instance gets an *instance* of
+     * this extension. This method call is removed in the class transformer when the ES class is transformed
+     * to the traditional UI5 class definition syntax.
+     *
+     * To allow for proper removal, it may only be called directly on the base class `ControllerExtension`,
+     * at the place where a controller extension is assigned to a member property of the new controller class.
+     * The class transformation then removes this call. If it is not removed because it is used in any other
+     * way, then it throws an error at runtime.
+     *
+     * Usage example:
+     * ```javascript
+     * import Routing from "sap/fe/core/controllerextensions/Routing";
+     * import ControllerExtension from "sap/ui/core/mvc/ControllerExtension";
+     * ...
+     * export default class App extends Controller {
+     *    routing = ControllerExtension.use(Routing);
+     * ```
+     *
+     * Usage example with overriding extension callbacks:
+     * ```javascript
+     * import Routing from "sap/fe/core/controllerextensions/Routing";
+     * import ControllerExtension from "sap/ui/core/mvc/ControllerExtension";
+     * ...
+     * export default class App extends Controller {
+     *    routing = ControllerExtension.use(Routing.override({
+     *       ...
+     *    }));
+     * ```
+     *
+     *
+     *
+     * @returns An instance of the given `ControllerExtension`. **NOTE:** this is only a dummy return type for
+     * proper usage in TypeScript. This method does not actually return an instance of `ControllerExtension`,
+     * but only throws an error at runtime. The sole purpose of this method is to mimic the actual runtime behavior
+     * where a *class* is given when a controller is defined, but an *instance* is present in each controller
+     * instance.
+     */
+    static use<TheExtension extends ControllerExtension>(
+      /**
+       * The ControllerExtension to use
+       */
+      extensionClass: new () => TheExtension
+    ): TheExtension;
     /**
      * Returns an Element of the connected view with the given local ID.
      *
@@ -34144,7 +34198,6 @@ declare module "sap/ui/core/mvc/View" {
      * Synchronously loading views get wrapped in an immediately resolving Promise.
      *
      * @since 1.30
-     * @deprecated As of version 1.66. Use {@link sap.ui.core.mvc.View.create View.create} instead
      *
      * @returns resolves with the complete view instance, rejects with any thrown error
      */
@@ -41141,7 +41194,7 @@ declare module "sap/ui/core/search/OpenSearchProvider" {
   /**
    * A SearchProvider which uses the OpenSearch protocol (either JSON or XML).
    *
-   * @deprecated As of version 1.120.
+   * @deprecated As of version 1.120. There is no API replacement.
    */
   export default class OpenSearchProvider extends SearchProvider {
     /**
@@ -41281,7 +41334,7 @@ declare module "sap/ui/core/search/OpenSearchProvider" {
   /**
    * Describes the settings that can be provided to the OpenSearchProvider constructor.
    *
-   * @deprecated As of version 1.120.
+   * @deprecated As of version 1.120. There is no API replacement.
    */
   export interface $OpenSearchProviderSettings extends $SearchProviderSettings {
     /**
@@ -41309,7 +41362,7 @@ declare module "sap/ui/core/search/SearchProvider" {
    *
    * Do not create instances of this class, but use a concrete subclass instead.
    *
-   * @deprecated As of version 1.120.
+   * @deprecated As of version 1.120. There is no API replacement.
    */
   export default abstract class SearchProvider extends UI5Element {
     /**
@@ -41418,7 +41471,7 @@ declare module "sap/ui/core/search/SearchProvider" {
   /**
    * Describes the settings that can be provided to the SearchProvider constructor.
    *
-   * @deprecated As of version 1.120.
+   * @deprecated As of version 1.120. There is no API replacement.
    */
   export interface $SearchProviderSettings extends $ElementSettings {
     /**
@@ -42028,7 +42081,8 @@ declare module "sap/ui/core/tmpl/DOMAttribute" {
    * Represents a DOM attribute of a DOM element.
    *
    * @since 1.15
-   * @deprecated As of version 1.56.
+   * @deprecated As of version 1.56. Use an {@link sap.ui.core.mvc.XMLView XMLView} or a {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed View }
+   * instead.
    */
   export default class DOMAttribute extends UI5Element {
     /**
@@ -42147,7 +42201,8 @@ declare module "sap/ui/core/tmpl/DOMAttribute" {
   /**
    * Describes the settings that can be provided to the DOMAttribute constructor.
    *
-   * @deprecated As of version 1.56.
+   * @deprecated As of version 1.56. Use an {@link sap.ui.core.mvc.XMLView XMLView} or a {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed View }
+   * instead.
    */
   export interface $DOMAttributeSettings extends $ElementSettings {
     /**
@@ -42178,7 +42233,8 @@ declare module "sap/ui/core/tmpl/DOMElement" {
    * Represents a DOM element. It allows to use databinding for the properties and nested DOM attributes.
    *
    * @since 1.15
-   * @deprecated As of version 1.56.
+   * @deprecated As of version 1.56. Use an {@link sap.ui.core.mvc.XMLView XMLView} or a {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed View }
+   * instead.
    */
   export default class DOMElement extends Control {
     /**
@@ -42485,7 +42541,8 @@ declare module "sap/ui/core/tmpl/DOMElement" {
   /**
    * Describes the settings that can be provided to the DOMElement constructor.
    *
-   * @deprecated As of version 1.56.
+   * @deprecated As of version 1.56. Use an {@link sap.ui.core.mvc.XMLView XMLView} or a {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed View }
+   * instead.
    */
   export interface $DOMElementSettings extends $ControlSettings {
     /**
@@ -42530,7 +42587,8 @@ declare module "sap/ui/core/tmpl/HandlebarsTemplate" {
    * The class for Handlebars Templates.
    *
    * @since 1.15
-   * @deprecated As of version 1.56.
+   * @deprecated As of version 1.56. Use an {@link sap.ui.core.mvc.XMLView XMLView} or a {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed View }
+   * instead.
    */
   export default abstract class HandlebarsTemplate extends Template {
     /**
@@ -42612,7 +42670,8 @@ declare module "sap/ui/core/tmpl/HandlebarsTemplate" {
   /**
    * Describes the settings that can be provided to the HandlebarsTemplate constructor.
    *
-   * @deprecated As of version 1.56.
+   * @deprecated As of version 1.56. Use an {@link sap.ui.core.mvc.XMLView XMLView} or a {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed View }
+   * instead.
    */
   export interface $HandlebarsTemplateSettings extends $TemplateSettings {}
 }
@@ -42909,7 +42968,8 @@ declare module "sap/ui/core/tmpl/TemplateControl" {
    * This is the base class for all template controls. Template controls are declared based on templates.
    *
    * @since 1.15
-   * @deprecated As of version 1.56.
+   * @deprecated As of version 1.56. Use an {@link sap.ui.core.mvc.XMLView XMLView} or a {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed View }
+   * instead.
    */
   export default class TemplateControl extends Control {
     /**
@@ -43340,7 +43400,8 @@ declare module "sap/ui/core/tmpl/TemplateControl" {
   /**
    * Describes the settings that can be provided to the TemplateControl constructor.
    *
-   * @deprecated As of version 1.56.
+   * @deprecated As of version 1.56. Use an {@link sap.ui.core.mvc.XMLView XMLView} or a {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed View }
+   * instead.
    */
   export interface $TemplateControlSettings extends $ControlSettings {
     /**
@@ -43941,7 +44002,7 @@ declare module "sap/ui/core/UIArea" {
      *
      * @since 1.107
      * @deprecated As of version 1.120. without a replacement. Applications should not be interested in the
-     * set of all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
+     * set of `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
      * or use the API of a `UIArea` as reachable via {@link sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea}.
      */
     static registry: registry;
@@ -44257,7 +44318,7 @@ declare module "sap/ui/core/UIArea" {
      * The node must have an ID that will be used as ID for this instance of `UIArea`.
      *
      * @deprecated As of version 1.107. without a replacement. Applications should not create or modify `UIArea`s
-     * programmatically. THey should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
+     * programmatically. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
      * or use the API of a `UIArea` as reachable via {@link sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea}.
      */
     setRootNode(
@@ -44278,7 +44339,7 @@ declare module "sap/ui/core/UIArea" {
    *
    * @since 1.107
    * @deprecated As of version 1.120. without a replacement. Applications should not be interested in the
-   * set of all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
+   * set of `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
    * or use the API of a `UIArea` as reachable via {@link sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea}.
    */
   interface registry {
@@ -44286,7 +44347,7 @@ declare module "sap/ui/core/UIArea" {
      * Number of existing UIAreas.
      *
      * @deprecated As of version 1.120. without a replacement. Applications should not be interested in the
-     * set of all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
+     * set of `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
      * or use the API of a `UIArea` as reachable via {@link sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea}.
      */
     size: int;
@@ -44390,8 +44451,8 @@ declare module "sap/ui/core/UIArea" {
      * When the ID is `null` or `undefined` or when there's no UIArea with the given ID, then `undefined` is
      * returned.
      *
-     * @deprecated As of version 1.120. without a replacement. Applications should not be interested in the
-     * set of all `UIArea`s. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
+     * @deprecated As of version 1.120. without a replacement. Applications should not be interested in a certain
+     * `UIArea`. They should only assign controls to them, by using {@link sap.ui.core.Control.prototype.placeAt Control.prototype.placeAt }
      * or use the API of a `UIArea` as reachable via {@link sap.ui.core.Control.prototype.getUIArea Control.prototype.getUIArea}.
      *
      * @returns UIArea with the given ID or `undefined`
@@ -46150,7 +46211,7 @@ declare module "sap/ui/core/util/MockServer" {
   /**
    * Class to mock http requests made to a remote server supporting the OData V2 REST protocol.
    */
-  export default abstract class MockServer extends ManagedObject {
+  export default class MockServer extends ManagedObject {
     /**
      * Creates a mocked server. This helps to mock some back-end calls, e.g. for OData V2/JSON Models or simple
      * XHR calls, without changing the application code. This class can also be used for qunit tests.
@@ -48969,6 +49030,10 @@ declare module "sap/ui/Device" {
      * The version of the operating system as `float`.
      *
      * Might be `-1` if no version can reliably be determined.
+     *
+     * **Note:** The property `version` may not contain the correct version for Windows 11 onwards, depending
+     * on the point in time, the property is accessed or the browser's capability to provide the version. In
+     * this case the `version` property may contain `10`.
      */
     export const version: float;
 
@@ -48976,6 +49041,10 @@ declare module "sap/ui/Device" {
      * The version of the operating system as `string`.
      *
      * Might be empty if no version can reliably be determined.
+     *
+     * **Note:** The property `versionStr` may not contain the correct version for Windows 11 onwards, depending
+     * on the point in time, the property is accessed or the browser's capability to provide the version. In
+     * this case the `versionStr` property may contain `10`.
      */
     export const versionStr: string;
 
@@ -49481,10 +49550,10 @@ declare module "sap/ui/model/analytics/AnalyticalBinding" {
        */
       oContext: Context,
       /**
-       * Parameters, specifying the aggregation level for which contexts shall be fetched or (legacy signature
-       * variant) index of first child entry to return from the parent context (zero-based)
+       * Parameters, specifying the aggregation level for which contexts shall be fetched or the index of the
+       * first child entry to return from the parent contexts
        */
-      mParameters:
+      mParameters?:
         | {
             /**
              * Level number for oContext, because it might occur at multiple levels; context with group ID `"/"` has
@@ -49596,7 +49665,7 @@ declare module "sap/ui/model/analytics/AnalyticalBinding" {
        * value can be set to define the parameter `startIndex` as described in this parameter list. In this case,
        * the function parameters `iLength`, `iNumberOfExpandedLevels` and `iThreshold` become mandatory.
        */
-      mParameters:
+      mParameters?:
         | {
             /**
              * Number of entries to return at and after the given start index; defaults to the model's size limit, see
@@ -53177,12 +53246,14 @@ declare module "sap/ui/model/ClientTreeBinding" {
      */
     filter(
       /**
-       * Single filter object or an array of filter objects
+       * The filters to use; in case of type {@link sap.ui.model.FilterType.Application} this replaces the filters
+       * given in {@link sap.ui.model.ClientModel#bindTree}; a falsy value is treated as an empty array and thus
+       * removes all filters of the specified type
        */
-      aFilters: Filter | Filter[],
+      aFilters?: Filter[] | Filter,
       /**
-       * Type of the filter to be adjusted; if no type is given, any previously configured application filters
-       * are cleared, and the given filters are used as control filters
+       * The type of the filter to replace; if no type is given, all filters previously configured with type {@link sap.ui.model.FilterType.Application }
+       * are cleared, and the given filters are used as filters of type {@link sap.ui.model.FilterType.Control}
        */
       sFilterType?: FilterType | keyof typeof FilterType
     ): this;
@@ -53197,11 +53268,11 @@ declare module "sap/ui/model/ClientTreeBinding" {
      */
     getCount(): number | undefined;
     /**
-     * Return node contexts for the tree
+     * Return node contexts for the tree.
      *
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      *
-     * @returns the contexts array
+     * @returns the context's array
      */
     getNodeContexts(
       /**
@@ -53209,42 +53280,44 @@ declare module "sap/ui/model/ClientTreeBinding" {
        */
       oContext: Context,
       /**
-       * the startIndex where to start the retrieval of contexts
+       * the index from which to start the retrieval of contexts
        */
-      iStartIndex: int,
+      iStartIndex?: int,
       /**
-       * determines how many contexts to retrieve beginning from the start index.
+       * determines how many contexts to retrieve, beginning from the start index. Defaults to the model's size
+       * limit; see {@link sap.ui.model.Model#setSizeLimit}.
        */
-      iLength: int
+      iLength?: int
     ): Context[];
     /**
-     * Return root contexts for the tree
+     * Return root contexts for the tree.
      *
      * @ui5-protected Do not call from applications (only from related classes in the framework)
      *
-     * @returns the contexts array
+     * @returns the context's array
      */
     getRootContexts(
       /**
-       * the startIndex where to start the retrieval of contexts
+       * the index from which to start the retrieval of contexts
        */
-      iStartIndex: int,
+      iStartIndex?: int,
       /**
-       * determines how many contexts to retrieve beginning from the start index.
+       * determines how many contexts to retrieve, beginning from the start index. Defaults to the model's size
+       * limit; see {@link sap.ui.model.Model#setSizeLimit}.
        */
-      iLength: int
-    ): object[];
+      iLength?: int
+    ): Context[];
     /**
      * Returns if the node has child nodes.
      *
      *
-     * @returns true if node has children
+     * @returns `true` if the node has children
      */
     hasChildren(
       /**
        * the context element of the node
        */
-      oContext: object
+      oContext: Context
     ): boolean;
     /**
      * Sorts the contexts of this ClientTreeBinding. The tree will be sorted level by level. So the nodes are
@@ -53255,9 +53328,10 @@ declare module "sap/ui/model/ClientTreeBinding" {
      */
     sort(
       /**
-       * An array of Sorter instances which will be applied
+       * The sorters to use; they replace the sorters given in {@link sap.ui.model.ClientModel#bindTree}; a falsy
+       * value is treated as an empty array and thus removes all sorters
        */
-      aSorters: Sorter[]
+      aSorters?: Sorter[] | Sorter
     ): this;
   }
 }
@@ -53886,9 +53960,9 @@ declare module "sap/ui/model/CompositeType" {
      * @since 1.82.0
      *
      * @returns An array of indices that determine which parts of this type shall not propagate their model
-     * messages to the attached control
+     * messages to the attached control; an empty array is returned by default
      */
-    getPartsIgnoringMessages(): number[];
+    getPartsIgnoringMessages(): int[];
     /**
      * Returns whether the {@link #formatValue} and {@link #parseValue} methods operate on the internal, related
      * native JavaScript values.
@@ -55015,9 +55089,13 @@ declare module "sap/ui/model/json/JSONModel" {
       oContext?: Context
     ): any | null | undefined;
     /**
-     * Load JSON-encoded data from the server using a GET HTTP request and store the resulting JSON data in
-     * the model. Note: Due to browser security restrictions, most "Ajax" requests are subject to the same origin
-     * policy, the request can not successfully retrieve data from a different domain, subdomain, or protocol.
+     * Loads JSON-encoded data from the server and stores the resulting JSON data in the model. Note: Due to
+     * browser security restrictions, most "Ajax" requests are subject to the same origin policy, the request
+     * can not successfully retrieve data from a different domain, subdomain, or protocol.
+     *
+     * Note: To send a JSON object in the body of a "POST" request to load the model data, `oParameters` has
+     * to be the JSON-stringified value of the object to be sent, and `mHeaders` has to contain a `"Content-Type"`
+     * property with the value `"application/json;charset=utf-8"`.
      *
      *
      * @returns in case bAsync is set to true a Promise is returned; this promise resolves/rejects based on
@@ -55025,13 +55103,16 @@ declare module "sap/ui/model/json/JSONModel" {
      */
     loadData(
       /**
-       * A string containing the URL to which the request is sent.
+       * A string containing the URL to which the request is sent
        */
       sURL: string,
       /**
-       * A map or string that is sent to the server with the request. Data that is sent to the server is appended
-       * to the URL as a query string. If the value of the data parameter is an object (map), it is converted
-       * to a string and url-encoded before it is appended to the URL.
+       * The data to be sent to the server with the data-loading request. If `oParameters` is a string, it has
+       * to be encoded based on the used content type. The default encoding is `'application/x-www-form-urlencoded;
+       * charset=UTF-8'` but it may be overwritten via the `"Content-Type"` property given in `mHeaders`. If `oParameters`
+       * is an object, a string is generated and the keys and values are URL-encoded. The resulting string is
+       * appended to the URL if the HTTP request method cannot have a request body, e.g. for a "GET" request.
+       * Otherwise, the resulting string is added to the request body.
        */
       oParameters?: object | string,
       /**
@@ -55041,8 +55122,7 @@ declare module "sap/ui/model/json/JSONModel" {
        */
       bAsync?: boolean,
       /**
-       * The type of request to make ("POST" or "GET"), default is "GET". Note: Other HTTP request methods, such
-       * as PUT and DELETE, can also be used here, but they are not supported by all browsers.
+       * The HTTP verb to use for the request ("GET" or "POST")
        */
       sType?: string,
       /**
@@ -67078,10 +67158,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
      * 	 - `properties` could be an array containing the property names which should be included in the new
      *     entry. Other properties defined in the entity type won't be included.
      * 	 - `properties` could be an object which includes the desired properties and the corresponding values
-     *     which should be used for the created entry.   If `properties` is not specified, all properties in
-     *     the entity type will be included in the created entry.
-     *
-     * If there are no values specified, the properties will have `undefined` values.
+     *     which should be used for the created entry.
      *
      * The `properties` can be modified via property bindings relative to the returned context instance.
      *
@@ -70606,7 +70683,8 @@ declare module "sap/ui/model/odata/v4/ODataContextBinding" {
     ): this;
     /**
      * Changes this binding's parameters and refreshes the binding. Since 1.111.0, a list binding's header context
-     * is deselected.
+     * is deselected, but (since 1.120.13) only if the binding parameter '$$clearSelectionOnFilter' is set and
+     * the '$filter' or '$search' parameter is changed.
      *
      * If there are pending changes that cannot be ignored, an error is thrown. Use {@link #hasPendingChanges }
      * to check if there are such pending changes. If there are, call {@link sap.ui.model.odata.v4.ODataModel#submitBatch }
@@ -71235,7 +71313,8 @@ declare module "sap/ui/model/odata/v4/ODataListBinding" {
     ): this;
     /**
      * Changes this binding's parameters and refreshes the binding. Since 1.111.0, a list binding's header context
-     * is deselected.
+     * is deselected, but (since 1.120.13) only if the binding parameter '$$clearSelectionOnFilter' is set and
+     * the '$filter' or '$search' parameter is changed.
      *
      * If there are pending changes that cannot be ignored, an error is thrown. Use {@link #hasPendingChanges }
      * to check if there are such pending changes. If there are, call {@link sap.ui.model.odata.v4.ODataModel#submitBatch }
@@ -71454,7 +71533,8 @@ declare module "sap/ui/model/odata/v4/ODataListBinding" {
     ): this;
     /**
      * Filters the list with the given filters. Since 1.97.0, if filters are unchanged, no request is sent,
-     * regardless of pending changes. Since 1.111.0, the header context is deselected.
+     * regardless of pending changes. Since 1.111.0, all contexts (incl. the header context) are deselected,
+     * but (since 1.120.13) only if the binding parameter '$$clearSelectionOnFilter' is set.
      *
      * If there are pending changes that cannot be ignored, an error is thrown. Use {@link #hasPendingChanges }
      * to check if there are such pending changes. If there are, call {@link sap.ui.model.odata.v4.ODataModel#submitBatch }
@@ -72030,7 +72110,9 @@ declare module "sap/ui/model/odata/v4/ODataListBinding" {
          * certain content will break the syntax of the system query option `$apply` and result in an invalid request.
          * If the OData service supports the proposal ODATA-1452,
          * then `ODataUtils.formatLiteral(sSearch, "Edm.String");` should be used to encapsulate the whole search
-         * string beforehand (see {@link sap.ui.model.odata.v4.ODataUtils.formatLiteral}).
+         * string beforehand (see {@link sap.ui.model.odata.v4.ODataUtils.formatLiteral}). Since 1.120.13, all contexts,
+         * including the header context are deselected if the '$$clearSelectionOnFilter' binding parameter is set
+         * and the search parameter is changed.
          */
         search?: string;
         /**
@@ -73574,6 +73656,11 @@ declare module "sap/ui/model/odata/v4/ODataModel" {
          * from its context's path for data service requests; only the value `true` is allowed.
          */
         $$canonicalPath?: boolean;
+        /**
+         * Whether the selection state of the list binding is cleared when a filter is changed; this includes dynamic
+         * filters, '$filter', '$search', and `$$aggregation.search`. Supported since 1.120.13.
+         */
+        $$clearSelectionOnFilter?: boolean;
         /**
          * Whether this binding is considered for a match when {@link #getKeepAliveContext} is called; only the
          * value `true` is allowed. Must not be combined with `$apply`, `$$aggregation`, `$$canonicalPath`, or `$$sharedRequest`.
@@ -76111,6 +76198,8 @@ declare module "sap/ui/model/TreeBinding" {
 
   import Model from "sap/ui/model/Model";
 
+  import Context from "sap/ui/model/Context";
+
   import Filter from "sap/ui/model/Filter";
 
   import Sorter from "sap/ui/model/Sorter";
@@ -76118,8 +76207,6 @@ declare module "sap/ui/model/TreeBinding" {
   import FilterType from "sap/ui/model/FilterType";
 
   import Metadata from "sap/ui/base/Metadata";
-
-  import Context from "sap/ui/model/Context";
 
   /**
    * The TreeBinding is a specific binding for trees in the model, which can be used to populate Trees.
@@ -76144,15 +76231,16 @@ declare module "sap/ui/model/TreeBinding" {
       /**
        * Context object for this binding (optional)
        */
-      oContext?: object,
+      oContext?: Context,
       /**
-       * Predefined filter or an array of filters (optional)
+       * The filters to be used initially with type {@link sap.ui.model.FilterType.Application}; call {@link #filter }
+       * to replace them
        */
-      aFilters?: Filter | Filter[],
+      aFilters?: Filter[] | Filter,
       /**
        * Additional model specific parameters (optional)
        */
-      mParameters?: string,
+      mParameters?: object,
       /**
        * Predefined sorter or an array of sorters (optional)
        */
@@ -76242,7 +76330,7 @@ declare module "sap/ui/model/TreeBinding" {
       sFilterType: FilterType | keyof typeof FilterType
     ): void;
     /**
-     * Returns the number of child nodes of a specific context
+     * Returns the number of child nodes of a specific context.
      *
      *
      * @returns the number of children
@@ -76251,7 +76339,7 @@ declare module "sap/ui/model/TreeBinding" {
       /**
        * the context element of the node
        */
-      oContext: Object
+      oContext: Context
     ): int;
     /**
      * Returns the count of entries in the tree, or `undefined` if it is unknown. If the tree is filtered, the
@@ -76267,7 +76355,7 @@ declare module "sap/ui/model/TreeBinding" {
      */
     getCount(): number | undefined;
     /**
-     * Returns the current value of the bound target
+     * Returns the current value of the bound target.
      *
      *
      * @returns the array of child contexts for the given node
@@ -76278,41 +76366,43 @@ declare module "sap/ui/model/TreeBinding" {
        */
       oContext: Context,
       /**
-       * the startIndex where to start the retrieval of contexts
+       * the index from which to start the retrieval of contexts
        */
-      iStartIndex: int,
+      iStartIndex?: int,
       /**
-       * determines how many contexts to retrieve beginning from the start index.
+       * determines how many contexts to retrieve, beginning from the start index. Defaults to the model's size
+       * limit; see {@link sap.ui.model.Model#setSizeLimit}.
        */
-      iLength: int
+      iLength?: int
     ): Context[];
     /**
-     * Returns the current value of the bound target
+     * Returns the current value of the bound target.
      *
      *
      * @returns the array of child contexts for the root node
      */
     getRootContexts(
       /**
-       * the startIndex where to start the retrieval of contexts
+       * the index from which to start the retrieval of contexts
        */
-      iStartIndex: int,
+      iStartIndex?: int,
       /**
-       * determines how many contexts to retrieve beginning from the start index.
+       * determines how many contexts to retrieve, beginning from the start index. Defaults to the model's size
+       * limit; see {@link sap.ui.model.Model#setSizeLimit}.
        */
-      iLength: int
-    ): any[];
+      iLength?: int
+    ): Context[];
     /**
-     * Returns if the node has child nodes
+     * Returns `true` if the node has child nodes.
      *
      *
-     * @returns true if node has children
+     * @returns `true` if the node has children
      */
     hasChildren(
       /**
        * the context element of the node
        */
-      oContext: Object
+      oContext: Context
     ): boolean;
     /**
      * Sorts the tree according to the sorter definitions.
@@ -80611,7 +80701,7 @@ declare module "sap/ui/test/OpaBuilder" {
        * the Opa5 instance to call {@link sap.ui.test.Opa5#waitFor} on
        */
       oOpaInstance?: Opa5
-    ): /* was: sap.ui.test.Opa5.Chain */ any;
+    ): Opa5;
     /**
      * Sets the `fragmentId` parameter.
      *
@@ -85654,7 +85744,7 @@ declare namespace sap {
      * Retrieve the {@link sap.ui.core.Core SAPUI5 Core} instance for the current window.
      *
      * @deprecated As of version 1.118. Please require 'sap/ui/core/Core' instead and use the module export
-     * directly without using 'new'."
+     * directly without using 'new'.
      *
      * @returns the API of the current SAPUI5 Core instance.
      */
@@ -86097,8 +86187,9 @@ declare namespace sap {
      *
      * **Note:** Any other call signature will lead to a runtime error.
      *
-     * @deprecated As of version 1.56. Use {@link sap.ui.core.mvc.View.extend View.extend} to define the view
-     * class and {@link sap.ui.core.mvc.View.create View.create} to create view instances
+     * @deprecated As of version 1.56. Instead use {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed Views }
+     * by defining the view class with {@link sap.ui.core.mvc.View.extend View.extend} and creating the view
+     * instances with {@link sap.ui.core.mvc.View.create View.create}.
      *
      * @returns the created JSView instance in the creation case, otherwise undefined
      */
@@ -86149,8 +86240,9 @@ declare namespace sap {
      *
      * **Note:** Any other call signature will lead to a runtime error.
      *
-     * @deprecated As of version 1.56. Use {@link sap.ui.core.mvc.View.extend View.extend} to define the view
-     * class and {@link sap.ui.core.mvc.View.create View.create} to create view instances
+     * @deprecated As of version 1.56. Instead use {@link topic:e6bb33d076dc4f23be50c082c271b9f0 Typed Views }
+     * by defining the view class with {@link sap.ui.core.mvc.View.extend View.extend} and creating the view
+     * instances with {@link sap.ui.core.mvc.View.create View.create}.
      *
      * @returns the created JSView instance in the creation case, otherwise undefined
      */

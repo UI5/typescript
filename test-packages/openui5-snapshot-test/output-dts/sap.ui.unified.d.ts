@@ -1,4 +1,4 @@
-// For Library Version: 1.120.12
+// For Library Version: 1.120.30
 
 declare module "sap/ui/unified/library" {
   /**
@@ -964,8 +964,14 @@ declare module "sap/ui/unified/Calendar" {
     /**
      * Gets current value of property {@link #getNonWorkingDays nonWorkingDays}.
      *
-     * If set, the provided weekdays are displayed as non-working days. Valid values inside the array are 0
-     * to 6. If not set, the weekend defined in the locale settings is displayed as non-working days.
+     * This property sets chosen days of the week as non-working days, and overrides the weekend days defined
+     * in the locale settings. If set, the provided weekdays are displayed as non-working days.
+     *
+     * Users could override the non-working days for each week. Valid values inside the array are from 0
+     * to 6. For example:
+     * 	 - A single day for each week - `[3]`.
+     * 	 - All days for each week - `[0,1,2,3,4,5,6]`.
+     * 	 - None of the days for each week - `[]`. In this case all weekdays are working days.
      *
      * **Note:** Keep in mind that this property sets only weekly-recurring days as non-working. If you need
      * specific dates or dates ranges, such as national holidays, use the `specialDates` aggregation to set
@@ -1392,8 +1398,14 @@ declare module "sap/ui/unified/Calendar" {
     /**
      * Sets a new value for property {@link #getNonWorkingDays nonWorkingDays}.
      *
-     * If set, the provided weekdays are displayed as non-working days. Valid values inside the array are 0
-     * to 6. If not set, the weekend defined in the locale settings is displayed as non-working days.
+     * This property sets chosen days of the week as non-working days, and overrides the weekend days defined
+     * in the locale settings. If set, the provided weekdays are displayed as non-working days.
+     *
+     * Users could override the non-working days for each week. Valid values inside the array are from 0
+     * to 6. For example:
+     * 	 - A single day for each week - `[3]`.
+     * 	 - All days for each week - `[0,1,2,3,4,5,6]`.
+     * 	 - None of the days for each week - `[]`. In this case all weekdays are working days.
      *
      * **Note:** Keep in mind that this property sets only weekly-recurring days as non-working. If you need
      * specific dates or dates ranges, such as national holidays, use the `specialDates` aggregation to set
@@ -1554,8 +1566,14 @@ declare module "sap/ui/unified/Calendar" {
     firstDayOfWeek?: int | PropertyBindingInfo | `{${string}}`;
 
     /**
-     * If set, the provided weekdays are displayed as non-working days. Valid values inside the array are 0
-     * to 6. If not set, the weekend defined in the locale settings is displayed as non-working days.
+     * This property sets chosen days of the week as non-working days, and overrides the weekend days defined
+     * in the locale settings. If set, the provided weekdays are displayed as non-working days.
+     *
+     * Users could override the non-working days for each week. Valid values inside the array are from 0
+     * to 6. For example:
+     * 	 - A single day for each week - `[3]`.
+     * 	 - All days for each week - `[0,1,2,3,4,5,6]`.
+     * 	 - None of the days for each week - `[]`. In this case all weekdays are working days.
      *
      * **Note:** Keep in mind that this property sets only weekly-recurring days as non-working. If you need
      * specific dates or dates ranges, such as national holidays, use the `specialDates` aggregation to set
