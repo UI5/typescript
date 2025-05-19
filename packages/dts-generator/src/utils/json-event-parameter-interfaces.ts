@@ -15,7 +15,7 @@ import { splitName } from "./base-utils.js";
 import {
   addJsDocProps,
   isA,
-  makeSettingsName,
+  makeSettingsNames,
 } from "./json-constructor-settings-interfaces.js";
 import { FunctionType, TypeReference } from "../types/ast.js";
 
@@ -380,7 +380,7 @@ function createEventParameterInterfaces(
 
             // finally also add the event parameter interface to the settings object
             const settingsInterface = typeUniverse.get(
-              makeSettingsName(symbol.name),
+              makeSettingsNames(symbol.name).name,
             );
             let eventProperty;
             if (
