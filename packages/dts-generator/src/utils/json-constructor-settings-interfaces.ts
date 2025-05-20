@@ -12,9 +12,72 @@ const log = getLogger("@ui5/dts-generator/constructor-settings-interfaces");
 import { splitName } from "./base-utils.js";
 import { TypeReference } from "../types/ast.js";
 
-export function makeSettingsName(fqn: string) {
-  const [pkgname, basename] = splitName(fqn);
-  return `${pkgname}.\$${basename}Settings`;
+/*
+ * Calculates the name for the $Settings interface, the basename of the name
+ * (last name segment) and the assumed export name under which the settings
+ * are exported from the containing module.
+ *
+ * Examples:
+ * (1) sap.m.Button -->
+ *       name: "sap.m.$ButtonSettings"
+ *       basename: "$ButtonSettings"
+ *       exportName: "$ButtonSettings"
+ *
+ * (2) module:my/lib//NotificationListGroupItem -->
+ *       name: "module:my/lib/NotificationListGroupItem.$NotificationListGroupItemSettings"
+ *       basename: "$NotificationListGroupItemSettings"
+ *       exportName: "$NotificationListGroupItemSettings"
+ *
+ * (3) module:my/lib/SegmentedButton.Item
+ *       name: "module:my/lib/SegmentedButton.$ItemSettings"
+ *       basename: "$ItemSettings"
+ *       exportName: "$ItemSettings"
+ *
+ * (4) module:my/lib/SegmentedButton.Item.SubItem
+ *       name: "module:my/lib/SegmentedButton.Item.$SubItemSettings"
+ *       basename: "$SubItemSettings"
+ *       exportName: "Item.$SubItemSettings"
+ */
+export function makeSettingsNames(fqn: string) {
+  const makeNameAndBasename = (fqn: string) => {
+    const [prefix, basename] = splitName(fqn);
+    const settings = `\$${basename}Settings`;
+    return [`${prefix}${prefix ? "." : ""}${settings}`, settings];
+  };
+
+  if (fqn.startsWith("module:")) {
+    const [pkgname, moduleAndExport] = splitName(
+      fqn.slice("module:".length),
+      "/",
+    );
+    const pos = moduleAndExport.indexOf(".");
+    if (pos < 0) {
+      // case (2), default export
+      const [, settingsName] = makeNameAndBasename(moduleAndExport);
+      return {
+        name: `${fqn}.${settingsName}`,
+        basename: settingsName,
+        exportName: settingsName,
+      };
+    }
+    // case (3) and (4), named export
+    const moduleBaseName = moduleAndExport.slice(0, pos);
+    const exportName = moduleAndExport.slice(pos + 1);
+    const [settingsNameWithPrefix, settingsName] =
+      makeNameAndBasename(exportName);
+    return {
+      name: `module:${pkgname}${pkgname ? "/" : ""}${moduleBaseName}.${settingsNameWithPrefix}`,
+      basename: settingsName,
+      exportName: settingsNameWithPrefix,
+    };
+  }
+  // case (1), global name
+  const [fqSettingsName, settingsName] = makeNameAndBasename(fqn);
+  return {
+    name: fqSettingsName,
+    basename: settingsName,
+    exportName: settingsName,
+  };
 }
 
 export function isA(
@@ -383,13 +446,14 @@ function createConstructorSettingsInterfaces(
   symbols.forEach((symbol) => {
     if (isManagedObject(symbol)) {
       log.verbose(`adding settings interface for ${symbol.name}`);
+      const { name, basename, exportName } = makeSettingsNames(symbol.name);
       const settings: InterfaceSymbol = {
         kind: "interface",
-        name: makeSettingsName(symbol.name),
-        basename: `\$${symbol.basename}Settings`,
+        name,
+        basename,
         module: symbol.module,
         resource: symbol.resource,
-        export: `\$${symbol.basename}Settings`,
+        export: exportName,
         properties: addDetails
           ? dedup([
               ...settingsForProperties(symbol),
@@ -402,7 +466,7 @@ function createConstructorSettingsInterfaces(
         __isNotAMarkerInterface: true,
       };
       if (isManagedObject(symbol.extends)) {
-        settings.extends = makeSettingsName(symbol.extends);
+        settings.extends = makeSettingsNames(symbol.extends).name;
       }
       settings.description = `Describes the settings that can be provided to the ${symbol.basename} constructor.`;
       if (symbol.deprecated) {
