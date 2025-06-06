@@ -196,7 +196,7 @@ export interface ExperimentalDesc extends Description {
 
 // Types
 
-export type Type =
+export type Type = (
   | TypeReference
   | TypeLiteral
   | UnionType
@@ -204,7 +204,8 @@ export type Type =
   | ArrayType
   | FunctionType
   | LiteralType
-  | NativeTSTypeExpression;
+  | NativeTSTypeExpression
+) & { repeatable?: boolean };
 
 export interface TypeReference {
   kind: "TypeReference";

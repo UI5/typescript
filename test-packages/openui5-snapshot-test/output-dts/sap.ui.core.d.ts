@@ -83938,11 +83938,11 @@ declare module "sap/ui/test/Opa5" {
      * whether a function is used as arrangement or action. Each function typically contains one or multiple
      * `waitFor` statements.
      */
-    actions?: Record<string, () => void> | Function;
+    actions?: Record<string, Function> | Function;
     /**
      * A map or a class of functions that can be used as assertions in Opa tests.
      */
-    assertions?: Record<string, () => void> | Function;
+    assertions?: Record<string, Function> | Function;
   };
 }
 
