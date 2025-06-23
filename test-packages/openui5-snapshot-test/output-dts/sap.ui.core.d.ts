@@ -55426,6 +55426,8 @@ declare module "sap/ui/model/json/TypedJSONModel" {
         ? never
         : Key;
   }[keyof Type];
+
+  export {}; // this prevents the non-exported types like PropertiesOf from being visible for applications
 }
 
 declare module "sap/ui/model/json/TypedJSONContext" {
