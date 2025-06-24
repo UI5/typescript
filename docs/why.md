@@ -6,9 +6,7 @@ and how it benefits the UI5 eco-system in general.
 ## Short Version
 
 - Better Integrating SAPUI5 and the **modern** JavaScript eco-system.
-
   - **Editor Tooling** & Functionality.
-
     - Working with many Editors / IDEs.
     - Content Assist.
     - Type Checks.
@@ -86,7 +84,6 @@ There are two elements to this topic
 2. **Promoting end users to raise issues with errors and inaccuracies in the API reference**:
 
    SAPUI5 has a large in depth API Reference:
-
    - https://ui5.sap.com/#/api
 
    However there exists no validation between an end user's source code and the content of the API Reference.

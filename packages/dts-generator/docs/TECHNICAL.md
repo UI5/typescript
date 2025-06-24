@@ -57,7 +57,6 @@ Using `directives` as input and the information whether modules or globals shoul
 - `addForwardDeclarations` (from directives) - this relates to inverse dependencies
 - `addInterfaceWithModuleNames` adds all visible modules to `sap.IUI5DefineDependencyNames`, which is merged across libraries from TypeScript perspective and can be used to type module imports
 - `addConstructorSettingsInterfaces` and `addEventParameterInterfaces` create two additional interfaces defining important structures:
-
   1.  for each ManagedObject subclass an interface that describes the settings object, to be used in the constructor
   1.  for each event an interface which lists its parameters
 
