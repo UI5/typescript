@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.4](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.7.2...@ui5/dts-generator@3.7.4) (2025-06-24)
+
+### Bug Fixes
+
+- **dts-generator:** fix name of $Settings interface for module:\* classes ([#505](https://github.com/SAP/ui5-typescript/issues/505)) ([b6c0fe5](https://github.com/SAP/ui5-typescript/commit/b6c0fe52c1603042439df035b5ba8f5439b732f8))
+- **dts-generator:** in function typedefs, parse types properly ([#508](https://github.com/SAP/ui5-typescript/issues/508)) ([06e6c57](https://github.com/SAP/ui5-typescript/commit/06e6c57417e507f0bae96233c947055cb70a302b))
+- **dts-generator:** support rest parameters in functions in nested types ([#507](https://github.com/SAP/ui5-typescript/issues/507)) ([095bae6](https://github.com/SAP/ui5-typescript/commit/095bae6c68dd76a7172a5c2ac8a198204da805d7))
+
 ## [3.7.3](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.7.2...@ui5/dts-generator@3.7.3) (2025-06-24)
 
 ### Bug Fixes

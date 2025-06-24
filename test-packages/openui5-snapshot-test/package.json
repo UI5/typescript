@@ -1,7 +1,7 @@
 {
   "name": "@ui5/openui5-snapshot-test",
   "private": true,
-  "version": "3.2.8",
+  "version": "3.2.9",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",

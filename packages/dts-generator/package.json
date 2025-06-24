@@ -1,7 +1,7 @@
 {
   "name": "@ui5/dts-generator",
   "description": "Generates TypeScript type definitions from UI5 api.json files",
-  "version": "3.7.3",
+  "version": "3.7.4",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
