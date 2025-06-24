@@ -46,13 +46,13 @@ export function createJSDocCenterPart(info: APIMember, lines: string[] = []) {
     lines.push("");
   }
 
-  info.since ? lines.push("@since " + info.since) : "",
+  (info.since ? lines.push("@since " + info.since) : "",
     info.deprecation !== undefined
       ? lines.push("@deprecated " + info.deprecation)
       : "", // "undefined" check to even output the tag when there is empty text
     info.experimental !== undefined
       ? lines.push("@experimental " + info.experimental)
-      : ""; // "undefined" check to even output the tag when there is empty text
+      : ""); // "undefined" check to even output the tag when there is empty text
 
   return lines;
 }
