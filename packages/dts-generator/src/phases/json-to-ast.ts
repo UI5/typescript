@@ -1840,16 +1840,7 @@ function buildTypedef(ui5Typedef: TypedefSymbol): TypeAliasDeclaration {
   } else if (ui5Typedef.returnValue || _.isArray(ui5Typedef.parameters)) {
     type = {
       kind: "FunctionType",
-      parameters: _.map(
-        ui5Typedef.parameters,
-        (param) =>
-          ({
-            kind: "Parameter",
-            name: param.name,
-            type: param.type,
-            // TODO how to represent parameter documentation?
-          }) as Parameter,
-      ),
+      parameters: _.map(ui5Typedef.parameters, buildParameter),
     };
     if (ui5Typedef.returnValue) {
       type.type = ui5Typedef.returnValue.type; // NOTE: this .type is always an object in the debugger
