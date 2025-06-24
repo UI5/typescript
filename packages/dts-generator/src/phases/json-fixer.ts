@@ -647,9 +647,7 @@ function parseTypeExpressions(symbols: ConcreteSymbol[]) {
       visitAnythingWithAType(typedef.returnValue);
     }
     if (typedef.parameters) {
-      typedef.parameters.forEach((param) => {
-        visitAnythingWithAType(param);
-      });
+      typedef.parameters.forEach(visitParam);
     }
   }
 
