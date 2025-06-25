@@ -202,8 +202,7 @@ function generateSettingsInterface(
         propertySignature,
         buildJSDocStringFromLines(createJSDocCenterPart(association)),
       );
-      (factory.createKeywordTypeNode(ts.SyntaxKind.StringKeyword),
-        interfaceProperties.push(propertySignature));
+      interfaceProperties.push(propertySignature);
     }
   }
 
