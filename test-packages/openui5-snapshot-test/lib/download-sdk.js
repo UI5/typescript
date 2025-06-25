@@ -23,8 +23,11 @@ async function main() {
   const pkgJson = require("../package.json");
   const version = pkgJson.snapshot.version;
   const ui5LibsMeta = await getSAPUI5LibsMeta(version);
-  const possibleOpenUI5LibNames = await getOpenUI5PossibleLibNames();
-  const openUI5Meta = pick(ui5LibsMeta, possibleOpenUI5LibNames);
+  const openUI5Meta = Object.fromEntries(
+    Object.entries(ui5LibsMeta).filter(
+      ([name, info]) => info.npmPackageName?.startsWith("@openui5")
+    )
+  ); 
   const allDependentOpenUI5Libs = expandTransitiveDeps(
     pkgJson.snapshot.libs,
     openUI5Meta
