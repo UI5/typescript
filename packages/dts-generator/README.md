@@ -1,6 +1,6 @@
 [![npm (scoped)](https://img.shields.io/npm/v/@ui5/dts-generator.svg)](https://www.npmjs.com/package/@ui5/dts-generator)
 
-# @ui5/dts-Generator
+# @ui5/dts-generator
 
 This npm package is used for generating (and checking) TypeScript type definitions (`*.d.ts` files) for SAPUI5/OpenUI5 libraries implemented in JavaScript. Input for this generation are the `api.json` files which describe the API of a library.
 

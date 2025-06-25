@@ -255,10 +255,10 @@ function genModule(ast: Module) {
   text += `declare module "${ast.name}" {` + NL;
   text += APPEND_ITEMS(ast.imports, genImport);
   text += APPEND_ITEMS(ast.exports, genExport);
-  ((text += APPEND_ITEMS(ast.namespaces, (namespace: Namespace) =>
+  text += APPEND_ITEMS(ast.namespaces, (namespace: Namespace) =>
     genNamespace(namespace, { export: namespace.export }),
-  )),
-    (text += "}"));
+  );
+  text += "}";
   return text;
 }
 
