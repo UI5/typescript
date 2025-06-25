@@ -525,6 +525,14 @@ function genMethodOrFunction(
     ? ""
     : `<${_.map(ast.typeParameters, genTypeParameter).join(",")}>`;
   let text = "";
+  if (ast.overloads) {
+    text += _.map(
+      ast.overloads,
+      (overload) =>
+        genMethodOrFunction(overload, staticPossible, isFunc, options) + NL,
+    ).join("");
+    return text;
+  }
   text += JSDOC(ast) + NL;
   text += applyTsIgnore(ast);
   text += ast.overwrite ? "// @ts-ignore" + NL : "";
@@ -550,6 +558,14 @@ function genMethodOrFunction(
  */
 function genConstructor(ast: FunctionDesc) {
   let text = "";
+
+  if (ast.overloads) {
+    text += _.map(
+      ast.overloads,
+      (overload) => genConstructor(overload) + NL,
+    ).join("");
+    return text;
+  }
 
   text += JSDOC(ast) + NL;
   text += ast.overwrite ? "// @ts-ignore" + NL : "";
