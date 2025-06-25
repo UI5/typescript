@@ -17,6 +17,7 @@
     "./node_modules/**/*",
     "./src/checkDtslint/dtslintConfig/openui5-tests.ts",
     "./src/checkDtslint/dtslintConfig/tsconfig.json",
-    "./src/resources/core-preamble.d.ts"
+    "./src/resources/core-preamble.d.ts",
+    "./src/resources/typed-json-model.d.ts"
   ]
 }

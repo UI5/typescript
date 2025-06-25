@@ -29,6 +29,39 @@ export async function postProcess(
         );
       }
 
+      // add the TypedJSONModel - but only if we do not generate globals
+      if (!options.generateGlobals) {
+        const typedJsonModel = fs
+          .readFileSync(
+            new URL("../resources/typed-json-model.d.ts", import.meta.url),
+          )
+          .toString();
+
+        // the position right after JSONModel
+        let pos = dtsResult.dtsText.indexOf(
+          'declare module "sap/ui/model/json/JSONPropertyBinding" {',
+        );
+        // or at least before JSONModel
+        if (pos === -1) {
+          pos = dtsResult.dtsText.indexOf(
+            'declare module "sap/ui/model/json/JSONModel" {',
+          );
+        }
+        if (pos > -1) {
+          // insert the typedJsonModel after/before the JSONModel module declaration in case we found it
+          dtsResult.dtsText = await reformat(
+            dtsResult.dtsText.slice(0, pos) +
+              typedJsonModel +
+              "\n" +
+              dtsResult.dtsText.slice(pos),
+          );
+        } else {
+          // otherwise just append it to the end of the dtsText
+          dtsResult.dtsText += typedJsonModel;
+        }
+      }
+
+      // prepend preamble
       dtsResult.dtsText = await reformat(preamble + dtsResult.dtsText);
       break;
 
