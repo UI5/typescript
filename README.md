@@ -1,6 +1,6 @@
-[![Continuous Integration](https://github.com/SAP/ui5-typescript/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/SAP/ui5-typescript/actions/workflows/ci.yml)
+[![Continuous Integration](https://github.com/UI5/typescript/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/UI5/typescript/actions/workflows/ci.yml)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP/ui5-typescript)](https://api.reuse.software/info/github.com/SAP/ui5-typescript)
+[![REUSE status](https://api.reuse.software/badge/github.com/UI5/typescript)](https://api.reuse.software/info/github.com/UI5/typescript)
 
 # UI5-TypeScript
 
@@ -52,7 +52,7 @@ See the [demos](./demos) directory for consumption examples of the legacy signat
 
 ## Support
 
-For issues caused by the generators please open [issues](https://github.com/SAP/ui5-typescript/issues) on GitHub.<br>
+For issues caused by the generators please open [issues](https://github.com/UI5/typescript/issues) on GitHub.<br>
 However, issues in the UI5 type definitions which are also present in the [API documentation](https://ui5.sap.com/#/api) originate from the JSDoc comments in the original OpenUI5/SAPUI5 code, so please directly open an [OpenUI5](https://github.com/SAP/openui5/issues)/SAPUI5 ticket in this case.
 
 ## Contributing
