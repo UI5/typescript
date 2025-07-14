@@ -38,7 +38,7 @@ With Yarn
 >
 > Before the type definitions were generated in ES module style, they did declare all APIs with their global names, which are discouraged to be used and will no longer be available in UI5 2.x. The dts-generator still has the capability to generate this legacy "globals" version of the type definitions, for compatibility reasons. These legacy definitions are released as "ts-types" instead of "types", but will no longer be produced for UI5 2.x.
 
-Find all information about using UI5 with TypeScript at https://sap.github.io/ui5-typescript!
+Find all information about using UI5 with TypeScript at https://ui5.github.io/typescript!
 
 ## Usage
 
@@ -46,7 +46,7 @@ To see the suggested project setup for TypeScript development with the `types` p
 
 The [TypeScript branch of the "UI5 CAP Event App"](https://github.com/SAP-samples/ui5-cap-event-app/tree/typescript) sample demonstrates a slightly more complex application, using the same setup. It comes with an [explanation](https://github.com/SAP-samples/ui5-cap-event-app/blob/typescript/docs/typescript.md) of what UI5 TypeScript code usually looks like and what to consider.
 
-As mentioned, the best resource for using UI5 with TypeScript is https://sap.github.io/ui5-typescript.
+As mentioned, the best resource for using UI5 with TypeScript is https://ui5.github.io/typescript.
 
 See the [demos](./demos) directory for consumption examples of the legacy signatures.
 
