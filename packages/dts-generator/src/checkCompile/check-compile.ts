@@ -148,7 +148,7 @@ export default function checkCompile(options: CheckCompileConfig) {
       `  ${errorCount} error(s)${ignoredOnListText}${ignoredInOtherText}`,
     );
     log.info(
-      "  (Further information at https://github.com/SAP/ui5-typescript/blob/main/hints-for-control-developers.md)\n\n",
+      "  (Further information at https://github.com/UI5/typescript/blob/main/hints-for-control-developers.md)\n\n",
     );
   } else {
     log.info(

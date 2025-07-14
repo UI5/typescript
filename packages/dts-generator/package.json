@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git@github.com:SAP/ui5-typescript.git",
+    "url": "git@github.com:UI5/typescript.git",
     "directory": "packages/dts-generator"
   },
   "type": "module",

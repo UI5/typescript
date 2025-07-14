@@ -18,10 +18,10 @@
     "lint": "eslint src",
     "ci": "npm-run-all build test lint"
   },
-  "homepage": "https://github.com/SAP/ui5-typescript/tree/main/packages/ts-interface-generator",
+  "homepage": "https://github.com/UI5/typescript/tree/main/packages/ts-interface-generator",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SAP/ui5-typescript.git",
+    "url": "https://github.com/UI5/typescript.git",
     "directory": "packages/ts-interface-generator"
   },
   "keywords": [

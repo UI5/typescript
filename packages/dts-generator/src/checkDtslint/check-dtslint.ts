@@ -140,7 +140,7 @@ const MIN_TYPESCRIPT_VERSION_LINES = `/**
 * For important notes, please read README.md!
 *
 * These *.d.ts files are generated. In case of issues, either the generator or the JSDoc in the original
-* OpenUI5 repository must be fixed. The generator is developed at https://github.com/SAP/ui5-typescript/tree/main/packages/dts-generator
+* OpenUI5 repository must be fixed. The generator is developed at https://github.com/UI5/typescript/tree/main/packages/dts-generator
 * and you can contribute to OpenUI5, see: https://github.com/SAP/openui5/blob/master/CONTRIBUTING.md
 */
 
