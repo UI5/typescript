@@ -8,6 +8,20 @@ Changes are grouped by UI5 version, as parser and generator changes so far only 
 
 When doing control development also be aware of the [@ui5/ts-interface-generator change log](https://github.com/SAP/ui5-typescript/blob/main/packages/ts-interface-generator/CHANGELOG.md).
 
+## 1.138.0 (July 2025)
+- RELATED: as UI5 became big enough to have its own GitHub org and we want to bundle all things UI5 there, along with other UI5 repositories, the https://github.com/SAP/ui5-typescript repository was moved to https://github.com/UI5/typescript on July 14th.
+
+## 1.137.0 (entire UI5 release was skipped)
+
+## 1.136.0 (May 2025)
+- No news
+
+## 1.135.0 (April 2025)
+- No news
+
+## 1.134.0 (March 2025)
+- No news
+
 ## 1.133.0 (February 2025)
 - BREAKING (only theoretically): the type alternative of using *literals* instead of *enum values* is no longer present for the return type of a function. E.g. the return type of `sap.ui.core.message.Message.getType()` is no longer `MessageType | keyof typeof MessageType` (either enum value or string), but it is now only the enum value `MessageType`. Usually, this shouldn't break any TypeScript code in applications, as the code had to deal with *both* types before the change, anyway. Returning only *one* of the possible types will hence still be fine. In rare cases, theoretically, code might have used this union type for e.g. typing a variable and then assigned a string value which corresponds to an enum entry. This would now be flagged by the TypeScript compiler. Casting to the enum type will easily fix this compiler error. At runtime, the behavior does not change anyway, as those values are always strings.
 - FIX: To improve compatibility with existing code, deprecated enums that are aliases for new, non-deprecated enums, are now generated as a re-export. This preserves both, the type and the object nature of the enum.
