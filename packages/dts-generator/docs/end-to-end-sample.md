@@ -64,7 +64,7 @@ When the build has completed, the `api.json` file is at `dist/test-resources/com
 
 This file is the API description used not only for the type generation, but also for the API documentation in the UI5 SDK.
 
-**NOTE:** To get proper content, you must maintain the JSDoc in the JavaScript sources correctly. This is not always trivial. You can find instructions at https://github.com/SAP/openui5/blob/master/docs/guidelines/jsdoc.md and in sibling files.
+**NOTE:** To get proper content, you must maintain the JSDoc in the JavaScript sources correctly. This is not always trivial. You can find instructions at https://github.com/UI5/openui5/blob/master/docs/guidelines/jsdoc.md and in sibling files.
 
 The TypeScript type definitions only contain the public API of the library, so entities which are not marked as public will not be available.
 

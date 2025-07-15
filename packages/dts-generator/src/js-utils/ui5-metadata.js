@@ -199,8 +199,8 @@ export async function downloadDtsgenrcFiles(
   }
 
   // GitHub libraries (example URL):
-  // https://raw.githubusercontent.com/SAP/openui5/${version}/src/sap.m/.dtsgenrc
-  const baseUrl = `https://raw.githubusercontent.com/SAP/openui5/${version}/src/`;
+  // https://raw.githubusercontent.com/UI5/openui5/${version}/src/sap.m/.dtsgenrc
+  const baseUrl = `https://raw.githubusercontent.com/UI5/openui5/${version}/src/`;
   const libraryNameToDtsgenrcFileUrl = zipObject(
     libs,
     map(libs, (_) => `${baseUrl}${_}/.dtsgenrc`),
