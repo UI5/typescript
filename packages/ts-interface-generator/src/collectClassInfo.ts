@@ -15,7 +15,7 @@ const mSingular: { [key: string]: string | number } = {
 
 function collectClassInfo(metadata: ClassInfo, className: string) {
   // !!!
-  // Mostly rewritten in TypeScript based on lines 732-988 in https://github.com/SAP/openui5/blob/ff8dec90ff0591e10f8bac1754a622f5d522a957/lib/jsdoc/ui5/plugin.js#L732-L988
+  // Mostly rewritten in TypeScript based on lines 732-988 in https://github.com/UI5/openui5/blob/ff8dec90ff0591e10f8bac1754a622f5d522a957/lib/jsdoc/ui5/plugin.js#L732-L988
   // hence still containing commented-out traces of that JS code.
   // Also, this is the reason why this code is structured and written like it is and may contain unneeded parts.
 

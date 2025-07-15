@@ -1,6 +1,6 @@
 import Preferences from "./preferences";
 
-// converted to TypeScript after copying from https://github.com/SAP/openui5/blob/b21d5c95cbba5a6ad455a9276659e4698bc7421a/lib/jsdoc/ui5/plugin.js#L1618-L2307
+// converted to TypeScript after copying from https://github.com/UI5/openui5/blob/b21d5c95cbba5a6ad455a9276659e4698bc7421a/lib/jsdoc/ui5/plugin.js#L1618-L2307
 // Then all type information stripped from the generated JSDoc, as well as visibility, @synthetic, @name, @function etc.
 // hungarian prefixing is removed as well
 
