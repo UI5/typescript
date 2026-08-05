@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@ui5/dts-generator": "link:../../packages/dts-generator",
-    "fs-extra": "11.3.5",
+    "fs-extra": "11.4.0",
     "lodash": "4.18.1",
     "typescript": "6.0.3"
   },

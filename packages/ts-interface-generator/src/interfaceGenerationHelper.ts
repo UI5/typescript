@@ -750,11 +750,7 @@ function generateInterface(
         isDefaultExport: boolean;
         settingsTypeFullName: string;
         interestingBaseClass:
-          | "ManagedObject"
-          | "Element"
-          | "Control"
-          | "WebComponent"
-          | undefined;
+          "ManagedObject" | "Element" | "Control" | "WebComponent" | undefined;
         constructorSignaturesAvailable: boolean;
         metadata: ts.PropertyDeclaration[];
       }

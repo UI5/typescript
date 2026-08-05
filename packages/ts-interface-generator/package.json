@@ -40,18 +40,18 @@
     "@types/node": "24.7.2",
     "@types/openui5": "1.146.0",
     "@types/yargs": "17.0.35",
-    "@typescript-eslint/eslint-plugin": "8.59.2",
-    "@typescript-eslint/parser": "8.59.2",
-    "eslint": "10.3.0",
+    "@typescript-eslint/eslint-plugin": "8.65.0",
+    "@typescript-eslint/parser": "8.65.0",
+    "eslint": "10.8.0",
     "jest": "30.4.2",
-    "npm-run-all2": "5.0.0",
-    "ts-jest": "29.4.9",
+    "npm-run-all2": "5.0.2",
+    "ts-jest": "29.4.12",
     "typescript": "6.0.3"
   },
   "dependencies": {
     "hjson": "3.2.2",
     "loglevel": "1.9.2",
-    "yargs": "18.0.0"
+    "yargs": "18.1.0"
   },
   "peerDependencies": {
     "typescript": ">=5.2.0 <7.0.0"

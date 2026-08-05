@@ -150,12 +150,10 @@ function createConstructorSettingsInterfaces(
             ],
           };
 
-          if (
-            !(
-              prop.type.kind === "TypeReference" &&
-              prop.type.typeName === "string"
-            )
-          ) {
+          if (!(
+            prop.type.kind === "TypeReference" &&
+            prop.type.typeName === "string"
+          )) {
             propType.types.push({
               kind: "TypeReference",
               typeName: "`{${string}}`",
