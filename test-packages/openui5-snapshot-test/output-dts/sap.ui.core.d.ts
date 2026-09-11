@@ -659,7 +659,8 @@ declare module "sap/base/i18n/Formatting" {
        * The calendar week numbering algorithm
        */
       sCalendarWeekNumbering:
-        CalendarWeekNumbering | keyof typeof CalendarWeekNumbering
+        | CalendarWeekNumbering
+        | keyof typeof CalendarWeekNumbering
     ): void;
     /**
      * Sets custom currencies and replaces existing entries.
@@ -22635,7 +22636,8 @@ declare module "sap/ui/core/dnd/DropInfo" {
      * The calculated position of the drop action relative to the `target`
      */
     dropPosition?:
-      dnd.RelativeDropPosition | keyof typeof dnd.RelativeDropPosition;
+      | dnd.RelativeDropPosition
+      | keyof typeof dnd.RelativeDropPosition;
 
     /**
      * The underlying browser event
@@ -22674,7 +22676,8 @@ declare module "sap/ui/core/dnd/DropInfo" {
      * The calculated position of the drop action relative to the `droppedControl`
      */
     dropPosition?:
-      dnd.RelativeDropPosition | keyof typeof dnd.RelativeDropPosition;
+      | dnd.RelativeDropPosition
+      | keyof typeof dnd.RelativeDropPosition;
 
     /**
      * The underlying browser event
@@ -23993,7 +23996,10 @@ declare module "sap/ui/core/Element" {
      * Custom Data, a data structure like a map containing arbitrary key value pairs.
      */
     customData?:
-      CustomData[] | CustomData | AggregationBindingInfo | `{${string}}`;
+      | CustomData[]
+      | CustomData
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Defines the layout constraints for this control when it is used inside a Layout. LayoutData classes are
@@ -24009,7 +24015,10 @@ declare module "sap/ui/core/Element" {
      * @since 1.19
      */
     dependents?:
-      UI5Element[] | UI5Element | AggregationBindingInfo | `{${string}}`;
+      | UI5Element[]
+      | UI5Element
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Defines the drag-and-drop configuration. **Note:** This configuration might be ignored due to control
@@ -24018,7 +24027,10 @@ declare module "sap/ui/core/Element" {
      * @since 1.56
      */
     dragDropConfig?:
-      DragDropBase[] | DragDropBase | AggregationBindingInfo | `{${string}}`;
+      | DragDropBase[]
+      | DragDropBase
+      | AggregationBindingInfo
+      | `{${string}}`;
   }
 
   export namespace MetadataOptions {
@@ -33585,7 +33597,8 @@ declare module "sap/ui/core/mvc/View" {
        * module path of the preprocessor implementation or a preprocessor function
        */
       vPreprocessor:
-        string | ((p1: Object, p2: Preprocessor.ViewInfo, p3: object) => void),
+        | string
+        | ((p1: Object, p2: Preprocessor.ViewInfo, p3: object) => void),
       /**
        * type of the calling view, e.g. `XML`
        */
@@ -34827,7 +34840,8 @@ declare module "sap/ui/core/mvc/XMLView" {
        * module path of the preprocessor implementation or a preprocessor function
        */
       vPreprocessor:
-        string | ((p1: Object, p2: Preprocessor.ViewInfo, p3: object) => void),
+        | string
+        | ((p1: Object, p2: Preprocessor.ViewInfo, p3: object) => void),
       /**
        * Since 1.89, added for signature compatibility with {@link sap.ui.core.mvc.View#registerPreprocessor View#registerPreprocessor}.
        * Only supported value is "XML".
@@ -34876,7 +34890,8 @@ declare module "sap/ui/core/mvc/XMLView" {
        * module path of the preprocessor implementation or a preprocessor function
        */
       vPreprocessor:
-        string | ((p1: Object, p2: Preprocessor.ViewInfo, p3: object) => void),
+        | string
+        | ((p1: Object, p2: Preprocessor.ViewInfo, p3: object) => void),
       /**
        * declares if the vPreprocessor ensures safe sync processing. This means the preprocessor will be executed
        * also for sync views. Please be aware that any kind of async processing (like Promises, XHR, etc) may
@@ -38521,7 +38536,8 @@ declare module "sap/ui/core/routing/HashChangerBase" {
        * The direction information for this hash replacement
        */
       sDirection:
-        routing.HistoryDirection | keyof typeof routing.HistoryDirection
+        | routing.HistoryDirection
+        | keyof typeof routing.HistoryDirection
     ): void;
     /**
      * Sets the hash to a certain value. When using this function, a browser history entry is written. If you
@@ -40100,7 +40116,8 @@ declare module "sap/ui/core/routing/RouterHashChanger" {
        * The direction information for the hash replacement
        */
       sDirection:
-        routing.HistoryDirection | keyof typeof routing.HistoryDirection,
+        | routing.HistoryDirection
+        | keyof typeof routing.HistoryDirection,
       /**
        * When this parameter is given, this RouterHashChanger switchs to collect mode and all hash changes from
        * its children will be collected. When this promise resolves, this RouterHashChanger fires a "hashReplaced"
@@ -42542,13 +42559,19 @@ declare module "sap/ui/core/tmpl/DOMElement" {
      * DOM attributes which are rendered as part of the DOM element and bindable
      */
     attributes?:
-      DOMAttribute[] | DOMAttribute | AggregationBindingInfo | `{${string}}`;
+      | DOMAttribute[]
+      | DOMAttribute
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Nested DOM elements to support nested bindable structures
      */
     elements?:
-      DOMElement[] | DOMElement | AggregationBindingInfo | `{${string}}`;
+      | DOMElement[]
+      | DOMElement
+      | AggregationBindingInfo
+      | `{${string}}`;
   }
 }
 
@@ -45268,7 +45291,10 @@ declare module "sap/ui/core/util/Export" {
      * Columns for the Export.
      */
     columns?:
-      ExportColumn[] | ExportColumn | AggregationBindingInfo | `{${string}}`;
+      | ExportColumn[]
+      | ExportColumn
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Rows of the Export.
@@ -47151,7 +47177,10 @@ declare module "sap/ui/core/VariantLayoutData" {
      * Allows multiple LayoutData.
      */
     multipleLayoutData?:
-      LayoutData[] | LayoutData | AggregationBindingInfo | `{${string}}`;
+      | LayoutData[]
+      | LayoutData
+      | AggregationBindingInfo
+      | `{${string}}`;
   }
 }
 
@@ -64723,7 +64752,10 @@ declare module "sap/ui/model/odata/v2/ODataAnnotations" {
          * One or several annotation sources; see {@link #addSource} for more details
          */
         source:
-          string | Record<string, any> | string[] | Array<Record<string, any>>;
+          | string
+          | Record<string, any>
+          | string[]
+          | Array<Record<string, any>>;
         /**
          * A map of headers to be sent with every request; see {@link #setHeaders} for more details
          */
@@ -70824,7 +70856,10 @@ declare module "sap/ui/model/odata/v4/ODataContextBinding" {
      * @returns The root binding or `undefined` if this binding is unresolved (see {@link sap.ui.model.Binding#isResolved}).
      */
     getRootBinding():
-      ODataContextBinding | ODataListBinding | ODataPropertyBinding | undefined;
+      | ODataContextBinding
+      | ODataListBinding
+      | ODataPropertyBinding
+      | undefined;
     /**
      * Returns the group ID of the binding that is used for update requests. The update group ID of the binding
      * is alternatively defined by
@@ -71759,7 +71794,10 @@ declare module "sap/ui/model/odata/v4/ODataListBinding" {
      * @returns The root binding or `undefined` if this binding is unresolved (see {@link sap.ui.model.Binding#isResolved}).
      */
     getRootBinding():
-      ODataContextBinding | ODataListBinding | ODataPropertyBinding | undefined;
+      | ODataContextBinding
+      | ODataListBinding
+      | ODataPropertyBinding
+      | undefined;
     /**
      * Returns the group ID of the binding that is used for update requests. The update group ID of the binding
      * is alternatively defined by
@@ -74505,7 +74543,10 @@ declare module "sap/ui/model/odata/v4/ODataPropertyBinding" {
      * @returns The root binding or `undefined` if this binding is unresolved (see {@link sap.ui.model.Binding#isResolved}).
      */
     getRootBinding():
-      ODataContextBinding | ODataListBinding | ODataPropertyBinding | undefined;
+      | ODataContextBinding
+      | ODataListBinding
+      | ODataPropertyBinding
+      | undefined;
     /**
      * Returns the group ID of the binding that is used for update requests. The update group ID of the binding
      * is alternatively defined by
@@ -83723,7 +83764,9 @@ declare module "sap/ui/test/Opa5" {
    * Matchers used to filter controls.
    */
   export type Matcher =
-    ((p1: UI5Element) => void) | Record<string, object> | Matcher1;
+    | ((p1: UI5Element) => void)
+    | Record<string, object>
+    | Matcher1;
 
   /**
    * Configuration parameters for an individual {@link sap.ui.test.Opa5#waitFor} call. Contain criteria for
