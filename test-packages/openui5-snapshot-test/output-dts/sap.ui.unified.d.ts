@@ -1661,7 +1661,9 @@ declare module "sap/ui/unified/Calendar" {
      * @since 1.108.0
      */
     calendarWeekNumbering?:
-      CalendarWeekNumbering | PropertyBindingInfo | `{${string}}`;
+      | CalendarWeekNumbering
+      | PropertyBindingInfo
+      | `{${string}}`;
 
     /**
      * Holds a reference to a UI5Date or JavaScript Date object to define the initially navigated date in the
@@ -1678,7 +1680,10 @@ declare module "sap/ui/unified/Calendar" {
      * class.
      */
     selectedDates?:
-      DateRange[] | DateRange | AggregationBindingInfo | `{${string}}`;
+      | DateRange[]
+      | DateRange
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Dates or date ranges with type, to visualize special days in the `Calendar`. If one day is assigned to
@@ -1694,7 +1699,10 @@ declare module "sap/ui/unified/Calendar" {
      * @since 1.24.0
      */
     specialDates?:
-      DateTypeRange[] | DateTypeRange | AggregationBindingInfo | `{${string}}`;
+      | DateTypeRange[]
+      | DateTypeRange
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Dates or date ranges for disabled dates.
@@ -1705,7 +1713,10 @@ declare module "sap/ui/unified/Calendar" {
      * @since 1.38.0
      */
     disabledDates?:
-      DateRange[] | DateRange | AggregationBindingInfo | `{${string}}`;
+      | DateRange[]
+      | DateRange
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Association to controls / ids which label this control (see WAI-ARIA attribute aria-labelledby).
@@ -2081,7 +2092,9 @@ declare module "sap/ui/unified/calendar/DatesRow" {
      * @since 1.110.0
      */
     calendarWeekNumbering?:
-      CalendarWeekNumbering | PropertyBindingInfo | `{${string}}`;
+      | CalendarWeekNumbering
+      | PropertyBindingInfo
+      | `{${string}}`;
   }
 }
 
@@ -4357,13 +4370,18 @@ declare module "sap/ui/unified/calendar/Month" {
      * @since 1.108.0
      */
     calendarWeekNumbering?:
-      CalendarWeekNumbering | PropertyBindingInfo | `{${string}}`;
+      | CalendarWeekNumbering
+      | PropertyBindingInfo
+      | `{${string}}`;
 
     /**
      * Date Ranges for selected dates of the DatePicker
      */
     selectedDates?:
-      DateRange[] | DateRange | AggregationBindingInfo | `{${string}}`;
+      | DateRange[]
+      | DateRange
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * `DateRange` with type to visualize special days in the Calendar.
@@ -4373,7 +4391,10 @@ declare module "sap/ui/unified/calendar/Month" {
      * other type. For example, you can have `NonWorking` + `Type01` but you can't have `Type01` + `Type02`.
      */
     specialDates?:
-      DateTypeRange[] | DateTypeRange | AggregationBindingInfo | `{${string}}`;
+      | DateTypeRange[]
+      | DateTypeRange
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Date Ranges for disabled dates
@@ -4381,7 +4402,10 @@ declare module "sap/ui/unified/calendar/Month" {
      * @since 1.38.0
      */
     disabledDates?:
-      DateRange[] | DateRange | AggregationBindingInfo | `{${string}}`;
+      | DateRange[]
+      | DateRange
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Association to controls / ids which label this control (see WAI-ARIA attribute aria-labelledby).
@@ -5124,7 +5148,10 @@ declare module "sap/ui/unified/calendar/MonthPicker" {
      * @since 1.74
      */
     selectedDates?:
-      DateRange[] | DateRange | AggregationBindingInfo | `{${string}}`;
+      | DateRange[]
+      | DateRange
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Association to controls / IDs that label this control (see WAI-ARIA attribute aria-labelledby).
@@ -5960,7 +5987,10 @@ declare module "sap/ui/unified/calendar/MonthsRow" {
      * **Note:** Even if only one day is selected, the whole corresponding month is selected.
      */
     selectedDates?:
-      DateRange[] | DateRange | AggregationBindingInfo | `{${string}}`;
+      | DateRange[]
+      | DateRange
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Date ranges with type to visualize special months in the row. If one day is assigned to more than one
@@ -5970,7 +6000,10 @@ declare module "sap/ui/unified/calendar/MonthsRow" {
      * this way.
      */
     specialDates?:
-      DateTypeRange[] | DateTypeRange | AggregationBindingInfo | `{${string}}`;
+      | DateTypeRange[]
+      | DateTypeRange
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Association to controls / IDs which label this control (see WAI-ARIA attribute aria-labelledby).
@@ -6861,14 +6894,20 @@ declare module "sap/ui/unified/calendar/TimesRow" {
      * Date ranges for selected dates. If `singleSelection` is set, only the first entry is used.
      */
     selectedDates?:
-      DateRange[] | DateRange | AggregationBindingInfo | `{${string}}`;
+      | DateRange[]
+      | DateRange
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Date ranges with type to visualize special item in the row. If one day is assigned to more than one type,
      * only the first one will be used.
      */
     specialDates?:
-      DateTypeRange[] | DateTypeRange | AggregationBindingInfo | `{${string}}`;
+      | DateTypeRange[]
+      | DateTypeRange
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Association to controls / IDs which label this control (see WAI-ARIA attribute aria-labelledby).
@@ -7541,7 +7580,10 @@ declare module "sap/ui/unified/calendar/YearPicker" {
      * @since 1.74
      */
     selectedDates?:
-      DateRange[] | DateRange | AggregationBindingInfo | `{${string}}`;
+      | DateRange[]
+      | DateRange
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Year selection changed
@@ -8066,7 +8108,10 @@ declare module "sap/ui/unified/CalendarAppointment" {
      * in the future.
      */
     customContent?:
-      Control[] | Control | AggregationBindingInfo | `{${string}}`;
+      | Control[]
+      | Control
+      | AggregationBindingInfo
+      | `{${string}}`;
   }
 }
 
@@ -9680,7 +9725,10 @@ declare module "sap/ui/unified/CalendarMonthInterval" {
      * **Note:** Even if only one day is selected, the whole corresponding month is selected.
      */
     selectedDates?:
-      DateRange[] | DateRange | AggregationBindingInfo | `{${string}}`;
+      | DateRange[]
+      | DateRange
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Date ranges with type to visualize special months in the `CalendarMonthInterval`. If one day is assigned
@@ -9690,7 +9738,10 @@ declare module "sap/ui/unified/CalendarMonthInterval" {
      * this way.
      */
     specialDates?:
-      DateTypeRange[] | DateTypeRange | AggregationBindingInfo | `{${string}}`;
+      | DateTypeRange[]
+      | DateTypeRange
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Association to controls / IDs which label this control (see WAI-ARIA attribute aria-labelledby).
@@ -10705,7 +10756,8 @@ declare module "sap/ui/unified/CalendarRow" {
        * New value for property `appointmentHeight`
        */
       sAppointmentHeight?:
-        CalendarAppointmentHeight | keyof typeof CalendarAppointmentHeight
+        | CalendarAppointmentHeight
+        | keyof typeof CalendarAppointmentHeight
     ): this;
     /**
      * Sets a new value for property {@link #getAppointmentRoundWidth appointmentRoundWidth}.
@@ -10819,7 +10871,8 @@ declare module "sap/ui/unified/CalendarRow" {
        * New value for property `groupAppointmentsMode`
        */
       sGroupAppointmentsMode?:
-        GroupAppointmentsMode | keyof typeof GroupAppointmentsMode
+        | GroupAppointmentsMode
+        | keyof typeof GroupAppointmentsMode
     ): this;
     /**
      * Sets a new value for property {@link #getHeight height}.
@@ -11268,7 +11321,9 @@ declare module "sap/ui/unified/CalendarRow" {
      * @since 1.97
      */
     multipleAppointmentsSelection?:
-      boolean | PropertyBindingInfo | `{${string}}`;
+      | boolean
+      | PropertyBindingInfo
+      | `{${string}}`;
 
     /**
      * Appointments to be displayed in the row. Appointments outside the visible time frame are not rendered.
@@ -12352,14 +12407,20 @@ declare module "sap/ui/unified/CalendarTimeInterval" {
      * If `singleSelection` is set, only the first entry is used.
      */
     selectedDates?:
-      DateRange[] | DateRange | AggregationBindingInfo | `{${string}}`;
+      | DateRange[]
+      | DateRange
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Date ranges with type to visualize special items in the `CalendarTimeInterval`. If one interval is assigned
      * to more than one type, only the first one will be used.
      */
     specialDates?:
-      DateTypeRange[] | DateTypeRange | AggregationBindingInfo | `{${string}}`;
+      | DateTypeRange[]
+      | DateTypeRange
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Association to controls / IDs which label this control (see WAI-ARIA attribute aria-labelledby).
@@ -13347,7 +13408,8 @@ declare module "sap/ui/unified/ColorPickerPopover" {
        * New value for property `displayMode`
        */
       sDisplayMode?:
-        ColorPickerDisplayMode | keyof typeof ColorPickerDisplayMode
+        | ColorPickerDisplayMode
+        | keyof typeof ColorPickerDisplayMode
     ): this;
     /**
      * Sets a new value for property {@link #getMode mode}.
@@ -14160,8 +14222,8 @@ declare module "sap/ui/unified/Currency" {
      *
      * @since 1.89
      */
-    emptyIndicatorMode?:
-      | /* was: sap.m.EmptyIndicatorMode */ any
+    emptyIndicatorMode?: /* was: sap.m.EmptyIndicatorMode */
+      | any
       | PropertyBindingInfo
       | `{${string}}`;
   }
@@ -16986,7 +17048,9 @@ declare module "sap/ui/unified/FileUploader" {
      * @since 1.81.0
      */
     httpRequestMethod?:
-      FileUploaderHttpRequestMethod | PropertyBindingInfo | `{${string}}`;
+      | FileUploaderHttpRequestMethod
+      | PropertyBindingInfo
+      | `{${string}}`;
 
     /**
      * Placeholder for the text field.
@@ -18355,7 +18419,10 @@ declare module "sap/ui/unified/Menu" {
      * The available actions to be displayed as items of the menu.
      */
     items?:
-      MenuItemBase[] | MenuItemBase | AggregationBindingInfo | `{${string}}`;
+      | MenuItemBase[]
+      | MenuItemBase
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Reference to accessible labels (ids of existing DOM elements or controls) for assistive technologies
@@ -19869,27 +19936,39 @@ declare module "sap/ui/unified/Shell" {
      * The content to appear in the curtain area.
      */
     curtainContent?:
-      Control[] | Control | AggregationBindingInfo | `{${string}}`;
+      | Control[]
+      | Control
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * The content to appear in the pane area of the curtain.
      */
     curtainPaneContent?:
-      Control[] | Control | AggregationBindingInfo | `{${string}}`;
+      | Control[]
+      | Control
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * The buttons shown in the begin (left in left-to-right case) of the Shell header. Currently max. 3 visible
      * buttons are supported. If a custom header is set this aggregation has no effect.
      */
     headItems?:
-      ShellHeadItem[] | ShellHeadItem | AggregationBindingInfo | `{${string}}`;
+      | ShellHeadItem[]
+      | ShellHeadItem
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * The buttons shown in the end (right in left-to-right case) of the Shell header. Currently max. 3 visible
      * buttons are supported (when user is set only 1). If a custom header is set this aggregation has no effect.
      */
     headEndItems?:
-      ShellHeadItem[] | ShellHeadItem | AggregationBindingInfo | `{${string}}`;
+      | ShellHeadItem[]
+      | ShellHeadItem
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Experimental (This aggregation might change in future!): The search control which should be displayed
@@ -21886,7 +21965,10 @@ declare module "sap/ui/unified/SplitContainer" {
      * The content to appear in the secondary area.
      */
     secondaryContent?:
-      Control[] | Control | AggregationBindingInfo | `{${string}}`;
+      | Control[]
+      | Control
+      | AggregationBindingInfo
+      | `{${string}}`;
   }
 }
 

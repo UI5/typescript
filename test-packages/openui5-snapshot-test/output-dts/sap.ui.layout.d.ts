@@ -1043,7 +1043,8 @@ declare module "sap/ui/layout/BlockLayoutCell" {
        * New value for property `backgroundColorSet`
        */
       sBackgroundColorSet:
-        BlockLayoutCellColorSet | keyof typeof BlockLayoutCellColorSet
+        | BlockLayoutCellColorSet
+        | keyof typeof BlockLayoutCellColorSet
     ): this;
     /**
      * Sets a new value for property {@link #getBackgroundColorShade backgroundColorShade}.
@@ -1062,7 +1063,8 @@ declare module "sap/ui/layout/BlockLayoutCell" {
        * New value for property `backgroundColorShade`
        */
       sBackgroundColorShade:
-        BlockLayoutCellColorShade | keyof typeof BlockLayoutCellColorShade
+        | BlockLayoutCellColorShade
+        | keyof typeof BlockLayoutCellColorShade
     ): this;
     /**
      * Sets a new value for property {@link #getTitle title}.
@@ -2154,7 +2156,8 @@ declare module "sap/ui/layout/cssgrid/CSSGrid" {
        * New value for property `gridAutoFlow`
        */
       sGridAutoFlow?:
-        cssgrid.CSSGridAutoFlow | keyof typeof cssgrid.CSSGridAutoFlow
+        | cssgrid.CSSGridAutoFlow
+        | keyof typeof cssgrid.CSSGridAutoFlow
     ): this;
     /**
      * Sets a new value for property {@link #getGridAutoRows gridAutoRows}.
@@ -2298,13 +2301,17 @@ declare module "sap/ui/layout/cssgrid/CSSGrid" {
      * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns MDN web docs: grid-template-columns}
      */
     gridTemplateColumns?:
-      cssgrid.CSSGridTrack | PropertyBindingInfo | `{${string}}`;
+      | cssgrid.CSSGridTrack
+      | PropertyBindingInfo
+      | `{${string}}`;
 
     /**
      * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows MDN web docs: grid-template-rows}
      */
     gridTemplateRows?:
-      cssgrid.CSSGridTrack | PropertyBindingInfo | `{${string}}`;
+      | cssgrid.CSSGridTrack
+      | PropertyBindingInfo
+      | `{${string}}`;
 
     /**
      * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap MDN web docs: grid-row-gap}
@@ -2332,7 +2339,9 @@ declare module "sap/ui/layout/cssgrid/CSSGrid" {
      * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns MDN web docs: grid-auto-columns}
      */
     gridAutoColumns?:
-      cssgrid.CSSGridTrack | PropertyBindingInfo | `{${string}}`;
+      | cssgrid.CSSGridTrack
+      | PropertyBindingInfo
+      | `{${string}}`;
 
     /**
      * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow MDN web docs: grid-auto-flow}
@@ -2559,7 +2568,8 @@ declare module "sap/ui/layout/cssgrid/GridBasicLayout" {
        * New value for property `gridAutoFlow`
        */
       sGridAutoFlow?:
-        cssgrid.CSSGridAutoFlow | keyof typeof cssgrid.CSSGridAutoFlow
+        | cssgrid.CSSGridAutoFlow
+        | keyof typeof cssgrid.CSSGridAutoFlow
     ): this;
     /**
      * Sets a new value for property {@link #getGridAutoRows gridAutoRows}.
@@ -2678,13 +2688,17 @@ declare module "sap/ui/layout/cssgrid/GridBasicLayout" {
      * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns MDN web docs: grid-template-columns}
      */
     gridTemplateColumns?:
-      cssgrid.CSSGridTrack | PropertyBindingInfo | `{${string}}`;
+      | cssgrid.CSSGridTrack
+      | PropertyBindingInfo
+      | `{${string}}`;
 
     /**
      * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows MDN web docs: grid-template-rows}
      */
     gridTemplateRows?:
-      cssgrid.CSSGridTrack | PropertyBindingInfo | `{${string}}`;
+      | cssgrid.CSSGridTrack
+      | PropertyBindingInfo
+      | `{${string}}`;
 
     /**
      * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap MDN web docs: grid-row-gap}
@@ -2710,7 +2724,9 @@ declare module "sap/ui/layout/cssgrid/GridBasicLayout" {
      * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns MDN web docs: grid-auto-columns}
      */
     gridAutoColumns?:
-      cssgrid.CSSGridTrack | PropertyBindingInfo | `{${string}}`;
+      | cssgrid.CSSGridTrack
+      | PropertyBindingInfo
+      | `{${string}}`;
 
     /**
      * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow MDN web docs: grid-auto-flow}
@@ -3978,7 +3994,8 @@ declare module "sap/ui/layout/cssgrid/GridSettings" {
        * New value for property `gridAutoFlow`
        */
       sGridAutoFlow?:
-        cssgrid.CSSGridAutoFlow | keyof typeof cssgrid.CSSGridAutoFlow
+        | cssgrid.CSSGridAutoFlow
+        | keyof typeof cssgrid.CSSGridAutoFlow
     ): this;
     /**
      * Sets a new value for property {@link #getGridAutoRows gridAutoRows}.
@@ -4097,13 +4114,17 @@ declare module "sap/ui/layout/cssgrid/GridSettings" {
      * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns MDN web docs: grid-template-columns}
      */
     gridTemplateColumns?:
-      cssgrid.CSSGridTrack | PropertyBindingInfo | `{${string}}`;
+      | cssgrid.CSSGridTrack
+      | PropertyBindingInfo
+      | `{${string}}`;
 
     /**
      * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows MDN web docs: grid-template-rows}
      */
     gridTemplateRows?:
-      cssgrid.CSSGridTrack | PropertyBindingInfo | `{${string}}`;
+      | cssgrid.CSSGridTrack
+      | PropertyBindingInfo
+      | `{${string}}`;
 
     /**
      * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap MDN web docs: grid-row-gap}
@@ -4129,7 +4150,9 @@ declare module "sap/ui/layout/cssgrid/GridSettings" {
      * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns MDN web docs: grid-auto-columns}
      */
     gridAutoColumns?:
-      cssgrid.CSSGridTrack | PropertyBindingInfo | `{${string}}`;
+      | cssgrid.CSSGridTrack
+      | PropertyBindingInfo
+      | `{${string}}`;
 
     /**
      * Sets the value for the CSS display:grid property {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow MDN web docs: grid-auto-flow}
@@ -5086,7 +5109,8 @@ declare module "sap/ui/layout/DynamicSideContent" {
        * New value for property `sideContentFallDown`
        */
       sSideContentFallDown?:
-        SideContentFallDown | keyof typeof SideContentFallDown
+        | SideContentFallDown
+        | keyof typeof SideContentFallDown
     ): this;
     /**
      * Sets a new value for property {@link #getSideContentPosition sideContentPosition}.
@@ -5106,7 +5130,8 @@ declare module "sap/ui/layout/DynamicSideContent" {
        * New value for property `sideContentPosition`
        */
       sSideContentPosition?:
-        SideContentPosition | keyof typeof SideContentPosition
+        | SideContentPosition
+        | keyof typeof SideContentPosition
     ): this;
     /**
      * Sets the sideContentVisibility property.
@@ -6719,7 +6744,10 @@ declare module "sap/ui/layout/form/Form" {
      * Containers with the content of the form. A `FormContainer` represents a group inside the `Form`.
      */
     formContainers?:
-      FormContainer[] | FormContainer | AggregationBindingInfo | `{${string}}`;
+      | FormContainer[]
+      | FormContainer
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Title of the `Form`. Can either be a `Title` element or a string. If a `Title` element it used, the style
@@ -7179,7 +7207,10 @@ declare module "sap/ui/layout/form/FormContainer" {
      * The `FormElements` contain the content (labels and fields) of the `FormContainers`.
      */
     formElements?:
-      FormElement[] | FormElement | AggregationBindingInfo | `{${string}}`;
+      | FormElement[]
+      | FormElement
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Title of the `FormContainer`. Can either be a `Title` element or a string. If a `Title` element is used,
@@ -10811,7 +10842,10 @@ declare module "sap/ui/layout/form/SimpleForm" {
      * alignment or wrong spacing between the controls.
      */
     content?:
-      UI5Element[] | UI5Element | AggregationBindingInfo | `{${string}}`;
+      | UI5Element[]
+      | UI5Element
+      | AggregationBindingInfo
+      | `{${string}}`;
 
     /**
      * Title element of the `SimpleForm`. Can either be a `Title` element, or a string.

@@ -20,7 +20,7 @@ describe("The OpenUI5 d.ts snapshots", async () => {
   );
 
   before( function () {
-    this.timeout(240000);
+    this.timeout(60000);
     return genDtsToDir({ inputDir: apiJsonDir, outputDir: tempOutDir }); // return the Promise to signal the test has to wait
   });
 
