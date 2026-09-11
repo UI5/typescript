@@ -935,9 +935,7 @@ declare module "sap/f/AvatarGroup" {
      * @since 1.103
      */
     avatarCustomDisplaySize?:
-      | AbsoluteCSSSize
-      | PropertyBindingInfo
-      | `{${string}}`;
+      AbsoluteCSSSize | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Specifies a custom font size for each avatar.
@@ -947,9 +945,7 @@ declare module "sap/f/AvatarGroup" {
      * @since 1.103
      */
     avatarCustomFontSize?:
-      | AbsoluteCSSSize
-      | PropertyBindingInfo
-      | `{${string}}`;
+      AbsoluteCSSSize | PropertyBindingInfo | `{${string}}`;
 
     /**
      * The `AvatarGroupItems` contained by the control.
@@ -4622,8 +4618,7 @@ declare module "sap/f/DynamicPage" {
        * New value for property `backgroundDesign`
        */
       sBackgroundDesign?:
-        | PageBackgroundDesign
-        | keyof typeof PageBackgroundDesign
+        PageBackgroundDesign | keyof typeof PageBackgroundDesign
     ): this;
     /**
      * Sets the aggregated {@link #getContent content}.
@@ -5237,8 +5232,7 @@ declare module "sap/f/DynamicPageAccessibleLandmarkInfo" {
        * New value for property `contentRole`
        */
       sContentRole?:
-        | AccessibleLandmarkRole
-        | keyof typeof AccessibleLandmarkRole
+        AccessibleLandmarkRole | keyof typeof AccessibleLandmarkRole
     ): this;
     /**
      * Sets a new value for property {@link #getFooterLabel footerLabel}.
@@ -6721,9 +6715,7 @@ declare module "sap/f/DynamicPageTitle" {
      * @since 1.54
      */
     areaShrinkRatio?:
-      | DynamicPageTitleShrinkRatio
-      | PropertyBindingInfo
-      | `{${string}}`;
+      DynamicPageTitleShrinkRatio | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Determines the background color of the `DynamicPageTitle`.
@@ -6807,10 +6799,7 @@ declare module "sap/f/DynamicPageTitle" {
      * @since 1.52
      */
     navigationActions?:
-      | Button[]
-      | Button
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Button[] | Button | AggregationBindingInfo | `{${string}}`;
 
     /**
      * The content is positioned in the `DynamicPageTitle` middle area and displayed in both expanded and collapsed
@@ -6832,19 +6821,13 @@ declare module "sap/f/DynamicPageTitle" {
      * state.
      */
     snappedContent?:
-      | Control[]
-      | Control
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Control[] | Control | AggregationBindingInfo | `{${string}}`;
 
     /**
      * The content that is displayed in the `DynamicPageTitle` in expanded state.
      */
     expandedContent?:
-      | Control[]
-      | Control
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Control[] | Control | AggregationBindingInfo | `{${string}}`;
 
     /**
      * The only content that is displayed in the `DynamicPageTitle` when it is viewed on a phone mobile device
@@ -8886,9 +8869,7 @@ declare module "sap/f/FlexibleColumnLayout" {
      * @since 1.77
      */
     restoreFocusOnBackNavigation?:
-      | boolean
-      | PropertyBindingInfo
-      | `{${string}}`;
+      boolean | PropertyBindingInfo | `{${string}}`;
 
     /**
      * The content entities between which the `FlexibleColumnLayout` navigates in the `Begin` column.
@@ -8898,10 +8879,7 @@ declare module "sap/f/FlexibleColumnLayout" {
      * {@link sap.m.NavContainerChild sap.m.NavContainerChild}.
      */
     beginColumnPages?:
-      | Control[]
-      | Control
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Control[] | Control | AggregationBindingInfo | `{${string}}`;
 
     /**
      * The content entities between which the `FlexibleColumnLayout` navigates in the `Mid` column.
@@ -8911,10 +8889,7 @@ declare module "sap/f/FlexibleColumnLayout" {
      * {@link sap.m.NavContainerChild sap.m.NavContainerChild}.
      */
     midColumnPages?:
-      | Control[]
-      | Control
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Control[] | Control | AggregationBindingInfo | `{${string}}`;
 
     /**
      * The content entities between which the `FlexibleColumnLayout` navigates in the `End` column.
@@ -8924,10 +8899,7 @@ declare module "sap/f/FlexibleColumnLayout" {
      * {@link sap.m.NavContainerChild sap.m.NavContainerChild}.
      */
     endColumnPages?:
-      | Control[]
-      | Control
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Control[] | Control | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Accessible landmark settings to be applied on the containers of the `sap.f.FlexibleColumnLayout` control.
@@ -18391,9 +18363,7 @@ declare module "sap/f/semantic/SemanticPage" {
      * @since 1.58
      */
     titleAreaShrinkRatio?:
-      | DynamicPageTitleShrinkRatio
-      | PropertyBindingInfo
-      | `{${string}}`;
+      DynamicPageTitleShrinkRatio | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Optimizes `SemanticPage` responsiveness on small screens and behavior when expanding/collapsing the `SemanticPageHeader`.
@@ -18493,10 +18463,7 @@ declare module "sap/f/semantic/SemanticPage" {
      *     state.
      */
     titleSnappedContent?:
-      | Control[]
-      | Control
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Control[] | Control | AggregationBindingInfo | `{${string}}`;
 
     /**
      * The content,displayed in the title, when the header is in expanded state.
@@ -18504,10 +18471,7 @@ declare module "sap/f/semantic/SemanticPage" {
      * **Note:** The controls will be placed in the title`s left area, under the `titleHeading` aggregation.
      */
     titleExpandedContent?:
-      | Control[]
-      | Control
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Control[] | Control | AggregationBindingInfo | `{${string}}`;
 
     /**
      * The content, displayed in the title.
@@ -18626,10 +18590,7 @@ declare module "sap/f/semantic/SemanticPage" {
      *     by design.
      */
     titleCustomTextActions?:
-      | Button[]
-      | Button
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Button[] | Button | AggregationBindingInfo | `{${string}}`;
 
     /**
      * The `titleCustomIconActions` are placed in the `IconActions` area of the `SemanticPage` title, right
@@ -18649,10 +18610,7 @@ declare module "sap/f/semantic/SemanticPage" {
      * The header content.
      */
     headerContent?:
-      | Control[]
-      | Control
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Control[] | Control | AggregationBindingInfo | `{${string}}`;
 
     /**
      * The `SemanticPage` content.
@@ -18715,10 +18673,7 @@ declare module "sap/f/semantic/SemanticPage" {
      * by design.
      */
     footerCustomActions?:
-      | Button[]
-      | Button
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Button[] | Button | AggregationBindingInfo | `{${string}}`;
 
     /**
      * A semantic-specific button which is placed in the `ShareMenu` area of the `SemanticPage` title.
@@ -18785,10 +18740,7 @@ declare module "sap/f/semantic/SemanticPage" {
      * state.
      */
     customShareActions?:
-      | Button[]
-      | Button
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Button[] | Button | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Accessible landmark settings to be applied to the containers of the `sap.f.SemanticPage` control.
@@ -20640,10 +20592,7 @@ declare module "sap/f/ShellBar" {
      * **Note:** Only controls implementing the `{@link sap.f.IShellBar}` interface are allowed.
      */
     additionalContent?:
-      | IShellBar[]
-      | IShellBar
-      | AggregationBindingInfo
-      | `{${string}}`;
+      IShellBar[] | IShellBar | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Fired when the `homeIcon` is pressed.
@@ -21608,10 +21557,7 @@ declare module "sap/f/SidePanel" {
      * The list of action items. Each action items can have different side content added to its `content` aggregation.
      */
     items?:
-      | SidePanelItem[]
-      | SidePanelItem
-      | AggregationBindingInfo
-      | `{${string}}`;
+      SidePanelItem[] | SidePanelItem | AggregationBindingInfo | `{${string}}`;
 
     /**
      * The action item that is currently selected.

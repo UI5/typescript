@@ -7552,10 +7552,7 @@ declare module "sap/m/Bar" {
      * the middle content, the middle content will be centered in the space between the left and the right content.
      */
     contentMiddle?:
-      | Control[]
-      | Control
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Control[] | Control | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Represents the right content area. Controls such as action buttons or search field can be placed here.
@@ -8029,8 +8026,7 @@ declare module "sap/m/Breadcrumbs" {
      */
     setSeparatorStyle(
       sSeparatorStyle:
-        | BreadcrumbsSeparatorStyle
-        | keyof typeof BreadcrumbsSeparatorStyle
+        BreadcrumbsSeparatorStyle | keyof typeof BreadcrumbsSeparatorStyle
     ): Breadcrumbs;
   }
   /**
@@ -10782,8 +10778,7 @@ declare module "sap/m/Carousel" {
        * New value for property `arrowsPlacement`
        */
       sArrowsPlacement?:
-        | CarouselArrowsPlacement
-        | keyof typeof CarouselArrowsPlacement
+        CarouselArrowsPlacement | keyof typeof CarouselArrowsPlacement
     ): this;
     /**
      * Sets a new value for property {@link #getBackgroundDesign backgroundDesign}.
@@ -10873,8 +10868,7 @@ declare module "sap/m/Carousel" {
        * New value for property `pageIndicatorBackgroundDesign`
        */
       sPageIndicatorBackgroundDesign?:
-        | BackgroundDesign
-        | keyof typeof BackgroundDesign
+        BackgroundDesign | keyof typeof BackgroundDesign
     ): this;
     /**
      * Sets a new value for property {@link #getPageIndicatorBorderDesign pageIndicatorBorderDesign}.
@@ -13088,8 +13082,7 @@ declare module "sap/m/ColorPalettePopover" {
        * New value for property `displayMode`
        */
       sDisplayMode?:
-        | ColorPickerDisplayMode
-        | keyof typeof ColorPickerDisplayMode
+        ColorPickerDisplayMode | keyof typeof ColorPickerDisplayMode
     ): this;
     /**
      * Sets a new value for property {@link #getShowDefaultColorButton showDefaultColorButton}.
@@ -14193,9 +14186,7 @@ declare module "sap/m/Column" {
      * @since 1.76
      */
     importance?:
-      | (Priority | keyof typeof Priority)
-      | PropertyBindingInfo
-      | `{${string}}`;
+      (Priority | keyof typeof Priority) | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Defines the auto pop-in width for the column.
@@ -17718,9 +17709,7 @@ declare module "sap/m/DatePicker" {
      * @since 1.108.0
      */
     calendarWeekNumbering?:
-      | CalendarWeekNumbering
-      | PropertyBindingInfo
-      | `{${string}}`;
+      CalendarWeekNumbering | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Date Range with type to visualize special days in the Calendar. If one day is assigned to more than one
@@ -17735,10 +17724,7 @@ declare module "sap/m/DatePicker" {
      * @since 1.38.5
      */
     specialDates?:
-      | UI5Element[]
-      | UI5Element
-      | AggregationBindingInfo
-      | `{${string}}`;
+      UI5Element[] | UI5Element | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Association to the `CalendarLegend` explaining the colors of the `specialDates`.
@@ -23631,9 +23617,7 @@ declare module "sap/m/DynamicDateRange" {
      * @since 1.111.0
      */
     calendarWeekNumbering?:
-      | CalendarWeekNumbering
-      | PropertyBindingInfo
-      | `{${string}}`;
+      CalendarWeekNumbering | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Specifies whether clear icon is shown. Pressing the icon will clear input's value and fire the liveChange
@@ -24286,8 +24270,7 @@ declare module "sap/m/ExpandableText" {
        * New value for property `overflowMode`
        */
       sOverflowMode?:
-        | ExpandableTextOverflowMode
-        | keyof typeof ExpandableTextOverflowMode
+        ExpandableTextOverflowMode | keyof typeof ExpandableTextOverflowMode
     ): this;
     /**
      * Sets a new value for property {@link #getRenderWhitespace renderWhitespace}.
@@ -29467,9 +29450,7 @@ declare module "sap/m/FlexBox" {
      * @since 1.36.0
      */
     wrap?:
-      | (FlexWrap | keyof typeof FlexWrap)
-      | PropertyBindingInfo
-      | `{${string}}`;
+      (FlexWrap | keyof typeof FlexWrap) | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Determines the layout behavior of container lines when there's extra space along the cross-axis.
@@ -32612,10 +32593,7 @@ declare module "sap/m/GenericTile" {
      * The content of the tile.
      */
     tileContent?:
-      | TileContent[]
-      | TileContent
-      | AggregationBindingInfo
-      | `{${string}}`;
+      TileContent[] | TileContent | AggregationBindingInfo | `{${string}}`;
 
     /**
      * LinkTileContent is being added to the GenericTile, it is advised to use in TwoByOne frameType
@@ -37304,8 +37282,7 @@ declare module "sap/m/IllustratedMessage" {
        * New value for property `illustrationSize`
        */
       sIllustrationSize?:
-        | IllustratedMessageSize
-        | keyof typeof IllustratedMessageSize
+        IllustratedMessageSize | keyof typeof IllustratedMessageSize
     ): this;
     /**
      * Sets a new value for property {@link #getTitle title}.
@@ -37354,9 +37331,7 @@ declare module "sap/m/IllustratedMessage" {
      * @since 1.111
      */
     enableDefaultTitleAndDescription?:
-      | boolean
-      | PropertyBindingInfo
-      | `{${string}}`;
+      boolean | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Defines whether the value set in the `description` property is displayed as formatted text in HTML format.
@@ -37374,9 +37349,7 @@ declare module "sap/m/IllustratedMessage" {
      * @since 1.104
      */
     enableVerticalResponsiveness?:
-      | boolean
-      | PropertyBindingInfo
-      | `{${string}}`;
+      boolean | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Determines which illustration breakpoint variant is used.
@@ -37437,10 +37410,7 @@ declare module "sap/m/IllustratedMessage" {
      * @since 1.98
      */
     additionalContent?:
-      | Button[]
-      | Button
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Button[] | Button | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Association to controls / IDs which label those controls (see WAI-ARIA attribute aria-labelledBy).
@@ -41823,9 +41793,7 @@ declare module "sap/m/Input" {
      * @since 1.22.1
      */
     showTableSuggestionValueHelp?:
-      | boolean
-      | PropertyBindingInfo
-      | `{${string}}`;
+      boolean | PropertyBindingInfo | `{${string}}`;
 
     /**
      * The description is a text after the input field, e.g. units of measurement, currencies.
@@ -41893,9 +41861,7 @@ declare module "sap/m/Input" {
      * @since 1.46
      */
     enableSuggestionsHighlighting?:
-      | boolean
-      | PropertyBindingInfo
-      | `{${string}}`;
+      boolean | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Enables the `autoPopinMode` of `sap.m.Table`, when the input has tabular suggestions. **Note:** The `autoPopinMode`
@@ -41950,10 +41916,7 @@ declare module "sap/m/Input" {
      * @since 1.21.1
      */
     suggestionColumns?:
-      | Column[]
-      | Column
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Column[] | Column | AggregationBindingInfo | `{${string}}`;
 
     /**
      * The suggestionColumns and suggestionRows are for tabular input suggestions. This aggregation allows for
@@ -41964,10 +41927,7 @@ declare module "sap/m/Input" {
      * @since 1.21.1
      */
     suggestionRows?:
-      | ITableItem[]
-      | ITableItem
-      | AggregationBindingInfo
-      | `{${string}}`;
+      ITableItem[] | ITableItem | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Sets or retrieves the selected item from the suggestionItems.
@@ -45292,10 +45252,7 @@ declare module "sap/m/LightBox" {
      * be added to this aggregation only the first one in the list will be taken into account.
      */
     imageContent?:
-      | LightBoxItem[]
-      | LightBoxItem
-      | AggregationBindingInfo
-      | `{${string}}`;
+      LightBoxItem[] | LightBoxItem | AggregationBindingInfo | `{${string}}`;
   }
 }
 
@@ -48644,8 +48601,7 @@ declare module "sap/m/ListBase" {
        * New value for property `growingDirection`
        */
       sGrowingDirection?:
-        | ListGrowingDirection
-        | keyof typeof ListGrowingDirection
+        ListGrowingDirection | keyof typeof ListGrowingDirection
     ): this;
     /**
      * Sets a new value for property {@link #getGrowingScrollToLoad growingScrollToLoad}.
@@ -49208,9 +49164,7 @@ declare module "sap/m/ListBase" {
      * Defines the mode of the control (e.g. `None`, `SingleSelect`, `MultiSelect`, `Delete`).
      */
     mode?:
-      | (ListMode | keyof typeof ListMode)
-      | PropertyBindingInfo
-      | `{${string}}`;
+      (ListMode | keyof typeof ListMode) | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Sets the width of the control.
@@ -49364,9 +49318,7 @@ declare module "sap/m/ListBase" {
      * @since 1.58
      */
     sticky?:
-      | Array<Sticky | keyof typeof Sticky>
-      | PropertyBindingInfo
-      | `{${string}}`;
+      Array<Sticky | keyof typeof Sticky> | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Defines the multi-selection mode for the control.
@@ -49393,10 +49345,7 @@ declare module "sap/m/ListBase" {
      * Defines the items contained within this control.
      */
     items?:
-      | ListItemBase[]
-      | ListItemBase
-      | AggregationBindingInfo
-      | `{${string}}`;
+      ListItemBase[] | ListItemBase | AggregationBindingInfo | `{${string}}`;
 
     /**
      * User can swipe to bring in this control on the right hand side of an item. **Note:**
@@ -50534,9 +50483,7 @@ declare module "sap/m/ListItemBase" {
      * Defines the visual indication and behavior of the list items, e.g. `Active`, `Navigation`, `Detail`.
      */
     type?:
-      | (ListType | keyof typeof ListType)
-      | PropertyBindingInfo
-      | `{${string}}`;
+      (ListType | keyof typeof ListType) | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Whether the control should be visible on the screen. If set to false, a placeholder is rendered instead
@@ -51087,10 +51034,7 @@ declare module "sap/m/MaskInput" {
      * A list of validation rules (one rule per mask character).
      */
     rules?:
-      | MaskInputRule[]
-      | MaskInputRule
-      | AggregationBindingInfo
-      | `{${string}}`;
+      MaskInputRule[] | MaskInputRule | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Fired when the value of the `MaskInput` is changed by user interaction - each keystroke, delete, paste,
@@ -56655,10 +56599,7 @@ declare module "sap/m/MessagePopover" {
      * A list with message items.
      */
     items?:
-      | MessageItem[]
-      | MessageItem
-      | AggregationBindingInfo
-      | `{${string}}`;
+      MessageItem[] | MessageItem | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Sets a custom header button.
@@ -58432,10 +58373,7 @@ declare module "sap/m/MessageView" {
      * the item.
      */
     items?:
-      | MessageItem[]
-      | MessageItem
-      | AggregationBindingInfo
-      | `{${string}}`;
+      MessageItem[] | MessageItem | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Sets a custom header button.
@@ -62143,9 +62081,7 @@ declare module "sap/m/NotificationListBase" {
      * Determines the priority of the Notification.
      */
     priority?:
-      | (Priority | keyof typeof Priority)
-      | PropertyBindingInfo
-      | `{${string}}`;
+      (Priority | keyof typeof Priority) | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Determines the title of the NotificationListBase item.
@@ -62724,9 +62660,7 @@ declare module "sap/m/NotificationListGroup" {
      * Determines if the collapse/expand button for an empty group is displayed.
      */
     enableCollapseButtonWhenEmpty?:
-      | boolean
-      | PropertyBindingInfo
-      | `{${string}}`;
+      boolean | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Determines if the items counter inside the group header will be visible.
@@ -65760,8 +65694,7 @@ declare module "sap/m/ObjectHeader" {
        * New value for property `imageShape`
        */
       sImageShape?:
-        | ObjectHeaderPictureShape
-        | keyof typeof ObjectHeaderPictureShape
+        ObjectHeaderPictureShape | keyof typeof ObjectHeaderPictureShape
     ): this;
     /**
      * Sets a new value for property {@link #getIntro intro}.
@@ -66453,10 +66386,7 @@ declare module "sap/m/ObjectHeader" {
      * @since 1.38.0
      */
     additionalNumbers?:
-      | ObjectNumber[]
-      | ObjectNumber
-      | AggregationBindingInfo
-      | `{${string}}`;
+      ObjectNumber[] | ObjectNumber | AggregationBindingInfo | `{${string}}`;
 
     /**
      * This aggregation takes only effect when you set "responsive" to true. It can either be filled with an
@@ -66476,10 +66406,7 @@ declare module "sap/m/ObjectHeader" {
      * and `markFavorite`. Using both can lead to unexpected results.
      */
     markers?:
-      | ObjectMarker[]
-      | ObjectMarker
-      | AggregationBindingInfo
-      | `{${string}}`;
+      ObjectMarker[] | ObjectMarker | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Association to controls / ids which describe this control (see WAI-ARIA attribute aria-describedby).
@@ -68037,10 +67964,7 @@ declare module "sap/m/ObjectListItem" {
      * `markFavorite`, and `markLocked`. Using both can lead to unexpected results.
      */
     markers?:
-      | ObjectMarker[]
-      | ObjectMarker
-      | AggregationBindingInfo
-      | `{${string}}`;
+      ObjectMarker[] | ObjectMarker | AggregationBindingInfo | `{${string}}`;
   }
 }
 
@@ -71859,19 +71783,13 @@ declare module "sap/m/p13n/Popup" {
      * The panels that are displayed by the `sap.m.p13n.Popup`.
      */
     panels?:
-      | p13n.IContent[]
-      | p13n.IContent
-      | AggregationBindingInfo
-      | `{${string}}`;
+      p13n.IContent[] | p13n.IContent | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Additional set of `sap.m.Button` controls that are added to the existing Ok and Cancel buttons.
      */
     additionalButtons?:
-      | Button[]
-      | Button
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Button[] | Button | AggregationBindingInfo | `{${string}}`;
 
     /**
      * This event is fired after the dialog has been closed.
@@ -75571,10 +75489,7 @@ declare module "sap/m/P13nDimMeasurePanel" {
      * Specifies available chart types.
      */
     availableChartTypes?:
-      | Item[]
-      | Item
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Item[] | Item | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Event raised when one or more `DimMeasureItems` has been updated. Aggregation `DimMeasureItems` should
@@ -77519,10 +77434,7 @@ declare module "sap/m/P13nGroupPanel" {
      * Defined group items.
      */
     groupItems?:
-      | P13nGroupItem[]
-      | P13nGroupItem
-      | AggregationBindingInfo
-      | `{${string}}`;
+      P13nGroupItem[] | P13nGroupItem | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Event raised if a `GroupItem` has been added.
@@ -79574,10 +79486,7 @@ declare module "sap/m/P13nSortPanel" {
      * defined Sort Items
      */
     sortItems?:
-      | P13nSortItem[]
-      | P13nSortItem
-      | AggregationBindingInfo
-      | `{${string}}`;
+      P13nSortItem[] | P13nSortItem | AggregationBindingInfo | `{${string}}`;
 
     /**
      * event raised when a SortItem was added
@@ -80373,8 +80282,7 @@ declare module "sap/m/Page" {
        * New value for property `backgroundDesign`
        */
       sBackgroundDesign?:
-        | PageBackgroundDesign
-        | keyof typeof PageBackgroundDesign
+        PageBackgroundDesign | keyof typeof PageBackgroundDesign
     ): this;
     /**
      * Sets a new value for property {@link #getContentOnlyBusy contentOnlyBusy}.
@@ -80863,10 +80771,7 @@ declare module "sap/m/Page" {
      * handling when the space is insufficient. When a customHeader is used, this aggregation will be ignored.
      */
     headerContent?:
-      | Control[]
-      | Control
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Control[] | Control | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Accessible landmark settings to be applied on the containers of the `sap.m.Page` control.
@@ -81161,8 +81066,7 @@ declare module "sap/m/PageAccessibleLandmarkInfo" {
        * New value for property `contentRole`
        */
       sContentRole?:
-        | AccessibleLandmarkRole
-        | keyof typeof AccessibleLandmarkRole
+        AccessibleLandmarkRole | keyof typeof AccessibleLandmarkRole
     ): this;
     /**
      * Sets a new value for property {@link #getFooterLabel footerLabel}.
@@ -81319,8 +81223,7 @@ declare module "sap/m/PageAccessibleLandmarkInfo" {
        * New value for property `subHeaderRole`
        */
       sSubHeaderRole?:
-        | AccessibleLandmarkRole
-        | keyof typeof AccessibleLandmarkRole
+        AccessibleLandmarkRole | keyof typeof AccessibleLandmarkRole
     ): this;
   }
   /**
@@ -84975,8 +84878,7 @@ declare module "sap/m/PlanningCalendar" {
        * New value for property `appointmentHeight`
        */
       sAppointmentHeight?:
-        | CalendarAppointmentHeight
-        | keyof typeof CalendarAppointmentHeight
+        CalendarAppointmentHeight | keyof typeof CalendarAppointmentHeight
     ): this;
     /**
      * Sets a new value for property {@link #getAppointmentRoundWidth appointmentRoundWidth}.
@@ -85144,8 +85046,7 @@ declare module "sap/m/PlanningCalendar" {
        * New value for property `groupAppointmentsMode`
        */
       sGroupAppointmentsMode?:
-        | GroupAppointmentsMode
-        | keyof typeof GroupAppointmentsMode
+        GroupAppointmentsMode | keyof typeof GroupAppointmentsMode
     ): this;
     /**
      * Sets a new value for property {@link #getHeight height}.
@@ -85699,9 +85600,7 @@ declare module "sap/m/PlanningCalendar" {
      * @since 1.110.0
      */
     calendarWeekNumbering?:
-      | CalendarWeekNumbering
-      | PropertyBindingInfo
-      | `{${string}}`;
+      CalendarWeekNumbering | PropertyBindingInfo | `{${string}}`;
 
     /**
      * If set, the calendar type is used for display. If not set, the calendar type of the global configuration
@@ -85728,9 +85627,7 @@ declare module "sap/m/PlanningCalendar" {
      * @since 1.97
      */
     multipleAppointmentsSelection?:
-      | boolean
-      | PropertyBindingInfo
-      | `{${string}}`;
+      boolean | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Defines the shape of the `Avatar`.
@@ -85766,19 +85663,13 @@ declare module "sap/m/PlanningCalendar" {
      * **Note:** If one day is assigned to more than one type, only the first type will be used.
      */
     specialDates?:
-      | DateTypeRange[]
-      | DateTypeRange
-      | AggregationBindingInfo
-      | `{${string}}`;
+      DateTypeRange[] | DateTypeRange | AggregationBindingInfo | `{${string}}`;
 
     /**
      * The content of the toolbar.
      */
     toolbarContent?:
-      | Control[]
-      | Control
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Control[] | Control | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Association to controls / IDs which label this control (see WAI-ARIA attribute aria-labelledby).
@@ -87589,9 +87480,7 @@ declare module "sap/m/PlanningCalendarRow" {
      * @since 1.54
      */
     enableAppointmentsDragAndDrop?:
-      | boolean
-      | PropertyBindingInfo
-      | `{${string}}`;
+      boolean | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Determines whether the appointments in the row are resizable.
@@ -87675,10 +87564,7 @@ declare module "sap/m/PlanningCalendarRow" {
      * @since 1.56
      */
     specialDates?:
-      | DateTypeRange[]
-      | DateTypeRange
-      | AggregationBindingInfo
-      | `{${string}}`;
+      DateTypeRange[] | DateTypeRange | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Holds the header content of the row.
@@ -87691,10 +87577,7 @@ declare module "sap/m/PlanningCalendarRow" {
      * in the future.
      */
     headerContent?:
-      | Control[]
-      | Control
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Control[] | Control | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Fired if an appointment is dropped.
@@ -88106,8 +87989,7 @@ declare module "sap/m/PlanningCalendarView" {
        * New value for property `appointmentHeight`
        */
       sAppointmentHeight?:
-        | CalendarAppointmentHeight
-        | keyof typeof CalendarAppointmentHeight
+        CalendarAppointmentHeight | keyof typeof CalendarAppointmentHeight
     ): this;
     /**
      * Sets a new value for property {@link #getDescription description}.
@@ -89131,8 +89013,7 @@ declare module "sap/m/plugins/CopyProvider" {
        * New value for property `copyPreference`
        */
       sCopyPreference?:
-        | plugins.CopyPreference
-        | keyof typeof plugins.CopyPreference
+        plugins.CopyPreference | keyof typeof plugins.CopyPreference
     ): this;
     /**
      * Sets a new value for property {@link #getCopySparse copySparse}.
@@ -93821,10 +93702,7 @@ declare module "sap/m/QuickViewBase" {
      * divided in groups
      */
     pages?:
-      | QuickViewPage[]
-      | QuickViewPage
-      | AggregationBindingInfo
-      | `{${string}}`;
+      QuickViewPage[] | QuickViewPage | AggregationBindingInfo | `{${string}}`;
 
     /**
      * The event is fired when navigation between two pages has been triggered. The transition (if any) to the
@@ -96710,10 +96588,7 @@ declare module "sap/m/RadioButtonGroup" {
      * Returns a list of the RadioButtons in a RadioButtonGroup
      */
     buttons?:
-      | RadioButton[]
-      | RadioButton
-      | AggregationBindingInfo
-      | `{${string}}`;
+      RadioButton[] | RadioButton | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Association to controls / IDs which describe this control (see WAI-ARIA attribute aria-describedby).
@@ -97625,8 +97500,7 @@ declare module "sap/m/RatingIndicator" {
        * New value for property `visualMode`
        */
       sVisualMode?:
-        | RatingIndicatorVisualMode
-        | keyof typeof RatingIndicatorVisualMode
+        RatingIndicatorVisualMode | keyof typeof RatingIndicatorVisualMode
     ): this;
     /**
      * Unbinds property {@link #getValue value} from model data.
@@ -105742,10 +105616,7 @@ declare module "sap/m/SelectDialog" {
      * dialog but other combinations are also possible.
      */
     items?:
-      | ListItemBase[]
-      | ListItemBase
-      | AggregationBindingInfo
-      | `{${string}}`;
+      ListItemBase[] | ListItemBase | AggregationBindingInfo | `{${string}}`;
 
     /**
      * This event will be fired when the dialog is confirmed by selecting an item in single selection mode or
@@ -106248,8 +106119,7 @@ declare module "sap/m/SelectDialogBase" {
        * New value for property `initialFocus`
        */
       sInitialFocus?:
-        | SelectDialogInitialFocus
-        | keyof typeof SelectDialogInitialFocus
+        SelectDialogInitialFocus | keyof typeof SelectDialogInitialFocus
     ): this;
   }
   /**
@@ -107645,8 +107515,7 @@ declare module "sap/m/ViewSettingsDialog" {
        * New value for property `filterSearchOperator`
        */
       sFilterSearchOperator?:
-        | StringFilterOperator
-        | keyof typeof StringFilterOperator
+        StringFilterOperator | keyof typeof StringFilterOperator
     ): this;
     /**
      * Sets a new value for property {@link #getGroupDescending groupDescending}.
@@ -108959,8 +108828,7 @@ declare module "sap/m/SelectionDetails" {
      * The action level of action buttons. The available levels are Item, List and Group
      */
     level?:
-      | SelectionDetailsActionLevel
-      | keyof typeof SelectionDetailsActionLevel;
+      SelectionDetailsActionLevel | keyof typeof SelectionDetailsActionLevel;
   }
 
   /**
@@ -115954,8 +115822,7 @@ declare module "sap/m/semantic/SemanticPage" {
        * New value for property `backgroundDesign`
        */
       sBackgroundDesign?:
-        | PageBackgroundDesign
-        | keyof typeof PageBackgroundDesign
+        PageBackgroundDesign | keyof typeof PageBackgroundDesign
     ): this;
     /**
      * Sets a new value for property {@link #getEnableScrolling enableScrolling}.
@@ -116025,8 +115892,7 @@ declare module "sap/m/semantic/SemanticPage" {
        * New value for property `semanticRuleSet`
        */
       sSemanticRuleSet?:
-        | semantic.SemanticRuleSetType
-        | keyof typeof semantic.SemanticRuleSetType
+        semantic.SemanticRuleSetType | keyof typeof semantic.SemanticRuleSetType
     ): this;
     /**
      * Sets a new value for property {@link #getShowFooter showFooter}.
@@ -116211,19 +116077,13 @@ declare module "sap/m/semantic/SemanticPage" {
      * Custom header buttons
      */
     customHeaderContent?:
-      | Button[]
-      | Button
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Button[] | Button | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Custom footer buttons
      */
     customFooterContent?:
-      | Button[]
-      | Button
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Button[] | Button | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Accessible landmark settings to be applied to the containers of the `sap.m.Page` control.
@@ -117203,10 +117063,7 @@ declare module "sap/m/semantic/ShareMenuPage" {
      * Custom share menu buttons
      */
     customShareMenuContent?:
-      | Button[]
-      | Button
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Button[] | Button | AggregationBindingInfo | `{${string}}`;
   }
 }
 
@@ -119831,8 +119688,7 @@ declare module "sap/m/SinglePlanningCalendar" {
        * New value for property `stickyMode`
        */
       sStickyMode?:
-        | PlanningCalendarStickyMode
-        | keyof typeof PlanningCalendarStickyMode
+        PlanningCalendarStickyMode | keyof typeof PlanningCalendarStickyMode
     ): this;
     /**
      * Sets a new value for property {@link #getTitle title}.
@@ -119920,9 +119776,7 @@ declare module "sap/m/SinglePlanningCalendar" {
      * @since 1.64
      */
     enableAppointmentsDragAndDrop?:
-      | boolean
-      | PropertyBindingInfo
-      | `{${string}}`;
+      boolean | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Determines whether the appointments are resizable.
@@ -119965,9 +119819,7 @@ declare module "sap/m/SinglePlanningCalendar" {
      * @since 1.110.0
      */
     calendarWeekNumbering?:
-      | CalendarWeekNumbering
-      | PropertyBindingInfo
-      | `{${string}}`;
+      CalendarWeekNumbering | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Determines whether more than one day will be selectable. **Note:** selecting more than one day is possible
@@ -120019,10 +119871,7 @@ declare module "sap/m/SinglePlanningCalendar" {
      * @since 1.66
      */
     specialDates?:
-      | DateTypeRange[]
-      | DateTypeRange
-      | AggregationBindingInfo
-      | `{${string}}`;
+      DateTypeRange[] | DateTypeRange | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Dates or date ranges for selected dates.
@@ -120031,10 +119880,7 @@ declare module "sap/m/SinglePlanningCalendar" {
      * class.
      */
     selectedDates?:
-      | DateRange[]
-      | DateRange
-      | AggregationBindingInfo
-      | `{${string}}`;
+      DateRange[] | DateRange | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Corresponds to the currently selected view.
@@ -120749,9 +120595,7 @@ declare module "sap/m/SinglePlanningCalendarView" {
      * @since 1.110.0
      */
     calendarWeekNumbering?:
-      | CalendarWeekNumbering
-      | PropertyBindingInfo
-      | `{${string}}`;
+      CalendarWeekNumbering | PropertyBindingInfo | `{${string}}`;
   }
 }
 
@@ -122648,10 +122492,7 @@ declare module "sap/m/SlideTile" {
      * The set of Generic Tiles to be shown in the control.
      */
     tiles?:
-      | GenericTile[]
-      | GenericTile
-      | AggregationBindingInfo
-      | `{${string}}`;
+      GenericTile[] | GenericTile | AggregationBindingInfo | `{${string}}`;
 
     /**
      * The event is fired when the user chooses the tile. The event is available only in Actions scope.
@@ -128810,8 +128651,7 @@ declare module "sap/m/TabContainer" {
        * New value for property `backgroundDesign`
        */
       sBackgroundDesign?:
-        | PageBackgroundDesign
-        | keyof typeof PageBackgroundDesign
+        PageBackgroundDesign | keyof typeof PageBackgroundDesign
     ): this;
     /**
      * Sets the associated {@link #getSelectedItem selectedItem}.
@@ -132382,8 +132222,7 @@ declare module "sap/m/table/columnmenu/QuickAction" {
        * New value for property `category`
        */
       sCategory?:
-        | table.columnmenu.Category
-        | keyof typeof table.columnmenu.Category
+        table.columnmenu.Category | keyof typeof table.columnmenu.Category
     ): this;
     /**
      * Sets a new value for property {@link #getLabel label}.
@@ -133339,10 +133178,7 @@ declare module "sap/m/table/columnmenu/QuickSort" {
      * The sortable properties and the initial state.
      */
     items?:
-      | QuickSortItem[]
-      | QuickSortItem
-      | AggregationBindingInfo
-      | `{${string}}`;
+      QuickSortItem[] | QuickSortItem | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Fires the change event.
@@ -137801,9 +137637,7 @@ declare module "sap/m/TextArea" {
      * Indicates how the control wraps the text, e.g. `Soft`, `Hard`, `Off`.
      */
     wrapping?:
-      | (Wrapping | keyof typeof Wrapping)
-      | PropertyBindingInfo
-      | `{${string}}`;
+      (Wrapping | keyof typeof Wrapping) | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Indicates when the `value` property gets updated with the user changes. Setting it to `true` updates
@@ -139215,9 +139049,7 @@ declare module "sap/m/TileContent" {
      * @experimental As of version 1.96.
      */
     priority?:
-      | (Priority | keyof typeof Priority)
-      | PropertyBindingInfo
-      | `{${string}}`;
+      (Priority | keyof typeof Priority) | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Sets the Text inside the Priority badge in Generic Tile ActionMode.
@@ -140235,10 +140067,7 @@ declare module "sap/m/TimePicker" {
      * A list of validation rules (one rule per mask character).
      */
     rules?:
-      | MaskInputRule[]
-      | MaskInputRule
-      | AggregationBindingInfo
-      | `{${string}}`;
+      MaskInputRule[] | MaskInputRule | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Fired when `value help` dialog opens.
@@ -145807,10 +145636,7 @@ declare module "sap/m/upload/FilePreviewDialog" {
      * Control by default adds two buttons (download and close).
      */
     additionalFooterButtons?:
-      | Button[]
-      | Button
-      | AggregationBindingInfo
-      | `{${string}}`;
+      Button[] | Button | AggregationBindingInfo | `{${string}}`;
   }
 }
 
@@ -146534,9 +146360,7 @@ declare module "sap/m/upload/Uploader" {
      * @since 1.90
      */
     httpRequestMethod?:
-      | UploaderHttpRequestMethod
-      | PropertyBindingInfo
-      | `{${string}}`;
+      UploaderHttpRequestMethod | PropertyBindingInfo | `{${string}}`;
 
     /**
      * This property decides the type of request. If set to "true", the request gets sent as a multipart/form-data
@@ -147175,9 +146999,7 @@ declare module "sap/m/upload/UploaderTableItem" {
      * HTTP request method chosen for file upload.
      */
     httpRequestMethod?:
-      | UploaderHttpRequestMethod
-      | PropertyBindingInfo
-      | `{${string}}`;
+      UploaderHttpRequestMethod | PropertyBindingInfo | `{${string}}`;
 
     /**
      * This property decides the type of request. If set to "true", the request gets sent as a multipart/form-data
@@ -150067,9 +149889,7 @@ declare module "sap/m/upload/UploadSet" {
      * @since 1.117
      */
     noDataIllustrationType?:
-      | IllustratedMessageType
-      | PropertyBindingInfo
-      | `{${string}}`;
+      IllustratedMessageType | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Defines custom text for the drag and drop text label.
@@ -150128,9 +149948,7 @@ declare module "sap/m/upload/UploadSet" {
      * @since 1.90
      */
     httpRequestMethod?:
-      | UploaderHttpRequestMethod
-      | PropertyBindingInfo
-      | `{${string}}`;
+      UploaderHttpRequestMethod | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Lets the user select multiple files from the same folder and then upload them.
@@ -150150,9 +149968,7 @@ declare module "sap/m/upload/UploadSet" {
      * @since 1.100.0
      */
     mode?:
-      | (ListMode | keyof typeof ListMode)
-      | PropertyBindingInfo
-      | `{${string}}`;
+      (ListMode | keyof typeof ListMode) | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Enables CloudFile picker feature to upload files from cloud.
@@ -150187,19 +150003,13 @@ declare module "sap/m/upload/UploadSet" {
      * Items representing files that have already been uploaded.
      */
     items?:
-      | UploadSetItem[]
-      | UploadSetItem
-      | AggregationBindingInfo
-      | `{${string}}`;
+      UploadSetItem[] | UploadSetItem | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Items representing files yet to be uploaded.
      */
     incompleteItems?:
-      | UploadSetItem[]
-      | UploadSetItem
-      | AggregationBindingInfo
-      | `{${string}}`;
+      UploadSetItem[] | UploadSetItem | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Header fields to be included in the header section of an XHR request.
@@ -151815,19 +151625,13 @@ declare module "sap/m/upload/UploadSetItem" {
      * Markers of the item.
      */
     markers?:
-      | ObjectMarker[]
-      | ObjectMarker
-      | AggregationBindingInfo
-      | `{${string}}`;
+      ObjectMarker[] | ObjectMarker | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Statuses of the item.
      */
     statuses?:
-      | ObjectStatus[]
-      | ObjectStatus
-      | AggregationBindingInfo
-      | `{${string}}`;
+      ObjectStatus[] | ObjectStatus | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Statuses of the item, but it would be appearing in the markers section
@@ -151835,10 +151639,7 @@ declare module "sap/m/upload/UploadSetItem" {
      * @since 1.117
      */
     markersAsStatus?:
-      | ObjectStatus[]
-      | ObjectStatus
-      | AggregationBindingInfo
-      | `{${string}}`;
+      ObjectStatus[] | ObjectStatus | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Header fields to be included in the header section of an XMLHttpRequest (XHR) request
@@ -153763,9 +153564,7 @@ declare module "sap/m/upload/UploadSetwithTable" {
      * HTTP request method chosen for file upload.
      */
     httpRequestMethod?:
-      | UploaderHttpRequestMethod
-      | PropertyBindingInfo
-      | `{${string}}`;
+      UploaderHttpRequestMethod | PropertyBindingInfo | `{${string}}`;
 
     /**
      * Lets the user select multiple files from the same folder and then upload them.
@@ -153804,9 +153603,7 @@ declare module "sap/m/upload/UploadSetwithTable" {
      * Determines which illustration type is displayed when the control holds no data.
      */
     noDataIllustrationType?:
-      | IllustratedMessageType
-      | PropertyBindingInfo
-      | `{${string}}`;
+      IllustratedMessageType | PropertyBindingInfo | `{${string}}`;
 
     /**
      * If set to true, the variant management gets enabled.
@@ -156529,9 +156326,7 @@ declare module "sap/m/UploadCollection" {
      * @since 1.34.0
      */
     mode?:
-      | (ListMode | keyof typeof ListMode)
-      | PropertyBindingInfo
-      | `{${string}}`;
+      (ListMode | keyof typeof ListMode) | PropertyBindingInfo | `{${string}}`;
 
     /**
      * If true, the button used for uploading files is invisible.
@@ -158096,10 +157891,7 @@ declare module "sap/m/UploadCollectionItem" {
      * @since 1.30.0
      */
     statuses?:
-      | ObjectStatus[]
-      | ObjectStatus
-      | AggregationBindingInfo
-      | `{${string}}`;
+      ObjectStatus[] | ObjectStatus | AggregationBindingInfo | `{${string}}`;
 
     /**
      * Markers of an uploaded item Markers will be displayed after an item has been uploaded But not in Edit
@@ -158108,10 +157900,7 @@ declare module "sap/m/UploadCollectionItem" {
      * @since 1.40.0
      */
     markers?:
-      | ObjectMarker[]
-      | ObjectMarker
-      | AggregationBindingInfo
-      | `{${string}}`;
+      ObjectMarker[] | ObjectMarker | AggregationBindingInfo | `{${string}}`;
 
     /**
      * ID of the FileUploader instance
@@ -160015,10 +159804,7 @@ declare module "sap/m/VariantManagement" {
      * Items displayed by the `VariantManagement` control.
      */
     items?:
-      | VariantItem[]
-      | VariantItem
-      | AggregationBindingInfo
-      | `{${string}}`;
+      VariantItem[] | VariantItem | AggregationBindingInfo | `{${string}}`;
 
     /**
      * This event is fired when either Save As is triggered from the Save View dialog, or Save
@@ -162173,10 +161959,7 @@ declare module "sap/m/WheelSliderContainer" {
      * The sliders in the container.
      */
     sliders?:
-      | WheelSlider[]
-      | WheelSlider
-      | AggregationBindingInfo
-      | `{${string}}`;
+      WheelSlider[] | WheelSlider | AggregationBindingInfo | `{${string}}`;
   }
 }
 
