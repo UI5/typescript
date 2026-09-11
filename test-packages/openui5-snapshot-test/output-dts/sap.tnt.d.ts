@@ -2394,8 +2394,7 @@ declare module "sap/tnt/ToolPage" {
        * New value for property `contentBackgroundDesign`
        */
       sContentBackgroundDesign?:
-        | PageBackgroundDesign
-        | keyof typeof PageBackgroundDesign
+        PageBackgroundDesign | keyof typeof PageBackgroundDesign
     ): this;
     /**
      * Sets the aggregated {@link #getHeader header}.
