@@ -11,7 +11,7 @@ Each class page includes the TypeScript import statement, inheritance hierarchy,
 - [OpenUI5 1.151](https://ui5.github.io/typescript/api/openui5/1.151/index.html): 1.151.0
 - [OpenUI5 1.150](https://ui5.github.io/typescript/api/openui5/1.150/index.html): 1.150.0
 - [OpenUI5 1.149](https://ui5.github.io/typescript/api/openui5/1.149/index.html): 1.149.1
-- [OpenUI5 1.148](https://ui5.github.io/typescript/api/openui5/1.148/index.html): 1.148.7
+- [OpenUI5 1.148](https://ui5.github.io/typescript/api/openui5/1.148/index.html): 1.148.8
 - [OpenUI5 1.136](https://ui5.github.io/typescript/api/openui5/1.136/index.html): 1.136.20
 - [OpenUI5 1.120](https://ui5.github.io/typescript/api/openui5/1.120/index.html): 1.120.49
 
@@ -20,7 +20,7 @@ Each class page includes the TypeScript import statement, inheritance hierarchy,
 - [SAPUI5 1.151](https://ui5.github.io/typescript/api/sapui5/1.151/index.html): 1.151.0
 - [SAPUI5 1.150](https://ui5.github.io/typescript/api/sapui5/1.150/index.html): 1.150.1
 - [SAPUI5 1.149](https://ui5.github.io/typescript/api/sapui5/1.149/index.html): 1.149.1
-- [SAPUI5 1.148](https://ui5.github.io/typescript/api/sapui5/1.148/index.html): 1.148.9
+- [SAPUI5 1.148](https://ui5.github.io/typescript/api/sapui5/1.148/index.html): 1.148.10
 - [SAPUI5 1.136](https://ui5.github.io/typescript/api/sapui5/1.136/index.html): 1.136.22
 - [SAPUI5 1.120](https://ui5.github.io/typescript/api/sapui5/1.120/index.html): 1.120.50
 
