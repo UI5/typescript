@@ -15,7 +15,7 @@
     "typescript": "6.0.3"
   },
   "devDependencies": {
-    "@types/jquery": "3.5.32",
+    "@types/jquery": "4.0.1",
     "@types/qunit": "2.5.4"
   },
   "scripts": {
