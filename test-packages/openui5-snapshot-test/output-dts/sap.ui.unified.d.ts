@@ -1812,12 +1812,12 @@ declare module "sap/ui/unified/Calendar" {
     /**
      * The selected week number.
      */
-    weekNumber?: int;
+    weekNumber: int;
 
     /**
      * The days of the corresponding week that are selected or deselected.
      */
-    weekDays?: DateRange;
+    weekDays: DateRange;
   }
 
   /**
@@ -4451,17 +4451,17 @@ declare module "sap/ui/unified/calendar/Month" {
     /**
      * focused date
      */
-    date?: object;
+    date: object;
 
     /**
      * focused date is in an other month than the displayed one
      */
-    otherMonth?: boolean;
+    otherMonth: boolean;
 
     /**
      * focused date is set to the same as before (date in other month clicked)
      */
-    restoreOldDate?: boolean;
+    restoreOldDate: boolean;
   }
 
   /**
@@ -4486,14 +4486,14 @@ declare module "sap/ui/unified/calendar/Month" {
     /**
      * The selected week number.
      */
-    weekNumber?: int;
+    weekNumber: int;
 
     /**
      * The days of the corresponding week that are selected or deselected.
      *
      * **Note:** Will be set to `null` if that week is being deselected.
      */
-    weekDays?: DateRange;
+    weekDays: DateRange;
   }
 
   /**
@@ -6037,12 +6037,12 @@ declare module "sap/ui/unified/calendar/MonthsRow" {
     /**
      * First date, as UI5Date or JavaScript Date object, of the month that is focused.
      */
-    date?: object;
+    date: object;
 
     /**
      * If set, the focused date is not rendered yet. (This happens by navigating out of the visible area.)
      */
-    notVisible?: boolean;
+    notVisible: boolean;
   }
 
   /**
@@ -6941,12 +6941,12 @@ declare module "sap/ui/unified/calendar/TimesRow" {
     /**
      * date, as UI5Date or JavaScript Date object, of the focused time.
      */
-    date?: object;
+    date: object;
 
     /**
      * If set, the focused date is not rendered yet. (This happens by navigating out of the visible area.)
      */
-    notVisible?: boolean;
+    notVisible: boolean;
   }
 
   /**
@@ -11400,17 +11400,17 @@ declare module "sap/ui/unified/CalendarRow" {
     /**
      * Interval start date as UI5Date or JavaScript Date object
      */
-    startDate?: object;
+    startDate: object;
 
     /**
      * Interval end date as UI5Date or JavaScript Date object
      */
-    endDate?: object;
+    endDate: object;
 
     /**
      * If set, the selected interval is a subinterval
      */
-    subInterval?: boolean;
+    subInterval: boolean;
   }
 
   /**
@@ -11428,7 +11428,7 @@ declare module "sap/ui/unified/CalendarRow" {
     /**
      * The type of the event that triggers this `leaveRow`
      */
-    type?: string;
+    type: string;
   }
 
   /**
@@ -11446,23 +11446,23 @@ declare module "sap/ui/unified/CalendarRow" {
     /**
      * selected appointment
      */
-    appointment?: CalendarAppointment;
+    appointment: CalendarAppointment;
 
     /**
      * selected appointments in case a group appointment is selected
      */
-    appointments?: CalendarAppointment[];
+    appointments: CalendarAppointment[];
 
     /**
      * If set, the appointment was selected by multiple selection (e.g. shift + mouse click). So more than the
      * current appointment could be selected.
      */
-    multiSelect?: boolean;
+    multiSelect: boolean;
 
     /**
      * Gives the ID of the DOM element of the clicked appointment
      */
-    domRefId?: string;
+    domRefId: string;
   }
 
   /**
@@ -12932,47 +12932,47 @@ declare module "sap/ui/unified/ColorPicker" {
     /**
      * Parameter containing the RED value (0-255).
      */
-    r?: int;
+    r: int;
 
     /**
      * Parameter containing the GREEN value (0-255).
      */
-    g?: int;
+    g: int;
 
     /**
      * Parameter containing the BLUE value (0-255).
      */
-    b?: int;
+    b: int;
 
     /**
      * Parameter containing the HUE value (0-360).
      */
-    h?: int;
+    h: int;
 
     /**
      * Parameter containing the SATURATION value (0-100).
      */
-    s?: int;
+    s: int;
 
     /**
      * Parameter containing the VALUE value (0-100).
      */
-    v?: int;
+    v: int;
 
     /**
      * Parameter containing the LIGHTNESS value (0-100).
      */
-    l?: int;
+    l: int;
 
     /**
      * Parameter containing the Hexadecimal string (#FFFFFF).
      */
-    hex?: string;
+    hex: string;
 
     /**
      * Parameter containing the alpha value (transparency).
      */
-    alpha?: string;
+    alpha: string;
   }
 
   /**
@@ -12990,47 +12990,47 @@ declare module "sap/ui/unified/ColorPicker" {
     /**
      * Parameter containing the RED value (0-255).
      */
-    r?: int;
+    r: int;
 
     /**
      * Parameter containing the GREEN value (0-255).
      */
-    g?: int;
+    g: int;
 
     /**
      * Parameter containing the BLUE value (0-255).
      */
-    b?: int;
+    b: int;
 
     /**
      * Parameter containing the HUE value (0-360).
      */
-    h?: int;
+    h: int;
 
     /**
      * Parameter containing the SATURATION value (0-100).
      */
-    s?: int;
+    s: int;
 
     /**
      * Parameter containing the VALUE value (0-100).
      */
-    v?: int;
+    v: int;
 
     /**
      * Parameter containing the LIGHTNESS value (0-100).
      */
-    l?: int;
+    l: int;
 
     /**
      * Parameter containing the Hexadecimal string (#FFFFFF).
      */
-    hex?: string;
+    hex: string;
 
     /**
      * Parameter containing the alpha value (transparency).
      */
-    alpha?: string;
+    alpha: string;
   }
 
   /**
@@ -13489,47 +13489,47 @@ declare module "sap/ui/unified/ColorPickerPopover" {
     /**
      * Parameter containing the RED value (0-255).
      */
-    r?: int;
+    r: int;
 
     /**
      * Parameter containing the GREEN value (0-255).
      */
-    g?: int;
+    g: int;
 
     /**
      * Parameter containing the BLUE value (0-255).
      */
-    b?: int;
+    b: int;
 
     /**
      * Parameter containing the HUE value (0-360).
      */
-    h?: int;
+    h: int;
 
     /**
      * Parameter containing the SATURATION value (0-100).
      */
-    s?: int;
+    s: int;
 
     /**
      * Parameter containing the VALUE value (0-100).
      */
-    v?: int;
+    v: int;
 
     /**
      * Parameter containing the LIGHTNESS value (0-100).
      */
-    l?: int;
+    l: int;
 
     /**
      * Parameter containing the Hexadecimal string (#FFFFFF).
      */
-    hex?: string;
+    hex: string;
 
     /**
      * Parameter containing the alpha value (transparency).
      */
-    alpha?: string;
+    alpha: string;
   }
 
   /**
@@ -13547,47 +13547,47 @@ declare module "sap/ui/unified/ColorPickerPopover" {
     /**
      * Parameter containing the RED value (0-255).
      */
-    r?: int;
+    r: int;
 
     /**
      * Parameter containing the GREEN value (0-255).
      */
-    g?: int;
+    g: int;
 
     /**
      * Parameter containing the BLUE value (0-255).
      */
-    b?: int;
+    b: int;
 
     /**
      * Parameter containing the HUE value (0-360).
      */
-    h?: int;
+    h: int;
 
     /**
      * Parameter containing the SATURATION value (0-100).
      */
-    s?: int;
+    s: int;
 
     /**
      * Parameter containing the VALUE value (0-100).
      */
-    v?: int;
+    v: int;
 
     /**
      * Parameter containing the LIGHTNESS value (0-100).
      */
-    l?: int;
+    l: int;
 
     /**
      * Parameter containing the Hexadecimal string (#FFFFFF).
      */
-    hex?: string;
+    hex: string;
 
     /**
      * Parameter containing the alpha value (transparency).
      */
-    alpha?: string;
+    alpha: string;
   }
 
   /**
@@ -17322,12 +17322,12 @@ declare module "sap/ui/unified/FileUploader" {
     /**
      * New file path value.
      */
-    newValue?: string;
+    newValue: string;
 
     /**
      * Files.
      */
-    files?: object[];
+    files: object[];
   }
 
   /**
@@ -17358,7 +17358,7 @@ declare module "sap/ui/unified/FileUploader" {
     /**
      * The name of the file to be uploaded.
      */
-    fileName?: string;
+    fileName: string;
   }
 
   /**
@@ -17376,7 +17376,7 @@ declare module "sap/ui/unified/FileUploader" {
     /**
      * The filename, which is longer than specified by the value of the property `maximumFilenameLength`.
      */
-    fileName?: string;
+    fileName: string;
   }
 
   /**
@@ -17394,12 +17394,12 @@ declare module "sap/ui/unified/FileUploader" {
     /**
      * The name of a file to be uploaded.
      */
-    fileName?: string;
+    fileName: string;
 
     /**
      * The size in MB of a file to be uploaded.
      */
-    fileSize?: string;
+    fileSize: string;
   }
 
   /**
@@ -17417,17 +17417,17 @@ declare module "sap/ui/unified/FileUploader" {
     /**
      * The name of a file to be uploaded.
      */
-    fileName?: string;
+    fileName: string;
 
     /**
      * The file ending of a file to be uploaded.
      */
-    fileType?: string;
+    fileType: string;
 
     /**
      * The MIME type of a file to be uploaded.
      */
-    mimeType?: string;
+    mimeType: string;
   }
 
   /**
@@ -17445,7 +17445,7 @@ declare module "sap/ui/unified/FileUploader" {
     /**
      * The name of a file to be uploaded.
      */
-    fileName?: string;
+    fileName: string;
 
     /**
      * Http-Request-Headers.
@@ -17453,7 +17453,7 @@ declare module "sap/ui/unified/FileUploader" {
      * Required for receiving `requestHeader` is to set the property `sendXHR` to true. This property is not
      * supported by Internet Explorer 9.
      */
-    requestHeaders?: object[];
+    requestHeaders: object[];
   }
 
   /**
@@ -17471,7 +17471,7 @@ declare module "sap/ui/unified/FileUploader" {
     /**
      * The name of a file to be uploaded.
      */
-    fileName?: string;
+    fileName: string;
 
     /**
      * Response message which comes from the server.
@@ -17480,7 +17480,7 @@ declare module "sap/ui/unified/FileUploader" {
      * of the iFrame. It can consist of a return code and an optional message. This does not work in cross-domain
      * scenarios.
      */
-    response?: string;
+    response: string;
 
     /**
      * ReadyState of the XHR request.
@@ -17488,7 +17488,7 @@ declare module "sap/ui/unified/FileUploader" {
      * Required for receiving a `readyStateXHR` is to set the property `sendXHR` to true. This property is not
      * supported by Internet Explorer 9.
      */
-    readyStateXHR?: string;
+    readyStateXHR: string;
 
     /**
      * Status of the XHR request.
@@ -17496,7 +17496,7 @@ declare module "sap/ui/unified/FileUploader" {
      * Required for receiving a `status` is to set the property `sendXHR` to true. This property is not supported
      * by Internet Explorer 9.
      */
-    status?: string;
+    status: string;
 
     /**
      * Http-Response which comes from the server.
@@ -17505,7 +17505,7 @@ declare module "sap/ui/unified/FileUploader" {
      *
      * This property is not supported by Internet Explorer 9.
      */
-    responseRaw?: string;
+    responseRaw: string;
 
     /**
      * Http-Response-Headers which come from the server.
@@ -17516,7 +17516,7 @@ declare module "sap/ui/unified/FileUploader" {
      * Required for receiving `headers` is to set the property `sendXHR` to true. This property is not supported
      * by Internet Explorer 9.
      */
-    headers?: object;
+    headers: object;
 
     /**
      * Http-Request-Headers.
@@ -17524,7 +17524,7 @@ declare module "sap/ui/unified/FileUploader" {
      * Required for receiving `requestHeaders` is to set the property `sendXHR` to true. This property is not
      * supported by Internet Explorer 9.
      */
-    requestHeaders?: object[];
+    requestHeaders: object[];
   }
 
   /**
@@ -17542,22 +17542,22 @@ declare module "sap/ui/unified/FileUploader" {
     /**
      * Indicates whether or not the relative upload progress can be calculated out of loaded and total.
      */
-    lengthComputable?: boolean;
+    lengthComputable: boolean;
 
     /**
      * The number of bytes of the file which have been uploaded by the time the event was fired.
      */
-    loaded?: float;
+    loaded: float;
 
     /**
      * The total size of the file to be uploaded in bytes.
      */
-    total?: float;
+    total: float;
 
     /**
      * The name of a file to be uploaded.
      */
-    fileName?: string;
+    fileName: string;
 
     /**
      * Http-Request-Headers.
@@ -17565,7 +17565,7 @@ declare module "sap/ui/unified/FileUploader" {
      * Required for receiving `requestHeaders` is to set the property `sendXHR` to true. This property is not
      * supported by Internet Explorer 9.
      */
-    requestHeaders?: object[];
+    requestHeaders: object[];
   }
 
   /**
@@ -17583,7 +17583,7 @@ declare module "sap/ui/unified/FileUploader" {
     /**
      * The name of a file to be uploaded.
      */
-    fileName?: string;
+    fileName: string;
 
     /**
      * Http-Request-Headers.
@@ -17591,7 +17591,7 @@ declare module "sap/ui/unified/FileUploader" {
      * Required for receiving `requestHeaders` is to set the property `sendXHR` to true. This property is not
      * supported by Internet Explorer 9.
      */
-    requestHeaders?: object[];
+    requestHeaders: object[];
   }
 
   /**
@@ -18447,7 +18447,7 @@ declare module "sap/ui/unified/Menu" {
     /**
      * The action (item) which was selected by the user.
      */
-    item?: MenuItemBase;
+    item: MenuItemBase;
   }
 
   /**
@@ -19041,7 +19041,7 @@ declare module "sap/ui/unified/MenuItemBase" {
     /**
      * The current item
      */
-    item?: MenuItemBase;
+    item: MenuItemBase;
   }
 
   /**
