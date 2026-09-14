@@ -9,8 +9,8 @@
   ],
   "minimumTypeScriptVersion": "5.0",
   "dependencies": {
-    "@types/jquery": "~3.5.13",
-    "@types/qunit": "^2.5.4"
+    "@types/jquery": "3.5.34",
+    "@types/qunit": "2.19.14"
   },
   "devDependencies": {
     "@types/openui5": "workspace:."
