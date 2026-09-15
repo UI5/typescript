@@ -15,8 +15,8 @@
     "typescript": "6.0.3"
   },
   "devDependencies": {
-    "@types/jquery": "3.5.32",
-    "@types/qunit": "2.5.4"
+    "@types/jquery": "3.5.34",
+    "@types/qunit": "2.19.14"
   },
   "scripts": {
     "ci": "npm-run-all test dts:run-check",

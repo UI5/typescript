@@ -26,13 +26,13 @@ jobs:
       contents: write
     steps:
       - name: Checkout main (scripts + workflow)
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           ref: main
           path: main
 
       - name: Checkout gh-pages (published site)
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           ref: gh-pages
           path: gh-pages
@@ -40,7 +40,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
-          node-version: "22.16.0"
+          node-version: "22.23.2"
 
       - name: Install generator dependencies
         working-directory: main/scripts/generate-api-docs

@@ -16,15 +16,15 @@
     "ci": "npm run lint && npm run ui5lint && npm run ts-typecheck && npm run test"
   },
   "devDependencies": {
-    "@openui5/types": "^1.146.0",
+    "@openui5/types": "^1.151.0",
     "@ui5/cli": "^4.0.60",
-    "@ui5/linter": "^1.23.3",
+    "@ui5/linter": "^1.23.4",
     "eslint": "^10.8.0",
-    "globals": "^17.8.0",
+    "globals": "^17.9.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.65.0",
-    "ui5-middleware-livereload": "^3",
-    "ui5-middleware-simpleproxy": "^3",
-    "ui5-tooling-transpile": "^3"
+    "typescript-eslint": "^8.66.0",
+    "ui5-middleware-livereload": "^3.4.0",
+    "ui5-middleware-simpleproxy": "^3.8.0",
+    "ui5-tooling-transpile": "^3.12.0"
   }
 }
