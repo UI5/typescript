@@ -38,7 +38,7 @@
     "lint-staged": "17.5.0",
     "lockfile-lint": "5.0.1",
     "mocha": "11.7.6",
-    "npm-run-all2": "5.0.0",
+    "npm-run-all2": "9.0.3",
     "prettier": "3.9.6",
     "shx": "0.4.0",
     "typescript": "6.0.3"
