@@ -25,15 +25,15 @@
       "automergeType": "pr"
     },
     {
-      "description": "Do NOT auto-merge minor updates for UI5/framework-coupled packages",
+      "description": "Never update: these versions are intentionally coupled to the UI5 version under test",
       "matchPackageNames": [
-        "@types/openui5",
         "@openui5/*",
+        "@types/openui5",
         "@types/jquery",
-        "@types/qunit"
+        "@types/qunit",
+        "node"
       ],
-      "matchUpdateTypes": ["minor"],
-      "automerge": false
+      "enabled": false
     }
   ],
   "prCreation": "not-pending"
