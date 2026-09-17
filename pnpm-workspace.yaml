@@ -1,0 +1,22 @@
+packages:
+  - "packages/*"
+  - "test-packages/*"
+  - "demos/*"
+
+# Supply-chain hardening
+frozenLockfile: true
+saveExact: true
+minimumReleaseAge: 4320 # 3 days (in minutes)
+allowBuilds:
+  '@parcel/watcher': true
+  ui5-tooling-transpile: true
+  unrs-resolver: true
+
+# Fail install if a package's provenance signatures got weaker
+# compared to an earlier release — catches compromised publishes.
+trustPolicy: no-downgrade
+# Known packages where not every version carries provenance.
+trustPolicyExclude:
+  - chokidar
+  - semver
+  - undici-types
