@@ -2276,10 +2276,10 @@
     proc-log "^5.0.0"
     which "^5.0.0"
 
-"@openui5/types@^1.146.0":
-  version "1.151.0"
-  resolved "https://registry.yarnpkg.com/@openui5/types/-/types-1.151.0.tgz#485a8d0c16376065ebe8110a2a28febc0b249c60"
-  integrity sha512-6l+V5W8RlmfHcZiHu7lMvME/pbZQ9vnNxif81a3KissRkiLrumCx623saQblTqsyxUmeHSPOsJdVPN+ZrW1DoA==
+"@openui5/types@1.146.0":
+  version "1.146.0"
+  resolved "https://registry.yarnpkg.com/@openui5/types/-/types-1.146.0.tgz#f3f035bc0f4e25f23acfeba888b927347fb3b336"
+  integrity sha512-6jzQ54BIpOQEL8+46u2WsaR9gFcjyEaKphUlAS82Pt60OOW8p2xpmTknFRRZDgBmP4IbZZob9nLb82MNGMRTSw==
   dependencies:
     "@types/jquery" "3.5.13"
     "@types/qunit" "2.5.4"
@@ -3077,7 +3077,7 @@
     workerpool "^10.0.3"
     xml2js "^0.6.2"
 
-"@ui5/cli@^4.0.60":
+"@ui5/cli@4.0.60":
   version "4.0.60"
   resolved "https://registry.yarnpkg.com/@ui5/cli/-/cli-4.0.60.tgz#853d929eaba531f3feb51363e81c3232215a702d"
   integrity sha512-Tj8DA8BIS4iTjeh7H4bvw7GHwEk+k5ktprtw0kWvVzY/o9tNU4Kdf4hxMJVhSiz+Iiuvpix2WhKohjXNpfHqQA==
@@ -3109,7 +3109,7 @@
     lodash "4.18.1"
     lodash.combinations "18.11.1"
     node-fetch "3.3.2"
-    prettier "3.9.6"
+    prettier "3.8.3"
     resolve "1.22.12"
     sanitize-html "2.17.7"
     semver "7.8.5"
@@ -3130,7 +3130,7 @@
     pretty-hrtime "^1.0.3"
     random-int "^3.1.0"
 
-"@ui5/linter@^1.23.3":
+"@ui5/linter@1.23.4":
   version "1.23.4"
   resolved "https://registry.yarnpkg.com/@ui5/linter/-/linter-1.23.4.tgz#aedc976437ca04ea91db48f025d8af27d437a0fd"
   integrity sha512-RlvvMLlEiLLHdI3CEYtgaaPUaGAH0seW4eTS3/VlapYtQFm2n9lZHYYZUNMN1CYWsbKAR+cRyCf+s1eaCIULSw==
@@ -5278,7 +5278,7 @@ eslint@10.10.0:
     natural-compare "^1.4.0"
     optionator "^0.9.3"
 
-eslint@^10.8.0:
+eslint@10.8.0:
   version "10.8.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-10.8.0.tgz#e6d19907a3f090a53a022261ba34c5ff6d04908b"
   integrity sha512-nuKKvN+oIBO0koN7Tm7dlkmnkc21mtt0QJLwAKzjLq14y6lRTdVG36MZHJ8eQHwdJMwZbQNMlPOYedMq/oVJvQ==
@@ -6036,17 +6036,17 @@ global-prefix@^1.0.1:
     is-windows "^1.0.1"
     which "^1.2.14"
 
+globals@17.9.0, globals@^17.9.0:
+  version "17.9.0"
+  resolved "https://registry.yarnpkg.com/globals/-/globals-17.9.0.tgz#e43f252d6bbe71508da43902a1709c8895a59f70"
+  integrity sha512-m/MvAW61QVU5VDNF1Vj8axt016h8w7L5TU1e9zlab7XIttAT2YAlCwl75K1fOqvMM9apmD7lbCIRhpfkhmxhCg==
+
 globals@^13.19.0:
   version "13.24.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-13.24.0.tgz#8432a19d78ce0c1e833949c36adb345400bb1171"
   integrity sha512-AhO5QUcj8llrbG09iWhPU2B204J1xnPeL8kQmVorSsy+Sjj1sk8gIyh6cUocGmH4L0UuhAJy+hJMRA4mgA4mFQ==
   dependencies:
     type-fest "^0.20.2"
-
-globals@^17.8.0, globals@^17.9.0:
-  version "17.9.0"
-  resolved "https://registry.yarnpkg.com/globals/-/globals-17.9.0.tgz#e43f252d6bbe71508da43902a1709c8895a59f70"
-  integrity sha512-m/MvAW61QVU5VDNF1Vj8axt016h8w7L5TU1e9zlab7XIttAT2YAlCwl75K1fOqvMM9apmD7lbCIRhpfkhmxhCg==
 
 globalthis@^1.0.4:
   version "1.0.4"
@@ -8889,6 +8889,11 @@ presentable-error@^0.0.1:
   resolved "https://registry.yarnpkg.com/presentable-error/-/presentable-error-0.0.1.tgz#6d2579d397b1384a0cc733b36375c2c8755d53c6"
   integrity sha512-E6rsNU1QNJgB3sjj7OANinGncFKuK+164sLXw1/CqBjj/EkXSoSdHCtWQGBNlREIGLnL7IEUEGa08YFVUbrhVg==
 
+prettier@3.8.3:
+  version "3.8.3"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.8.3.tgz#560f2de55bf01b4c0503bc629d5df99b9a1d09b0"
+  integrity sha512-7igPTM53cGHMW8xWuVTydi2KO233VFiTNyF5hLJqpilHfmn8C8gPf+PS7dUT64YcXFbiMGZxS9pCSxL/Dxm/Jw==
+
 prettier@3.9.6:
   version "3.9.6"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.9.6.tgz#b3ea5146515d40fc53f18aa63f74dfab1e10dbf6"
@@ -10364,7 +10369,7 @@ typed-array-length@^1.0.7:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-6.0.3.tgz#90251dc007916e972786cb94d74d15b185577d21"
   integrity sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==
 
-typescript-eslint@^8.65.0:
+typescript-eslint@8.66.0:
   version "8.66.0"
   resolved "https://registry.yarnpkg.com/typescript-eslint/-/typescript-eslint-8.66.0.tgz#0809b6d25c8a0924690ba30dc1f05607093c11fb"
   integrity sha512-QlEbBPz/RuJ1XUHj29nm3t0F/O/cSlEnntozqPOYHnnTGAXFamnMBu5i9Vn6vhUPHGAjR+Vl+5J8vPN/BMUrJw==
@@ -10384,7 +10389,7 @@ typescript@5.9.3, typescript@^5.9.3:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.9.3.tgz#5b4f59e15310ab17a216f5d6cf53ee476ede670f"
   integrity sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==
 
-typescript@6.0.3, typescript@^6.0.3:
+typescript@6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-6.0.3.tgz#90251dc007916e972786cb94d74d15b185577d21"
   integrity sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==
@@ -10399,7 +10404,7 @@ uglify-js@^3.1.4:
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.19.3.tgz#82315e9bbc6f2b25888858acd1fff8441035b77f"
   integrity sha512-v3Xu+yuwBXisp6QYTcH4UbH+xYJXqnq2m/LtQVWKWzYc1iehYnLixoQDN9FH6/j9/oybfd6W9Ghwkl8+UMKTKQ==
 
-ui5-middleware-livereload@^3:
+ui5-middleware-livereload@3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/ui5-middleware-livereload/-/ui5-middleware-livereload-3.3.1.tgz#eaec515fb225d7ddf58361816c6788c82b2dbcd4"
   integrity sha512-JoJVenmhJm8KXflveEhR2iBDBlUdhj4GKNvsYwsj0WVCO1+tqbBdMnpnDXMORke+QMN80EfPVoZea9O25Ojnww==
@@ -10408,7 +10413,7 @@ ui5-middleware-livereload@^3:
     livereload "^0.10.3"
     portfinder "^1.0.38"
 
-ui5-middleware-simpleproxy@^3:
+ui5-middleware-simpleproxy@3.8.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/ui5-middleware-simpleproxy/-/ui5-middleware-simpleproxy-3.8.0.tgz#57a0f74c0547cf7c733403393a19f6825256e196"
   integrity sha512-NQK3luXhe8fMliLAOulR7EHEkrKTkKLmGKitKE5lTVxI8AGwTEhMu8k+tsq8xZwCOK6sn6rmOuVPXdxxek8oHg==
@@ -10421,7 +10426,7 @@ ui5-middleware-simpleproxy@^3:
     proxy-from-env "^2.1.0"
     ui5-utils-express "^1.5.2"
 
-ui5-tooling-transpile@^3:
+ui5-tooling-transpile@3.12.0:
   version "3.12.0"
   resolved "https://registry.yarnpkg.com/ui5-tooling-transpile/-/ui5-tooling-transpile-3.12.0.tgz#38350b66456b99719628bc998fd9684586c18bed"
   integrity sha512-6hwr9k+Hi3iXlkOgFHBUzijmDj4e4FLzDE+9CQfk7tW6k+WysqafDPTn6VLNO4XcCFL5oyISZmbbeJMbPUvuEQ==
