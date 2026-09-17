@@ -1,26 +1,24 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": {
-    "packages": [
-      "packages/*",
-      "test-packages/*",
-      "demos/*"
-    ]
-  },
+  "workspaces": [
+    "packages/*",
+    "test-packages/*",
+    "demos/*"
+  ],
   "scripts": {
-    "build": "yarn workspace @ui5/dts-generator build && yarn workspace @ui5/ts-interface-generator build",
-    "preci": "yarn build",
+    "build": "npm run -w @ui5/dts-generator build && npm run -w @ui5/ts-interface-generator build",
+    "preci": "npm run build",
     "ci": "npm-run-all format:validate lint:lockfile ci:subpackages",
-    "ci:subpackages": "yarn workspaces run ci",
+    "ci:subpackages": "npm run -ws --if-present ci",
     "changeset": "changeset",
     "changeset:auto": "node scripts/auto-changeset.mjs",
     "changeset:empty": "changeset --empty",
-    "version-packages": "changeset version && yarn install --ignore-scripts",
+    "version-packages": "changeset version && npm install --ignore-scripts",
     "release-publish": "changeset publish",
     "format:fix": "prettier --write \"**/*.@(ts|js|json|md|yml)\"",
     "format:validate": "prettier --check \"**/*.@(ts|js|json|md|yml)\"",
-    "lint:lockfile": "lockfile-lint --path yarn.lock --type yarn --allowed-hosts yarn --validate-https",
+    "lint:lockfile": "lockfile-lint --path package-lock.json --type npm --allowed-hosts npm --validate-https",
     "prepare": "husky",
     "hooks:pre-commit": "lint-staged",
     "hooks:commit-msg": "commitlint -e",

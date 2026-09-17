@@ -12,7 +12,7 @@ We have a quick list of common questions to get you started engaging with this p
 This monorepo replaced Lerna with [Changesets](https://github.com/changesets/changesets) for
 versioning and releases. The flow is:
 
-1. **In your PR**, run `yarn changeset` and answer the prompts (which packages, semver level,
+1. **In your PR**, run `npm run changeset` and answer the prompts (which packages, semver level,
    summary). Commit the generated `.changeset/<random-name>.md` file alongside your code change.
 2. When your PR is merged to `main`, the **Release** workflow opens (or updates) a single
    `Version Packages` PR that aggregates all pending changesets — bumping versions and updating
@@ -23,4 +23,4 @@ versioning and releases. The flow is:
 Private packages (`test-packages/*`, `demos/*`) are skipped automatically by `changeset publish`.
 Only the public packages under `packages/*` are released.
 
-If a change does not warrant a release (docs-only, internal tooling, test refactors, etc.) run `yarn changeset:empty` and commit the generated file — it satisfies the required changeset check without producing any package bump.
+If a change does not warrant a release (docs-only, internal tooling, test refactors, etc.) run `npm run changeset:empty` and commit the generated file — it satisfies the required changeset check without producing any package bump.

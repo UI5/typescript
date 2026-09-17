@@ -26,13 +26,7 @@ It currently contains two public packages:
 
 The UI5 type signatures are created and published as part of the UI5 build process. They are available for SAPUI5 as well as OpenUI5. The SAPUI5 type definitions can be obtained like this:
 
-With npm
-
 `npm install @sapui5/types --save-dev`
-
-With Yarn
-
-`yarn add @sapui5/types --dev`
 
 > **NOTE:** the type definitions define ES6-style module names for the entities. They require the usage of modern JavaScript syntax with ES modules and classes, which requires an additional transformation step that can be run together with the anyway required TypeScript transpilation.
 >

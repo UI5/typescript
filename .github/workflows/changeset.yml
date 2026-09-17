@@ -38,17 +38,17 @@ jobs:
           node-version: 24.x
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: npm ci
 
       # Fails the PR if no changeset describes the change.
-      # Add one with `yarn changeset` (or `yarn changeset:empty` for PRs
+      # Add one with `npm run changeset` (or `npm run changeset:empty` for PRs
       # that don't need a release entry) and commit it.
       # We check `.changesets` (not `.releases`) so that empty changesets
       # — which have 0 package bumps but still document the PR — pass.
       - name: Verify changeset is present
         run: |
-          yarn changeset status --since=origin/main --output=/tmp/cs.json
+          npx changeset status --since=origin/main --output=/tmp/cs.json
           if [ "$(jq '.changesets | length' /tmp/cs.json)" -eq 0 ]; then
-            echo "::error::No changeset found on this PR. Run 'yarn changeset' (or 'yarn changeset:empty' for PRs that don't need a release entry) and commit the file."
+            echo "::error::No changeset found on this PR. Run 'npm run changeset' (or 'npm run changeset:empty' for PRs that don't need a release entry) and commit the file."
             exit 1
           fi
