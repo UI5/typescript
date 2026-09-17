@@ -1,26 +1,19 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": {
-    "packages": [
-      "packages/*",
-      "test-packages/*",
-      "demos/*"
-    ]
-  },
+  "packageManager": "pnpm@12.4.1",
   "scripts": {
-    "build": "yarn workspace @ui5/dts-generator build && yarn workspace @ui5/ts-interface-generator build",
-    "preci": "yarn build",
-    "ci": "npm-run-all format:validate lint:lockfile ci:subpackages",
-    "ci:subpackages": "yarn workspaces run ci",
+    "build": "pnpm --filter @ui5/dts-generator run build && pnpm --filter @ui5/ts-interface-generator run build",
+    "preci": "pnpm run build",
+    "ci": "pnpm run format:validate && pnpm run ci:subpackages",
+    "ci:subpackages": "pnpm -r run ci",
     "changeset": "changeset",
     "changeset:auto": "node scripts/auto-changeset.mjs",
     "changeset:empty": "changeset --empty",
-    "version-packages": "changeset version && yarn install --ignore-scripts",
+    "version-packages": "changeset version && pnpm install --no-frozen-lockfile --ignore-scripts",
     "release-publish": "changeset publish",
     "format:fix": "prettier --write \"**/*.@(ts|js|json|md|yml)\"",
     "format:validate": "prettier --check \"**/*.@(ts|js|json|md|yml)\"",
-    "lint:lockfile": "lockfile-lint --path yarn.lock --type yarn --allowed-hosts yarn --validate-https",
     "prepare": "husky",
     "hooks:pre-commit": "lint-staged",
     "hooks:commit-msg": "commitlint -e",
@@ -36,7 +29,6 @@
     "cz-conventional-changelog": "3.3.0",
     "husky": "9.1.7",
     "lint-staged": "17.5.0",
-    "lockfile-lint": "5.0.1",
     "mocha": "11.7.6",
     "npm-run-all2": "5.0.0",
     "prettier": "3.9.6",

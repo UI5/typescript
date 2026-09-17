@@ -3,16 +3,16 @@
 //
 // Reads the commits in the configured range and emits one
 // .changeset/auto-<short-sha>.md per commit that affects a published
-// package. The CLI is a faster path than `yarn changeset` for the common
+// package. The CLI is a faster path than `pnpm changeset` for the common
 // case where the commit message already encodes the bump (`feat:` ->
 // minor, `fix:` -> patch, `!`/`BREAKING CHANGE:` -> major) and the
 // scope already names the affected packages.
 //
 // Usage:
-//   yarn changeset:auto              # commits ahead of origin/main
-//   yarn changeset:auto --since=<ref>
-//   yarn changeset:auto --dry-run    # print, don't write
-//   yarn changeset:auto --verbose    # log per-commit decisions
+//   pnpm changeset:auto              # commits ahead of origin/main
+//   pnpm changeset:auto --since=<ref>
+//   pnpm changeset:auto --dry-run    # print, don't write
+//   pnpm changeset:auto --verbose    # log per-commit decisions
 //
 // Skip rules: commits whose `type` is `ci`, whose scope is `release`,
 // or that touch no `packages/*` files. A commit is also skipped when

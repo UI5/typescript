@@ -34,6 +34,10 @@ With Yarn
 
 `yarn add @sapui5/types --dev`
 
+With pnpm
+
+`pnpm add @sapui5/types --save-dev`
+
 > **NOTE:** the type definitions define ES6-style module names for the entities. They require the usage of modern JavaScript syntax with ES modules and classes, which requires an additional transformation step that can be run together with the anyway required TypeScript transpilation.
 >
 > Before the type definitions were generated in ES module style, they did declare all APIs with their global names, which are discouraged to be used and will no longer be available in UI5 2.x. The dts-generator still has the capability to generate this legacy "globals" version of the type definitions, for compatibility reasons. These legacy definitions are released as "ts-types" instead of "types", but will no longer be produced for UI5 2.x.
