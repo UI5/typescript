@@ -2276,10 +2276,10 @@
     proc-log "^5.0.0"
     which "^5.0.0"
 
-"@openui5/types@^1.146.0":
-  version "1.151.0"
-  resolved "https://registry.yarnpkg.com/@openui5/types/-/types-1.151.0.tgz#485a8d0c16376065ebe8110a2a28febc0b249c60"
-  integrity sha512-6l+V5W8RlmfHcZiHu7lMvME/pbZQ9vnNxif81a3KissRkiLrumCx623saQblTqsyxUmeHSPOsJdVPN+ZrW1DoA==
+"@openui5/types@1.146.0":
+  version "1.146.0"
+  resolved "https://registry.yarnpkg.com/@openui5/types/-/types-1.146.0.tgz#f3f035bc0f4e25f23acfeba888b927347fb3b336"
+  integrity sha512-6jzQ54BIpOQEL8+46u2WsaR9gFcjyEaKphUlAS82Pt60OOW8p2xpmTknFRRZDgBmP4IbZZob9nLb82MNGMRTSw==
   dependencies:
     "@types/jquery" "3.5.13"
     "@types/qunit" "2.5.4"
@@ -2771,12 +2771,12 @@
   dependencies:
     undici-types "~8.3.0"
 
-"@types/node@22.19.18":
-  version "22.19.18"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.19.18.tgz#fde5e5e082daa1e69535deb9e2bbfa928f61b5e3"
-  integrity sha512-9v00a+dn2yWVsYDEunWC4g/TcRKVq3r8N5FuZp7u0SGrPvdN9c2yXI9bBuf5Fl0hNCb+QTIePTn5pJs2pwBOQQ==
+"@types/node@24.13.5":
+  version "24.13.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.13.5.tgz#b1c34df1c3c47709a2f1790f2eb2d7eba53788f9"
+  integrity sha512-TXyindR+lBr22aJIdMQzCFHPHR6cR4js838mRDCSz5hOKWZvZwsXSSiXDmjRj4iJmgl+sR9O+1mkoVBSMadNug==
   dependencies:
-    undici-types "~6.21.0"
+    undici-types "~7.18.0"
 
 "@types/node@24.7.2":
   version "24.7.2"
@@ -3109,7 +3109,7 @@
     lodash "4.18.1"
     lodash.combinations "18.11.1"
     node-fetch "3.3.2"
-    prettier "3.9.6"
+    prettier "3.8.3"
     resolve "1.22.12"
     sanitize-html "2.17.7"
     semver "7.8.5"
@@ -8889,6 +8889,11 @@ presentable-error@^0.0.1:
   resolved "https://registry.yarnpkg.com/presentable-error/-/presentable-error-0.0.1.tgz#6d2579d397b1384a0cc733b36375c2c8755d53c6"
   integrity sha512-E6rsNU1QNJgB3sjj7OANinGncFKuK+164sLXw1/CqBjj/EkXSoSdHCtWQGBNlREIGLnL7IEUEGa08YFVUbrhVg==
 
+prettier@3.8.3:
+  version "3.8.3"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.8.3.tgz#560f2de55bf01b4c0503bc629d5df99b9a1d09b0"
+  integrity sha512-7igPTM53cGHMW8xWuVTydi2KO233VFiTNyF5hLJqpilHfmn8C8gPf+PS7dUT64YcXFbiMGZxS9pCSxL/Dxm/Jw==
+
 prettier@3.9.6:
   version "3.9.6"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.9.6.tgz#b3ea5146515d40fc53f18aa63f74dfab1e10dbf6"
@@ -10461,15 +10466,15 @@ underscore@~1.13.2:
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.24.6.tgz#61275b485d7fd4e9d269c7cf04ec2873c9cc0f91"
   integrity sha512-WRNW+sJgj5OBN4/0JpHFqtqzhpbnV0GuB+OozA9gCL7a993SmU+1JBZCzLNxYsbMfIeDL+lTsphD5jN5N+n0zg==
 
-undici-types@~6.21.0:
-  version "6.21.0"
-  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-6.21.0.tgz#691d00af3909be93a7faa13be61b3a5b50ef12cb"
-  integrity sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==
-
 undici-types@~7.14.0:
   version "7.14.0"
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.14.0.tgz#4c037b32ca4d7d62fae042174604341588bc0840"
   integrity sha512-QQiYxHuyZ9gQUIrmPo3IA+hUl4KYk8uSA7cHrcKd/l3p1OTpZcM0Tbp9x7FAtXdAYhlasd60ncPpgu6ihG6TOA==
+
+undici-types@~7.18.0:
+  version "7.18.2"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.18.2.tgz#29357a89e7b7ca4aef3bf0fd3fd0cd73884229e9"
+  integrity sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==
 
 undici-types@~8.3.0:
   version "8.3.0"
