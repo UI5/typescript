@@ -63,8 +63,9 @@ typings/
 # next.js build output
 .next
 
-# yarn lock file
+# other lock files
 yarn.lock
+pnpm-lock.yaml
 .idea
 
 # build results
