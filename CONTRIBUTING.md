@@ -31,8 +31,7 @@ A reproducible example (a minimal repo or a [TypeScript Hello World](https://git
 
 ### Pre-requisites
 
-- A current [Long-Term Support version](https://nodejs.org/en/about/releases/) of Node.js (>= 22; CI tests on 22.x and 24.x).
-- [Yarn 1.x](https://classic.yarnpkg.com/lang/en/docs/install/) — this repo uses yarn classic with workspaces.
+- A current [Long-Term Support version](https://nodejs.org/en/about/releases/) of Node.js (>= 22; CI tests on 22.x and 24.x). npm ships with Node.js — no separate package-manager install is required.
 - (optional) [commitizen](https://github.com/commitizen/cz-cli#installing-the-command-line-tool) for managing commit messages.
 
 ### Initial Setup
@@ -40,9 +39,9 @@ A reproducible example (a minimal repo or a [TypeScript Hello World](https://git
 The initial setup is trivial:
 
 - clone this repo
-- `yarn`
+- `npm install`
 
-The repo's `.yarnrc` enforces `--frozen-lockfile`, exact-version saves (`save-prefix ""`), and a pinned registry — that's intentional supply-chain hardening, please don't loosen it without discussion.
+The repo's `.npmrc` enforces exact-version saves (`save-exact=true`), a pinned registry, blocked git dependencies (`allow-git=none`), and a 7-day minimum release age — that's intentional supply-chain hardening, please don't loosen it without discussion.
 
 ### Repository Layout
 
@@ -82,7 +81,7 @@ fix(ts-interface-generator): handle aggregations with cardinality 0..1
 chore: bump root devDependencies
 ```
 
-The scope is also what `yarn changeset:auto` uses to figure out which packages to bump (see [Releases](#release-process) below). Breaking changes are signalled with a `!` after the type/scope **or** a `BREAKING CHANGE:` footer in the body — either flips the bump to `major`.
+The scope is also what `npm run changeset:auto` uses to figure out which packages to bump (see [Releases](#release-process) below). Breaking changes are signalled with a `!` after the type/scope **or** a `BREAKING CHANGE:` footer in the body — either flips the bump to `major`.
 
 ### Formatting
 
@@ -93,8 +92,8 @@ However, this does mean that dev flows that do not use a full dev env (e.g editi
 To run it manually:
 
 ```sh
-yarn format:fix          # rewrite files
-yarn format:validate     # check, no rewrite (this is what CI runs)
+npm run format:fix          # rewrite files
+npm run format:validate     # check, no rewrite (this is what CI runs)
 ```
 
 ### Compiling
@@ -104,14 +103,14 @@ See the respective sub-packages for instructions (if needed at all).
 To build both publishable packages from the root:
 
 ```sh
-yarn build
+npm run build
 ```
 
-Per-package work uses yarn's workspace shorthand:
+Per-package work uses npm's workspace shorthand:
 
 ```sh
-yarn workspace @ui5/dts-generator build
-yarn workspace @ui5/ts-interface-generator test
+npm run -w @ui5/dts-generator build
+npm run -w @ui5/ts-interface-generator test
 ```
 
 ### Testing
@@ -121,14 +120,14 @@ yarn workspace @ui5/ts-interface-generator test
 [mocha]: https://mochajs.org/
 [chai]: https://www.chaijs.com
 
-- To run the tests, execute `yarn test` in a specific sub-package.
+- To run the tests, execute `npm test` in a specific sub-package.
   - Note that not all sub-packages contain tests.
 
 When adding a feature or fixing a bug, **please add or extend a test**. PRs without tests will get a friendly nudge.
 
 ### Full Build
 
-To run the full **C**ontinuous **I**ntegration build run `yarn ci` in either the top-level package or a specific subpackage.
+To run the full **C**ontinuous **I**ntegration build run `npm run ci` in either the top-level package or a specific subpackage.
 
 ## Pull Requests
 
@@ -153,15 +152,15 @@ The release flow is fully automated through [GitHub Actions](.github/workflows/r
 
 When your PR changes one or more public packages, add a changeset alongside your code change. Pick whichever of the three commands fits best:
 
-| Command                | When to use                                                                                                                                                                                                                                                                                                                                           |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `yarn changeset:auto`  | **Recommended for most PRs.** Walks the conventional-commit history on your branch and writes one `.changeset/auto-<sha>.md` per qualifying commit (packages from the commit `scope`, bump from the `type`, summary from the `subject`). Idempotent — safe to re-run. Already-covered commits are skipped, so any hand-written changeset always wins. |
-| `yarn changeset`       | Interactive — pick packages, bump type, and write a summary by hand. Use when the auto-derived bump or summary is wrong (e.g. a `chore:` commit that secretly contains a `feat:`). The next `:auto` run will then skip the commit because it's covered.                                                                                               |
-| `yarn changeset:empty` | Docs- or tooling-only PRs that touch no public package. Writes an empty `.changeset/*.md` so the "no changeset detected" hint goes away without producing any CHANGELOG entry.                                                                                                                                                                        |
+| Command                   | When to use                                                                                                                                                                                                                                                                                                                                           |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm run changeset:auto`  | **Recommended for most PRs.** Walks the conventional-commit history on your branch and writes one `.changeset/auto-<sha>.md` per qualifying commit (packages from the commit `scope`, bump from the `type`, summary from the `subject`). Idempotent — safe to re-run. Already-covered commits are skipped, so any hand-written changeset always wins. |
+| `npm run changeset`       | Interactive — pick packages, bump type, and write a summary by hand. Use when the auto-derived bump or summary is wrong (e.g. a `chore:` commit that secretly contains a `feat:`). The next `:auto` run will then skip the commit because it's covered.                                                                                               |
+| `npm run changeset:empty` | Docs- or tooling-only PRs that touch no public package. Writes an empty `.changeset/*.md` so the "no changeset detected" hint goes away without producing any CHANGELOG entry.                                                                                                                                                                        |
 
 Whichever you pick, **commit the resulting `.changeset/*.md` file alongside your code change**.
 
-How `yarn changeset:auto` chooses the bump:
+How `npm run changeset:auto` chooses the bump:
 
 | Conventional-commit `type` (or marker)                     | Bump    |
 | ---------------------------------------------------------- | ------- |
@@ -173,13 +172,13 @@ How `yarn changeset:auto` chooses the bump:
 
 Commits whose only file changes are under `packages/<pkg>/test/` are also skipped — test-only changes don't ship in the published tarball.
 
-If a change does not warrant a release at all (CI tweaks, internal tooling, etc.) run `yarn changeset:empty` and commit the generated file — it satisfies the required changeset check without producing any package release.
+If a change does not warrant a release at all (CI tweaks, internal tooling, etc.) run `npm run changeset:empty` and commit the generated file — it satisfies the required changeset check without producing any package release.
 
 ### For maintainers — cutting a release
 
 The release itself happens entirely on GitHub. You don't need npm credentials or a clean local checkout.
 
-1. When a PR with at least one changeset is merged into `main`, the [`Release`](.github/workflows/release.yml) workflow opens (or updates) a single **`Version Packages`** PR. That PR aggregates every pending changeset, bumps the affected `package.json` versions, regenerates each package's `CHANGELOG.md`, and refreshes `yarn.lock`.
+1. When a PR with at least one changeset is merged into `main`, the [`Release`](.github/workflows/release.yml) workflow opens (or updates) a single **`Version Packages`** PR. That PR aggregates every pending changeset, bumps the affected `package.json` versions, regenerates each package's `CHANGELOG.md`, and refreshes `package-lock.json`.
 2. Review and merge that **`Version Packages`** PR when you're ready to cut a release.
 3. Merging it triggers the same workflow again, this time on the `publish` path: `changeset publish` runs, the new versions go to npm (with [npm provenance](https://docs.npmjs.com/generating-provenance-statements)), and matching git tags are pushed.
 4. Spot-check the newly published artifacts on [npmjs.com](https://www.npmjs.com/package/@ui5/dts-generator).
@@ -199,10 +198,10 @@ Not currently configured. If we need them, [`changeset pre enter <tag>`](https:/
 To upgrade the version of the dependencies, [`npm-check-updates`](https://github.com/raineorshine/npm-check-updates) is wired up at the root:
 
 ```sh
-yarn ncu          # list outdated packages across the workspace
-yarn ncu-u        # apply the bumps to every package.json
-yarn install      # refresh yarn.lock
-yarn ci           # sanity-check before opening the PR
+npm run ncu          # list outdated packages across the workspace
+npm run ncu-u        # apply the bumps to every package.json
+npm install          # refresh package-lock.json
+npm run ci           # sanity-check before opening the PR
 ```
 
 ## Where to ask questions

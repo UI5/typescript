@@ -35,10 +35,10 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: npm ci
 
       - name: Build
-        run: yarn build
+        run: npm run build
 
       - name: Detect auth mode (OIDC vs token)
         env:
@@ -61,8 +61,8 @@ jobs:
         id: changesets
         uses: changesets/action@63a615b9cd06ba9a3e6d13796c7fbcb080a60a0b # v1.8.0
         with:
-          version: yarn run version-packages
-          publish: yarn run release-publish
+          version: npm run version-packages
+          publish: npm run release-publish
           commit: "chore(release): publish"
           title: "chore(release): publish"
         env:
