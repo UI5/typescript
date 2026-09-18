@@ -28,17 +28,21 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+
       - name: Setup node
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 24.15.0
           registry-url: https://registry.npmjs.org
+          cache: "pnpm"
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: yarn build
+        run: pnpm run build
 
       - name: Detect auth mode (OIDC vs token)
         env:
@@ -61,8 +65,8 @@ jobs:
         id: changesets
         uses: changesets/action@63a615b9cd06ba9a3e6d13796c7fbcb080a60a0b # v1.8.0
         with:
-          version: yarn run version-packages
-          publish: yarn run release-publish
+          version: pnpm run version-packages
+          publish: pnpm run release-publish
           commit: "chore(release): publish"
           title: "chore(release): publish"
         env:

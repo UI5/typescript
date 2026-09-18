@@ -1,5 +1,5 @@
 import * as path from "path";
-import { readdirSync, readFileSync } from "fs";
+import { readdirSync, readFileSync, statSync } from "fs";
 
 export function discoverTypes(): { typeRoots: string[]; types: string[] } {
   const declaredTypes = new Set<string>();
@@ -34,7 +34,16 @@ export function discoverTypes(): { typeRoots: string[]; types: string[] } {
     const candidate = path.join(dir, "node_modules", "@types");
     try {
       for (const entry of readdirSync(candidate, { withFileTypes: true })) {
-        if (entry.isDirectory() && declaredTypes.has(entry.name)) {
+        if (!declaredTypes.has(entry.name)) {
+          continue;
+        }
+        // Accept both real directories and symlinks that resolve to
+        // directories (pnpm uses symlinks in node_modules).
+        const isDir =
+          entry.isDirectory() ||
+          (entry.isSymbolicLink() &&
+            statSync(path.join(candidate, entry.name)).isDirectory());
+        if (isDir) {
           types.add(entry.name);
         }
       }

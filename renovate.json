@@ -12,6 +12,7 @@
     "enabled": true,
     "schedule": ["before 6am on monday"]
   },
+  "postUpdateOptions": ["pnpmDedupe"],
   "packageRules": [
     {
       "description": "Group all non-major updates to reduce PR noise",

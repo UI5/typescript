@@ -714,6 +714,7 @@ function getMemberFromPropertyAssignment<T extends MetadataSectionName>(
       }: metadata is no valid JSON and could not be quick-fixed to be. Please make the metadata at least close to valid JSON. In particular, TypeScript type annotations cannot be used. Error: ${
         (e as Error).message
       }`,
+      { cause: e },
     );
   }
 
@@ -814,6 +815,7 @@ function generateInterface(
         `When parsing the metadata of ${className} in ${fileName}: ${
           (e as Error).message
         }`,
+        { cause: e },
       );
     }
   });
