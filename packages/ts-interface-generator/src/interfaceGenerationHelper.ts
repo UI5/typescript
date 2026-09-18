@@ -562,7 +562,17 @@ function getInterestingBaseClass(
     return interestingBaseClass;
   }
   if (!type.isClassOrInterface()) {
-    return;
+    // Handle instantiated generic types like MyGenericClass<SomeType>
+    // For these, isClassOrInterface() returns false, but the target property
+    // contains the original generic class definition
+    if (
+      (type as ts.TypeReference).target &&
+      (type as ts.TypeReference).target.isClassOrInterface()
+    ) {
+      type = (type as ts.TypeReference).target;
+    } else {
+      return;
+    }
   }
   const baseTypes = typeChecker.getBaseTypes(type);
   for (let i = 0; i < baseTypes.length; i++) {
@@ -592,11 +602,19 @@ function getInterestingBaseSettingsClass(
   | undefined {
   const symbol = type.getSymbol();
   if (!symbol) {
+    // Handle instantiated generic types - try to use the target type
+    if ((type as ts.TypeReference).target) {
+      return getInterestingBaseSettingsClass(
+        (type as ts.TypeReference).target,
+        typeChecker,
+      );
+    }
     log.error(`Symbol ${
       type.aliasSymbol ? `for type '${type.aliasSymbol.getName()}'` : ""
     } could not be resolved.
     This means that TypeScript did not find out what this type actually is.
     Check the source code: is this type defined where it is written? If not, why not?`);
+    return;
   }
   let interestingBaseSettingsClass =
     interestingBaseSettingsClasses[typeChecker.getFullyQualifiedName(symbol)];
