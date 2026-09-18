@@ -3778,7 +3778,7 @@ declare module "sap/ui/layout/cssgrid/GridResponsiveLayout" {
     /**
      * The name of the newly active layout aggregation
      */
-    layout?: string;
+    layout: string;
   }
 
   /**
@@ -4510,7 +4510,7 @@ declare module "sap/ui/layout/cssgrid/ResponsiveColumnLayout" {
     /**
      * The name of the newly active layout - "S", "M", "ML", "L", "XL", "XXL" or "XXXL".
      */
-    layout?: string;
+    layout: string;
   }
 
   /**
@@ -5239,7 +5239,7 @@ declare module "sap/ui/layout/DynamicSideContent" {
    * Parameters of the DynamicSideContent#breakpointChanged event.
    */
   export interface DynamicSideContent$BreakpointChangedEventParameters {
-    currentBreakpoint?: string;
+    currentBreakpoint: string;
   }
 
   /**
@@ -13080,12 +13080,12 @@ declare module "sap/ui/layout/PaneContainer" {
     /**
      * An array of values representing the old (pixel)sizes of the split panes, which are inside the pane container.
      */
-    oldSizes?: float[];
+    oldSizes: float[];
 
     /**
      * An array of values representing the new (pixel)sizes of the split panes, which are inside the pane container.
      */
-    newSizes?: float[];
+    newSizes: float[];
   }
 
   /**
@@ -14530,17 +14530,17 @@ declare module "sap/ui/layout/Splitter" {
      * The ID of the splitter control. The splitter control can also be accessed by calling getSource() on the
      * event.
      */
-    id?: string;
+    id: string;
 
     /**
      * An array of values representing the old (pixel-)sizes of the splitter contents
      */
-    oldSizes?: int[];
+    oldSizes: int[];
 
     /**
      * An array of values representing the new (pixel-)sizes of the splitter contents
      */
-    newSizes?: int[];
+    newSizes: int[];
   }
 
   /**
