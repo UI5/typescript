@@ -31,7 +31,7 @@
     "lodash": "4.18.1",
     "lodash.combinations": "18.11.1",
     "node-fetch": "3.3.2",
-    "prettier": "3.8.3",
+    "prettier": "3.9.7",
     "resolve": "1.22.12",
     "sanitize-html": "2.17.7",
     "semver": "7.8.5",
@@ -39,10 +39,10 @@
     "typescript": "6.0.3"
   },
   "devDependencies": {
-    "@microsoft/api-extractor": "7.58.12",
+    "@microsoft/api-extractor": "7.59.1",
     "@types/argparse": "2.0.17",
     "@types/lodash": "4.17.25",
-    "@types/node": "22.19.18",
+    "@types/node": "22.20.3",
     "@types/sanitize-html": "2.16.1",
     "@types/urijs": "1.19.26",
     "copyfiles": "2.4.1",
