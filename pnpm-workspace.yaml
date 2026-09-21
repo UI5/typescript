@@ -6,7 +6,7 @@ packages:
 # Supply-chain hardening
 frozenLockfile: true
 saveExact: true
-minimumReleaseAge: 10080 # 7 days (in minutes)
+minimumReleaseAge: 4320 # 3 days (in minutes)
 allowBuilds:
   '@parcel/watcher': true
   ui5-tooling-transpile: true
