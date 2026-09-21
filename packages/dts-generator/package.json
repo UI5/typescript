@@ -39,10 +39,10 @@
     "typescript": "6.0.3"
   },
   "devDependencies": {
-    "@microsoft/api-extractor": "7.58.12",
+    "@microsoft/api-extractor": "7.59.1",
     "@types/argparse": "2.0.17",
     "@types/lodash": "4.17.25",
-    "@types/node": "22.19.18",
+    "@types/node": "22.20.2",
     "@types/sanitize-html": "2.16.1",
     "@types/urijs": "1.19.26",
     "copyfiles": "2.4.1",
