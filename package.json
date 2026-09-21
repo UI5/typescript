@@ -30,7 +30,7 @@
     "husky": "9.1.7",
     "lint-staged": "17.5.1",
     "mocha": "11.8.0",
-    "npm-run-all2": "5.0.2",
+    "npm-run-all2": "9.0.3",
     "prettier": "3.9.6",
     "shx": "0.4.0",
     "typescript": "6.0.3"

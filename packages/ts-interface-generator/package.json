@@ -46,7 +46,7 @@
     "@typescript-eslint/parser": "8.70.0",
     "eslint": "10.10.0",
     "jest": "30.5.1",
-    "npm-run-all2": "5.0.2",
+    "npm-run-all2": "9.0.3",
     "ts-jest": "29.4.12",
     "typescript": "6.0.3"
   },
