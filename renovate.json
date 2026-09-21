@@ -32,7 +32,7 @@
     {
       "description": "Group all non-major updates to reduce PR noise",
       "matchUpdateTypes": ["minor", "patch"],
-      "matchExcludePackageNames": ["prettier"],
+      "matchPackageNames": ["!prettier"],
       "groupName": "non-major dependencies",
       "minimumReleaseAge": "7 days"
     },
