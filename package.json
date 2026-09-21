@@ -33,7 +33,7 @@
     "npm-run-all2": "5.0.2",
     "prettier": "3.9.6",
     "shx": "0.4.0",
-    "typescript": "6.0.3"
+    "typescript": "7.0.2"
   },
   "lint-staged": {
     "*.{ts,js,json,md,yml}": [

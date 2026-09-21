@@ -12,7 +12,7 @@
     "@ui5/dts-generator": "workspace:*",
     "fs-extra": "11.4.0",
     "lodash": "4.18.1",
-    "typescript": "6.0.3"
+    "typescript": "7.0.2"
   },
   "devDependencies": {
     "@types/jquery": "3.5.32",
