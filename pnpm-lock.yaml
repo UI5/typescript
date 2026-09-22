@@ -368,31 +368,31 @@ importers:
         specifier: 1.146.0
         version: 1.146.0
       '@ui5/cli':
-        specifier: ^4.0.60
+        specifier: 4.0.69
         version: 4.0.69
       '@ui5/linter':
-        specifier: ^1.23.3
+        specifier: 1.23.6
         version: 1.23.6(supports-color@8.1.1)
       eslint:
-        specifier: ^10.8.0
+        specifier: 10.10.0
         version: 10.10.0(supports-color@8.1.1)
       globals:
-        specifier: ^17.8.0
+        specifier: 17.12.0
         version: 17.12.0
       typescript:
-        specifier: ^6.0.3
+        specifier: 6.0.3
         version: 6.0.3
       typescript-eslint:
-        specifier: ^8.65.0
+        specifier: 8.70.0
         version: 8.70.0(eslint@10.10.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
       ui5-middleware-livereload:
-        specifier: ^3
+        specifier: 3.4.0
         version: 3.4.0(supports-color@8.1.1)
       ui5-middleware-simpleproxy:
-        specifier: ^3
+        specifier: 3.9.0
         version: 3.9.0(supports-color@8.1.1)
       ui5-tooling-transpile:
-        specifier: ^3
+        specifier: 3.13.1
         version: 3.13.1(babel-plugin-istanbul@8.0.0(supports-color@8.1.1))(supports-color@8.1.1)
 
 packages:
