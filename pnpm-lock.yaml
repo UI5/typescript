@@ -218,8 +218,8 @@ importers:
         specifier: 4.0.2
         version: 4.0.2
       argparse:
-        specifier: 2.0.1
-        version: 2.0.1
+        specifier: 3.0.2
+        version: 3.0.2
       es-main:
         specifier: 1.4.0
         version: 1.4.0
@@ -257,9 +257,6 @@ importers:
       '@microsoft/api-extractor':
         specifier: 7.59.1
         version: 7.59.1(@types/node@22.20.2)
-      '@types/argparse':
-        specifier: 2.0.17
-        version: 2.0.17
       '@types/lodash':
         specifier: 4.17.25
         version: 4.17.25
@@ -1818,9 +1815,6 @@ packages:
   '@types/argparse@1.0.38':
     resolution: {integrity: sha512-ebDJ9b0e702Yr7pWgB0jzm+CX4Srzz8RcXtLJDJB+BSccqMa36uyH/zUsSYao5+BD1ytv3k3rPYCq4mAE1hsXA==}
 
-  '@types/argparse@2.0.17':
-    resolution: {integrity: sha512-fueJssTf+4dW4HODshEGkIZbkLKHzgu1FvCI4cTc/MKum/534Euo3SrN+ilq8xgyHnOjtmg33/hee8iXLRg1XA==}
-
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
 
@@ -2245,6 +2239,9 @@ packages:
 
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
+
+  argparse@3.0.2:
+    resolution: {integrity: sha512-mFdDM6WqWKraGLsVb+C9CahPnzTXOefAOLq3jYcca2YZ8bEWpr++Tzj+zSaKW9+X9L5uSxcm1AZ3Y6aZJ09OhQ==}
 
   argue-cli@3.2.0:
     resolution: {integrity: sha512-VipTB0gXgGIFO2Rg9yEVN5wLt2AurJcZqDbgmYSwPwsykhLrQhs240/bfceev4w68lI8JshoOJIk9uW7tFzROw==}
@@ -7537,8 +7534,6 @@ snapshots:
 
   '@types/argparse@1.0.38': {}
 
-  '@types/argparse@2.0.17': {}
-
   '@types/babel__core@7.20.5':
     dependencies:
       '@babel/parser': 7.29.9
@@ -8063,6 +8058,8 @@ snapshots:
       sprintf-js: 1.0.3
 
   argparse@2.0.1: {}
+
+  argparse@3.0.2: {}
 
   argue-cli@3.2.0: {}
 

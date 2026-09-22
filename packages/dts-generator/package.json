@@ -25,7 +25,7 @@
     "@definitelytyped/dtslint": "latest",
     "@definitelytyped/eslint-plugin": "latest",
     "@ui5/logger": "4.0.2",
-    "argparse": "2.0.1",
+    "argparse": "3.0.2",
     "es-main": "1.4.0",
     "fs-extra": "11.4.0",
     "lodash": "4.18.1",
@@ -40,7 +40,6 @@
   },
   "devDependencies": {
     "@microsoft/api-extractor": "7.59.1",
-    "@types/argparse": "2.0.17",
     "@types/lodash": "4.17.25",
     "@types/node": "22.20.2",
     "@types/sanitize-html": "2.16.1",
