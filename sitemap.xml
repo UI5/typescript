@@ -2,16 +2,10 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap><loc>https://ui5.github.io/typescript/sitemap-site.xml</loc></sitemap>
   <sitemap><loc>https://ui5.github.io/typescript/api/openui5/1.152/sitemap.xml</loc></sitemap>
-  <sitemap><loc>https://ui5.github.io/typescript/api/openui5/1.151/sitemap.xml</loc></sitemap>
-  <sitemap><loc>https://ui5.github.io/typescript/api/openui5/1.150/sitemap.xml</loc></sitemap>
-  <sitemap><loc>https://ui5.github.io/typescript/api/openui5/1.149/sitemap.xml</loc></sitemap>
   <sitemap><loc>https://ui5.github.io/typescript/api/openui5/1.148/sitemap.xml</loc></sitemap>
   <sitemap><loc>https://ui5.github.io/typescript/api/openui5/1.136/sitemap.xml</loc></sitemap>
   <sitemap><loc>https://ui5.github.io/typescript/api/openui5/1.120/sitemap.xml</loc></sitemap>
   <sitemap><loc>https://ui5.github.io/typescript/api/sapui5/1.152/sitemap.xml</loc></sitemap>
-  <sitemap><loc>https://ui5.github.io/typescript/api/sapui5/1.151/sitemap.xml</loc></sitemap>
-  <sitemap><loc>https://ui5.github.io/typescript/api/sapui5/1.150/sitemap.xml</loc></sitemap>
-  <sitemap><loc>https://ui5.github.io/typescript/api/sapui5/1.149/sitemap.xml</loc></sitemap>
   <sitemap><loc>https://ui5.github.io/typescript/api/sapui5/1.148/sitemap.xml</loc></sitemap>
   <sitemap><loc>https://ui5.github.io/typescript/api/sapui5/1.136/sitemap.xml</loc></sitemap>
   <sitemap><loc>https://ui5.github.io/typescript/api/sapui5/1.120/sitemap.xml</loc></sitemap>
