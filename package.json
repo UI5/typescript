@@ -1,7 +1,7 @@
 {
   "name": "root",
   "private": true,
-  "packageManager": "pnpm@12.4.1",
+  "packageManager": "pnpm@12.4.2",
   "scripts": {
     "build": "pnpm --filter @ui5/dts-generator run build && pnpm --filter @ui5/ts-interface-generator run build",
     "preci": "pnpm run build",
