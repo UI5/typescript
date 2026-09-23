@@ -156,6 +156,31 @@ jobs:
             echo "All versions up to date — nothing to generate"
           fi
 
+      - name: Remove outdated version docs
+        if: ${{ !inputs.versions }}
+        working-directory: gh-pages
+        run: |
+          VERSIONS="${{ steps.versions.outputs.versions }}"
+          if [ -z "$VERSIONS" ]; then
+            echo "No versions detected — skipping cleanup"
+            exit 0
+          fi
+
+          for FW in openui5 sapui5; do
+            FW_DIR="api/${FW}"
+            [ -d "$FW_DIR" ] || continue
+            for DIR in "$FW_DIR"/*/; do
+              [ -d "$DIR" ] || continue
+              MINOR=$(basename "$DIR")
+              # Check if this minor is in the detected versions for this framework
+              PKG=$( [[ "$FW" == "openui5" ]] && echo "@openui5/types" || echo "@sapui5/types" )
+              if ! echo "$VERSIONS" | grep -qF "${PKG}@${MINOR}."; then
+                echo "🗑 Removing outdated ${FW}/${MINOR}"
+                rm -rf "$DIR"
+              fi
+            done
+          done
+
       - name: Update index pages
         working-directory: gh-pages
         run: |
