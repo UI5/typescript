@@ -41,7 +41,7 @@
   "devDependencies": {
     "@microsoft/api-extractor": "7.59.1",
     "@types/lodash": "4.17.25",
-    "@types/node": "22.20.2",
+    "@types/node": "22.20.3",
     "@types/sanitize-html": "2.16.1",
     "@types/urijs": "1.19.26",
     "copyfiles": "2.4.1",
