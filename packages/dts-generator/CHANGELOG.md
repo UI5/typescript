@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.6
+
+### Patch Changes
+
+- [#651](https://github.com/UI5/typescript/pull/651) [`6b650fb`](https://github.com/UI5/typescript/commit/6b650fb5f0e6a20c3cd2f09e8d80824579753bb4) Thanks [@akudev](https://github.com/akudev)! - Updated dependencies
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 

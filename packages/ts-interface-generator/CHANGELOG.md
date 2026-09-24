@@ -253,6 +253,12 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 **Note:** Version bump only for package @ui5/ts-interface-generator
 
+## 0.11.2
+
+### Patch Changes
+
+- [#651](https://github.com/UI5/typescript/pull/651) [`6b650fb`](https://github.com/UI5/typescript/commit/6b650fb5f0e6a20c3cd2f09e8d80824579753bb4) Thanks [@akudev](https://github.com/akudev)! - Updated dependencies
+
 # 0.1.0 (2021-11-17)
 
 ### Features
