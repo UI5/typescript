@@ -1,13 +1,13 @@
 # Change Log
 
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
 ## 4.0.6
 
 ### Patch Changes
 
 - [#651](https://github.com/UI5/typescript/pull/651) [`6b650fb`](https://github.com/UI5/typescript/commit/6b650fb5f0e6a20c3cd2f09e8d80824579753bb4) Thanks [@akudev](https://github.com/akudev)! - Updated dependencies
-
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## [4.0.5](https://github.com/UI5/typescript/compare/@ui5/dts-generator@4.0.4...@ui5/dts-generator@4.0.5) (2026-05-29)
 
@@ -39,7 +39,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **dts-generator:** align module option with moduleResolution for TS6 ([1c3293e](https://github.com/UI5/typescript/commit/1c3293e1903dd3520226776c40c353c87bc6ccb9))
 
-# [4.0.0](https://github.com/UI5/typescript/compare/@ui5/dts-generator@3.11.0...@ui5/dts-generator@4.0.0) (2026-05-11)
+## [4.0.0](https://github.com/UI5/typescript/compare/@ui5/dts-generator@3.11.0...@ui5/dts-generator@4.0.0) (2026-05-11)
 
 ### Bug Fixes
 
@@ -70,7 +70,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 - The minimum supported Node.js version is now 20.0.0.
   CI tests on Node 22 and 24 only.
 
-# [3.11.0](https://github.com/UI5/typescript/compare/@ui5/dts-generator@3.10.1...@ui5/dts-generator@3.11.0) (2026-04-24)
+## [3.11.0](https://github.com/UI5/typescript/compare/@ui5/dts-generator@3.10.1...@ui5/dts-generator@3.11.0) (2026-04-24)
 
 ### Features
 
@@ -86,7 +86,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 - **dts-generator:** revert add getOriginalProperty declarations and tests to TypedJSONModel ([#537](https://github.com/UI5/typescript/issues/537)) ([9b90b1b](https://github.com/UI5/typescript/commit/9b90b1bd83dc0669daac97c16a1750c1c333fe8f))
 
-# [3.10.0](https://github.com/UI5/typescript/compare/@ui5/dts-generator@3.9.1...@ui5/dts-generator@3.10.0) (2026-01-20)
+## [3.10.0](https://github.com/UI5/typescript/compare/@ui5/dts-generator@3.9.1...@ui5/dts-generator@3.10.0) (2026-01-20)
 
 ### Features
 
@@ -96,7 +96,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 **Note:** Version bump only for package @ui5/dts-generator
 
-# [3.9.0](https://github.com/UI5/typescript/compare/@ui5/dts-generator@3.8.1...@ui5/dts-generator@3.9.0) (2025-10-13)
+## [3.9.0](https://github.com/UI5/typescript/compare/@ui5/dts-generator@3.8.1...@ui5/dts-generator@3.9.0) (2025-10-13)
 
 ### Features
 
@@ -108,7 +108,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 - **dts-generator:** fix more derived type names for module:\* classes ([#523](https://github.com/UI5/typescript/issues/523)) ([0233f8e](https://github.com/UI5/typescript/commit/0233f8e8a8b9550bc080f57a9db980bd655c2f9d))
 
-# [3.8.0](https://github.com/UI5/typescript/compare/@ui5/dts-generator@3.7.4...@ui5/dts-generator@3.8.0) (2025-08-08)
+## [3.8.0](https://github.com/UI5/typescript/compare/@ui5/dts-generator@3.7.4...@ui5/dts-generator@3.8.0) (2025-08-08)
 
 ### Features
 
@@ -142,7 +142,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 - **dts-generator:** detect broken method names and throw error ([bb26fd6](https://github.com/SAP/ui5-typescript/commit/bb26fd62b34f270b18630813f3cd8e7e1ed958dd))
 
-# [3.7.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.6.1...@ui5/dts-generator@3.7.0) (2025-03-14)
+## [3.7.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.6.1...@ui5/dts-generator@3.7.0) (2025-03-14)
 
 ### Features
 
@@ -154,7 +154,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 - **dts-generator:** adapt eslintrc rules to what is in dt repo ([#495](https://github.com/SAP/ui5-typescript/issues/495)) ([e361741](https://github.com/SAP/ui5-typescript/commit/e361741341359e1a61d853213cba51966687c7e4))
 
-# [3.6.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.5.0...@ui5/dts-generator@3.6.0) (2025-03-12)
+## [3.6.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.5.0...@ui5/dts-generator@3.6.0) (2025-03-12)
 
 ### Bug Fixes
 
@@ -164,7 +164,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 - **dts-generator:** allow "esmOnly" in directives and "readonly" props ([#491](https://github.com/SAP/ui5-typescript/issues/491)) ([b2c4d50](https://github.com/SAP/ui5-typescript/commit/b2c4d509e51bf2ecb9e820175c391d22955d35ab))
 
-# [3.5.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.4.1...@ui5/dts-generator@3.5.0) (2025-02-08)
+## [3.5.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.4.1...@ui5/dts-generator@3.5.0) (2025-02-08)
 
 ### Features
 
@@ -180,7 +180,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 - take the changed enum representation into account for array types ([#483](https://github.com/SAP/ui5-typescript/issues/483)) ([1a1a660](https://github.com/SAP/ui5-typescript/commit/1a1a6609a69c6f6ad57c7d078e4e282a16e59d04))
 
-# [3.4.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.3.1...@ui5/dts-generator@3.4.0) (2025-01-08)
+## [3.4.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.3.1...@ui5/dts-generator@3.4.0) (2025-01-08)
 
 ### Features
 
@@ -192,19 +192,19 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 - **dts-generator:** align deprecation/experimental tags with UI5 SDK ([#469](https://github.com/SAP/ui5-typescript/issues/469)) ([aa36d21](https://github.com/SAP/ui5-typescript/commit/aa36d21309695d8cd30a77b192f495df8db75101))
 
-# [3.3.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.2.0...@ui5/dts-generator@3.3.0) (2024-07-04)
+## [3.3.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.2.0...@ui5/dts-generator@3.3.0) (2024-07-04)
 
 ### Features
 
 - **dts-generator:** allow changing names in .dtsgenrc overlays ([#464](https://github.com/SAP/ui5-typescript/issues/464)) ([5d5e690](https://github.com/SAP/ui5-typescript/commit/5d5e69082b174c2336ce36d9c90401eab49da60c))
 
-# [3.2.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.1.0...@ui5/dts-generator@3.2.0) (2024-06-27)
+## [3.2.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.1.0...@ui5/dts-generator@3.2.0) (2024-06-27)
 
 ### Features
 
 - **dts-generator:** add user-agent to HTTP requests ([#462](https://github.com/SAP/ui5-typescript/issues/462)) ([b65eafa](https://github.com/SAP/ui5-typescript/commit/b65eafab80155b548c5abc7e9e175a04987a5669))
 
-# [3.1.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.0.2...@ui5/dts-generator@3.1.0) (2024-05-07)
+## [3.1.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@3.0.2...@ui5/dts-generator@3.1.0) (2024-05-07)
 
 ### Features
 
@@ -224,7 +224,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 - dtslint adaptations ([#447](https://github.com/SAP/ui5-typescript/issues/447)) ([944411c](https://github.com/SAP/ui5-typescript/commit/944411c2cdcb136c8e9f40560dbc954b5563c9ea))
 - set up the dtslint temp folder only when needed ([#449](https://github.com/SAP/ui5-typescript/issues/449)) ([2a4f38e](https://github.com/SAP/ui5-typescript/commit/2a4f38e9fd6bab591e3ae6058283bbe3a4133b6b))
 
-# [3.0.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@2.3.2...@ui5/dts-generator@3.0.0) (2024-04-25)
+## [3.0.0](https://github.com/SAP/ui5-typescript/compare/@ui5/dts-generator@2.3.2...@ui5/dts-generator@3.0.0) (2024-04-25)
 
 ### Features
 
@@ -260,7 +260,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 - update project dependencies and fix tests ([#313](https://github.com/SAP/ui5-typescript/issues/313)) ([62626f4](https://github.com/SAP/ui5-typescript/commit/62626f4069d0fa701528d84ae431ccc2a4b69933))
 
-# [2.3.0](https://github.com/SAP/ui5-typescript/compare/v2.2.1...v2.3.0) (2021-07-14)
+## [2.3.0](https://github.com/SAP/ui5-typescript/compare/v2.2.1...v2.3.0) (2021-07-14)
 
 ### Features
 
@@ -272,13 +272,13 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 - enable auto-complete for methods overriding ([#245](https://github.com/SAP/ui5-typescript/issues/245)) ([f5d9474](https://github.com/SAP/ui5-typescript/commit/f5d947489fcbc820cdb03a019f188c41413a5429))
 
-# [2.2.0](https://github.com/SAP/ui5-typescript/compare/v2.1.0...v2.2.0) (2021-02-16)
+## [2.2.0](https://github.com/SAP/ui5-typescript/compare/v2.1.0...v2.2.0) (2021-02-16)
 
 ### Features
 
 - export replacement interfaces for module declaration ([#222](https://github.com/SAP/ui5-typescript/issues/222)) ([1a5dc02](https://github.com/SAP/ui5-typescript/commit/1a5dc02adfd0dc44f4c3fd53bcd371079cb20bfd))
 
-# [2.1.0](https://github.com/SAP/ui5-typescript/compare/v2.0.6...v2.1.0) (2021-01-28)
+## [2.1.0](https://github.com/SAP/ui5-typescript/compare/v2.0.6...v2.1.0) (2021-01-28)
 
 ### Features
 
@@ -321,7 +321,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 - **dts-generator:** directive to ignore api.json symbols by fqn. ([f328662](https://github.com/SAP/ui5-typescript/commit/f3286622c274b01dd6a3194ebd8d0f827792ddb1))
 
-# [2.0.0](https://github.com/SAP/ui5-typescript/compare/v1.60.5...v2.0.0) (2020-05-13)
+## [2.0.0](https://github.com/SAP/ui5-typescript/compare/v1.60.5...v2.0.0) (2020-05-13)
 
 ### Features
 
@@ -338,10 +338,10 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 ## [1.60.1](https://github.com/SAP/ui5-typescript/compare/v1.60.0...v1.60.1) (2019-07-17)
 
-# [1.60.0](https://github.com/SAP/ui5-typescript/compare/v1.65.1...v1.60.0) (2019-07-15)
+## [1.60.0](https://github.com/SAP/ui5-typescript/compare/v1.65.1...v1.60.0) (2019-07-15)
 
 ### Features
 
 - Ignore restricted interfaces ([#29](https://github.com/SAP/ui5-typescript/issues/29)) ([6ba301d](https://github.com/SAP/ui5-typescript/commit/6ba301d7f1a218d2ab9ea1c3481dcdae0a3dd14a))
 
-# [1.65.0](https://github.com/SAP/ui5-typescript/compare/v1.64.1...v1.65.0) (2019-05-09)
+## [1.65.0](https://github.com/SAP/ui5-typescript/compare/v1.64.1...v1.65.0) (2019-05-09)
