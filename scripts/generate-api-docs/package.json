@@ -9,7 +9,7 @@
   "dependencies": {
     "marked": "18.0.13",
     "typedoc": "0.28.20",
-    "typedoc-plugin-markdown": "4.13.0",
+    "typedoc-plugin-markdown": "4.13.1",
     "typescript": "5.9.3"
   },
   "devDependencies": {
