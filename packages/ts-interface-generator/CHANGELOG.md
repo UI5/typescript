@@ -3,13 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.2
+
+### Patch Changes
+
+- [#651](https://github.com/UI5/typescript/pull/651) [`6b650fb`](https://github.com/UI5/typescript/commit/6b650fb5f0e6a20c3cd2f09e8d80824579753bb4) Thanks [@akudev](https://github.com/akudev)! - Updated dependencies
+
 ## [0.11.1](https://github.com/UI5/typescript/compare/@ui5/ts-interface-generator@0.11.0...@ui5/ts-interface-generator@0.11.1) (2026-05-26)
 
 ### Bug Fixes
 
 - **ts-interface-generator:** pass process.argv to yargs so CLI flags work ([ea03e83](https://github.com/UI5/typescript/commit/ea03e83194632567d5d6441329c79499b1726176)), closes [#542](https://github.com/UI5/typescript/issues/542)
 
-# [0.11.0](https://github.com/UI5/typescript/compare/@ui5/ts-interface-generator@0.10.5...@ui5/ts-interface-generator@0.11.0) (2026-05-11)
+## [0.11.0](https://github.com/UI5/typescript/compare/@ui5/ts-interface-generator@0.10.5...@ui5/ts-interface-generator@0.11.0) (2026-05-11)
 
 ### Bug Fixes
 
@@ -58,13 +64,13 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 **Note:** Version bump only for package @ui5/ts-interface-generator
 
-# [0.10.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.9.0...@ui5/ts-interface-generator@0.10.0) (2025-03-12)
+## [0.10.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.9.0...@ui5/ts-interface-generator@0.10.0) (2025-03-12)
 
 ### Features
 
 - **ts-interface-generator:** support ts path mappings with configDir template variable ([#492](https://github.com/SAP/ui5-typescript/issues/492)) ([4d3aafe](https://github.com/SAP/ui5-typescript/commit/4d3aafeb04517bdd5bc20317fe8210a464ea58dc)), closes [#484](https://github.com/SAP/ui5-typescript/issues/484)
 
-# [0.9.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.8.4...@ui5/ts-interface-generator@0.9.0) (2024-09-26)
+## [0.9.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.8.4...@ui5/ts-interface-generator@0.9.0) (2024-09-26)
 
 ### Bug Fixes
 
@@ -94,14 +100,14 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 - **ts-interface-generator:** added webc sample for UI5 >=1.118 ([#414](https://github.com/SAP/ui5-typescript/issues/414)) ([f4af575](https://github.com/SAP/ui5-typescript/commit/f4af575dd534672349d3c52faa2ed1aa0194ab5f))
 
-# [0.8.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.7.0...@ui5/ts-interface-generator@0.8.0) (2023-08-25)
+## [0.8.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.7.0...@ui5/ts-interface-generator@0.8.0) (2023-08-25)
 
 ### Features
 
 - **ts-interface-generator:** split main CLI and API ([#413](https://github.com/SAP/ui5-typescript/issues/413)) ([477dab6](https://github.com/SAP/ui5-typescript/commit/477dab6193fcc47ebfbda4a5f2fd3197f6c4edf7))
 - **ts-interface-generator:** support WebComponents ([#412](https://github.com/SAP/ui5-typescript/issues/412)) ([fa680d6](https://github.com/SAP/ui5-typescript/commit/fa680d68bfb44ef4bef932ebaf6b27c0f492eb0c))
 
-# [0.7.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.6.3...@ui5/ts-interface-generator@0.7.0) (2023-06-22)
+## [0.7.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.6.3...@ui5/ts-interface-generator@0.7.0) (2023-06-22)
 
 ### Features
 
@@ -125,7 +131,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 - **ts-interface-generator:** enable running with TypeScript < 4.8 ([e1f9442](https://github.com/SAP/ui5-typescript/commit/e1f9442b2b78f891f9cf6d3159f267179a17f899)), closes [#396](https://github.com/SAP/ui5-typescript/issues/396)
 
-# [0.6.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.5.5...@ui5/ts-interface-generator@0.6.0) (2023-05-24)
+## [0.6.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.5.5...@ui5/ts-interface-generator@0.6.0) (2023-05-24)
 
 ### Features
 
@@ -163,7 +169,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 - **ts-interface-generator:** handle array types properly ([deb6af4](https://github.com/SAP/ui5-typescript/commit/deb6af4c4974cad1ba817faf9a3757717e0a8af3)), closes [#370](https://github.com/SAP/ui5-typescript/issues/370)
 - **ts-interface-generator:** recognize "function" as built-in type ([c8bf7af](https://github.com/SAP/ui5-typescript/commit/c8bf7afa617e14fc6dc2db049192ae97c7de1514)), closes [#371](https://github.com/SAP/ui5-typescript/issues/371)
 
-# [0.5.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.4.2...@ui5/ts-interface-generator@0.5.0) (2022-04-22)
+## [0.5.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.4.2...@ui5/ts-interface-generator@0.5.0) (2022-04-22)
 
 ### Bug Fixes
 
@@ -186,7 +192,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 - **ts-interface-generator:** fix interface not generated when superclass not recognized ([183920f](https://github.com/SAP/ui5-typescript/commit/183920fbb221a30bc0f357d2bf229a6b4f9014a4)), closes [#337](https://github.com/SAP/ui5-typescript/issues/337)
 - **ts-interface-generator:** handle simple type arrays in metadata properly ([9f6ab01](https://github.com/SAP/ui5-typescript/commit/9f6ab01f62044434ada9132510f8ee6e31032250)), closes [#345](https://github.com/SAP/ui5-typescript/issues/345)
 
-# [0.4.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.3.2...@ui5/ts-interface-generator@0.4.0) (2022-01-31)
+## [0.4.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.3.2...@ui5/ts-interface-generator@0.4.0) (2022-01-31)
 
 ### Features
 
@@ -204,7 +210,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 - **ts-interface-generator:** fix dependencies ([eb29c1c](https://github.com/SAP/ui5-typescript/commit/eb29c1cc465fd5af96e688e3c52ae35e2c0c34f0))
 
-# [0.3.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.2.3...@ui5/ts-interface-generator@0.3.0) (2022-01-18)
+## [0.3.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.2.3...@ui5/ts-interface-generator@0.3.0) (2022-01-18)
 
 ### Bug Fixes
 
@@ -237,7 +243,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 - **ts-interface-generator:** re-add binary to enable npx usage ([d98e4b7](https://github.com/SAP/ui5-typescript/commit/d98e4b7973c814199868b93a418d238f7b521540)), closes [#319](https://github.com/SAP/ui5-typescript/issues/319)
 
-# [0.2.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.1.2...@ui5/ts-interface-generator@0.2.0) (2021-11-26)
+## [0.2.0](https://github.com/SAP/ui5-typescript/compare/@ui5/ts-interface-generator@0.1.2...@ui5/ts-interface-generator@0.2.0) (2021-11-26)
 
 ### Features
 
@@ -253,13 +259,7 @@ Adapt all tsconfigs for TS6 changed defaults:
 
 **Note:** Version bump only for package @ui5/ts-interface-generator
 
-## 0.11.2
-
-### Patch Changes
-
-- [#651](https://github.com/UI5/typescript/pull/651) [`6b650fb`](https://github.com/UI5/typescript/commit/6b650fb5f0e6a20c3cd2f09e8d80824579753bb4) Thanks [@akudev](https://github.com/akudev)! - Updated dependencies
-
-# 0.1.0 (2021-11-17)
+## 0.1.0 (2021-11-17)
 
 ### Features
 
