@@ -1,7 +1,7 @@
 {
   "name": "root",
   "private": true,
-  "packageManager": "pnpm@12.4.2",
+  "packageManager": "pnpm@12.5.1",
   "scripts": {
     "build": "pnpm --filter @ui5/dts-generator run build && pnpm --filter @ui5/ts-interface-generator run build",
     "preci": "pnpm run build",
@@ -23,8 +23,8 @@
   "devDependencies": {
     "@changesets/changelog-github": "1.0.1",
     "@changesets/cli": "3.0.3",
-    "@commitlint/cli": "21.2.2",
-    "@commitlint/config-conventional": "21.2.2",
+    "@commitlint/cli": "21.2.3",
+    "@commitlint/config-conventional": "21.2.3",
     "chai": "6.2.2",
     "cz-conventional-changelog": "3.3.0",
     "husky": "9.1.7",
