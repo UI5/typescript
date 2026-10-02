@@ -287,6 +287,9 @@ importers:
       loglevel:
         specifier: 1.9.2
         version: 1.9.2
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
       yargs:
         specifier: 18.2.0
         version: 18.2.0
@@ -330,9 +333,6 @@ importers:
       ts-jest:
         specifier: 29.4.13
         version: 29.4.13(@babel/core@7.29.7(supports-color@8.1.1))(@jest/transform@30.5.2(supports-color@8.1.1))(@jest/types@30.5.1)(babel-jest@30.5.2(@babel/core@7.29.7(supports-color@8.1.1))(supports-color@8.1.1))(jest-util@30.5.1)(jest@30.5.2(@types/node@24.13.6)(supports-color@8.1.1))(typescript@6.0.3)
-      typescript:
-        specifier: 6.0.3
-        version: 6.0.3
 
   test-packages/openui5-snapshot-test:
     dependencies:

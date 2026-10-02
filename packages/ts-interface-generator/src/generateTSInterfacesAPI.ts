@@ -102,6 +102,12 @@ export function getProgramInfo(
   const options = program.getCompilerOptions();
   if (options.baseUrl) {
     basePath = path.normalize(options.baseUrl);
+  } else if ((options as Record<string, unknown>).pathsBasePath) {
+    // When "paths" is specified without "baseUrl" (which is removed in TS7),
+    // TS6 internally populates the "pathsBasePath" property to the tsconfig directory.
+    basePath = path.normalize(
+      (options as Record<string, unknown>).pathsBasePath as string,
+    );
   }
 
   // loop all files, filter for relevant ones, and extract knowledge about all their module exports

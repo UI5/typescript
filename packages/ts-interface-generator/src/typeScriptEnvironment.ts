@@ -69,7 +69,7 @@ function initialize(
     { noEmit: true },
     ts.sys,
     ts.createSemanticDiagnosticsBuilderProgram,
-    options.watchMode ? reportDiagnostic : undefined,
+    reportDiagnostic,
     options.watchMode ? reportWatchStatusChanged : undefined,
   );
 
@@ -133,9 +133,27 @@ function reportDiagnostic(diagnostic: ts.Diagnostic) {
     }
   }
 
-  // the remaining errors MAY be real - some may still be caused by access to API methods when the interface is not yet generated
-  // but also the real errors do not need to be brought to the developer's attention - they will appear in the editor anyway.
-  // log.error("[reportDiagnostic] ", diagnostic.code, ":: [in ", formatHost.getCanonicalFileName(diagnostic.file.fileName), "] ", ts.flattenDiagnosticMessageText( diagnostic.messageText, formatHost.getNewLine()));
+  // Filter out unknown compiler option warnings.
+  // When the user's tsconfig contains options the bundled TypeScript version doesn't recognize
+  // (e.g. options introduced in newer TS versions), these diagnostics are noise —
+  // the user's own TS installation validates the tsconfig.
+  if (diagnostic.code === 5023 || diagnostic.code === 5025) {
+    return;
+  }
+
+  // The remaining errors MAY be real — some may still be caused by access to API
+  // methods when the interface is not yet generated.
+  // In watch mode they can be ignored (the editor shows them). In run-once / CI
+  // mode we log them so they're visible in the build output.
+  if (!options.watchMode) {
+    log.warn(
+      ts.formatDiagnosticsWithColorAndContext([diagnostic], {
+        getCurrentDirectory: () => ts.sys.getCurrentDirectory(),
+        getCanonicalFileName: (f) => f,
+        getNewLine: () => ts.sys.newLine,
+      }),
+    );
+  }
 }
 
 /**
@@ -178,9 +196,9 @@ function reportWatchStatusChanged(diagnostic: ts.Diagnostic) {
       );
     }
   } else {
-    // should not happen
-    throw new Error(
-      `reportWatchStatusChanged: diagnostic.code !== 6031 or 6032 or 6193 or 6194, it is: ${diagnostic.code}`,
+    // other diagnostic codes (e.g. unknown compiler option warnings) can be ignored
+    log.debug(
+      `reportWatchStatusChanged: ignoring diagnostic code ${diagnostic.code}`,
     );
   }
 }
