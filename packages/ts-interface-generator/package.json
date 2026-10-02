@@ -39,21 +39,21 @@
     "@eslint/js": "10.0.1",
     "@types/hjson": "2.4.6",
     "@types/jest": "30.0.0",
-    "@types/node": "24.13.5",
+    "@types/node": "24.13.6",
     "@types/openui5": "1.146.0",
     "@types/yargs": "17.0.35",
-    "@typescript-eslint/eslint-plugin": "8.70.0",
-    "@typescript-eslint/parser": "8.70.0",
-    "eslint": "10.10.0",
-    "jest": "30.5.1",
+    "@typescript-eslint/eslint-plugin": "8.70.1",
+    "@typescript-eslint/parser": "8.70.1",
+    "eslint": "10.11.0",
+    "jest": "30.5.2",
     "npm-run-all2": "9.0.3",
-    "ts-jest": "29.4.12",
+    "ts-jest": "29.4.13",
     "typescript": "6.0.3"
   },
   "dependencies": {
     "hjson": "3.2.2",
     "loglevel": "1.9.2",
-    "yargs": "18.1.0"
+    "yargs": "18.2.0"
   },
   "peerDependencies": {
     "typescript": ">=5.2.0 <7.0.0"

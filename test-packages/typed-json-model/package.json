@@ -20,10 +20,10 @@
     "@openui5/types": "1.146.0",
     "@ui5/cli": "4.0.69",
     "@ui5/linter": "1.23.6",
-    "eslint": "10.10.0",
+    "eslint": "10.11.0",
     "globals": "17.12.0",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.70.0",
+    "typescript-eslint": "8.70.1",
     "ui5-middleware-livereload": "3.4.0",
     "ui5-middleware-simpleproxy": "3.9.0",
     "ui5-tooling-transpile": "3.13.1"
