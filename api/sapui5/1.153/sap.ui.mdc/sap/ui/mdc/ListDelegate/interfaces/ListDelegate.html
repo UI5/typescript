@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Interface: ListDelegate — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: ListDelegate — SAPUI5 TypeScript API Reference (1.153.0)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.153/sap.ui.mdc/sap/ui/mdc/ListDelegate/interfaces/ListDelegate.html">
+<meta property="og:title" content="Interface: ListDelegate — SAPUI5 TypeScript API">
+<meta property="og:description" content="Interface: ListDelegate — SAPUI5 TypeScript API Reference (1.153.0)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.153/sap.ui.mdc/sap/ui/mdc/ListDelegate/interfaces/ListDelegate.html">
+<meta property="og:site_name" content="UI5 TypeScript API">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../sap.ui.mdc/README.html">sap.ui.mdc</a> › sap › ui › mdc › <a href="../../../../../../sap.ui.mdc/sap/ui/mdc/ListDelegate/README.html">ListDelegate</a> › interfaces</nav>
+<p><a href="../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.153.0)</strong></a></p>
+<hr>
+<p><a href="../../../../../../README.html">SAPUI5 TypeScript API (1.153.0)</a> / <a href="../../../../../README.html">sap.ui.mdc</a> / <a href="../README.html">sap/ui/mdc/ListDelegate</a> / ListDelegate</p>
+<h1>Interface: ListDelegate</h1>
+<pre class="sig"><span class="kw">import</span> ListDelegate <span class="kw">from</span> <span class="str">"sap/ui/mdc/ListDelegate"</span>;</pre>
+<p>Base delegate for sap.ui.mdc.List. Extend this object in your project to use all functionalities
+of the list.</p>
+<h2>Since</h2>
+<p>1.151</p>
+<h2>Extends</h2>
+<ul>
+<li><a href="../../AggregationBaseDelegate/interfaces/AggregationBaseDelegate.html"><code>AggregationBaseDelegate</code></a></li>
+</ul>
+<h2>Methods</h2>
+<h3>fetchExportCapabilities()</h3>
+<blockquote>
+<p><strong>fetchExportCapabilities</strong>(<code>oList</code>): <code>Promise</code>&lt;<code>object</code>&gt;</p>
+</blockquote>
+<p>Returns the export capabilities for the given list.</p>
+<h4>Parameters</h4>
+<h5>oList</h5>
+<p><code>any</code></p>
+<p>Instance of the list</p>
+<h4>Returns</h4>
+<p><code>Promise</code>&lt;<code>object</code>&gt;</p>
+<p>A promise that resolves with the export capabilities</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>formatGroupHeader()</h3>
+<blockquote>
+<p><strong>formatGroupHeader</strong>(<code>oList</code>, <code>oContext</code>, <code>sPropertyKey</code>): <code>string</code></p>
+</blockquote>
+<p>Formats the title text of a group header row of the list.</p>
+<p>Override this method in a concrete delegate to provide a custom group header label.</p>
+<h4>Parameters</h4>
+<h5>oList</h5>
+<p><code>any</code></p>
+<p>Instance of the list</p>
+<h5>oContext</h5>
+<p><a href="../../../../../../sap.ui.core/sap/ui/model/Context/classes/Context.html"><code>Context</code></a></p>
+<p>Binding context</p>
+<h5>sPropertyKey</h5>
+<p><code>string</code></p>
+<p>Key of the grouped property</p>
+<h4>Returns</h4>
+<p><code>string</code></p>
+<p>The group header title</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>getFilterDelegate()</h3>
+<blockquote>
+<p><strong>getFilterDelegate</strong>(): <a href="../../library/type-aliases/FilterDelegateObject.html"><code>FilterDelegateObject</code></a></p>
+</blockquote>
+<p>Returns the filter delegate of the list that provides basic filter functionality, such as adding filter
+fields.</p>
+<p>Application delegates must override this method and return an object with a working <code>addItem</code> implementation
+to enable the inbuilt filter personalization panel. The default implementation returns <code>null</code> from <code>addItem</code>,
+which means the filter panel is available but no filter fields are created unless overridden.</p>
+<h4>Returns</h4>
+<p><a href="../../library/type-aliases/FilterDelegateObject.html"><code>FilterDelegateObject</code></a></p>
+<p>Object for the list&#39;s filter personalization</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>getGroupSorters()</h3>
+<blockquote>
+<p><strong>getGroupSorters</strong>(<code>oList</code>): <a href="../../../../../../sap.ui.core/sap/ui/model/Sorter/classes/Sorter.html"><code>Sorter</code></a>[]</p>
+</blockquote>
+<p>Returns group-level sorters to be applied when updating the list&#39;s binding based on the group conditions
+of the list.</p>
+<p>Override this method in a concrete delegate to customize group sorter construction.</p>
+<h4>Parameters</h4>
+<h5>oList</h5>
+<p><code>any</code></p>
+<p>Instance of the list</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/model/Sorter/classes/Sorter.html"><code>Sorter</code></a>[]</p>
+<p>Array of group sorters</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>getItemTemplate()</h3>
+<blockquote>
+<p><strong>getItemTemplate</strong>(<code>oList</code>, <code>oBindingInfo</code>): <a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+</blockquote>
+<p>Returns the item template to be used for list items.</p>
+<p>Override this method in a concrete delegate to provide a custom template. Return <code>null</code> to use the template
+from the list&#39;s <code>itemTemplate</code> aggregation instead.</p>
+<h4>Parameters</h4>
+<h5>oList</h5>
+<p><code>any</code></p>
+<p>Instance of the list</p>
+<h5>oBindingInfo</h5>
+<p><code>object</code></p>
+<p>The current binding info</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/core/Control/classes/Control.html"><code>Control</code></a></p>
+<p>The item template, or <code>null</code> to fall back to the aggregation template</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>getSorters()</h3>
+<blockquote>
+<p><strong>getSorters</strong>(<code>oList</code>): <a href="../../../../../../sap.ui.core/sap/ui/model/Sorter/classes/Sorter.html"><code>Sorter</code></a>[]</p>
+</blockquote>
+<p>Returns sorters to be applied when updating the list&#39;s binding based on the sort conditions of the list.</p>
+<p>Override this method in a concrete delegate to customize sort sorter construction.</p>
+<h4>Parameters</h4>
+<h5>oList</h5>
+<p><code>any</code></p>
+<p>Instance of the list</p>
+<h4>Returns</h4>
+<p><a href="../../../../../../sap.ui.core/sap/ui/model/Sorter/classes/Sorter.html"><code>Sorter</code></a>[]</p>
+<p>Array of sorters</p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>rebind()</h3>
+<blockquote>
+<p><strong>rebind</strong>(<code>oList</code>, <code>oBindingInfo</code>): <code>void</code></p>
+</blockquote>
+<p>Rebinds the list with the binding info object returned from module:sap/ui/mdc/ListDelegate.updateBindingInfo updateBindingInfo.</p>
+<h4>Parameters</h4>
+<h5>oList</h5>
+<p><code>any</code></p>
+<p>Instance of the list</p>
+<h5>oBindingInfo</h5>
+<p><a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
+<p>The binding info object used to bind the list</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+<hr>
+<h3>updateBinding()</h3>
+<blockquote>
+<p><strong>updateBinding</strong>(<code>oList</code>, <code>oBindingInfo</code>, <code>oBinding?</code>, <code>mSettings?</code>): <code>void</code></p>
+</blockquote>
+<p>Updates the items binding of the list.</p>
+<p>The default implementation rebinds the list. Model-specific subclasses may call dedicated binding methods
+to update the binding instead of triggering a full rebind.</p>
+<h4>Parameters</h4>
+<h5>oList</h5>
+<p><code>any</code></p>
+<p>Instance of the list</p>
+<h5>oBindingInfo</h5>
+<p><a href="../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/AggregationBindingInfo.html"><code>AggregationBindingInfo</code></a></p>
+<p>The binding info object used to bind the list items</p>
+<h5>oBinding?</h5>
+<p><a href="../../../../../../sap.ui.core/sap/ui/model/ListBinding/classes/ListBinding.html"><code>ListBinding</code></a></p>
+<p>The current binding instance, if one exists</p>
+<h5>mSettings?</h5>
+<p>Additional settings</p>
+<h6>forceRefresh?</h6>
+<p><code>boolean</code></p>
+<p>Indicates that the binding must be refreshed even if <code>oBindingInfo</code> has not changed</p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<h4>Ui5-protected</h4>
+<p>Do not call from applications (only from related classes in the framework)</p>
+
+<footer>Generated from <code>@sapui5/types@1.153.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.153/">Back to index</a>.</footer>
+</body>
+</html>

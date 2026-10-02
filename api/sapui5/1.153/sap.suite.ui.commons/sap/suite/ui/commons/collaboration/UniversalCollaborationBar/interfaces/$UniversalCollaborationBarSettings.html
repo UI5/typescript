@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Interface: $UniversalCollaborationBarSettings — SAPUI5 TypeScript API</title>
+<meta name="description" content="Interface: $UniversalCollaborationBarSettings — SAPUI5 TypeScript API Reference (1.153.0)">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://ui5.github.io/typescript/api/sapui5/1.153/sap.suite.ui.commons/sap/suite/ui/commons/collaboration/UniversalCollaborationBar/interfaces/$UniversalCollaborationBarSettings.html">
+<meta property="og:title" content="Interface: $UniversalCollaborationBarSettings — SAPUI5 TypeScript API">
+<meta property="og:description" content="Interface: $UniversalCollaborationBarSettings — SAPUI5 TypeScript API Reference (1.153.0)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ui5.github.io/typescript/api/sapui5/1.153/sap.suite.ui.commons/sap/suite/ui/commons/collaboration/UniversalCollaborationBar/interfaces/$UniversalCollaborationBarSettings.html">
+<meta property="og:site_name" content="UI5 TypeScript API">
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:56em;margin:0 auto;padding:1.5em;line-height:1.6;color:#1a1a2e}
+pre{background:#f6f8fa;padding:1em;overflow-x:auto;border-radius:6px;border:1px solid #e1e4e8}
+code{font-size:0.88em;background:#f6f8fa;padding:0.15em 0.4em;border-radius:3px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+pre code{background:none;padding:0;font-size:0.85em}
+a{color:#0366d6;text-decoration:none}a:hover{text-decoration:underline}
+h1{border-bottom:2px solid #e1e4e8;padding-bottom:0.3em;margin-top:0}
+h2{border-bottom:1px solid #e8e8e8;padding-bottom:0.2em;margin-top:2em}
+h3{margin-top:1.8em;color:#24292e}
+h4,h5{margin-top:1em}
+nav{font-size:0.85em;color:#586069;margin-bottom:1.5em;padding:0.5em 0;border-bottom:1px solid #e1e4e8}
+nav a{margin-right:0.3em}
+ul{padding-left:1.5em}
+blockquote{border-left:3px solid #dfe2e5;padding-left:1em;color:#6a737d;margin:1em 0}
+blockquote code{color:#005cc5}
+hr{border:none;border-top:1px solid #e1e4e8;margin:2em 0}
+footer{margin-top:3em;padding-top:1em;border-top:1px solid #e1e4e8;font-size:0.8em;color:#6a737d}
+/* Syntax highlighting for TypeScript signatures */
+.sig{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.88em;background:#f6f8fa;border:1px solid #e1e4e8;border-radius:6px;padding:0.6em 1em;display:block;overflow-x:auto;margin:0.5em 0}
+.kw{color:#d73a49}.tp{color:#6f42c1}.fn{color:#6f42c1}.str{color:#032f62}.cm{color:#6a737d}</style>
+</head>
+<body>
+<nav><a href="../../../../../../../../index.html">SAPUI5 API</a> › <a href="../../../../../../../../sap.suite.ui.commons/README.html">sap.suite.ui.commons</a> › sap › suite › ui › commons › collaboration › <a href="../../../../../../../../sap.suite.ui.commons/sap/suite/ui/commons/collaboration/UniversalCollaborationBar/README.html">UniversalCollaborationBar</a> › interfaces</nav>
+<p><a href="../../../../../../../../README.html"><strong>SAPUI5 TypeScript API (1.153.0)</strong></a></p>
+<hr>
+<p><a href="../../../../../../../../README.html">SAPUI5 TypeScript API (1.153.0)</a> / <a href="../../../../../../../README.html">sap.suite.ui.commons</a> / <a href="../README.html">sap/suite/ui/commons/collaboration/UniversalCollaborationBar</a> / $UniversalCollaborationBarSettings</p>
+<h1>Interface: $UniversalCollaborationBarSettings</h1>
+<pre class="sig"><span class="kw">import</span> { $UniversalCollaborationBarSettings } <span class="kw">from</span> <span class="str">"sap/suite/ui/commons/collaboration/UniversalCollaborationBar"</span>;</pre>
+<p>Describes the settings that can be provided to the UniversalCollaborationBar constructor.</p>
+<h2>Extends</h2>
+<ul>
+<li><a href="../../../../../../../../sap.m/sap/m/Menu/interfaces/$MenuSettings.html"><code>$MenuSettings</code></a></li>
+</ul>
+<h2>Properties</h2>
+<h3>copyLinkEnabled?</h3>
+<blockquote>
+<p><code>optional</code> <strong>copyLinkEnabled?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
+</blockquote>
+<p>Enables or disables the copy link option.</p>
+<hr>
+<h3>copyLinkSelected?</h3>
+<blockquote>
+<p><code>optional</code> <strong>copyLinkSelected?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
+</blockquote>
+<p>Fired when the user selects the copy link option.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3>shareAsCardEnabled?</h3>
+<blockquote>
+<p><code>optional</code> <strong>shareAsCardEnabled?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
+</blockquote>
+<p>Enables or disables the share as adaptive card option for Microsoft Teams.</p>
+<hr>
+<h3>shareAsCardSelected?</h3>
+<blockquote>
+<p><code>optional</code> <strong>shareAsCardSelected?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
+</blockquote>
+<p>Fired when the user selects the share as adaptive card option.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3>shareAsChatEnabled?</h3>
+<blockquote>
+<p><code>optional</code> <strong>shareAsChatEnabled?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
+</blockquote>
+<p>Enables or disables the share as chat option for Microsoft Teams.</p>
+<hr>
+<h3>shareAsTabEnabled?</h3>
+<blockquote>
+<p><code>optional</code> <strong>shareAsTabEnabled?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
+</blockquote>
+<p>Enables or disables the share as tab option for Microsoft Teams.</p>
+<hr>
+<h3>shareToChatSelected?</h3>
+<blockquote>
+<p><code>optional</code> <strong>shareToChatSelected?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
+</blockquote>
+<p>Fired when the user selects the share as chat option.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3>shareToCollaborationManagerEnabled?</h3>
+<blockquote>
+<p><code>optional</code> <strong>shareToCollaborationManagerEnabled?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
+</blockquote>
+<p>Enables or disables the SAP Collaboration Manager option.</p>
+<hr>
+<h3>shareToCollaborationManagerSelected?</h3>
+<blockquote>
+<p><code>optional</code> <strong>shareToCollaborationManagerSelected?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
+</blockquote>
+<p>Fired when the user selects the collaboration manager option.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3>shareToEmailEnabled?</h3>
+<blockquote>
+<p><code>optional</code> <strong>shareToEmailEnabled?</strong>: <code>boolean</code> | <a href="../../../../../../../../sap.ui.core/sap/ui/base/ManagedObject/type-aliases/PropertyBindingInfo.html"><code>PropertyBindingInfo</code></a> | <code>`{${string}}`</code></p>
+</blockquote>
+<p>Enables or disables the share to email option.</p>
+<hr>
+<h3>shareToEmailSelected?</h3>
+<blockquote>
+<p><code>optional</code> <strong>shareToEmailSelected?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
+</blockquote>
+<p>Fired when the user selects the share to email option.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<hr>
+<h3>shareToTabSelected?</h3>
+<blockquote>
+<p><code>optional</code> <strong>shareToTabSelected?</strong>: (<code>oEvent</code>) =&gt; <code>void</code></p>
+</blockquote>
+<p>Fired when the user selects the share as tab option.</p>
+<h4>Parameters</h4>
+<h5>oEvent</h5>
+<p><a href="../../../../../../../../sap.ui.core/sap/ui/base/Event/classes/Event.html"><code>Event</code></a></p>
+<h4>Returns</h4>
+<p><code>void</code></p>
+<hr>
+
+<footer>Generated from <code>@sapui5/types@1.153.0</code> using TypeDoc. <a href="https://ui5.github.io/typescript/api/sapui5/1.153/">Back to index</a>.</footer>
+</body>
+</html>
