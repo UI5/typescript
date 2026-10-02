@@ -103,8 +103,8 @@ export function getProgramInfo(
   if (options.baseUrl) {
     basePath = path.normalize(options.baseUrl);
   } else if ((options as Record<string, unknown>).pathsBasePath) {
-    // When "paths" is specified without "baseUrl" (which is removed in TS7),
-    // TS6 internally populates the "pathsBasePath" property to the tsconfig directory.
+    // When "paths" is specified without "baseUrl", TS6 internally populates
+    // the "pathsBasePath" property to the tsconfig directory.
     basePath = path.normalize(
       (options as Record<string, unknown>).pathsBasePath as string,
     );
