@@ -65,7 +65,7 @@ The immediate solution: change `typescript` from a peer dependency to a **direct
 
 **Fixes applied alongside:**
 
-- **`baseUrl` → `pathsBasePath` fallback**: TS7 projects won't have `baseUrl` in their tsconfig (it's removed). The tool now falls back to the internal `pathsBasePath` property that TS6 populates when `paths` is specified without `baseUrl`.
+- **`pathsBasePath` fallback for projects without `baseUrl`**: Projects that use `paths` without `baseUrl` (a pattern that has become more common since TypeScript relaxed the requirement) need special handling. The tool now falls back to the internal `pathsBasePath` property that TS6 populates when `paths` is specified without `baseUrl`.
 - **Diagnostic filtering for unknown compiler options**: When the user's tsconfig contains options that the bundled TS6 doesn't recognize (e.g. future TS7-specific options), those warnings are now silently filtered. They're noise — the user's own TS validates the tsconfig. The program still creates correctly.
 
 ### Phase 2: Future migration to TS7 API (planned)
