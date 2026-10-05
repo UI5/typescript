@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@ui5/dts-generator": "workspace:*",
-    "fs-extra": "11.4.0",
+    "fs-extra": "11.4.1",
     "lodash": "4.18.1",
     "typescript": "6.0.3"
   },

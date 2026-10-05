@@ -27,7 +27,7 @@
     "@ui5/logger": "4.0.2",
     "argparse": "3.0.2",
     "es-main": "1.4.0",
-    "fs-extra": "11.4.0",
+    "fs-extra": "11.4.1",
     "lodash": "4.18.1",
     "lodash.combinations": "18.11.1",
     "node-fetch": "3.3.2",
@@ -39,9 +39,9 @@
     "typescript": "6.0.3"
   },
   "devDependencies": {
-    "@microsoft/api-extractor": "7.59.1",
+    "@microsoft/api-extractor": "7.59.2",
     "@types/lodash": "4.17.25",
-    "@types/node": "22.20.3",
+    "@types/node": "22.20.4",
     "@types/sanitize-html": "2.16.1",
     "@types/urijs": "1.19.26",
     "copyfiles": "2.4.1",
