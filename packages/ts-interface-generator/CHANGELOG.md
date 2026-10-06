@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.12.0
+
+### Minor Changes
+
+- [#659](https://github.com/UI5/typescript/pull/659) [`00101bf`](https://github.com/UI5/typescript/commit/00101bf20e93014fee8b9d6758d9271a851c027c) Thanks [@akudev](https://github.com/akudev)! - The `typescript` peer dependency has been removed. The tool now bundles its own TypeScript compiler internally (pinned to TypeScript 6.0.3), so it works regardless of which TypeScript version your project uses — including TypeScript 7.
+
+  Also fixes path resolution for projects that use `paths` without `baseUrl` and suppresses spurious diagnostics for unrecognized compiler options.
+
 ## 0.11.2
 
 ### Patch Changes
