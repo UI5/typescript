@@ -1,7 +1,7 @@
 {
   "name": "root",
   "private": true,
-  "packageManager": "pnpm@12.8.1",
+  "packageManager": "pnpm@12.8.2",
   "scripts": {
     "build": "pnpm --filter @ui5/dts-generator run build && pnpm --filter @ui5/ts-interface-generator run build",
     "preci": "pnpm run build",
@@ -25,11 +25,11 @@
     "@changesets/cli": "3.0.3",
     "@commitlint/cli": "21.2.3",
     "@commitlint/config-conventional": "21.2.3",
-    "chai": "6.2.2",
+    "chai": "6.3.0",
     "cz-conventional-changelog": "3.3.0",
     "husky": "9.1.7",
     "lint-staged": "17.6.0",
-    "mocha": "12.0.2",
+    "mocha": "12.0.3",
     "npm-run-all2": "9.0.3",
     "prettier": "3.9.6",
     "shx": "0.4.0",
