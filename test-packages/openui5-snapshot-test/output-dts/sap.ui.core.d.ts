@@ -10425,27 +10425,27 @@ declare module "sap/ui/base/ManagedObject" {
     /**
      * ManagedObject instance whose property should have received the model update.
      */
-    element?: ManagedObject;
+    element: ManagedObject;
 
     /**
      * Name of the property for which the binding should have been updated.
      */
-    property?: string;
+    property: string;
 
     /**
      * Data type used in the binding (if any).
      */
-    type?: Type;
+    type: Type;
 
     /**
      * New value (model representation) as propagated from the model.
      */
-    newValue?: any;
+    newValue: any;
 
     /**
      * Old value (external representation) as previously stored in the ManagedObject.
      */
-    oldValue?: any;
+    oldValue: any;
   }
 
   /**
@@ -10476,32 +10476,32 @@ declare module "sap/ui/base/ManagedObject" {
     /**
      * ManagedObject instance whose property initiated the model update.
      */
-    element?: ManagedObject;
+    element: ManagedObject;
 
     /**
      * Name of the property for which the bound model property should have been been updated.
      */
-    property?: string;
+    property: string;
 
     /**
      * Data type used in the binding.
      */
-    type?: Type;
+    type: Type;
 
     /**
      * New value (external representation) as parsed by the binding.
      */
-    newValue?: any;
+    newValue: any;
 
     /**
      * Old value (external representation) as previously stored in the ManagedObject.
      */
-    oldValue?: any;
+    oldValue: any;
 
     /**
      * Localized message describing the parse error
      */
-    message?: string;
+    message: string;
   }
 
   /**
@@ -10519,32 +10519,32 @@ declare module "sap/ui/base/ManagedObject" {
     /**
      * ManagedObject instance whose property initiated the model update.
      */
-    element?: ManagedObject;
+    element: ManagedObject;
 
     /**
      * Name of the property for which the bound model property should have been been updated.
      */
-    property?: string;
+    property: string;
 
     /**
      * Data type used in the binding.
      */
-    type?: Type;
+    type: Type;
 
     /**
      * New value (external representation) as parsed and validated by the binding.
      */
-    newValue?: any;
+    newValue: any;
 
     /**
      * Old value (external representation) as previously stored in the ManagedObject.
      */
-    oldValue?: any;
+    oldValue: any;
 
     /**
      * Localized message describing the validation issues
      */
-    message?: string;
+    message: string;
   }
 
   /**
@@ -10562,17 +10562,17 @@ declare module "sap/ui/base/ManagedObject" {
     /**
      * ManagedObject instance whose property initiated the model update.
      */
-    element?: ManagedObject;
+    element: ManagedObject;
 
     /**
      * Name of the property for which the bound model property has been updated.
      */
-    property?: string;
+    property: string;
 
     /**
      * Data type used in the binding.
      */
-    type?: Type;
+    type: Type;
 
     /**
      * New value (external representation) as propagated to the model.
@@ -10580,12 +10580,12 @@ declare module "sap/ui/base/ManagedObject" {
      * **Note: **the model might modify (normalize) the value again and this modification will be stored in
      * the ManagedObject. The 'newValue' parameter of this event contains the value **before** such a normalization.
      */
-    newValue?: any;
+    newValue: any;
 
     /**
      * Old value (external representation) as previously stored in the ManagedObject.
      */
-    oldValue?: any;
+    oldValue: any;
   }
 
   /**
@@ -15916,7 +15916,7 @@ declare module "sap/ui/core/ComponentContainer" {
     /**
      * Reference to the created component instance
      */
-    component?: UIComponent;
+    component: UIComponent;
   }
 
   /**
@@ -15934,7 +15934,7 @@ declare module "sap/ui/core/ComponentContainer" {
     /**
      * The reason object as returned by the component promise
      */
-    reason?: object;
+    reason: object;
   }
 
   /**
@@ -18278,7 +18278,7 @@ declare module "sap/ui/core/Control" {
     /**
      * field group IDs of the logical field groups to validate
      */
-    fieldGroupIds?: string[];
+    fieldGroupIds: string[];
   }
 
   /**
@@ -21557,17 +21557,17 @@ declare module "sap/ui/core/dnd/DragDropInfo" {
     /**
      * The target element that will be dragged
      */
-    target?: UI5Element;
+    target: UI5Element;
 
     /**
      * The UI5 `dragSession` object that exists only during drag and drop
      */
-    dragSession?: DragSession;
+    dragSession: DragSession;
 
     /**
      * The underlying browser event
      */
-    browserEvent?: DragEvent;
+    browserEvent: DragEvent;
   }
 
   /**
@@ -21890,17 +21890,17 @@ declare module "sap/ui/core/dnd/DragInfo" {
     /**
      * The target element that is being dragged
      */
-    target?: UI5Element;
+    target: UI5Element;
 
     /**
      * The UI5 `dragSession` object that exists only during drag and drop
      */
-    dragSession?: DragSession;
+    dragSession: DragSession;
 
     /**
      * The underlying browser event
      */
-    browserEvent?: DragEvent;
+    browserEvent: DragEvent;
   }
 
   /**
@@ -21918,17 +21918,17 @@ declare module "sap/ui/core/dnd/DragInfo" {
     /**
      * The target element that will be dragged
      */
-    target?: UI5Element;
+    target: UI5Element;
 
     /**
      * The UI5 `dragSession` object that exists only during drag and drop
      */
-    dragSession?: DragSession;
+    dragSession: DragSession;
 
     /**
      * The underlying browser event
      */
-    browserEvent?: DragEvent;
+    browserEvent: DragEvent;
   }
 
   /**
@@ -22597,17 +22597,17 @@ declare module "sap/ui/core/dnd/DropInfo" {
     /**
      * The target element on which the dragged element will be dropped
      */
-    target?: UI5Element;
+    target: UI5Element;
 
     /**
      * The UI5 `dragSession` object that exists only during drag and drop
      */
-    dragSession?: DragSession;
+    dragSession: DragSession;
 
     /**
      * The underlying browser event
      */
-    browserEvent?: DragEvent;
+    browserEvent: DragEvent;
   }
 
   /**
@@ -22625,24 +22625,24 @@ declare module "sap/ui/core/dnd/DropInfo" {
     /**
      * The target element on which the dragged element will be dropped
      */
-    target?: UI5Element;
+    target: UI5Element;
 
     /**
      * The UI5 `dragSession` object that exists only during drag and drop
      */
-    dragSession?: DragSession;
+    dragSession: DragSession;
 
     /**
      * The calculated position of the drop action relative to the `target`
      */
-    dropPosition?:
+    dropPosition:
       | dnd.RelativeDropPosition
       | keyof typeof dnd.RelativeDropPosition;
 
     /**
      * The underlying browser event
      */
-    browserEvent?: DragEvent;
+    browserEvent: DragEvent;
   }
 
   /**
@@ -22660,29 +22660,29 @@ declare module "sap/ui/core/dnd/DropInfo" {
     /**
      * The UI5 `dragSession` object that exists only during drag and drop
      */
-    dragSession?: DragSession;
+    dragSession: DragSession;
 
     /**
      * The element being dragged
      */
-    draggedControl?: UI5Element;
+    draggedControl: UI5Element;
 
     /**
      * The element being dropped
      */
-    droppedControl?: UI5Element;
+    droppedControl: UI5Element;
 
     /**
      * The calculated position of the drop action relative to the `droppedControl`
      */
-    dropPosition?:
+    dropPosition:
       | dnd.RelativeDropPosition
       | keyof typeof dnd.RelativeDropPosition;
 
     /**
      * The underlying browser event
      */
-    browserEvent?: DragEvent;
+    browserEvent: DragEvent;
   }
 
   /**
@@ -26943,7 +26943,7 @@ declare module "sap/ui/core/HTML" {
      * Whether the current DOM of the control has been preserved (true) or not (e.g. rendered from content property
      * or it is an empty HTML control).
      */
-    isPreservedDOM?: boolean;
+    isPreservedDOM: boolean;
   }
 
   /**
@@ -27240,7 +27240,7 @@ declare module "sap/ui/core/hyphenation/Hyphenation" {
     /**
      * The message of the error.
      */
-    sErrorMessage?: string;
+    sErrorMessage: string;
   }
 
   /**
@@ -32240,12 +32240,12 @@ declare module "sap/ui/core/message/MessageProcessor" {
     /**
      * Messages already existing before the `messageChange` event was fired.
      */
-    oldMessages?: Message;
+    oldMessages: Message;
 
     /**
      * New messages added by the trigger of the `messageChange` event.
      */
-    newMessages?: Message;
+    newMessages: Message;
   }
 
   /**
@@ -35826,14 +35826,14 @@ declare module "sap/ui/core/Popup" {
     /**
      * Indicates whether a blocking layer is currently visible `visible: true` or not `visible: false`
      */
-    visible?: boolean;
+    visible: boolean;
 
     /**
      * In case a blocking layer is visible, the `zIndex` property will represent the zIndex at which the blocking
      * layer is displayed. In case of `visible: false`, `zIndex` represents the zIndex value of the last open
      * popup.
      */
-    zIndex?: number;
+    zIndex: number;
   }
 
   /**
@@ -37623,18 +37623,18 @@ declare module "sap/ui/core/routing/Route" {
     /**
      * The name of the route
      */
-    name?: string;
+    name: string;
 
     /**
      * A key-value pair object which contains the arguments defined in the route resolved with the corresponding
      * information from the current URL hash
      */
-    arguments?: object;
+    arguments: object;
 
     /**
      * The configuration object of the route
      */
-    config?: object;
+    config: object;
 
     /**
      * The nested route instance of this route. The event is fired on this route because the pattern in the
@@ -37660,18 +37660,18 @@ declare module "sap/ui/core/routing/Route" {
     /**
      * The name of the route
      */
-    name?: string;
+    name: string;
 
     /**
      * A key-value pair object which contains the arguments defined in the route resolved with the corresponding
      * information from the current URL hash
      */
-    arguments?: object;
+    arguments: object;
 
     /**
      * The configuration object of the route
      */
-    config?: object;
+    config: object;
 
     /**
      * The nested route instance of this route. The event is fired on this route because the pattern in the
@@ -37685,23 +37685,23 @@ declare module "sap/ui/core/routing/Route" {
      * The first View or ComponentContainer instance which is created out of the first target. If multiple targets
      * are displayed, use oEvent.getParameters.views to get all instances
      */
-    view?: View | ComponentContainer;
+    view: View | ComponentContainer;
 
     /**
      * All View or ComponentContainer instances which are created out of the targets.
      */
-    views?: Array<View | ComponentContainer>;
+    views: Array<View | ComponentContainer>;
 
     /**
      * The container control to which the first View or ComponentContainer is added. If multiple targets are
      * displayed, use oEvent.getParameters.targetControls to get all container controls
      */
-    targetControl?: Control;
+    targetControl: Control;
 
     /**
      * The container controls to which the View or ComponentContainer instances are added.
      */
-    targetControls?: Control[];
+    targetControls: Control[];
   }
 
   /**
@@ -37716,40 +37716,40 @@ declare module "sap/ui/core/routing/Route" {
     /**
      * The name of the route
      */
-    name?: string;
+    name: string;
 
     /**
      * A key-value pair object which contains the arguments defined in the route resolved with the corresponding
      * information from the current URL hash
      */
-    arguments?: object;
+    arguments: object;
 
     /**
      * The configuration object of the route
      */
-    config?: object;
+    config: object;
 
     /**
      * The first View or ComponentContainer instance which is created out of the first target. If multiple targets
      * are displayed, use oEvent.getParameters.views to get all instances
      */
-    view?: View | ComponentContainer;
+    view: View | ComponentContainer;
 
     /**
      * All View or ComponentContainer instances which are created out of the targets.
      */
-    views?: Array<View | ComponentContainer>;
+    views: Array<View | ComponentContainer>;
 
     /**
      * The container control to which the first View or ComponentContainer is added. If multiple targets are
      * displayed, use oEvent.getParameters.targetControls to get all container controls
      */
-    targetControl?: Control;
+    targetControl: Control;
 
     /**
      * The container controls to which the View or ComponentContainer instances are added.
      */
-    targetControls?: Control[];
+    targetControls: Control[];
   }
 
   /**
@@ -37767,18 +37767,18 @@ declare module "sap/ui/core/routing/Route" {
     /**
      * The name of the route
      */
-    name?: string;
+    name: string;
 
     /**
      * A key-value pair object which contains the arguments defined in the route resolved with the corresponding
      * information from the current URL hash
      */
-    arguments?: object;
+    arguments: object;
 
     /**
      * The configuration object of the route
      */
-    config?: object;
+    config: object;
   }
 
   /**
@@ -38216,27 +38216,27 @@ declare module "sap/ui/core/routing/Target" {
     /**
      * The view that got displayed.
      */
-    view?: object;
+    view: object;
 
     /**
      * The control that now contains the view in the controlAggregation
      */
-    control?: object;
+    control: object;
 
     /**
      * The options object passed to the constructor {@link sap.ui.core.routing.Target#constructor}
      */
-    config?: object;
+    config: object;
 
     /**
      * The data passed into the {@link sap.ui.core.routing.Target#display} function
      */
-    data?: object;
+    data: object;
 
     /**
      * Whether the target is relevant to the matched route or not
      */
-    routeRelevant?: object;
+    routeRelevant: object;
   }
 
   /**
@@ -38449,7 +38449,7 @@ declare module "sap/ui/core/routing/HashChanger" {
     /**
      * The relevant hash segment
      */
-    hash?: string;
+    hash: string;
   }
 
   /**
@@ -38561,12 +38561,12 @@ declare module "sap/ui/core/routing/HashChangerBase" {
     /**
      * The hash segment before it's changed
      */
-    oldHash?: string;
+    oldHash: string;
 
     /**
      * The new hash segment
      */
-    newHash?: object;
+    newHash: object;
 
     /**
      * The full format of the hash if the newHash only contains part of the relevant hash
@@ -38593,7 +38593,7 @@ declare module "sap/ui/core/routing/HashChangerBase" {
     /**
      * The relevant hash segment
      */
-    hash?: string;
+    hash: string;
   }
 
   /**
@@ -39818,18 +39818,18 @@ declare module "sap/ui/core/routing/Router" {
     /**
      * The name of the route
      */
-    name?: string;
+    name: string;
 
     /**
      * A key-value pair object which contains the arguments defined in the route resolved with the corresponding
      * information from the current URL hash
      */
-    arguments?: object;
+    arguments: object;
 
     /**
      * The configuration object of the route
      */
-    config?: object;
+    config: object;
 
     /**
      * The nested route instance of this route. The event is fired on this route because the pattern in the
@@ -39855,7 +39855,7 @@ declare module "sap/ui/core/routing/Router" {
     /**
      * the current URL hash which did not match any route
      */
-    hash?: string;
+    hash: string;
   }
 
   /**
@@ -39873,18 +39873,18 @@ declare module "sap/ui/core/routing/Router" {
     /**
      * The name of the route
      */
-    name?: string;
+    name: string;
 
     /**
      * A key-value pair object which contains the arguments defined in the route resolved with the corresponding
      * information from the current URL hash
      */
-    arguments?: object;
+    arguments: object;
 
     /**
      * The configuration object of the route
      */
-    config?: object;
+    config: object;
 
     /**
      * The nested route instance of this route. The event is fired on this route because the pattern in the
@@ -39898,23 +39898,23 @@ declare module "sap/ui/core/routing/Router" {
      * The first View or ComponentContainer instance which is created out of the first target. If multiple targets
      * are displayed, use oEvent.getParameters.views to get all instances
      */
-    view?: View | ComponentContainer;
+    view: View | ComponentContainer;
 
     /**
      * All View or ComponentContainer instances which are created out of the targets.
      */
-    views?: Array<View | ComponentContainer>;
+    views: Array<View | ComponentContainer>;
 
     /**
      * The container control to which the first View or ComponentContainer is added. If multiple targets are
      * displayed, use oEvent.getParameters.targetControls to get all container controls
      */
-    targetControl?: Control;
+    targetControl: Control;
 
     /**
      * The container controls to which the View or ComponentContainer instances are added.
      */
-    targetControls?: Control[];
+    targetControls: Control[];
   }
 
   /**
@@ -39932,40 +39932,40 @@ declare module "sap/ui/core/routing/Router" {
     /**
      * The name of the route
      */
-    name?: string;
+    name: string;
 
     /**
      * A key-value pair object which contains the arguments defined in the route resolved with the corresponding
      * information from the current URL hash
      */
-    arguments?: object;
+    arguments: object;
 
     /**
      * The configuration object of the route
      */
-    config?: object;
+    config: object;
 
     /**
      * The first View or ComponentContainer instance which is created out of the first target. If multiple targets
      * are displayed, use oEvent.getParameters.views to get all instances
      */
-    view?: View | ComponentContainer;
+    view: View | ComponentContainer;
 
     /**
      * All View or ComponentContainer instances which are created out of the targets.
      */
-    views?: Array<View | ComponentContainer>;
+    views: Array<View | ComponentContainer>;
 
     /**
      * The container control to which the first View or ComponentContainer is added. If multiple targets are
      * displayed, use oEvent.getParameters.targetControls to get all container controls
      */
-    targetControl?: Control;
+    targetControl: Control;
 
     /**
      * The container controls to which the View or ComponentContainer instances are added.
      */
-    targetControls?: Control[];
+    targetControls: Control[];
   }
 
   /**
@@ -39983,12 +39983,12 @@ declare module "sap/ui/core/routing/Router" {
     /**
      * The current displayed title
      */
-    title?: string;
+    title: string;
 
     /**
      * An array which contains the history of previous titles
      */
-    history?: any[];
+    history: any[];
 
     /**
      * An array which contains the title history information of the current router and of the router of the
@@ -39997,12 +39997,12 @@ declare module "sap/ui/core/routing/Router" {
      * control), the application can simply use the `nestedHistory` to build up the control and doesn't need
      * the `history` anymore.
      */
-    nestedHistory?: any[];
+    nestedHistory: any[];
 
     /**
      * Whether the titleChanged event is triggered by a nested component
      */
-    propagated?: boolean;
+    propagated: boolean;
   }
 
   /**
@@ -40587,32 +40587,32 @@ declare module "sap/ui/core/routing/Targets" {
     /**
      * The view that got displayed.
      */
-    view?: object;
+    view: object;
 
     /**
      * The control that now contains the view in the controlAggregation
      */
-    control?: object;
+    control: object;
 
     /**
      * The options object passed to the constructor {@link sap.ui.core.routing.Targets#constructor}
      */
-    config?: object;
+    config: object;
 
     /**
      * The name of the target firing the event
      */
-    name?: object;
+    name: object;
 
     /**
      * The data passed into the {@link sap.ui.core.routing.Targets#display} function
      */
-    data?: object;
+    data: object;
 
     /**
      * Whether the target is relevant to the matched route or not
      */
-    routeRelevant?: object;
+    routeRelevant: object;
   }
 
   /**
@@ -40630,12 +40630,12 @@ declare module "sap/ui/core/routing/Targets" {
     /**
      * The current displayed title
      */
-    title?: string;
+    title: string;
 
     /**
      * The name of the displayed target
      */
-    name?: string;
+    name: string;
   }
 
   /**
@@ -40778,12 +40778,12 @@ declare module "sap/ui/core/routing/Views" {
     /**
      * the instance of the created view.
      */
-    view?: View;
+    view: View;
 
     /**
      * The view options passed to {@link sap.ui.view}
      */
-    viewOptions?: object;
+    viewOptions: object;
   }
 
   /**
@@ -41152,22 +41152,22 @@ declare module "sap/ui/core/ScrollBar" {
     /**
      * Actions are: Click on track, button, drag of thumb, or mouse wheel click.
      */
-    action?: ScrollBarAction | keyof typeof ScrollBarAction;
+    action: ScrollBarAction | keyof typeof ScrollBarAction;
 
     /**
      * Direction of scrolling: back (up) or forward (down).
      */
-    forward?: boolean;
+    forward: boolean;
 
     /**
      * Current Scroll position either in pixels or in steps.
      */
-    newScrollPos?: int;
+    newScrollPos: int;
 
     /**
      * Old Scroll position - can be in pixels or in steps.
      */
-    oldScrollPos?: int;
+    oldScrollPos: int;
   }
 
   /**
@@ -47625,7 +47625,7 @@ declare module "sap/ui/core/ws/SapPcpWebSocket" {
     /**
      * Received pcpFields as a key-value map.
      */
-    pcpFields?: string;
+    pcpFields: string;
   }
 
   /**
@@ -48066,17 +48066,17 @@ declare module "sap/ui/core/ws/WebSocket" {
     /**
      * Close code provided by the server.
      */
-    code?: string;
+    code: string;
 
     /**
      * Reason from server for closing the connection.
      */
-    reason?: string;
+    reason: string;
 
     /**
      * Indicates whether the connection was cleanly closed or not.
      */
-    wasClean?: string;
+    wasClean: string;
   }
 
   /**
@@ -48107,7 +48107,7 @@ declare module "sap/ui/core/ws/WebSocket" {
     /**
      * Received data from the server.
      */
-    data?: string;
+    data: string;
   }
 
   /**
@@ -56710,19 +56710,19 @@ declare module "sap/ui/model/Model" {
    * Parameters of the Model#parseError event.
    */
   export interface Model$ParseErrorEventParameters {
-    errorCode?: int;
+    errorCode: int;
 
-    url?: string;
+    url: string;
 
-    reason?: string;
+    reason: string;
 
-    srcText?: string;
+    srcText: string;
 
-    line?: int;
+    line: int;
 
-    linepos?: int;
+    linepos: int;
 
-    filepos?: int;
+    filepos: int;
   }
 
   /**
@@ -56740,12 +56740,12 @@ declare module "sap/ui/model/Model" {
     /**
      * The cause of the property value change
      */
-    reason?: ChangeReason;
+    reason: ChangeReason;
 
     /**
      * The path of the property
      */
-    path?: string;
+    path: string;
 
     /**
      * The binding context (if available)
@@ -56755,7 +56755,7 @@ declare module "sap/ui/model/Model" {
     /**
      * The current value of the property
      */
-    value?: any;
+    value: any;
   }
 
   /**
@@ -56773,7 +56773,7 @@ declare module "sap/ui/model/Model" {
     /**
      * URL which was sent to the back end
      */
-    url?: string;
+    url: string;
 
     /**
      * Type of the request (if available)
@@ -56784,7 +56784,7 @@ declare module "sap/ui/model/Model" {
      * Whether the request has been successful or not. In case of errors, consult the optional `errorobject`
      * parameter.
      */
-    success?: boolean;
+    success: boolean;
 
     /**
      * If the request failed the error if any can be accessed in this property.
@@ -56822,17 +56822,17 @@ declare module "sap/ui/model/Model" {
     /**
      * A text that describes the failure.
      */
-    message?: string;
+    message: string;
 
     /**
      * HTTP status code returned by the request (if available)
      */
-    statusCode?: string;
+    statusCode: string;
 
     /**
      * The status as a text, details not specified, intended only for diagnosis output
      */
-    statusText?: string;
+    statusText: string;
 
     /**
      * Response that has been received for the request, as a text string
@@ -56855,7 +56855,7 @@ declare module "sap/ui/model/Model" {
     /**
      * The url which is sent to the back end
      */
-    url?: string;
+    url: string;
 
     /**
      * The type of the request (if available)
@@ -68591,7 +68591,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
     /**
      * An array of Errors
      */
-    result?: Error[];
+    result: Error[];
   }
 
   /**
@@ -68610,7 +68610,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
      * An array consisting of one or several annotation sources and/or errors containing a source property and
      * error details.
      */
-    result?: Source[];
+    result: Source[];
   }
 
   /**
@@ -68628,44 +68628,44 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
     /**
      * The request ID
      */
-    ID?: string;
+    ID: string;
 
     /**
      * The URL which is sent to the backend
      */
-    url?: string;
+    url: string;
 
     /**
      * The HTTP method
      */
-    method?: string;
+    method: string;
 
     /**
      * The request headers
      */
-    headers?: Record<string, string>;
+    headers: Record<string, string>;
 
     /**
      * Request was successful or not
      */
-    success?: boolean;
+    success: boolean;
 
     /**
      * If the request is synchronous or asynchronous (if available)
      */
-    async?: boolean;
+    async: boolean;
 
     /**
      * Array of embedded requests ($batch) Each request object within the array contains the following properties:
      * url, method, headers, response object
      */
-    requests?: any[];
+    requests: any[];
 
     /**
      * The response object - empty object if no response: The response object contains the following properties:
      * message, success, headers, statusCode, statusText, responseText
      */
-    response?: object;
+    response: object;
   }
 
   /**
@@ -68683,44 +68683,44 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
     /**
      * The request ID
      */
-    ID?: string;
+    ID: string;
 
     /**
      * The URL which is sent to the backend
      */
-    url?: string;
+    url: string;
 
     /**
      * The HTTP method
      */
-    method?: string;
+    method: string;
 
     /**
      * The request headers
      */
-    headers?: Record<string, string>;
+    headers: Record<string, string>;
 
     /**
      * If the request is synchronous or asynchronous (if available)
      */
-    async?: boolean;
+    async: boolean;
 
     /**
      * Request was successful or not
      */
-    success?: boolean;
+    success: boolean;
 
     /**
      * The response object - empty object if no response The response object contains the following properties:
      * message, success, headers, statusCode, statusText, responseText
      */
-    response?: object;
+    response: object;
 
     /**
      * Array of embedded requests ($batch) Each request object within the array contains the following properties:
      * url, method, headers, response object
      */
-    requests?: any[];
+    requests: any[];
   }
 
   /**
@@ -68738,7 +68738,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
     /**
      * The URL which is sent to the backend
      */
-    url?: string;
+    url: string;
 
     /**
      * The type of the request (if available)
@@ -68754,7 +68754,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
      * Array of embedded requests ($batch) Each request object within the array contains the following properties:
      * url, method, headers
      */
-    requests?: any[];
+    requests: any[];
   }
 
   /**
@@ -68772,32 +68772,32 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
     /**
      * The parsed metadata
      */
-    metadata?: string;
+    metadata: string;
 
     /**
      * A text that describes the failure.
      */
-    message?: string;
+    message: string;
 
     /**
      * HTTP status code returned by the request (if available)
      */
-    statusCode?: string;
+    statusCode: string;
 
     /**
      * The status as a text, details not specified, intended only for diagnosis output
      */
-    statusText?: string;
+    statusText: string;
 
     /**
      * Response that has been received for the request, as a text string
      */
-    responseText?: string;
+    responseText: string;
 
     /**
      * The response object - empty object if no response
      */
-    response?: object;
+    response: object;
   }
 
   /**
@@ -68815,7 +68815,7 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
     /**
      * The parsed metadata
      */
-    metadata?: string;
+    metadata: string;
   }
 
   /**
@@ -68833,23 +68833,23 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
     /**
      * The request ID
      */
-    ID?: string;
+    ID: string;
 
     /**
      * The HTTP method
      */
-    method?: string;
+    method: string;
 
     /**
      * The request headers
      */
-    headers?: Record<string, string>;
+    headers: Record<string, string>;
 
     /**
      * The response object - empty object if no response: The response object contains the following properties:
      * message, success, headers, statusCode, statusText, responseText
      */
-    response?: object;
+    response: object;
   }
 
   /**
@@ -68867,38 +68867,38 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
     /**
      * The request ID
      */
-    ID?: string;
+    ID: string;
 
     /**
      * The URL which is sent to the backend
      */
-    url?: string;
+    url: string;
 
     /**
      * The HTTP method
      */
-    method?: string;
+    method: string;
 
     /**
      * The request headers
      */
-    headers?: Record<string, string>;
+    headers: Record<string, string>;
 
     /**
      * If the request is synchronous or asynchronous (if available)
      */
-    async?: boolean;
+    async: boolean;
 
     /**
      * Request was successful or not
      */
-    success?: boolean;
+    success: boolean;
 
     /**
      * The response object - empty object if no response The response object contains the following properties:
      * message, success, headers, statusCode, statusText, responseText
      */
-    response?: object;
+    response: object;
   }
 
   /**
@@ -68916,17 +68916,17 @@ declare module "sap/ui/model/odata/v2/ODataModel" {
     /**
      * The request ID
      */
-    ID?: string;
+    ID: string;
 
     /**
      * The HTTP method
      */
-    method?: string;
+    method: string;
 
     /**
      * The request headers
      */
-    headers?: Record<string, string>;
+    headers: Record<string, string>;
   }
 
   /**
@@ -71104,7 +71104,7 @@ declare module "sap/ui/model/odata/v4/ODataContextBinding" {
     /**
      * Whether all PATCHes are successfully processed
      */
-    success?: boolean;
+    success: boolean;
   }
 
   /**
@@ -72268,7 +72268,7 @@ declare module "sap/ui/model/odata/v4/ODataListBinding" {
      * reason "AddVirtualContext" and then removed with detailed reason "RemoveVirtualContext" (since 1.69.0);
      * `undefined` is used in all other cases
      */
-    detailedReason?: string;
+    detailedReason: string;
   }
 
   /**
@@ -72286,7 +72286,7 @@ declare module "sap/ui/model/odata/v4/ODataListBinding" {
     /**
      * The affected context
      */
-    context?: Context;
+    context: Context;
   }
 
   /**
@@ -72304,12 +72304,12 @@ declare module "sap/ui/model/odata/v4/ODataListBinding" {
     /**
      * The context for the created entity
      */
-    context?: Context;
+    context: Context;
 
     /**
      * Whether the POST was successfully processed; in case of an error, the error is already reported to {@link sap.ui.core.Messaging}
      */
-    success?: boolean;
+    success: boolean;
   }
 
   /**
@@ -72327,7 +72327,7 @@ declare module "sap/ui/model/odata/v4/ODataListBinding" {
     /**
      * The context for the created entity
      */
-    context?: Context;
+    context: Context;
   }
 
   /**
@@ -72377,7 +72377,7 @@ declare module "sap/ui/model/odata/v4/ODataListBinding" {
     /**
      * Whether all PATCHes are successfully processed
      */
-    success?: boolean;
+    success: boolean;
   }
 
   /**
@@ -72418,7 +72418,7 @@ declare module "sap/ui/model/odata/v4/ODataListBinding" {
      * leads to the "strongest" change reason in the order {@link sap.ui.model.ChangeReason.Filter Filter},
      * {@link sap.ui.model.ChangeReason.Sort Sort}, {@link sap.ui.model.ChangeReason.Refresh Refresh}, {@link sap.ui.model.ChangeReason.Change Change}.
      */
-    reason?: ChangeReason;
+    reason: ChangeReason;
   }
 
   /**
@@ -74370,7 +74370,7 @@ declare module "sap/ui/model/odata/v4/ODataModel" {
     /**
      * The property binding's {@link sap.ui.model.Binding#getResolvedPath resolved path}
      */
-    resolvedPath?: string;
+    resolvedPath: string;
   }
 
   /**
