@@ -44,7 +44,12 @@ describe("Single Testcases", () => {
       } else {
         config = {...standardTsConfig};
       }
-      config.baseUrl = testCaseDir;
+      if (!config.paths) {
+        // Only set baseUrl when there are no "paths" mappings — otherwise let
+        // the compiler populate pathsBasePath internally, which is the mechanism
+        // used when paths is configured without baseUrl.
+        config.baseUrl = testCaseDir;
+      }
       return config;
     }
 

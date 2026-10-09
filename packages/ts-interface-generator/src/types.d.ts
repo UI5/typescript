@@ -9,11 +9,7 @@ interface ManagedObjectInfo {
   isDefaultExport: boolean;
   settingsTypeFullName: string;
   interestingBaseClass:
-    | "ManagedObject"
-    | "WebComponent"
-    | "Element"
-    | "Control"
-    | undefined;
+    "ManagedObject" | "WebComponent" | "Element" | "Control" | undefined;
   constructorSignaturesAvailable: boolean;
   metadata: ts.PropertyDeclaration[];
 }

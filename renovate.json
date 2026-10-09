@@ -6,17 +6,35 @@
   "vulnerabilityAlerts": {
     "enabled": true,
     "minimumReleaseAge": "3 days",
+    "automerge": true,
+    "automergeType": "pr",
     "labels": ["security"]
   },
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["before 6am on monday"]
+    "schedule": ["before 6am on monday"],
+    "minimumReleaseAge": "0 days",
+    "automerge": true,
+    "automergeType": "pr"
   },
+  "postUpdateOptions": ["pnpmDedupe"],
   "packageRules": [
+    {
+      "description": "Never pin peerDependencies — consumers need ranges",
+      "matchDepTypes": ["peerDependencies"],
+      "rangeStrategy": "widen"
+    },
+    {
+      "description": "Never pin engines — CI controls runtime versions, not package.json",
+      "matchDepTypes": ["engines"],
+      "enabled": false
+    },
     {
       "description": "Group all non-major updates to reduce PR noise",
       "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "non-major dependencies"
+      "matchPackageNames": ["!prettier"],
+      "groupName": "non-major dependencies",
+      "minimumReleaseAge": "7 days"
     },
     {
       "description": "Auto-merge minor and patch updates after age gate",
@@ -25,16 +43,16 @@
       "automergeType": "pr"
     },
     {
-      "description": "Do NOT auto-merge minor updates for UI5/framework-coupled packages",
+      "description": "Never update: these versions are intentionally coupled to the UI5 version under test",
       "matchPackageNames": [
-        "@types/openui5",
         "@openui5/*",
+        "@types/openui5",
         "@types/jquery",
-        "@types/qunit"
+        "@types/qunit",
+        "node"
       ],
-      "matchUpdateTypes": ["minor"],
-      "automerge": false
+      "enabled": false
     }
   ],
-  "prCreation": "not-pending"
+  "prCreation": "immediate"
 }

@@ -1,6 +1,6 @@
 {
   "name": "@ui5/ts-interface-generator",
-  "version": "0.11.1",
+  "version": "0.12.0",
   "description": "Generator for TypeScript type definitions for custom UI5 controls implemented in TypeScript",
   "author": "SAP SE",
   "license": "Apache-2.0",
@@ -35,26 +35,25 @@
     "access": "public"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "3.3.7",
+    "@eslint/js": "10.0.1",
     "@types/hjson": "2.4.6",
     "@types/jest": "30.0.0",
-    "@types/node": "24.7.2",
+    "@types/node": "24.19.1",
     "@types/openui5": "1.146.0",
     "@types/yargs": "17.0.35",
-    "@typescript-eslint/eslint-plugin": "8.59.2",
-    "@typescript-eslint/parser": "8.59.2",
-    "eslint": "10.3.0",
-    "jest": "30.4.2",
-    "npm-run-all2": "5.0.0",
-    "ts-jest": "29.4.9",
-    "typescript": "6.0.3"
+    "@typescript-eslint/eslint-plugin": "8.71.0",
+    "@typescript-eslint/parser": "8.71.0",
+    "eslint": "10.11.0",
+    "jest": "30.5.2",
+    "npm-run-all2": "9.0.3",
+    "ts-jest": "29.4.14"
   },
   "dependencies": {
     "hjson": "3.2.2",
     "loglevel": "1.9.2",
-    "yargs": "18.0.0"
-  },
-  "peerDependencies": {
-    "typescript": ">=5.2.0 <7.0.0"
+    "typescript": "6.0.3",
+    "yargs": "18.2.0"
   },
   "files": [
     "dist"

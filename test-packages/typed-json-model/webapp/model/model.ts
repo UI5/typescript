@@ -169,8 +169,7 @@ export class TypedJSONModel<Data extends object> extends JSONModel {
     oContext?: TypedJSONContext<Data, Root>,
   ): PropertyByAbsoluteBindingPath<Data, Path> | PropertyByRelativeBindingPath<Data, Root, Path> {
     return super.getProperty(sPath, oContext) as
-      | PropertyByAbsoluteBindingPath<Data, Path>
-      | PropertyByRelativeBindingPath<Data, Root, Path>;
+      PropertyByAbsoluteBindingPath<Data, Path> | PropertyByRelativeBindingPath<Data, Root, Path>;
   }
 
   setData(oData: Data, bMerge?: boolean): void {

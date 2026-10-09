@@ -9,8 +9,8 @@
     "directory": "test-packages/openui5-snapshot-test"
   },
   "dependencies": {
-    "@ui5/dts-generator": "link:../../packages/dts-generator",
-    "fs-extra": "11.3.5",
+    "@ui5/dts-generator": "workspace:*",
+    "fs-extra": "11.4.1",
     "lodash": "4.18.1",
     "typescript": "6.0.3"
   },

@@ -17,7 +17,7 @@ In detail, it does:
 ### `generateFromObjects(...)`
 
 Generate the *.d.ts file content for a UI5 library.<br>
-In contrast to the `generate(...)` API, this API does operate on file *contents* and returns the result as *string\*. The caller has to take care of loading file contents first and saving the result. This may be useful for plugging into a build pipeline.<br>
+In contrast to the `generate(...)` API, this API does operate on file _contents_ and returns the result as *string\*. The caller has to take care of loading file contents first and saving the result. This may be useful for plugging into a build pipeline.<br>
 Details about [how the generation works can be found below](#implementation).
 
 ### `generateFromPaths(...)`

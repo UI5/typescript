@@ -25466,7 +25466,7 @@ declare module "sap/ui/core/format/NumberFormat" {
         style?: string;
         /**
          * overrides the global configuration value {@link sap.ui.core.Configuration.FormatSettings#getTrailingCurrencyCode},
-         * which has a default value of `true</>. This is ignored if oFormatOptions.currencyCode` is set to
+         * which has a default value of `true. This is ignored if oFormatOptions.currencyCode` is set to
          * `false`, or if `oFormatOptions.pattern` is supplied.
          */
         trailingCurrencyCode?: boolean;
@@ -46523,7 +46523,7 @@ declare module "sap/ui/core/util/MockServer" {
     simulate(
       /**
        * Either the URL to the service metadata document or the metadata document as xml string itself (starting
-       * with "xml")
+       * with "
        */
       sMetadataString: string,
       /**
