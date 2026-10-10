@@ -20,7 +20,7 @@
     "@openui5/types": "1.146.0",
     "@ui5/cli": "4.0.70",
     "@ui5/linter": "1.23.7",
-    "eslint": "10.11.0",
+    "eslint": "10.12.0",
     "globals": "17.13.0",
     "typescript": "6.0.3",
     "typescript-eslint": "8.71.0",
