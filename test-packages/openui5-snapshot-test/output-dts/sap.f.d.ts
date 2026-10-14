@@ -973,17 +973,17 @@ declare module "sap/f/AvatarGroup" {
     /**
      * The `GroupType` of the control.
      */
-    groupType?: string;
+    groupType: string;
 
     /**
      * Indication whether the overflow button is pressed.
      */
-    overflowButtonPressed?: boolean;
+    overflowButtonPressed: boolean;
 
     /**
      * The number of currently displayed (visible) avatars.
      */
-    avatarsDisplayed?: int;
+    avatarsDisplayed: int;
   }
 
   /**
@@ -5006,7 +5006,7 @@ declare module "sap/f/DynamicPage" {
     /**
      * False or True values indicate the new pinned property value.
      */
-    pinned?: boolean;
+    pinned: boolean;
   }
 
   /**
@@ -6893,7 +6893,7 @@ declare module "sap/f/DynamicPageTitle" {
     /**
      * Whether the title was expanded (true) or collapsed (false).
      */
-    isExpanded?: boolean;
+    isExpanded: boolean;
   }
 
   /**
@@ -9036,53 +9036,53 @@ declare module "sap/f/FlexibleColumnLayout" {
     /**
      * The page, which had been displayed before navigation.
      */
-    from?: Control;
+    from: Control;
 
     /**
      * The ID of the page, which had been displayed before navigation.
      */
-    fromId?: string;
+    fromId: string;
 
     /**
      * The page, which is now displayed after navigation.
      */
-    to?: Control;
+    to: Control;
 
     /**
      * The ID of the page, which is now displayed after navigation.
      */
-    toId?: string;
+    toId: string;
 
     /**
      * Whether the "to" page (more precisely: a control with the ID of the page, which has been navigated to)
      * has not been displayed/navigated to before.
      */
-    firstTime?: boolean;
+    firstTime: boolean;
 
     /**
      * Determines whether was a forward navigation, triggered by to().
      */
-    isTo?: boolean;
+    isTo: boolean;
 
     /**
      * Determines whether this was a back navigation, triggered by back().
      */
-    isBack?: boolean;
+    isBack: boolean;
 
     /**
      * Determines whether this was a navigation to the root page, triggered by backToTop().
      */
-    isBackToTop?: boolean;
+    isBackToTop: boolean;
 
     /**
      * Determines whether this was a navigation to a specific page, triggered by backToPage().
      */
-    isBackToPage?: boolean;
+    isBackToPage: boolean;
 
     /**
      * Determines how the navigation was triggered, possible values are "to", "back", "backToPage", and "backToTop".
      */
-    direction?: string;
+    direction: string;
   }
 
   /**
@@ -9100,53 +9100,53 @@ declare module "sap/f/FlexibleColumnLayout" {
     /**
      * The page, which had been displayed before navigation.
      */
-    from?: Control;
+    from: Control;
 
     /**
      * The ID of the page, which had been displayed before navigation.
      */
-    fromId?: string;
+    fromId: string;
 
     /**
      * The page, which is now displayed after navigation.
      */
-    to?: Control;
+    to: Control;
 
     /**
      * The ID of the page, which is now displayed after navigation.
      */
-    toId?: string;
+    toId: string;
 
     /**
      * Whether the "to" page (more precisely: a control with the ID of the page, which has been navigated to)
      * has not been displayed/navigated to before.
      */
-    firstTime?: boolean;
+    firstTime: boolean;
 
     /**
      * Determines whether was a forward navigation, triggered by to().
      */
-    isTo?: boolean;
+    isTo: boolean;
 
     /**
      * Determines whether this was a back navigation, triggered by back().
      */
-    isBack?: boolean;
+    isBack: boolean;
 
     /**
      * Determines whether this was a navigation to the root page, triggered by backToTop().
      */
-    isBackToTop?: boolean;
+    isBackToTop: boolean;
 
     /**
      * Determines whether this was a navigation to a specific page, triggered by backToPage().
      */
-    isBackToPage?: boolean;
+    isBackToPage: boolean;
 
     /**
      * Determines how the navigation was triggered, possible values are "to", "back", "backToPage", and "backToTop".
      */
-    direction?: string;
+    direction: string;
   }
 
   /**
@@ -9164,53 +9164,53 @@ declare module "sap/f/FlexibleColumnLayout" {
     /**
      * The page, which had been displayed before navigation.
      */
-    from?: Control;
+    from: Control;
 
     /**
      * The ID of the page, which had been displayed before navigation.
      */
-    fromId?: string;
+    fromId: string;
 
     /**
      * The page, which is now displayed after navigation.
      */
-    to?: Control;
+    to: Control;
 
     /**
      * The ID of the page, which is now displayed after navigation.
      */
-    toId?: string;
+    toId: string;
 
     /**
      * Whether the "to" page (more precisely: a control with the ID of the page, which has been navigated to)
      * has not been displayed/navigated to before.
      */
-    firstTime?: boolean;
+    firstTime: boolean;
 
     /**
      * Determines whether was a forward navigation, triggered by to().
      */
-    isTo?: boolean;
+    isTo: boolean;
 
     /**
      * Determines whether this was a back navigation, triggered by back().
      */
-    isBack?: boolean;
+    isBack: boolean;
 
     /**
      * Determines whether this was a navigation to the root page, triggered by backToTop().
      */
-    isBackToTop?: boolean;
+    isBackToTop: boolean;
 
     /**
      * Determines whether this was a navigation to a specific page, triggered by backToPage().
      */
-    isBackToPage?: boolean;
+    isBackToPage: boolean;
 
     /**
      * Determines how the navigation was triggered, possible values are "to", "back", "backToPage", and "backToTop".
      */
-    direction?: string;
+    direction: string;
   }
 
   /**
@@ -9228,53 +9228,53 @@ declare module "sap/f/FlexibleColumnLayout" {
     /**
      * The page, which was displayed before the current navigation.
      */
-    from?: Control;
+    from: Control;
 
     /**
      * The ID of the page, which was displayed before the current navigation.
      */
-    fromId?: string;
+    fromId: string;
 
     /**
      * The page, which will be displayed after the current navigation.
      */
-    to?: Control;
+    to: Control;
 
     /**
      * The ID of the page, which will be displayed after the current navigation.
      */
-    toId?: string;
+    toId: string;
 
     /**
      * Determines whether the "to" page (more precisely: a control with the ID of the page, which is currently
      * being navigated to) has not been displayed/navigated to before.
      */
-    firstTime?: boolean;
+    firstTime: boolean;
 
     /**
      * Determines whether this is a forward navigation, triggered by to().
      */
-    isTo?: boolean;
+    isTo: boolean;
 
     /**
      * Determines whether this is a back navigation, triggered by back().
      */
-    isBack?: boolean;
+    isBack: boolean;
 
     /**
      * Determines whether this is a navigation to the root page, triggered by backToTop().
      */
-    isBackToTop?: boolean;
+    isBackToTop: boolean;
 
     /**
      * Determines whether this was a navigation to a specific page, triggered by backToPage().
      */
-    isBackToPage?: boolean;
+    isBackToPage: boolean;
 
     /**
      * Determines how the navigation was triggered, possible values are "to", "back", "backToPage", and "backToTop".
      */
-    direction?: string;
+    direction: string;
   }
 
   /**
@@ -9292,17 +9292,17 @@ declare module "sap/f/FlexibleColumnLayout" {
     /**
      * Determines whether `beginColumn` resize has completed.
      */
-    beginColumn?: boolean;
+    beginColumn: boolean;
 
     /**
      * Determines whether `midColumn` resize has completed.
      */
-    midColumn?: boolean;
+    midColumn: boolean;
 
     /**
      * Determines whether `endColumn` resize has completed.
      */
-    endColumn?: boolean;
+    endColumn: boolean;
   }
 
   /**
@@ -9320,53 +9320,53 @@ declare module "sap/f/FlexibleColumnLayout" {
     /**
      * The page, which was displayed before the current navigation.
      */
-    from?: Control;
+    from: Control;
 
     /**
      * The ID of the page, which was displayed before the current navigation.
      */
-    fromId?: string;
+    fromId: string;
 
     /**
      * The page, which will be displayed after the current navigation.
      */
-    to?: Control;
+    to: Control;
 
     /**
      * The ID of the page, which will be displayed after the current navigation.
      */
-    toId?: string;
+    toId: string;
 
     /**
      * Determines whether the "to" page (more precisely: a control with the ID of the page, which is currently
      * being navigated to) has not been displayed/navigated to before.
      */
-    firstTime?: boolean;
+    firstTime: boolean;
 
     /**
      * Determines whether this is a forward navigation, triggered by to().
      */
-    isTo?: boolean;
+    isTo: boolean;
 
     /**
      * Determines whether this is a back navigation, triggered by back().
      */
-    isBack?: boolean;
+    isBack: boolean;
 
     /**
      * Determines whether this is a navigation to the root page, triggered by backToTop().
      */
-    isBackToTop?: boolean;
+    isBackToTop: boolean;
 
     /**
      * Determines whether this was a navigation to a specific page, triggered by backToPage().
      */
-    isBackToPage?: boolean;
+    isBackToPage: boolean;
 
     /**
      * Determines how the navigation was triggered, possible values are "to", "back", "backToPage", and "backToTop".
      */
-    direction?: string;
+    direction: string;
   }
 
   /**
@@ -9384,53 +9384,53 @@ declare module "sap/f/FlexibleColumnLayout" {
     /**
      * The page, which was displayed before the current navigation.
      */
-    from?: Control;
+    from: Control;
 
     /**
      * The ID of the page, which was displayed before the current navigation.
      */
-    fromId?: string;
+    fromId: string;
 
     /**
      * The page, which will be displayed after the current navigation.
      */
-    to?: Control;
+    to: Control;
 
     /**
      * The ID of the page, which will be displayed after the current navigation.
      */
-    toId?: string;
+    toId: string;
 
     /**
      * Determines whether the "to" page (more precisely: a control with the ID of the page, which is currently
      * being navigated to) has not been displayed/navigated to before.
      */
-    firstTime?: boolean;
+    firstTime: boolean;
 
     /**
      * Determines whether this is a forward navigation, triggered by to().
      */
-    isTo?: boolean;
+    isTo: boolean;
 
     /**
      * Determines whether this is a back navigation, triggered by back().
      */
-    isBack?: boolean;
+    isBack: boolean;
 
     /**
      * Determines whether this is a navigation to the root page, triggered by backToTop().
      */
-    isBackToTop?: boolean;
+    isBackToTop: boolean;
 
     /**
      * Determines whether this was a navigation to a specific page, triggered by backToPage().
      */
-    isBackToPage?: boolean;
+    isBackToPage: boolean;
 
     /**
      * Determines how the navigation was triggered, possible values are "to", "back", "backToPage", and "backToTop".
      */
-    direction?: string;
+    direction: string;
   }
 
   /**
@@ -9448,7 +9448,7 @@ declare module "sap/f/FlexibleColumnLayout" {
     /**
      * The value of the `layout` property
      */
-    layout?: LayoutType | keyof typeof LayoutType;
+    layout: LayoutType | keyof typeof LayoutType;
 
     /**
      * The maximum number of columns that can be displayed at once based on the available screen size and control
@@ -9459,17 +9459,17 @@ declare module "sap/f/FlexibleColumnLayout" {
      * 	 - 2 for browser size between 960px and 1280px
      * 	 - 1 for browser size less than 960px
      */
-    maxColumnsCount?: int;
+    maxColumnsCount: int;
 
     /**
      * Indicates whether the layout changed as a result of the user clicking a layout arrow
      */
-    isNavigationArrow?: boolean;
+    isNavigationArrow: boolean;
 
     /**
      * Indicates whether the maximum number of columns that can be displayed at once changed
      */
-    isResize?: boolean;
+    isResize: boolean;
   }
 
   /**
@@ -11300,22 +11300,22 @@ declare module "sap/f/GridContainer" {
     /**
      * Event that leads to the focus change.
      */
-    event?: jQuery.Event;
+    event: jQuery.Event;
 
     /**
      * The navigation direction that is used to reach the border.
      */
-    direction?: NavigationDirection | keyof typeof NavigationDirection;
+    direction: NavigationDirection | keyof typeof NavigationDirection;
 
     /**
      * The row index, from which the border is reached.
      */
-    row?: int;
+    row: int;
 
     /**
      * The column index, from which the border is reached.
      */
-    column?: int;
+    column: int;
   }
 
   /**
@@ -11333,7 +11333,7 @@ declare module "sap/f/GridContainer" {
     /**
      * The count of the gird columns.
      */
-    columns?: int;
+    columns: int;
   }
 
   /**
@@ -11351,7 +11351,7 @@ declare module "sap/f/GridContainer" {
     /**
      * The name of the newly active layout.
      */
-    layout?: string;
+    layout: string;
   }
 
   /**
@@ -12207,22 +12207,22 @@ declare module "sap/f/GridList" {
     /**
      * Event that leads to the focus change.
      */
-    event?: jQuery.Event;
+    event: jQuery.Event;
 
     /**
      * The navigation direction that is used to reach the border.
      */
-    direction?: NavigationDirection | keyof typeof NavigationDirection;
+    direction: NavigationDirection | keyof typeof NavigationDirection;
 
     /**
      * The row index, from which the border is reached.
      */
-    row?: int;
+    row: int;
 
     /**
      * The the column index, from which the border is reached.
      */
-    column?: int;
+    column: int;
   }
 
   /**
@@ -12960,7 +12960,7 @@ declare module "sap/f/ProductSwitch" {
     /**
      * Reference to the new item that has been selected.
      */
-    itemPressed?: ProductSwitchItem;
+    itemPressed: ProductSwitchItem;
   }
 
   /**
@@ -14491,7 +14491,7 @@ declare module "sap/f/SearchManager" {
     /**
      * Current search string.
      */
-    newValue?: string;
+    newValue: string;
   }
 
   /**
@@ -14509,12 +14509,12 @@ declare module "sap/f/SearchManager" {
     /**
      * The search query string.
      */
-    query?: string;
+    query: string;
 
     /**
      * Indicates if the user pressed the clear icon.
      */
-    clearButtonPressed?: boolean;
+    clearButtonPressed: boolean;
   }
 
   /**
@@ -14532,7 +14532,7 @@ declare module "sap/f/SearchManager" {
     /**
      * Current search string of the search field.
      */
-    suggestValue?: string;
+    suggestValue: string;
   }
 
   /**
@@ -20695,7 +20695,7 @@ declare module "sap/f/ShellBar" {
     /**
      * Reference to the button that has been pressed
      */
-    avatar?: Avatar;
+    avatar: Avatar;
   }
 
   /**
@@ -20713,12 +20713,12 @@ declare module "sap/f/ShellBar" {
     /**
      * Reference to the button that has been pressed
      */
-    image?: Image;
+    image: Image;
 
     /**
      * Reference to the button that has been pressed
      */
-    button?: Button;
+    button: Button;
   }
 
   /**
@@ -20736,7 +20736,7 @@ declare module "sap/f/ShellBar" {
     /**
      * Reference to the image that has been pressed
      */
-    icon?: Image;
+    icon: Image;
   }
 
   /**
@@ -20754,7 +20754,7 @@ declare module "sap/f/ShellBar" {
     /**
      * Reference to the button that has been pressed
      */
-    button?: Button;
+    button: Button;
   }
 
   /**
@@ -20772,7 +20772,7 @@ declare module "sap/f/ShellBar" {
     /**
      * Reference to the button that has been pressed
      */
-    button?: Button;
+    button: Button;
   }
 
   /**
@@ -20790,7 +20790,7 @@ declare module "sap/f/ShellBar" {
     /**
      * Reference to the button that has been pressed
      */
-    button?: Button;
+    button: Button;
   }
 
   /**
@@ -20808,7 +20808,7 @@ declare module "sap/f/ShellBar" {
     /**
      * Reference to the button that has been pressed
      */
-    button?: Button;
+    button: Button;
   }
 
   /**
@@ -20826,7 +20826,7 @@ declare module "sap/f/ShellBar" {
     /**
      * Reference to the button that has been pressed
      */
-    button?: Button;
+    button: Button;
   }
 
   /**
@@ -21640,12 +21640,12 @@ declare module "sap/f/SidePanel" {
     /**
      * The action item that triggers the event.
      */
-    item?: SidePanelItem;
+    item: SidePanelItem;
 
     /**
      * State of the action item.
      */
-    expanded?: boolean;
+    expanded: boolean;
   }
 
   /**

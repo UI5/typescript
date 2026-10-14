@@ -49,7 +49,7 @@ function mergeOverlays(
     );
   }
 
-  const mapLikeProperties = new Set(["methods", "properties"]);
+  const mapLikeProperties = new Set(["methods", "properties", "events"]);
 
   function mergeProp(
     obj: { [key: string]: unknown },
@@ -984,7 +984,7 @@ export function fixApiJsons(
 
   // Part 2: add interfaces for settings objects and event parameter objects
   addConstructorSettingsInterfaces(targetLibFixedJson, depsFixedJsons);
-  addEventParameterInterfaces(targetLibFixedJson, depsFixedJsons);
+  addEventParameterInterfaces(targetLibFixedJson, depsFixedJsons, directives);
 
   // Part 3: "fix JSON"
   targetLibFixedJson = _fixApiJson(targetLibFixedJson, directives.badSymbols);

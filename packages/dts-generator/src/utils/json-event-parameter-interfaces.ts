@@ -4,11 +4,12 @@ import {
   ClassSymbol,
   ConcreteSymbol,
   InterfaceSymbol,
+  NestedProperties,
   ObjCallableParameter,
   TypedefSymbol,
   Ui5Event,
 } from "../types/api-json.js";
-const log = getLogger("@ui5/dts-generator/constructor-settings-interfaces");
+const log = getLogger("@ui5/dts-generator/event-parameter-interfaces");
 import { calculateDerivedNames } from "./base-utils.js";
 import {
   addJsDocProps,
@@ -16,6 +17,7 @@ import {
   makeSettingsNames,
 } from "./json-constructor-settings-interfaces.js";
 import { FunctionType, TypeReference } from "../types/ast.js";
+import { Directives } from "../generate-from-objects.js";
 
 /**
  * Creates for each event in an `EventProvider` subclass an interface that describes the
@@ -40,6 +42,7 @@ function createEventParameterInterfaces(
   symbols: ConcreteSymbol[],
   dependencies: ApiJSON[],
   addDetails: boolean,
+  directives?: Directives,
 ) {
   const typeUniverse = new Map();
 
@@ -71,20 +74,32 @@ function createEventParameterInterfaces(
     };
   };
 
-  function buildProperties(srcProperties) {
+  function buildProperties(
+    srcProperties: NestedProperties,
+    allOptional: boolean,
+    context: string,
+  ) {
     const transformedProperties = [];
     for (let propertyName in srcProperties) {
       const prop = srcProperties[propertyName];
-      transformedProperties.push(
-        addJsDocProps(
-          {
-            name: prop.name,
-            type: prop.type,
-            visibility: "public", // prop.visibility,
-          },
-          prop,
-        ),
+      const transformed = addJsDocProps(
+        {
+          name: prop.name,
+          type: prop.type,
+          visibility: "public", // prop.visibility,
+        },
+        prop,
       );
+      if (!allOptional) {
+        if (prop.optional === false) {
+          transformed.optional = false;
+        } else if (prop.optional !== true) {
+          log.warn(
+            `Event parameter "${prop.name}" in ${context} has no "optional" value; treating as optional.`,
+          );
+        }
+      }
+      transformedProperties.push(transformed);
     }
     return transformedProperties;
   }
@@ -118,7 +133,9 @@ function createEventParameterInterfaces(
           superEvent: superEvents[0],
         };
       } else if (superEvents && superEvents.length > 1) {
-        debugger; // should never happen
+        log.warn(
+          `Multiple events named "${eventName}" found on superclass ${superClassSymbol.name}`,
+        );
       } else {
         // superclass does not have the event -> go up the class hierarchy
         superClassSymbol = nextEventProviderSuperClass(superClassSymbol);
@@ -270,12 +287,12 @@ function createEventParameterInterfaces(
           };
 
           // collect parameters
-          const allParameters =
+          const allParameters: NestedProperties =
             (addDetails &&
               event.parameters &&
               (event.parameters[0] as ObjCallableParameter).parameterProperties
                 ?.getParameters?.parameterProperties) ||
-            [];
+            {};
           const hasParameters = Object.keys(allParameters).length > 0; // remember because elements from allParameters are removed below; if true, then at least somesuperclass has parameters
 
           // search superclasses for same event
@@ -320,7 +337,15 @@ function createEventParameterInterfaces(
           }
 
           // now add the parameters to the interface
-          const parameters = buildProperties(allParameters);
+          const allOptional =
+            directives?.eventsWithAllParamsOptional?.includes(
+              `${symbol.name}:${event.name}`,
+            ) ?? false;
+          const parameters = buildProperties(
+            allParameters,
+            allOptional,
+            `${symbol.name}#${event.name}`,
+          );
           eventParametersInterface.properties = parameters;
           eventParametersInterface.description = `Parameters of the ${symbol.basename}#${event.name} event.`;
           if (event.deprecated) {
@@ -418,9 +443,20 @@ function createEventParameterInterfaces(
 export function addEventParameterInterfaces(
   apijson: ApiJSON,
   dependencies: ApiJSON[],
+  directives?: Directives,
 ) {
   dependencies.forEach((dep) => {
-    createEventParameterInterfaces(dep.symbols, dependencies, false);
+    createEventParameterInterfaces(
+      dep.symbols,
+      dependencies,
+      false,
+      directives,
+    );
   });
-  createEventParameterInterfaces(apijson.symbols, dependencies, true);
+  createEventParameterInterfaces(
+    apijson.symbols,
+    dependencies,
+    true,
+    directives,
+  );
 }

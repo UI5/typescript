@@ -897,7 +897,7 @@ declare module "sap/tnt/NavigationList" {
     /**
      * The selected item.
      */
-    item?: Item;
+    item: Item;
   }
 
   /**
@@ -1441,7 +1441,7 @@ declare module "sap/tnt/NavigationListItem" {
     /**
      * The selected item.
      */
-    item?: Item;
+    item: Item;
   }
 
   /**
@@ -1919,7 +1919,7 @@ declare module "sap/tnt/SideNavigation" {
     /**
      * The selected item.
      */
-    item?: Item;
+    item: Item;
   }
 
   /**

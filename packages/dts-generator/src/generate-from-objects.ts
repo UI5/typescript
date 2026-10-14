@@ -103,6 +103,13 @@ export interface Directives {
    * to be listed.
    */
   modulesWithNamedExports: string[];
+
+  /**
+   * Events listed here retain the legacy "all parameters optional" behavior.
+   * Format: "fully.qualified.ClassName:eventName"
+   * Used for events whose parameter optionality has not yet been verified in the source.
+   */
+  eventsWithAllParamsOptional?: string[];
 }
 
 /**
@@ -145,6 +152,7 @@ const defaultOptions: GenerateFromObjectsConfig = {
     overlays: {},
     deprecatedEnumAliases: {},
     modulesWithNamedExports: [],
+    eventsWithAllParamsOptional: [],
   },
   generateGlobals: false,
 };
