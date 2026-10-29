@@ -25,14 +25,14 @@
     "@definitelytyped/dtslint": "latest",
     "@definitelytyped/eslint-plugin": "latest",
     "@ui5/logger": "4.0.2",
-    "argparse": "3.0.2",
+    "argparse": "3.0.3",
     "es-main": "1.4.0",
     "fs-extra": "11.4.1",
     "lodash": "4.18.1",
     "lodash.combinations": "18.11.1",
     "node-fetch": "3.3.2",
     "prettier": "3.8.3",
-    "resolve": "1.22.12",
+    "resolve": "1.22.13",
     "sanitize-html": "2.18.0",
     "semver": "7.8.5",
     "strip-json-comments": "5.0.3",
@@ -40,13 +40,13 @@
   },
   "devDependencies": {
     "@microsoft/api-extractor": "7.59.4",
-    "@types/lodash": "4.17.25",
+    "@types/lodash": "4.17.27",
     "@types/node": "22.20.5",
     "@types/sanitize-html": "2.16.2",
     "@types/urijs": "1.19.26",
     "copyfiles": "2.4.1",
     "del-cli": "8.0.1",
-    "npm-run-all2": "9.0.3"
+    "npm-run-all2": "9.0.4"
   },
   "scripts": {
     "clean": "del-cli -f dist",
