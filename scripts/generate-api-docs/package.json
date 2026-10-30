@@ -7,9 +7,9 @@
     "start": "http-server ../../api -o -c-1"
   },
   "dependencies": {
-    "marked": "18.1.0",
+    "marked": "18.1.1",
     "typedoc": "0.28.20",
-    "typedoc-plugin-markdown": "4.13.1",
+    "typedoc-plugin-markdown": "4.14.1",
     "typescript": "5.9.3"
   },
   "devDependencies": {
