@@ -4817,7 +4817,7 @@ declare module "sap/m/ActionSheet" {
      * (on mobile device), the button that closes the dialog is set to this parameter. Otherwise this parameter
      * is set to null.
      */
-    origin?: Button;
+    origin: Button;
   }
 
   /**
@@ -4850,7 +4850,7 @@ declare module "sap/m/ActionSheet" {
      * the button that closes the dialog is set to this parameter. Otherwise this parameter is set to null.
      * This is valid only for Phone mode of the ActionSheet
      */
-    origin?: Button;
+    origin: Button;
   }
 
   /**
@@ -5499,7 +5499,7 @@ declare module "sap/m/App" {
     /**
      * Whether the device is in landscape orientation.
      */
-    landscape?: boolean;
+    landscape: boolean;
   }
 
   /**
@@ -8671,7 +8671,7 @@ declare module "sap/m/BusyDialog" {
      * Indicates if the close events are triggered by a user, pressing a cancel button or because the operation
      * was terminated. This parameter is set to true if the close event is fired by user interaction.
      */
-    cancelPressed?: boolean;
+    cancelPressed: boolean;
   }
 
   /**
@@ -11114,7 +11114,7 @@ declare module "sap/m/Carousel" {
     /**
      * Indexes of all active pages after the page change.
      */
-    activePages?: any[];
+    activePages: any[];
   }
 
   /**
@@ -11134,7 +11134,7 @@ declare module "sap/m/Carousel" {
     /**
      * Id of the page which will be loaded
      */
-    pageId?: string;
+    pageId: string;
   }
 
   /**
@@ -11154,17 +11154,17 @@ declare module "sap/m/Carousel" {
     /**
      * ID of the page which was active before the page change.
      */
-    oldActivePageId?: string;
+    oldActivePageId: string;
 
     /**
      * ID of the page which will be active after the page change.
      */
-    newActivePageId?: string;
+    newActivePageId: string;
 
     /**
      * Indexes of all active pages after the page change.
      */
-    activePages?: any[];
+    activePages: any[];
   }
 
   /**
@@ -11184,7 +11184,7 @@ declare module "sap/m/Carousel" {
     /**
      * Id of the page which will be unloaded
      */
-    pageId?: string;
+    pageId: string;
   }
 
   /**
@@ -12256,7 +12256,7 @@ declare module "sap/m/CheckBox" {
     /**
      * Checks whether the CheckBox is marked or not .
      */
-    selected?: boolean;
+    selected: boolean;
   }
 
   /**
@@ -12614,12 +12614,12 @@ declare module "sap/m/ColorPalette" {
     /**
      * The color that is returned when user chooses the "Default color" button.
      */
-    value?: CSSColor;
+    value: CSSColor;
 
     /**
      * Denotes if the color has been chosen by selecting the "Default Color" button (true or false)
      */
-    defaultAction?: boolean;
+    defaultAction: boolean;
   }
 
   /**
@@ -12637,47 +12637,47 @@ declare module "sap/m/ColorPalette" {
     /**
      * Parameter containing the RED value (0-255).
      */
-    r?: int;
+    r: int;
 
     /**
      * Parameter containing the GREEN value (0-255).
      */
-    g?: int;
+    g: int;
 
     /**
      * Parameter containing the BLUE value (0-255).
      */
-    b?: int;
+    b: int;
 
     /**
      * Parameter containing the HUE value (0-360).
      */
-    h?: int;
+    h: int;
 
     /**
      * Parameter containing the SATURATION value (0-100).
      */
-    s?: int;
+    s: int;
 
     /**
      * Parameter containing the VALUE value (0-100).
      */
-    v?: int;
+    v: int;
 
     /**
      * Parameter containing the LIGHTNESS value (0-100).
      */
-    l?: int;
+    l: int;
 
     /**
      * Parameter containing the Hexadecimal string (#FFFFFF).
      */
-    hex?: string;
+    hex: string;
 
     /**
      * Parameter containing the alpha value (transparency).
      */
-    alpha?: string;
+    alpha: string;
   }
 
   /**
@@ -13211,12 +13211,12 @@ declare module "sap/m/ColorPalettePopover" {
     /**
      * The selected color value.
      */
-    value?: CSSColor;
+    value: CSSColor;
 
     /**
      * Denotes if the color has been chosen by selecting the "Default Color" button (true or false).
      */
-    defaultAction?: boolean;
+    defaultAction: boolean;
   }
 
   /**
@@ -13234,47 +13234,47 @@ declare module "sap/m/ColorPalettePopover" {
     /**
      * Parameter containing the RED value (0-255).
      */
-    r?: int;
+    r: int;
 
     /**
      * Parameter containing the GREEN value (0-255).
      */
-    g?: int;
+    g: int;
 
     /**
      * Parameter containing the BLUE value (0-255).
      */
-    b?: int;
+    b: int;
 
     /**
      * Parameter containing the HUE value (0-360).
      */
-    h?: int;
+    h: int;
 
     /**
      * Parameter containing the SATURATION value (0-100).
      */
-    s?: int;
+    s: int;
 
     /**
      * Parameter containing the VALUE value (0-100).
      */
-    v?: int;
+    v: int;
 
     /**
      * Parameter containing the LIGHTNESS value (0-100).
      */
-    l?: int;
+    l: int;
 
     /**
      * Parameter containing the Hexadecimal string (#FFFFFF).
      */
-    hex?: string;
+    hex: string;
 
     /**
      * Parameter containing the alpha value (transparency).
      */
-    alpha?: string;
+    alpha: string;
   }
 
   /**
@@ -15159,7 +15159,7 @@ declare module "sap/m/ComboBox" {
     /**
      * Indicates whether the change event was caused by selecting an item in the list
      */
-    itemPressed?: boolean;
+    itemPressed: boolean;
   }
 
   /**
@@ -15177,7 +15177,7 @@ declare module "sap/m/ComboBox" {
     /**
      * The selected item.
      */
-    selectedItem?: Item;
+    selectedItem: Item;
   }
 
   /**
@@ -17804,7 +17804,7 @@ declare module "sap/m/DatePicker" {
     /**
      * Indicator for a valid date.
      */
-    valid?: boolean;
+    valid: boolean;
   }
 
   /**
@@ -17822,12 +17822,12 @@ declare module "sap/m/DatePicker" {
     /**
      * Date range containing the start and end date displayed in the `Calendar` popup.
      */
-    dateRange?: DateRange;
+    dateRange: DateRange;
 
     /**
      * Indicates if the event is fired, due to popup being opened.
      */
-    afterPopupOpened?: boolean;
+    afterPopupOpened: boolean;
   }
 
   /**
@@ -18254,12 +18254,12 @@ declare module "sap/m/DateRangeSelection" {
     /**
      * Current start date after change.
      */
-    from?: object;
+    from: object;
 
     /**
      * Current end date after change.
      */
-    to?: object;
+    to: object;
   }
 
   /**
@@ -18631,12 +18631,12 @@ declare module "sap/m/DateTimeField" {
     /**
      * The current value of the input, after a live change event.
      */
-    value?: string;
+    value: string;
 
     /**
      * The previous value of the input, before the last user interaction.
      */
-    previousValue?: string;
+    previousValue: string;
   }
 
   /**
@@ -19467,17 +19467,17 @@ declare module "sap/m/DateTimeInput" {
     /**
      * The string value of the control in given valueFormat (or locale format).
      */
-    value?: string;
+    value: string;
 
     /**
      * The value of control as JavaScript Date Object or null if value is empty.
      */
-    dateValue?: object;
+    dateValue: object;
 
     /**
      * if set, the entered value is a valid date. If not set the entered value cannot be converted to a date.
      */
-    valid?: boolean;
+    valid: boolean;
   }
 
   /**
@@ -21676,7 +21676,7 @@ declare module "sap/m/Dialog" {
      * or the `endButton`, the button that closes the Dialog is set to this parameter. Otherwise, the parameter
      * is set to `null`.
      */
-    origin?: Button;
+    origin: Button;
   }
 
   /**
@@ -21709,7 +21709,7 @@ declare module "sap/m/Dialog" {
      * or the `endButton`, the button that closes the Dialog is set to this parameter. Otherwise, the parameter
      * is set to `null`.
      */
-    origin?: Button;
+    origin: Button;
   }
 
   /**
@@ -23680,12 +23680,12 @@ declare module "sap/m/DynamicDateRange" {
     /**
      * The current value of the control.
      */
-    value?: object;
+    value: object;
 
     /**
      * Whether the new value is valid.
      */
-    valid?: boolean;
+    valid: boolean;
   }
 
   /**
@@ -26134,13 +26134,13 @@ declare module "sap/m/FacetFilterList" {
      * Array of selected items. Items returned are only copies and therefore can only be used to read properties,
      * not set them.
      */
-    selectedItems?: FacetFilterItem[];
+    selectedItems: FacetFilterItem[];
 
     /**
      * `True` if the select All checkbox is selected. This will be `false` if all items are actually selected
      * (every FacetFilterItem.selected == true). In that case selectedItems will contain all selected items.
      */
-    allSelected?: boolean;
+    allSelected: boolean;
 
     /**
      * Associative array containing the keys of selected FacetFilterItems. Unlike the selectedItems parameter,
@@ -26148,7 +26148,7 @@ declare module "sap/m/FacetFilterList" {
      * each object property is the FacetFilterItem key value and the value of the property is the FacetFilterItem
      * text.
      */
-    selectedKeys?: object;
+    selectedKeys: object;
   }
 
   /**
@@ -26179,7 +26179,7 @@ declare module "sap/m/FacetFilterList" {
     /**
      * Value received as user input in the `sap.m.SearchField`, and taken as a JavaScript string object.
      */
-    term?: string;
+    term: string;
   }
 
   /**
@@ -27383,7 +27383,7 @@ declare module "sap/m/FeedInput" {
     /**
      * The value of the feed input before reseting it.
      */
-    value?: string;
+    value: string;
   }
 
   /**
@@ -28480,13 +28480,13 @@ declare module "sap/m/FeedListItem" {
     /**
      * Dom reference of the feed item's icon to be used for positioning.
      */
-    domRef?: string;
+    domRef: string;
 
     /**
      * Function to retrieve the DOM reference for the `iconPress` event. The function returns the DOM element
      * of the icon or null
      */
-    getDomRef?: Function;
+    getDomRef: Function;
   }
 
   /**
@@ -28504,13 +28504,13 @@ declare module "sap/m/FeedListItem" {
     /**
      * Dom reference of the feed item's sender string to be used for positioning.
      */
-    domRef?: string;
+    domRef: string;
 
     /**
      * Function to retrieve the DOM reference for the `senderPress` event. The function returns the DOM element
      * of the sender link or null
      */
-    getDomRef?: Function;
+    getDomRef: Function;
   }
 
   /**
@@ -32657,20 +32657,20 @@ declare module "sap/m/GenericTile" {
     /**
      * The current scope the GenericTile was in when the event occurred.
      */
-    scope?: GenericTileScope | keyof typeof GenericTileScope;
+    scope: GenericTileScope | keyof typeof GenericTileScope;
 
     /**
      * The action that was pressed on the tile. In the Actions scope, the available actions are Press and Remove.
      * In Display scope, the parameter value is only Press.
      */
-    action?: string;
+    action: string;
 
     /**
      * The pressed DOM Element pointing to the GenericTile's DOM Element in Display scope. In Actions scope
      * it points to the more icon, when the tile is pressed, or to the DOM Element of the remove button, when
      * the remove button is pressed.
      */
-    domRef?: any;
+    domRef: any;
   }
 
   /**
@@ -35109,12 +35109,12 @@ declare module "sap/m/IconTabBar" {
     /**
      * If the tab will expand, this is true.
      */
-    expand?: boolean;
+    expand: boolean;
 
     /**
      * If the tab will collapse, this is true.
      */
-    collapse?: boolean;
+    collapse: boolean;
   }
 
   /**
@@ -35132,27 +35132,27 @@ declare module "sap/m/IconTabBar" {
     /**
      * The selected item
      */
-    item?: IconTabFilter;
+    item: IconTabFilter;
 
     /**
      * The key of the selected item
      */
-    key?: string;
+    key: string;
 
     /**
      * The key of the previous selected item
      */
-    previousKey?: string;
+    previousKey: string;
 
     /**
      * The selected item
      */
-    selectedItem?: IconTabFilter;
+    selectedItem: IconTabFilter;
 
     /**
      * The key of the selected item
      */
-    selectedKey?: string;
+    selectedKey: string;
   }
 
   /**
@@ -36539,17 +36539,17 @@ declare module "sap/m/IconTabHeader" {
     /**
      * The selected item
      */
-    item?: IconTabFilter;
+    item: IconTabFilter;
 
     /**
      * The key of the selected item
      */
-    key?: string;
+    key: string;
 
     /**
      * The key of the previous selected item
      */
-    previousKey?: string;
+    previousKey: string;
   }
 
   /**
@@ -42037,19 +42037,19 @@ declare module "sap/m/Input" {
     /**
      * The current value of the input, after a live change event.
      */
-    value?: string;
+    value: string;
 
     /**
      * Indicates that ESC key triggered the event. **Note:** This parameter will not be sent unless the ESC
      * key is pressed.
      */
-    escPressed?: boolean;
+    escPressed: boolean;
 
     /**
      * The value of the input before pressing ESC key. **Note:** This parameter will not be sent unless the
      * ESC key is pressed.
      */
-    previousValue?: string;
+    previousValue: string;
   }
 
   /**
@@ -42067,7 +42067,7 @@ declare module "sap/m/Input" {
     /**
      * The new value of the input.
      */
-    value?: string;
+    value: string;
   }
 
   /**
@@ -42082,14 +42082,14 @@ declare module "sap/m/Input" {
     /**
      * The current value which has been typed in the input.
      */
-    suggestValue?: string;
+    suggestValue: string;
 
     /**
      * The suggestion list is passed to this event for convenience. If you use list-based or tabular suggestions,
      * fill the suggestionList with the items you want to suggest. Otherwise, directly add the suggestions to
      * the "suggestionItems" aggregation of the input control.
      */
-    suggestionColumns?: ListBase;
+    suggestionColumns: ListBase;
   }
 
   /**
@@ -42105,7 +42105,7 @@ declare module "sap/m/Input" {
      * This is the item selected in the suggestion popup for one and two-value suggestions. For tabular suggestions,
      * this value will not be set.
      */
-    selectedItem?: Item;
+    selectedItem: Item;
 
     /**
      * This is the row selected in the tabular suggestion popup represented as a ColumnListItem. For one and
@@ -42114,7 +42114,7 @@ declare module "sap/m/Input" {
      * **Note:** The row result function to select a result value for the string is already executed at this
      * time. To pick different value for the input field or to do follow up steps after the item has been selected.
      */
-    selectedRow?: ColumnListItem;
+    selectedRow: ColumnListItem;
   }
 
   /**
@@ -42134,7 +42134,7 @@ declare module "sap/m/Input" {
      * false. It can be used to determine whether the "value help" trigger or the "show all items" trigger has
      * been pressed.
      */
-    fromSuggestions?: boolean;
+    fromSuggestions: boolean;
   }
 
   /**
@@ -43225,7 +43225,7 @@ declare module "sap/m/InputBase" {
     /**
      * The new `value` of the `control`.
      */
-    value?: string;
+    value: string;
   }
 
   /**
@@ -46452,14 +46452,14 @@ declare module "sap/m/Link" {
     /**
      * Indicates whether the CTRL key was pressed when the link was selected.
      */
-    ctrlKey?: boolean;
+    ctrlKey: boolean;
 
     /**
      * Indicates whether the "meta" key was pressed when the link was selected.
      *
      * On Macintosh keyboards, this is the command key (⌘). On Windows keyboards, this is the windows key (⊞).
      */
-    metaKey?: boolean;
+    metaKey: boolean;
   }
 
   /**
@@ -46780,14 +46780,14 @@ declare module "sap/m/LinkTileContent" {
     /**
      * Indicates whether the CTRL key was pressed when the link was selected.
      */
-    ctrlKey?: boolean;
+    ctrlKey: boolean;
 
     /**
      * Indicates whether the "meta" key was pressed when the link was selected.
      *
      * On Macintosh keyboards, this is the command key (⌘). On Windows keyboards, this is the windows key (⊞).
      */
-    metaKey?: boolean;
+    metaKey: boolean;
   }
 
   /**
@@ -49531,7 +49531,7 @@ declare module "sap/m/ListBase" {
     /**
      * Item in which the context menu was opened.
      */
-    listItem?: ListItemBase;
+    listItem: ListItemBase;
   }
 
   /**
@@ -49549,7 +49549,7 @@ declare module "sap/m/ListBase" {
     /**
      * The item which fired the delete event.
      */
-    listItem?: ListItemBase;
+    listItem: ListItemBase;
   }
 
   /**
@@ -49569,12 +49569,12 @@ declare module "sap/m/ListBase" {
     /**
      * Actual number of items.
      */
-    actual?: int;
+    actual: int;
 
     /**
      * Total number of items.
      */
-    total?: int;
+    total: int;
   }
 
   /**
@@ -49596,12 +49596,12 @@ declare module "sap/m/ListBase" {
     /**
      * Actual number of items.
      */
-    actual?: int;
+    actual: int;
 
     /**
      * Total number of items.
      */
-    total?: int;
+    total: int;
   }
 
   /**
@@ -49621,12 +49621,12 @@ declare module "sap/m/ListBase" {
     /**
      * The item which fired the pressed event.
      */
-    listItem?: ListItemBase;
+    listItem: ListItemBase;
 
     /**
      * The control which caused the press event within the container.
      */
-    srcControl?: Control;
+    srcControl: Control;
   }
 
   /**
@@ -49646,7 +49646,7 @@ declare module "sap/m/ListBase" {
     /**
      * The item which fired the select event.
      */
-    listItem?: ListItemBase;
+    listItem: ListItemBase;
   }
 
   /**
@@ -49667,22 +49667,22 @@ declare module "sap/m/ListBase" {
      * The item whose selection has changed. In `MultiSelect` mode, only the up-most selected item is returned.
      * This parameter can be used for single-selection modes.
      */
-    listItem?: ListItemBase;
+    listItem: ListItemBase;
 
     /**
      * Array of items whose selection has changed. This parameter can be used for `MultiSelect` mode.
      */
-    listItems?: ListItemBase[];
+    listItems: ListItemBase[];
 
     /**
      * Indicates whether the `listItem` parameter is selected or not.
      */
-    selected?: boolean;
+    selected: boolean;
 
     /**
      * Indicates whether the select all action is triggered or not.
      */
-    selectAll?: boolean;
+    selectAll: boolean;
   }
 
   /**
@@ -49700,24 +49700,24 @@ declare module "sap/m/ListBase" {
     /**
      * The item which fired the swipe.
      */
-    listItem?: ListItemBase;
+    listItem: ListItemBase;
 
     /**
      * Aggregated `swipeContent` control that is shown on the right hand side of the item.
      */
-    swipeContent?: Control;
+    swipeContent: Control;
 
     /**
      * Holds which control caused the swipe event within the item.
      */
-    srcControl?: Control;
+    srcControl: Control;
 
     /**
      * Shows in which direction the user swipes and can have the value `BeginToEnd` (left to right in LTR languages
      * and right to left in RTL languages) or `EndToBegin` (right to left in LTR languages and left to right
      * in RTL languages)
      */
-    swipeDirection?: SwipeDirection | keyof typeof SwipeDirection;
+    swipeDirection: SwipeDirection | keyof typeof SwipeDirection;
   }
 
   /**
@@ -49735,17 +49735,17 @@ declare module "sap/m/ListBase" {
     /**
      * The reason of the update, e.g. Binding, Filter, Sort, Growing, Change, Refresh, Context.
      */
-    reason?: string;
+    reason: string;
 
     /**
      * Actual number of items.
      */
-    actual?: int;
+    actual: int;
 
     /**
      * The total count of bound items. This can be used if the `growing` property is set to `true`.
      */
-    total?: int;
+    total: int;
   }
 
   /**
@@ -49763,17 +49763,17 @@ declare module "sap/m/ListBase" {
     /**
      * The reason of the update, e.g. Binding, Filter, Sort, Growing, Change, Refresh, Context.
      */
-    reason?: string;
+    reason: string;
 
     /**
      * Actual number of items.
      */
-    actual?: int;
+    actual: int;
 
     /**
      * The total count of bound items. This can be used if the `growing` property is set to `true`.
      */
-    total?: int;
+    total: int;
   }
 
   /**
@@ -51110,12 +51110,12 @@ declare module "sap/m/MaskInput" {
     /**
      * The current value of the input, after a live change event.
      */
-    value?: string;
+    value: string;
 
     /**
      * The previous value of the input, before the last user interaction.
      */
-    previousValue?: string;
+    previousValue: string;
   }
 
   /**
@@ -51744,7 +51744,7 @@ declare module "sap/m/Menu" {
     /**
      * The `MenuItem` which was selected.
      */
-    item?: MenuItem;
+    item: MenuItem;
   }
 
   /**
@@ -53184,17 +53184,17 @@ declare module "sap/m/MenuItem" {
     /**
      * The aggregation name of the changed aggregation.
      */
-    aggregationName?: string;
+    aggregationName: string;
 
     /**
      * Which method changed the aggregation.
      */
-    methodName?: string;
+    methodName: string;
 
     /**
      * What parameters were used to change the aggregation.
      */
-    methodParams?: object;
+    methodParams: object;
   }
 
   /**
@@ -53225,12 +53225,12 @@ declare module "sap/m/MenuItem" {
     /**
      * The property name to be changed.
      */
-    propertyKey?: string;
+    propertyKey: string;
 
     /**
      * The new property value.
      */
-    propertyValue?: any;
+    propertyValue: any;
   }
 
   /**
@@ -56720,7 +56720,7 @@ declare module "sap/m/MessagePopover" {
     /**
      * Refers to the message item that contains the activeTitle.
      */
-    item?: MessageItem;
+    item: MessageItem;
   }
 
   /**
@@ -56738,7 +56738,7 @@ declare module "sap/m/MessagePopover" {
     /**
      * Refers to the control that opens the popover.
      */
-    openBy?: Control;
+    openBy: Control;
   }
 
   /**
@@ -56756,7 +56756,7 @@ declare module "sap/m/MessagePopover" {
     /**
      * Refers to the control that opens the popover.
      */
-    openBy?: Control;
+    openBy: Control;
   }
 
   /**
@@ -56774,7 +56774,7 @@ declare module "sap/m/MessagePopover" {
     /**
      * Refers to the control that opens the popover. See {@link sap.ui.core.MessageType} enum values for types.
      */
-    openBy?: Control;
+    openBy: Control;
   }
 
   /**
@@ -56792,7 +56792,7 @@ declare module "sap/m/MessagePopover" {
     /**
      * Refers to the control that opens the popover.
      */
-    openBy?: Control;
+    openBy: Control;
   }
 
   /**
@@ -56810,12 +56810,12 @@ declare module "sap/m/MessagePopover" {
     /**
      * Refers to the `MessagePopover` item that is being presented.
      */
-    item?: MessageItem;
+    item: MessageItem;
 
     /**
      * Refers to the type of messages being shown.
      */
-    messageTypeFilter?: MessageType;
+    messageTypeFilter: MessageType;
   }
 
   /**
@@ -56833,7 +56833,7 @@ declare module "sap/m/MessagePopover" {
     /**
      * This parameter refers to the type of messages being shown.
      */
-    messageTypeFilter?: MessageType;
+    messageTypeFilter: MessageType;
   }
 
   /**
@@ -58484,7 +58484,7 @@ declare module "sap/m/MessageView" {
     /**
      * Refers to the message item that contains the activeTitle.
      */
-    item?: MessageItem;
+    item: MessageItem;
   }
 
   /**
@@ -58504,7 +58504,7 @@ declare module "sap/m/MessageView" {
     /**
      * This refers to the control which opens the popover.
      */
-    openBy?: Control;
+    openBy: Control;
   }
 
   /**
@@ -58524,12 +58524,12 @@ declare module "sap/m/MessageView" {
     /**
      * Refers to the message item that is being presented.
      */
-    item?: MessageItem;
+    item: MessageItem;
 
     /**
      * Refers to the type of messages being shown. See sap.ui.core.MessageType values for types.
      */
-    messageTypeFilter?: MessageType;
+    messageTypeFilter: MessageType;
   }
 
   /**
@@ -58547,7 +58547,7 @@ declare module "sap/m/MessageView" {
     /**
      * This parameter refers to the type of messages being shown.
      */
-    messageTypeFilter?: MessageType;
+    messageTypeFilter: MessageType;
   }
 
   /**
@@ -59143,22 +59143,22 @@ declare module "sap/m/MultiComboBox" {
     /**
      * Item which selection is changed
      */
-    changedItem?: Item;
+    changedItem: Item;
 
     /**
      * Array of items whose selection has changed.
      */
-    changedItems?: Item[];
+    changedItems: Item[];
 
     /**
      * Selection state: true if item is selected, false if item is not selected
      */
-    selected?: boolean;
+    selected: boolean;
 
     /**
      * Indicates whether the select all action is triggered or not.
      */
-    selectAll?: boolean;
+    selectAll: boolean;
   }
 
   /**
@@ -59176,7 +59176,7 @@ declare module "sap/m/MultiComboBox" {
     /**
      * The selected items which are selected after list box has been closed.
      */
-    selectedItems?: Item[];
+    selectedItems: Item[];
   }
 
   /**
@@ -59940,27 +59940,27 @@ declare module "sap/m/MultiInput" {
      * sap.m.Tokenizer.TokenChangeType.RemovedAll for "removedAll" and sap.m.Tokenizer.TokenChangeType.TokensChanged
      * for "tokensChanged".
      */
-    type?: string;
+    type: string;
 
     /**
      * The added token or removed token. This parameter is used when tokenChange type is "added" or "removed".
      */
-    token?: Token;
+    token: Token;
 
     /**
      * The array of removed tokens. This parameter is used when tokenChange type is "removedAll".
      */
-    tokens?: Token[];
+    tokens: Token[];
 
     /**
      * The array of tokens that are added. This parameter is used when tokenChange type is "tokenChanged".
      */
-    addedTokens?: Token[];
+    addedTokens: Token[];
 
     /**
      * The array of tokens that are removed. This parameter is used when tokenChange type is "tokenChanged".
      */
-    removedTokens?: Token[];
+    removedTokens: Token[];
   }
 
   /**
@@ -59981,17 +59981,17 @@ declare module "sap/m/MultiInput" {
      * Type of tokenChange event. There are two TokenUpdate types: "added", "removed" Use sap.m.Tokenizer.TokenUpdateType.Added
      * for "added" and sap.m.Tokenizer.TokenUpdateType.Removed for "removed".
      */
-    type?: string;
+    type: string;
 
     /**
      * The array of tokens that are added. This parameter is used when tokenUpdate type is "added".
      */
-    addedTokens?: Token[];
+    addedTokens: Token[];
 
     /**
      * The array of tokens that are removed. This parameter is used when tokenUpdate type is "removed".
      */
-    removedTokens?: Token[];
+    removedTokens: Token[];
   }
 
   /**
@@ -61111,53 +61111,53 @@ declare module "sap/m/NavContainer" {
     /**
      * The page which had been shown before navigation.
      */
-    from?: Control;
+    from: Control;
 
     /**
      * The ID of the page which had been shown before navigation.
      */
-    fromId?: string;
+    fromId: string;
 
     /**
      * The page which is now shown after navigation.
      */
-    to?: Control;
+    to: Control;
 
     /**
      * The ID of the page which is now shown after navigation.
      */
-    toId?: string;
+    toId: string;
 
     /**
      * Whether the "to" page (more precisely: a control with the ID of the page which has been navigated to)
      * had not been shown/navigated to before.
      */
-    firstTime?: boolean;
+    firstTime: boolean;
 
     /**
      * Whether was a forward navigation, triggered by "to()".
      */
-    isTo?: boolean;
+    isTo: boolean;
 
     /**
      * Whether this was a back navigation, triggered by "back()".
      */
-    isBack?: boolean;
+    isBack: boolean;
 
     /**
      * Whether this was a navigation to the root page, triggered by "backToTop()".
      */
-    isBackToTop?: boolean;
+    isBackToTop: boolean;
 
     /**
      * Whether this was a navigation to a specific page, triggered by "backToPage()".
      */
-    isBackToPage?: boolean;
+    isBackToPage: boolean;
 
     /**
      * How the navigation was triggered, possible values are "to", "back", "backToPage", and "backToTop".
      */
-    direction?: string;
+    direction: string;
   }
 
   /**
@@ -61175,53 +61175,53 @@ declare module "sap/m/NavContainer" {
     /**
      * The page which was shown before the current navigation.
      */
-    from?: Control;
+    from: Control;
 
     /**
      * The ID of the page which was shown before the current navigation.
      */
-    fromId?: string;
+    fromId: string;
 
     /**
      * The page which will be shown after the current navigation.
      */
-    to?: Control;
+    to: Control;
 
     /**
      * The ID of the page which will be shown after the current navigation.
      */
-    toId?: string;
+    toId: string;
 
     /**
      * Whether the "to" page (more precisely: a control with the ID of the page which is currently navigated
      * to) has not been shown/navigated to before.
      */
-    firstTime?: boolean;
+    firstTime: boolean;
 
     /**
      * Whether this is a forward navigation, triggered by "to()".
      */
-    isTo?: boolean;
+    isTo: boolean;
 
     /**
      * Whether this is a back navigation, triggered by "back()".
      */
-    isBack?: boolean;
+    isBack: boolean;
 
     /**
      * Whether this is a navigation to the root page, triggered by "backToTop()".
      */
-    isBackToTop?: boolean;
+    isBackToTop: boolean;
 
     /**
      * Whether this was a navigation to a specific page, triggered by "backToPage()".
      */
-    isBackToPage?: boolean;
+    isBackToPage: boolean;
 
     /**
      * How the navigation was triggered, possible values are "to", "back", "backToPage", and "backToTop".
      */
-    direction?: string;
+    direction: string;
   }
 
   /**
@@ -61239,53 +61239,53 @@ declare module "sap/m/NavContainer" {
     /**
      * The page which had been shown before navigation.
      */
-    from?: Control;
+    from: Control;
 
     /**
      * The ID of the page which had been shown before navigation.
      */
-    fromId?: string;
+    fromId: string;
 
     /**
      * The page which is now shown after navigation.
      */
-    to?: Control;
+    to: Control;
 
     /**
      * The ID of the page which is now shown after navigation.
      */
-    toId?: string;
+    toId: string;
 
     /**
      * Whether the "to" page (more precisely: a control with the ID of the page which has been navigated to)
      * had not been shown/navigated to before.
      */
-    firstTime?: boolean;
+    firstTime: boolean;
 
     /**
      * Whether was a forward navigation, triggered by "to()".
      */
-    isTo?: boolean;
+    isTo: boolean;
 
     /**
      * Whether this was a back navigation, triggered by "back()".
      */
-    isBack?: boolean;
+    isBack: boolean;
 
     /**
      * Whether this was a navigation to the root page, triggered by "backToTop()".
      */
-    isBackToTop?: boolean;
+    isBackToTop: boolean;
 
     /**
      * Whether this was a navigation to a specific page, triggered by "backToPage()".
      */
-    isBackToPage?: boolean;
+    isBackToPage: boolean;
 
     /**
      * How the navigation was triggered, possible values are "to", "back", "backToPage", and "backToTop".
      */
-    direction?: string;
+    direction: string;
   }
 
   /**
@@ -62780,7 +62780,7 @@ declare module "sap/m/NotificationListGroup" {
     /**
      * Indicates exact collapse direction
      */
-    collapsed?: boolean;
+    collapsed: boolean;
   }
 
   /**
@@ -64272,7 +64272,7 @@ declare module "sap/m/ObjectAttribute" {
     /**
      * DOM reference of the ObjectAttribute's text to be used for positioning.
      */
-    domRef?: string;
+    domRef: string;
   }
 
   /**
@@ -66521,7 +66521,7 @@ declare module "sap/m/ObjectHeader" {
     /**
      * Dom reference of the object header' icon to be used for positioning.
      */
-    domRef?: object;
+    domRef: object;
   }
 
   /**
@@ -66539,7 +66539,7 @@ declare module "sap/m/ObjectHeader" {
     /**
      * Dom reference of the object header' intro to be used for positioning.
      */
-    domRef?: object;
+    domRef: object;
   }
 
   /**
@@ -66557,7 +66557,7 @@ declare module "sap/m/ObjectHeader" {
     /**
      * Dom reference of the object header' title to be used for positioning.
      */
-    domRef?: object;
+    domRef: object;
   }
 
   /**
@@ -66575,7 +66575,7 @@ declare module "sap/m/ObjectHeader" {
     /**
      * Dom reference of the object header' titleArrow to be used for positioning.
      */
-    domRef?: object;
+    domRef: object;
   }
 
   /**
@@ -67131,7 +67131,7 @@ declare module "sap/m/ObjectIdentifier" {
     /**
      * DOM reference of the object identifier's title.
      */
-    domRef?: object;
+    domRef: object;
   }
 
   /**
@@ -68385,7 +68385,7 @@ declare module "sap/m/ObjectMarker" {
     /**
      * Type of the `ObjectMarker`.
      */
-    type?: ObjectMarkerType | keyof typeof ObjectMarkerType;
+    type: ObjectMarkerType | keyof typeof ObjectMarkerType;
   }
 
   /**
@@ -70785,12 +70785,12 @@ declare module "sap/m/p13n/BasePanel" {
     /**
      * The reason why the panel state has changed, for example, items have been added, removed, or moved.
      */
-    reason?: string;
+    reason: string;
 
     /**
      * An object containing information about the specific item that has been changed.
      */
-    item?: Item;
+    item: Item;
   }
 
   /**
@@ -71886,7 +71886,7 @@ declare module "sap/m/p13n/Popup" {
     /**
      * The corresponding reason for closing the dialog (Ok & Cancel).
      */
-    reason?: string;
+    reason: string;
   }
 
   /**
@@ -73441,7 +73441,7 @@ declare module "sap/m/P13nColumnsPanel" {
     /**
      * `columnsItem` that needs to be added in the model.
      */
-    newItem?: P13nColumnsItem;
+    newItem: P13nColumnsItem;
   }
 
   /**
@@ -73462,19 +73462,19 @@ declare module "sap/m/P13nColumnsPanel" {
      * Contains `columnsItems` that needs to be created in the model. Deprecated as of version 1.50, replaced
      * by new parameter `items`.
      */
-    newItems?: P13nColumnsItem[];
+    newItems: P13nColumnsItem[];
 
     /**
      * Contains `columnsItems` that needs to be changed in the model. Deprecated as of version 1.50, replaced
      * by new parameter `items`.
      */
-    existingItems?: P13nColumnsItem[];
+    existingItems: P13nColumnsItem[];
 
     /**
      * Array contains an object for each item in `items` aggregation enriched with index and visibility information.
      * The item order reflects the current order of columns in the panel.
      */
-    items?: object[];
+    items: object[];
   }
 
   /**
@@ -76718,23 +76718,23 @@ declare module "sap/m/P13nFilterPanel" {
     /**
      * reason for the changeFilterItem event. Value can be added, updated or removed.
      */
-    reason?: string;
+    reason: string;
 
     /**
      * key of the changed filterItem
      */
-    key?: string;
+    key: string;
 
     /**
      * index of the changed filterItem
      */
-    index?: int;
+    index: int;
 
     /**
      * JSON object of the changed filterItem instance (in case of reason=="removed" the itemData parameter does
      * not exist)
      */
-    itemData?: object;
+    itemData: object;
   }
 
   /**
@@ -81745,12 +81745,12 @@ declare module "sap/m/PagingButton" {
     /**
      * The number of the new position.
      */
-    newPosition?: int;
+    newPosition: int;
 
     /**
      * The number of the old position.
      */
-    oldPosition?: int;
+    oldPosition: int;
   }
 
   /**
@@ -82504,12 +82504,12 @@ declare module "sap/m/Panel" {
     /**
      * If the panel will expand, this is true. If the panel will collapse, this is false.
      */
-    expand?: boolean;
+    expand: boolean;
 
     /**
      * Identifies whether the event is triggered by an user interaction or by calling setExpanded.
      */
-    triggeredByInteraction?: boolean;
+    triggeredByInteraction: boolean;
   }
 
   /**
@@ -83419,7 +83419,7 @@ declare module "sap/m/PDFViewer" {
     /**
      * The iframe element.
      */
-    target?: any;
+    target: any;
   }
 
   /**
@@ -85851,23 +85851,23 @@ declare module "sap/m/PlanningCalendar" {
     /**
      * The selected appointment.
      */
-    appointment?: CalendarAppointment;
+    appointment: CalendarAppointment;
 
     /**
      * The selected appointments in case a group appointment is selected.
      */
-    appointments?: CalendarAppointment[];
+    appointments: CalendarAppointment[];
 
     /**
      * If set, the appointment was selected using multiple selection (e.g. Shift + single mouse click), meaning
      * more than the current appointment could be selected.
      */
-    multiSelect?: boolean;
+    multiSelect: boolean;
 
     /**
      * Gives the ID of the DOM element of the clicked appointment
      */
-    domRefId?: string;
+    domRefId: string;
   }
 
   /**
@@ -85885,22 +85885,22 @@ declare module "sap/m/PlanningCalendar" {
     /**
      * Start date of the selected interval, as a UI5Date or JavaScript Date object.
      */
-    startDate?: object;
+    startDate: object;
 
     /**
      * Interval end date as a UI5Date or JavaScript Date object.
      */
-    endDate?: object;
+    endDate: object;
 
     /**
      * If set, the selected interval is a subinterval.
      */
-    subInterval?: boolean;
+    subInterval: boolean;
 
     /**
      * Row of the selected interval.
      */
-    row?: PlanningCalendarRow;
+    row: PlanningCalendarRow;
   }
 
   /**
@@ -85923,12 +85923,12 @@ declare module "sap/m/PlanningCalendar" {
      * **Note:** Intended to be used as an easy way to get an ID of a `PlanningCalendarRowHeader`. Do NOT use
      * for modification.
      */
-    headerId?: string;
+    headerId: string;
 
     /**
      * The row user clicked on.
      */
-    row?: PlanningCalendarRow;
+    row: PlanningCalendarRow;
   }
 
   /**
@@ -85951,12 +85951,12 @@ declare module "sap/m/PlanningCalendar" {
      * **Note:** Intended to be used as an easy way to get an ID of a `PlanningCalendarRowHeader`. Do NOT use
      * for modification.
      */
-    headerId?: string;
+    headerId: string;
 
     /**
      * The row user pressed.
      */
-    row?: PlanningCalendarRow;
+    row: PlanningCalendarRow;
   }
 
   /**
@@ -85974,7 +85974,7 @@ declare module "sap/m/PlanningCalendar" {
     /**
      * Array of rows whose selection has changed.
      */
-    rows?: PlanningCalendarRow[];
+    rows: PlanningCalendarRow[];
   }
 
   /**
@@ -87747,17 +87747,17 @@ declare module "sap/m/PlanningCalendarRow" {
     /**
      * Start date of the created appointment, as a UI5Date or JavaScript Date object.
      */
-    startDate?: object;
+    startDate: object;
 
     /**
      * End date of the created appointment, as a UI5Date or JavaScript Date object.
      */
-    endDate?: object;
+    endDate: object;
 
     /**
      * The row of the appointment.
      */
-    calendarRow?: PlanningCalendarRow;
+    calendarRow: PlanningCalendarRow;
   }
 
   /**
@@ -87775,22 +87775,22 @@ declare module "sap/m/PlanningCalendarRow" {
     /**
      * The dropped appointment.
      */
-    appointment?: CalendarAppointment;
+    appointment: CalendarAppointment;
 
     /**
      * Start date of the dropped appointment, as a UI5Date or JavaScript Date object.
      */
-    startDate?: object;
+    startDate: object;
 
     /**
      * Dropped appointment end date as a UI5Date or JavaScript Date object.
      */
-    endDate?: object;
+    endDate: object;
 
     /**
      * The row of the appointment.
      */
-    calendarRow?: PlanningCalendarRow;
+    calendarRow: PlanningCalendarRow;
   }
 
   /**
@@ -87808,27 +87808,27 @@ declare module "sap/m/PlanningCalendarRow" {
     /**
      * The dropped appointment.
      */
-    appointment?: CalendarAppointment;
+    appointment: CalendarAppointment;
 
     /**
      * Start date of the dropped appointment, as a UI5Date or JavaScript Date object.
      */
-    startDate?: object;
+    startDate: object;
 
     /**
      * Dropped appointment end date as a UI5Date or JavaScript Date object.
      */
-    endDate?: object;
+    endDate: object;
 
     /**
      * The row of the appointment.
      */
-    calendarRow?: PlanningCalendarRow;
+    calendarRow: PlanningCalendarRow;
 
     /**
      * The drop type. If true - it's "Copy", if false - it's "Move".
      */
-    copy?: boolean;
+    copy: boolean;
   }
 
   /**
@@ -87846,17 +87846,17 @@ declare module "sap/m/PlanningCalendarRow" {
     /**
      * The resized appointment.
      */
-    appointment?: CalendarAppointment;
+    appointment: CalendarAppointment;
 
     /**
      * Start date of the resized appointment, as a UI5Date or JavaScript Date object.
      */
-    startDate?: object;
+    startDate: object;
 
     /**
      * End date of the resized appointment, as a UI5Date or JavaScript Date object.
      */
-    endDate?: object;
+    endDate: object;
   }
 
   /**
@@ -88779,12 +88779,12 @@ declare module "sap/m/plugins/ColumnResizer" {
     /**
      * The column being resized.
      */
-    column?: UI5Element;
+    column: UI5Element;
 
     /**
      * The new width of the column.
      */
-    width?: CSSSize;
+    width: CSSSize;
   }
 
   /**
@@ -89330,7 +89330,7 @@ declare module "sap/m/plugins/CopyProvider" {
      * Two-dimensional mutable array of selection data to be copied to the clipboard. The first dimension represents
      * the selected rows, and the second dimension represents the cells of the selected rows.
      */
-    data?: any[][];
+    data: any[][];
   }
 
   /**
@@ -89924,7 +89924,7 @@ declare module "sap/m/plugins/DataStateIndicator" {
     /**
      * The filter object representing the entries with messages.
      */
-    filter?: Filter;
+    filter: Filter;
   }
 
   /**
@@ -89968,13 +89968,13 @@ declare module "sap/m/plugins/DataStateIndicator" {
     /**
      * The data state object.
      */
-    dataState?: DataState;
+    dataState: DataState;
 
     /**
      * The messages ({@link sap.ui.core.message.Message}) from the current `dataState` object filtered by the
      * given `filter` function.
      */
-    filteredMessages?: object[];
+    filteredMessages: object[];
   }
 
   /**
@@ -90200,12 +90200,12 @@ declare module "sap/m/plugins/PasteProvider" {
      * Two-dimentional array of strings with data from the clipboard. The first dimension represents the rows,
      * and the second dimension represents the cells of the tabular data.
      */
-    data?: string[][];
+    data: string[][];
 
     /**
      * The text data, with all special characters, from the clipboard.
      */
-    text?: string;
+    text: string;
   }
 
   /**
@@ -91874,7 +91874,7 @@ declare module "sap/m/Popover" {
     /**
      * This refers to the control which opens the popover.
      */
-    openBy?: Control;
+    openBy: Control;
   }
 
   /**
@@ -91892,7 +91892,7 @@ declare module "sap/m/Popover" {
     /**
      * This refers to the control which opens the popover.
      */
-    openBy?: Control;
+    openBy: Control;
   }
 
   /**
@@ -91910,7 +91910,7 @@ declare module "sap/m/Popover" {
     /**
      * This refers to the control which opens the popover.
      */
-    openBy?: Control;
+    openBy: Control;
   }
 
   /**
@@ -91928,7 +91928,7 @@ declare module "sap/m/Popover" {
     /**
      * This refers to the control which opens the popover.
      */
-    openBy?: Control;
+    openBy: Control;
   }
 
   /**
@@ -93386,13 +93386,13 @@ declare module "sap/m/QuickView" {
     /**
      * This parameter refers to the control, which opens the QuickView.
      */
-    openBy?: Control;
+    openBy: Control;
 
     /**
      * This parameter contains the control, which triggers the close of the QuickView. It is undefined when
      * running on desktop or tablet.
      */
-    origin?: Button;
+    origin: Button;
   }
 
   /**
@@ -93410,7 +93410,7 @@ declare module "sap/m/QuickView" {
     /**
      * This parameter refers to the control, which opens the QuickView.
      */
-    openBy?: Control;
+    openBy: Control;
   }
 
   /**
@@ -93428,13 +93428,13 @@ declare module "sap/m/QuickView" {
     /**
      * This parameter refers to the control, which opens the QuickView.
      */
-    openBy?: Control;
+    openBy: Control;
 
     /**
      * This parameter contains the control, which triggers the close of the QuickView. It is undefined when
      * running on desktop or tablet.
      */
-    origin?: Button;
+    origin: Button;
   }
 
   /**
@@ -93452,7 +93452,7 @@ declare module "sap/m/QuickView" {
     /**
      * This parameter refers to the control, which opens the QuickView.
      */
-    openBy?: Control;
+    openBy: Control;
   }
 
   /**
@@ -93846,63 +93846,63 @@ declare module "sap/m/QuickViewBase" {
     /**
      * Determines the page, which has been displayed before navigation.
      */
-    from?: Control;
+    from: Control;
 
     /**
      * Determines the ID of the page, which has been displayed before navigation.
      */
-    fromId?: string;
+    fromId: string;
 
     /**
      * Determines the page, which is now displayed after navigation.
      */
-    to?: Control;
+    to: Control;
 
     /**
      * Determines the ID of the page, which is now displayed after navigation.
      */
-    toId?: string;
+    toId: string;
 
     /**
      * Determines whether the "to" page (a control with the ID of the page, which has been navigated to) has
      * not been displayed/navigated to before.
      */
-    firstTime?: boolean;
+    firstTime: boolean;
 
     /**
      * Determines whether this was a forward navigation.
      */
-    isTo?: boolean;
+    isTo: boolean;
 
     /**
      * Determines whether this was a back navigation.
      */
-    isBack?: boolean;
+    isBack: boolean;
 
     /**
      * Determines whether this was a navigation to the root page.
      */
-    isBackToTop?: boolean;
+    isBackToTop: boolean;
 
     /**
      * Determines whether this was a navigation to a specific page.
      */
-    isBackToPage?: boolean;
+    isBackToPage: boolean;
 
     /**
      * Determines how the navigation was triggered, possible values are "to", "back", "backToPage", and "backToTop".
      */
-    direction?: string;
+    direction: string;
 
     /**
      * Determines whether this is a navigation to the top page.
      */
-    isTopPage?: boolean;
+    isTopPage: boolean;
 
     /**
      * Determines which link initiated the navigation.
      */
-    navOrigin?: Control;
+    navOrigin: Control;
   }
 
   /**
@@ -93920,58 +93920,58 @@ declare module "sap/m/QuickViewBase" {
     /**
      * The page which was displayed before the current navigation.
      */
-    from?: Control;
+    from: Control;
 
     /**
      * The ID of the page which was displayed before the current navigation.
      */
-    fromId?: string;
+    fromId: string;
 
     /**
      * The page which will be displayed after the current navigation.
      */
-    to?: Control;
+    to: Control;
 
     /**
      * The ID of the page which will be displayed after the current navigation.
      */
-    toId?: string;
+    toId: string;
 
     /**
      * Determines whether the "to" page (a control with the ID of the page which is currently navigated to)
      * has not been displayed/navigated to before.
      */
-    firstTime?: boolean;
+    firstTime: boolean;
 
     /**
      * Determines whether this is a forward navigation.
      */
-    isTo?: boolean;
+    isTo: boolean;
 
     /**
      * Determines whether this is a back navigation.
      */
-    isBack?: boolean;
+    isBack: boolean;
 
     /**
      * Determines whether this is a navigation to the root page.
      */
-    isBackToTop?: boolean;
+    isBackToTop: boolean;
 
     /**
      * Determines whether this was a navigation to a specific page.
      */
-    isBackToPage?: boolean;
+    isBackToPage: boolean;
 
     /**
      * Determines how the navigation was triggered, possible values are "to", "back", "backToPage", and "backToTop".
      */
-    direction?: string;
+    direction: string;
 
     /**
      * Determines which link initiated the navigation.
      */
-    navOrigin?: Control;
+    navOrigin: Control;
   }
 
   /**
@@ -96055,7 +96055,7 @@ declare module "sap/m/RadioButton" {
     /**
      * Checks whether the RadioButton is active or not.
      */
-    selected?: boolean;
+    selected: boolean;
   }
 
   /**
@@ -96738,7 +96738,7 @@ declare module "sap/m/RadioButtonGroup" {
     /**
      * Index of the selected RadioButton.
      */
-    selectedIndex?: int;
+    selectedIndex: int;
   }
 
   /**
@@ -97743,7 +97743,7 @@ declare module "sap/m/RatingIndicator" {
     /**
      * The rated value
      */
-    value?: int;
+    value: int;
   }
 
   /**
@@ -97761,7 +97761,7 @@ declare module "sap/m/RatingIndicator" {
     /**
      * The current value of the rating after a live change event.
      */
-    value?: float;
+    value: float;
   }
 
   /**
@@ -99086,13 +99086,13 @@ declare module "sap/m/ResponsivePopover" {
      * This parameter contains the control which is passed as the parameter when calling openBy method. When
      * runs on the phone, this parameter is undefined.
      */
-    openBy?: Control;
+    openBy: Control;
 
     /**
      * This parameter contains the control which triggers the close of the ResponsivePopover. This parameter
      * is undefined when runs on desktop or tablet.
      */
-    origin?: Button;
+    origin: Button;
   }
 
   /**
@@ -99111,7 +99111,7 @@ declare module "sap/m/ResponsivePopover" {
      * This parameter contains the control which is passed as the parameter when calling openBy method. When
      * runs on the phone, this parameter is undefined.
      */
-    openBy?: Control;
+    openBy: Control;
   }
 
   /**
@@ -99130,13 +99130,13 @@ declare module "sap/m/ResponsivePopover" {
      * This parameter contains the control which is passed as the parameter when calling openBy method. When
      * runs on the phone, this parameter is undefined.
      */
-    openBy?: Control;
+    openBy: Control;
 
     /**
      * This parameter contains the control which triggers the close of the ResponsivePopover. This parameter
      * is undefined when runs on desktop or tablet.
      */
-    origin?: Button;
+    origin: Button;
   }
 
   /**
@@ -99155,7 +99155,7 @@ declare module "sap/m/ResponsivePopover" {
      * This parameter contains the control which is passed as the parameter when calling openBy method. When
      * runs on the phone, this parameter is undefined.
      */
-    openBy?: Control;
+    openBy: Control;
   }
 
   /**
@@ -101802,7 +101802,7 @@ declare module "sap/m/SearchField" {
     /**
      * The new value of the control.
      */
-    value?: string;
+    value: string;
   }
 
   /**
@@ -101820,7 +101820,7 @@ declare module "sap/m/SearchField" {
     /**
      * Current search string.
      */
-    newValue?: string;
+    newValue: string;
   }
 
   /**
@@ -101838,33 +101838,33 @@ declare module "sap/m/SearchField" {
     /**
      * The search query string.
      */
-    query?: string;
+    query: string;
 
     /**
      * Suggestion list item in case if the user has selected an item from the suggestions list.
      */
-    suggestionItem?: SuggestionItem;
+    suggestionItem: SuggestionItem;
 
     /**
      * Indicates if the user pressed the refresh icon.
      */
-    refreshButtonPressed?: boolean;
+    refreshButtonPressed: boolean;
 
     /**
      * Indicates if the user pressed the clear icon.
      */
-    clearButtonPressed?: boolean;
+    clearButtonPressed: boolean;
 
     /**
      * Indicates if the user pressed the search button.
      */
-    searchButtonPressed?: boolean;
+    searchButtonPressed: boolean;
 
     /**
      * Indicates that ESC key triggered the event. **Note:** This parameter will not be sent unless the ESC
      * key is pressed.
      */
-    escPressed?: boolean;
+    escPressed: boolean;
   }
 
   /**
@@ -101882,7 +101882,7 @@ declare module "sap/m/SearchField" {
     /**
      * Current search string of the search field.
      */
-    suggestValue?: string;
+    suggestValue: string;
   }
 
   /**
@@ -102727,18 +102727,18 @@ declare module "sap/m/SegmentedButton" {
     /**
      * Reference to the button, that has been selected.
      */
-    button?: Button;
+    button: Button;
 
     /**
      * ID of the button, which has been selected.
      */
-    id?: string;
+    id: string;
 
     /**
      * Key of the button, which has been selected. This property is only filled when the control is initiated
      * with the items aggregation.
      */
-    key?: string;
+    key: string;
   }
 
   /**
@@ -102758,7 +102758,7 @@ declare module "sap/m/SegmentedButton" {
     /**
      * Reference to the item, that has been selected.
      */
-    item?: SegmentedButtonItem;
+    item: SegmentedButtonItem;
   }
 
   /**
@@ -104564,12 +104564,12 @@ declare module "sap/m/Select" {
     /**
      * The selected item.
      */
-    selectedItem?: Item;
+    selectedItem: Item;
 
     /**
      * The previous selected item.
      */
-    previousSelectedItem?: Item;
+    previousSelectedItem: Item;
   }
 
   /**
@@ -104584,7 +104584,7 @@ declare module "sap/m/Select" {
     /**
      * The selected item.
      */
-    selectedItem?: Item;
+    selectedItem: Item;
   }
 
   /**
@@ -105791,13 +105791,13 @@ declare module "sap/m/SelectDialog" {
      * Returns the selected list item. When no item is selected, "null" is returned. When multi-selection is
      * enabled and multiple items are selected, only the first selected item is returned.
      */
-    selectedItem?: StandardListItem;
+    selectedItem: StandardListItem;
 
     /**
      * Returns an array containing the visible selected list items. If no items are selected, an empty array
      * is returned.
      */
-    selectedItems?: StandardListItem[];
+    selectedItems: StandardListItem[];
 
     /**
      * Returns the binding contexts of the selected items including the non-visible items, but excluding the
@@ -105808,7 +105808,7 @@ declare module "sap/m/SelectDialog" {
      * are not visible upon opening the dialog, these contexts are not loaded. Therefore, these items will not
      * be included in the selectedContexts array unless they are displayed at least once.
      */
-    selectedContexts?: object[];
+    selectedContexts: object[];
   }
 
   /**
@@ -105826,13 +105826,13 @@ declare module "sap/m/SelectDialog" {
     /**
      * The value to search for, which can change at any keypress
      */
-    value?: string;
+    value: string;
 
     /**
      * The Items binding of the Select Dialog. It will only be available if the items aggregation is bound to
      * a model.
      */
-    itemsBinding?: any;
+    itemsBinding: any;
   }
 
   /**
@@ -105850,18 +105850,18 @@ declare module "sap/m/SelectDialog" {
     /**
      * The value entered in the search
      */
-    value?: string;
+    value: string;
 
     /**
      * The Items binding of the Select Dialog for search purposes. It will only be available if the items aggregation
      * is bound to a model.
      */
-    itemsBinding?: any;
+    itemsBinding: any;
 
     /**
      * Returns if the Clear button is pressed.
      */
-    clearButtonPressed?: boolean;
+    clearButtonPressed: boolean;
   }
 
   /**
@@ -106301,22 +106301,22 @@ declare module "sap/m/SelectDialogBase" {
      * The item whose selection has changed. In `MultiSelect` mode, only the up-most selected item is returned.
      * This parameter can be used for single-selection modes.
      */
-    listItem?: ListItemBase;
+    listItem: ListItemBase;
 
     /**
      * Array of items whose selection has changed. This parameter can be used for `MultiSelect` mode.
      */
-    listItems?: ListItemBase[];
+    listItems: ListItemBase[];
 
     /**
      * Indicates whether the `listItem` parameter is selected or not.
      */
-    selected?: boolean;
+    selected: boolean;
 
     /**
      * Indicates whether the select all action is triggered or not.
      */
-    selectAll?: boolean;
+    selectAll: boolean;
   }
 
   /**
@@ -106334,17 +106334,17 @@ declare module "sap/m/SelectDialogBase" {
     /**
      * The reason of the update, e.g. Binding, Filter, Sort, Growing, Change, Refresh, Context.
      */
-    reason?: string;
+    reason: string;
 
     /**
      * Actual number of items.
      */
-    actual?: int;
+    actual: int;
 
     /**
      * The total count of bound items. This can be used if the `growing` property is set to `true`.
      */
-    total?: int;
+    total: int;
   }
 
   /**
@@ -106362,17 +106362,17 @@ declare module "sap/m/SelectDialogBase" {
     /**
      * The reason of the update, e.g. Binding, Filter, Sort, Growing, Change, Refresh, Context.
      */
-    reason?: string;
+    reason: string;
 
     /**
      * Actual number of items.
      */
-    actual?: int;
+    actual: int;
 
     /**
      * The total count of bound items. This can be used if the `growing` property is set to `true`.
      */
-    total?: int;
+    total: int;
   }
 
   /**
@@ -108019,52 +108019,52 @@ declare module "sap/m/ViewSettingsDialog" {
     /**
      * The selected sort item.
      */
-    sortItem?: ViewSettingsItem;
+    sortItem: ViewSettingsItem;
 
     /**
      * The selected sort order (true = descending, false = ascending).
      */
-    sortDescending?: boolean;
+    sortDescending: boolean;
 
     /**
      * The selected group item.
      */
-    groupItem?: ViewSettingsItem;
+    groupItem: ViewSettingsItem;
 
     /**
      * The selected group order (true = descending, false = ascending).
      */
-    groupDescending?: boolean;
+    groupDescending: boolean;
 
     /**
      * The selected preset filter item.
      */
-    presetFilterItem?: ViewSettingsItem;
+    presetFilterItem: ViewSettingsItem;
 
     /**
      * The selected filters in an array of ViewSettingsItem.
      */
-    filterItems?: ViewSettingsItem[];
+    filterItems: ViewSettingsItem[];
 
     /**
      * The selected filter items in an object notation format: { key: boolean }. If a custom control filter
      * was displayed (for example, the user clicked on the filter item), the value for its key is set to true
      * to indicate that there has been an interaction with the control.
      */
-    filterKeys?: object;
+    filterKeys: object;
 
     /**
      * The selected filter items in an object notation format: { parentKey: { key: boolean, key2: boolean, ...
      * }, ...}. If a custom control filter was displayed (for example, the user clicked on the filter item),
      * the value for its key is set to true to indicate that there has been an interaction with the control.
      */
-    filterCompoundKeys?: object;
+    filterCompoundKeys: object;
 
     /**
      * The selected filter items in a string format to display in the control's header bar in format "Filtered
      * by: key (subkey1, subkey2, subkey3)".
      */
-    filterString?: string;
+    filterString: string;
   }
 
   /**
@@ -108082,7 +108082,7 @@ declare module "sap/m/ViewSettingsDialog" {
     /**
      * The filter item for which the details are opened.
      */
-    parentFilterItem?: ViewSettingsFilterItem;
+    parentFilterItem: ViewSettingsFilterItem;
   }
 
   /**
@@ -108946,19 +108946,19 @@ declare module "sap/m/SelectionDetails" {
     /**
      * The action that has to be processed once the action has been pressed
      */
-    action?: Item;
+    action: Item;
 
     /**
      * If the action is pressed on one of the {@link sap.m.SelectionDetailsItem items}, the parameter contains
      * a reference to the pressed {@link sap.m.SelectionDetailsItem item}. If a custom action or action group
      * of the SelectionDetails popover is pressed, this parameter refers to all {@link sap.m.SelectionDetailsItem items}
      */
-    items?: SelectionDetailsItem;
+    items: SelectionDetailsItem;
 
     /**
      * The action level of action buttons. The available levels are Item, List and Group
      */
-    level?:
+    level:
       | SelectionDetailsActionLevel
       | keyof typeof SelectionDetailsActionLevel;
   }
@@ -109017,19 +109017,19 @@ declare module "sap/m/SelectionDetails" {
      * The item on which the action has been pressed. Can be null in case a navigation was done without item
      * context, e.g. action press.
      */
-    item?: SelectionDetailsItem;
+    item: SelectionDetailsItem;
 
     /**
      * Direction of the triggered navigation, possible values are "to" and "back".
      */
-    direction?: string;
+    direction: string;
 
     /**
      * The content of the currently viewed page that was previously added via {@link sap.m.SelectionDetailsFacade#navTo}.
      * This contains the content of the page before the navigation was triggered. Can be null in case of first
      * event triggering.
      */
-    content?: Control;
+    content: Control;
   }
 
   /**
@@ -110919,7 +110919,7 @@ declare module "sap/m/SelectList" {
     /**
      * The pressed item.
      */
-    item?: Item;
+    item: Item;
   }
 
   /**
@@ -110937,7 +110937,7 @@ declare module "sap/m/SelectList" {
     /**
      * The selected item.
      */
-    selectedItem?: Item;
+    selectedItem: Item;
   }
 
   /**
@@ -116630,7 +116630,7 @@ declare module "sap/m/semantic/SemanticSelect" {
     /**
      * The selected item.
      */
-    selectedItem?: Item;
+    selectedItem: Item;
   }
 
   /**
@@ -120126,12 +120126,12 @@ declare module "sap/m/SinglePlanningCalendar" {
     /**
      * Start date of the created appointment, as a UI5Date or JavaScript Date object.
      */
-    startDate?: object;
+    startDate: object;
 
     /**
      * End date of the created appointment, as a UI5Date or JavaScript Date object.
      */
-    endDate?: object;
+    endDate: object;
   }
 
   /**
@@ -120149,22 +120149,22 @@ declare module "sap/m/SinglePlanningCalendar" {
     /**
      * The dropped appointment.
      */
-    appointment?: CalendarAppointment;
+    appointment: CalendarAppointment;
 
     /**
      * Start date of the dropped appointment, as a UI5Date or JavaScript Date object.
      */
-    startDate?: object;
+    startDate: object;
 
     /**
      * Dropped appointment end date as a UI5Date or JavaScript Date object.
      */
-    endDate?: object;
+    endDate: object;
 
     /**
      * The drop type. If true - it's "Copy", if false - it's "Move".
      */
-    copy?: boolean;
+    copy: boolean;
   }
 
   /**
@@ -120182,17 +120182,17 @@ declare module "sap/m/SinglePlanningCalendar" {
     /**
      * The resized appointment.
      */
-    appointment?: CalendarAppointment;
+    appointment: CalendarAppointment;
 
     /**
      * Start date of the resized appointment, as a UI5Date or JavaScript Date object.
      */
-    startDate?: object;
+    startDate: object;
 
     /**
      * End date of the resized appointment, as a UI5Date or JavaScript Date object.
      */
-    endDate?: object;
+    endDate: object;
   }
 
   /**
@@ -120210,12 +120210,12 @@ declare module "sap/m/SinglePlanningCalendar" {
     /**
      * The appointment on which the event was triggered.
      */
-    appointment?: CalendarAppointment;
+    appointment: CalendarAppointment;
 
     /**
      * All appointments with changed selected state.
      */
-    appointments?: CalendarAppointment[];
+    appointments: CalendarAppointment[];
   }
 
   /**
@@ -120233,12 +120233,12 @@ declare module "sap/m/SinglePlanningCalendar" {
     /**
      * The start date as a UI5Date or JavaScript Date object of the focused grid cell.
      */
-    startDate?: object;
+    startDate: object;
 
     /**
      * The end date as a UI5Date or JavaScript Date object of the focused grid cell.
      */
-    endDate?: object;
+    endDate: object;
   }
 
   /**
@@ -120256,7 +120256,7 @@ declare module "sap/m/SinglePlanningCalendar" {
     /**
      * Date of the selected header, as a UI5Date or JavaScript Date object. It is considered as a local date.
      */
-    date?: object;
+    date: object;
   }
 
   /**
@@ -120274,7 +120274,7 @@ declare module "sap/m/SinglePlanningCalendar" {
     /**
      * The date as a UI5Date or JavaScript Date object of the cell with the pressed more link.
      */
-    date?: object;
+    date: object;
   }
 
   /**
@@ -120292,7 +120292,7 @@ declare module "sap/m/SinglePlanningCalendar" {
     /**
      * The new start date, as a UI5Date or JavaScript Date object. It is considered as a local date.
      */
-    date?: object;
+    date: object;
   }
 
   /**
@@ -122014,7 +122014,7 @@ declare module "sap/m/Slider" {
     /**
      * The current value of the slider after a change.
      */
-    value?: float;
+    value: float;
   }
 
   /**
@@ -122029,7 +122029,7 @@ declare module "sap/m/Slider" {
     /**
      * The current value of the slider after a live change.
      */
-    value?: float;
+    value: float;
   }
 
   /**
@@ -122668,18 +122668,18 @@ declare module "sap/m/SlideTile" {
     /**
      * The current scope the SlideTile was in when the event occurred.
      */
-    scope?: GenericTileScope | keyof typeof GenericTileScope;
+    scope: GenericTileScope | keyof typeof GenericTileScope;
 
     /**
      * The action that was pressed on the tile. In the Actions scope, the available actions are Press and Remove.
      */
-    action?: string;
+    action: string;
 
     /**
      * The Element's DOM Element. In Actions scope the domRef points to the DOM Element of the remove button
      * (if pressed) or the more icon.
      */
-    domRef?: any;
+    domRef: any;
   }
 
   /**
@@ -122976,7 +122976,7 @@ declare module "sap/m/SplitApp" {
     /**
      * Returns true if the device is in landscape mode.
      */
-    landscape?: boolean;
+    landscape: boolean;
   }
 
   /**
@@ -124990,53 +124990,53 @@ declare module "sap/m/SplitContainer" {
     /**
      * The page, which had been displayed before navigation.
      */
-    from?: Control;
+    from: Control;
 
     /**
      * The ID of the page, which had been displayed before navigation.
      */
-    fromId?: string;
+    fromId: string;
 
     /**
      * The page, which is now displayed after navigation.
      */
-    to?: Control;
+    to: Control;
 
     /**
      * The ID of the page, which is now displayed after navigation.
      */
-    toId?: string;
+    toId: string;
 
     /**
      * Determines whether the "to" page (more precisely: a control with the ID of the page, which has been navigated
      * to) has not been displayed/navigated to before.
      */
-    firstTime?: boolean;
+    firstTime: boolean;
 
     /**
      * Determines whether was a forward navigation, triggered by to().
      */
-    isTo?: boolean;
+    isTo: boolean;
 
     /**
      * Determines whether this was a back navigation, triggered by back().
      */
-    isBack?: boolean;
+    isBack: boolean;
 
     /**
      * Determines whether this was a navigation to the root page, triggered by backToTop().
      */
-    isBackToTop?: boolean;
+    isBackToTop: boolean;
 
     /**
      * Determines whether this was a navigation to a specific page, triggered by backToPage().
      */
-    isBackToPage?: boolean;
+    isBackToPage: boolean;
 
     /**
      * Determines how the navigation was triggered, possible values are "to", "back", "backToPage", and "backToTop".
      */
-    direction?: string;
+    direction: string;
   }
 
   /**
@@ -125067,53 +125067,53 @@ declare module "sap/m/SplitContainer" {
     /**
      * The page, which had been displayed before navigation.
      */
-    from?: Control;
+    from: Control;
 
     /**
      * The ID of the page, which had been displayed before navigation.
      */
-    fromId?: string;
+    fromId: string;
 
     /**
      * The page, which is now displayed after navigation.
      */
-    to?: Control;
+    to: Control;
 
     /**
      * The ID of the page, which is now displayed after navigation.
      */
-    toId?: string;
+    toId: string;
 
     /**
      * Whether the "to" page (more precisely: a control with the ID of the page, which has been navigated to)
      * has not been displayed/navigated to before.
      */
-    firstTime?: boolean;
+    firstTime: boolean;
 
     /**
      * Determines whether was a forward navigation, triggered by to().
      */
-    isTo?: boolean;
+    isTo: boolean;
 
     /**
      * Determines whether this was a back navigation, triggered by back().
      */
-    isBack?: boolean;
+    isBack: boolean;
 
     /**
      * Determines whether this was a navigation to the root page, triggered by backToTop().
      */
-    isBackToTop?: boolean;
+    isBackToTop: boolean;
 
     /**
      * Determines whether this was a navigation to a specific page, triggered by backToPage().
      */
-    isBackToPage?: boolean;
+    isBackToPage: boolean;
 
     /**
      * Determines how the navigation was triggered, possible values are "to", "back", "backToPage", and "backToTop".
      */
-    direction?: string;
+    direction: string;
   }
 
   /**
@@ -125170,53 +125170,53 @@ declare module "sap/m/SplitContainer" {
     /**
      * The page, which was displayed before the current navigation.
      */
-    from?: Control;
+    from: Control;
 
     /**
      * The ID of the page, which was displayed before the current navigation.
      */
-    fromId?: string;
+    fromId: string;
 
     /**
      * The page, which will be displayed after the current navigation.
      */
-    to?: Control;
+    to: Control;
 
     /**
      * The ID of the page, which will be displayed after the current navigation.
      */
-    toId?: string;
+    toId: string;
 
     /**
      * Determines whether the "to" page (more precisely: a control with the ID of the page, which is currently
      * navigated to) has not been displayed/navigated to before.
      */
-    firstTime?: boolean;
+    firstTime: boolean;
 
     /**
      * Determines whether this is a forward navigation, triggered by to().
      */
-    isTo?: boolean;
+    isTo: boolean;
 
     /**
      * Determines whether this is a back navigation, triggered by back().
      */
-    isBack?: boolean;
+    isBack: boolean;
 
     /**
      * Determines whether this is a navigation to the root page, triggered by backToTop().
      */
-    isBackToTop?: boolean;
+    isBackToTop: boolean;
 
     /**
      * Determines whether this was a navigation to a specific page, triggered by backToPage().
      */
-    isBackToPage?: boolean;
+    isBackToPage: boolean;
 
     /**
      * Determines how the navigation was triggered, possible values are "to", "back", "backToPage", and "backToTop".
      */
-    direction?: string;
+    direction: string;
   }
 
   /**
@@ -125247,53 +125247,53 @@ declare module "sap/m/SplitContainer" {
     /**
      * The page, which was displayed before the current navigation.
      */
-    from?: Control;
+    from: Control;
 
     /**
      * The ID of the page, which was displayed before the current navigation.
      */
-    fromId?: string;
+    fromId: string;
 
     /**
      * The page, which will be displayed after the current navigation.
      */
-    to?: Control;
+    to: Control;
 
     /**
      * The ID of the page, which will be displayed after the current navigation.
      */
-    toId?: string;
+    toId: string;
 
     /**
      * Determines whether the "to" page (more precisely: a control with the ID of the page, which is currently
      * being navigated to) has not been displayed/navigated to before.
      */
-    firstTime?: boolean;
+    firstTime: boolean;
 
     /**
      * Determines whether this is a forward navigation, triggered by to().
      */
-    isTo?: boolean;
+    isTo: boolean;
 
     /**
      * Determines whether this is a back navigation, triggered by back().
      */
-    isBack?: boolean;
+    isBack: boolean;
 
     /**
      * Determines whether this is a navigation to the root page, triggered by backToTop().
      */
-    isBackToTop?: boolean;
+    isBackToTop: boolean;
 
     /**
      * Determines whether this was a navigation to a specific page, triggered by backToPage().
      */
-    isBackToPage?: boolean;
+    isBackToPage: boolean;
 
     /**
      * Determines how the navigation was triggered, possible values are "to", "back", "backToPage", and "backToTop".
      */
-    direction?: string;
+    direction: string;
   }
 
   /**
@@ -127621,7 +127621,7 @@ declare module "sap/m/StepInput" {
     /**
      * The new `value` of the `control`.
      */
-    value?: string;
+    value: string;
   }
 
   /**
@@ -128287,7 +128287,7 @@ declare module "sap/m/Switch" {
     /**
      * The new state of the switch.
      */
-    state?: boolean;
+    state: boolean;
   }
 
   /**
@@ -128921,7 +128921,7 @@ declare module "sap/m/TabContainer" {
     /**
      * The item to be closed.
      */
-    item?: TabContainerItem;
+    item: TabContainerItem;
   }
 
   /**
@@ -128939,7 +128939,7 @@ declare module "sap/m/TabContainer" {
     /**
      * The selected item.
      */
-    item?: TabContainerItem;
+    item: TabContainerItem;
   }
 
   /**
@@ -129450,17 +129450,17 @@ declare module "sap/m/TabContainerItem" {
     /**
      * The item changed.
      */
-    itemChanged?: TabContainerItem;
+    itemChanged: TabContainerItem;
 
     /**
      * The key of the property.
      */
-    propertyKey?: string;
+    propertyKey: string;
 
     /**
      * The value of the property.
      */
-    propertyValue?: any;
+    propertyValue: any;
   }
 
   /**
@@ -130514,7 +130514,7 @@ declare module "sap/m/Table" {
      * Column in which the context menu was opened. **Note:** This parameter might be undefined for the items
      * that are not part of a column definition.
      */
-    column?: Column;
+    column: Column;
   }
 
   /**
@@ -130533,7 +130533,7 @@ declare module "sap/m/Table" {
      * 2D array of strings with data from the clipboard. The first dimension represents the rows, and the second
      * dimension represents the cells of the tabular data.
      */
-    data?: string[][];
+    data: string[][];
   }
 
   /**
@@ -130548,17 +130548,17 @@ declare module "sap/m/Table" {
     /**
      * Returns true if there are visible columns in the pop-in area
      */
-    hasPopin?: boolean;
+    hasPopin: boolean;
 
     /**
      * Returns array of all visible columns in the pop-in area.
      */
-    visibleInPopin?: Column[];
+    visibleInPopin: Column[];
 
     /**
      * Returns array of columns that are hidden in the pop-in based on their importance. See {@link sap.m.Column#getImportance}
      */
-    hiddenInPopin?: Column[];
+    hiddenInPopin: Column[];
   }
 
   /**
@@ -132157,7 +132157,7 @@ declare module "sap/m/table/columnmenu/Menu" {
      * The element for which the menu is opened. If it is an `HTMLElement`, the closest control is passed for
      * this event (if it exists).
      */
-    openBy?: UI5Element;
+    openBy: UI5Element;
   }
 
   /**
@@ -132953,12 +132953,12 @@ declare module "sap/m/table/columnmenu/QuickGroup" {
     /**
      * The key of the property to be grouped.
      */
-    key?: string;
+    key: string;
 
     /**
      * The new grouped state.
      */
-    grouped?: boolean;
+    grouped: boolean;
   }
 
   /**
@@ -133357,12 +133357,12 @@ declare module "sap/m/table/columnmenu/QuickSort" {
     /**
      * The key of the property that is sorted.
      */
-    key?: string;
+    key: string;
 
     /**
      * The new sort order.
      */
-    sortOrder?: SortOrder | keyof typeof SortOrder;
+    sortOrder: SortOrder | keyof typeof SortOrder;
   }
 
   /**
@@ -133764,12 +133764,12 @@ declare module "sap/m/table/columnmenu/QuickTotal" {
     /**
      * The key of the property.
      */
-    key?: string;
+    key: string;
 
     /**
      * The new value.
      */
-    totaled?: boolean;
+    totaled: boolean;
   }
 
   /**
@@ -136552,13 +136552,13 @@ declare module "sap/m/TableSelectDialog" {
      * Returns the selected list item. When no item is selected, "null" is returned. When multi-selection is
      * enabled and multiple items are selected, only the first selected item is returned.
      */
-    selectedItem?: StandardListItem;
+    selectedItem: StandardListItem;
 
     /**
      * Returns an array containing the visible selected list items. If no items are selected, an empty array
      * is returned.
      */
-    selectedItems?: StandardListItem[];
+    selectedItems: StandardListItem[];
 
     /**
      * Returns the binding contexts of the selected items including the non-visible items, but excluding the
@@ -136568,7 +136568,7 @@ declare module "sap/m/TableSelectDialog" {
      * visible upon opening the dialog, these contexts are not loaded. Therefore, these items will not be included
      * in the selectedContexts array unless they are displayed at least once.
      */
-    selectedContexts?: string;
+    selectedContexts: string;
   }
 
   /**
@@ -136586,12 +136586,12 @@ declare module "sap/m/TableSelectDialog" {
     /**
      * Specifies the value entered in the search field.
      */
-    value?: string;
+    value: string;
 
     /**
      * The Items binding of the Table Select Dialog. Only available if the items aggregation is bound to a model.
      */
-    itemsBinding?: any;
+    itemsBinding: any;
   }
 
   /**
@@ -136609,18 +136609,18 @@ declare module "sap/m/TableSelectDialog" {
     /**
      * Specifies the value entered in the search field.
      */
-    value?: string;
+    value: string;
 
     /**
      * Determines the Items binding of the Table Select Dialog. Only available if the items aggregation is bound
      * to a model.
      */
-    itemsBinding?: any;
+    itemsBinding: any;
 
     /**
      * Returns if the Clear button is pressed.
      */
-    clearButtonPressed?: boolean;
+    clearButtonPressed: boolean;
   }
 
   /**
@@ -137841,7 +137841,7 @@ declare module "sap/m/TextArea" {
     /**
      * The new `value` of the control.
      */
-    value?: string;
+    value: string;
   }
 
   /**
@@ -138703,7 +138703,7 @@ declare module "sap/m/TileContainer" {
     /**
      * The deleted Tile.
      */
-    tile?: Tile;
+    tile: Tile;
   }
 
   /**
@@ -138721,12 +138721,12 @@ declare module "sap/m/TileContainer" {
     /**
      * The Tile that has been moved.
      */
-    tile?: Tile;
+    tile: Tile;
 
     /**
      * The new index of the Tile in the tiles aggregation.
      */
-    newIndex?: int;
+    newIndex: int;
   }
 
   /**
@@ -140298,7 +140298,7 @@ declare module "sap/m/TimePicker" {
     /**
      * Indicator for a valid time
      */
-    valid?: boolean;
+    valid: boolean;
   }
 
   /**
@@ -141042,7 +141042,7 @@ declare module "sap/m/TimePickerSliders" {
     /**
      * The new `value` of the control.
      */
-    value?: string;
+    value: string;
   }
 
   /**
@@ -141857,7 +141857,7 @@ declare module "sap/m/ToggleButton" {
     /**
      * The current pressed state of the control.
      */
-    pressed?: boolean;
+    pressed: boolean;
   }
 
   /**
@@ -143462,27 +143462,27 @@ declare module "sap/m/Tokenizer" {
      * sap.m.Tokenizer.TokenChangeType.RemovedAll for "removedAll" and sap.m.Tokenizer.TokenChangeType.TokensChanged
      * for "tokensChanged".
      */
-    type?: string;
+    type: string;
 
     /**
      * the added token or removed token. This parameter is used when tokenChange type is "added" or "removed".
      */
-    token?: Token;
+    token: Token;
 
     /**
      * the array of removed tokens. This parameter is used when tokenChange type is "removedAll".
      */
-    tokens?: Token[];
+    tokens: Token[];
 
     /**
      * the array of tokens that are added. This parameter is used when tokenChange type is "tokenChanged".
      */
-    addedTokens?: Token[];
+    addedTokens: Token[];
 
     /**
      * the array of tokens that are removed. This parameter is used when tokenChange type is "tokenChanged".
      */
-    removedTokens?: Token[];
+    removedTokens: Token[];
   }
 
   /**
@@ -143502,12 +143502,12 @@ declare module "sap/m/Tokenizer" {
     /**
      * The array of tokens that are removed.
      */
-    tokens?: Token[];
+    tokens: Token[];
 
     /**
      * Keycode of the key pressed for deletion (backspace or delete).
      */
-    keyCode?: number;
+    keyCode: number;
   }
 
   /**
@@ -143528,17 +143528,17 @@ declare module "sap/m/Tokenizer" {
      * Type of tokenChange event. There are two TokenUpdate types: "added", "removed" Use sap.m.Tokenizer.TokenUpdateType.Added
      * for "added" and sap.m.Tokenizer.TokenUpdateType.Removed for "removed".
      */
-    type?: string;
+    type: string;
 
     /**
      * The array of tokens that are added. This parameter is used when tokenUpdate type is "added".
      */
-    addedTokens?: Token[];
+    addedTokens: Token[];
 
     /**
      * The array of tokens that are removed. This parameter is used when tokenUpdate type is "removed".
      */
-    removedTokens?: Token[];
+    removedTokens: Token[];
   }
 
   /**
@@ -144255,7 +144255,7 @@ declare module "sap/m/Toolbar" {
     /**
      * The toolbar item that was pressed
      */
-    srcControl?: Control;
+    srcControl: Control;
   }
 
   /**
@@ -145011,17 +145011,17 @@ declare module "sap/m/Tree" {
     /**
      * Index of the expanded/collapsed item
      */
-    itemIndex?: int;
+    itemIndex: int;
 
     /**
      * Binding context of the item
      */
-    itemContext?: object;
+    itemContext: object;
 
     /**
      * Flag that indicates whether the item has been expanded or collapsed
      */
-    expanded?: boolean;
+    expanded: boolean;
   }
 
   /**
@@ -146574,7 +146574,7 @@ declare module "sap/m/upload/Uploader" {
     /**
      * The item that is going to be deleted.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -146592,7 +146592,7 @@ declare module "sap/m/upload/Uploader" {
     /**
      * The item that was uploaded.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
 
     /**
      * A JSON object containing the additional response parameters like response, responseXML, readyState, status
@@ -146608,7 +146608,7 @@ declare module "sap/m/upload/Uploader" {
      * }
      * ```
      */
-    responseXHR?: object;
+    responseXHR: object;
   }
 
   /**
@@ -146626,19 +146626,19 @@ declare module "sap/m/upload/Uploader" {
     /**
      * The item that is being uploaded.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
 
     /**
      * The number of bytes transferred since the beginning of the operation. This doesn't include headers and
      * other overhead, but only the content itself
      */
-    loaded?: int;
+    loaded: int;
 
     /**
      * The total number of bytes of content that will be transferred during the operation. If the total size
      * is unknown, this value is zero.
      */
-    total?: int;
+    total: int;
   }
 
   /**
@@ -146656,7 +146656,7 @@ declare module "sap/m/upload/Uploader" {
     /**
      * The item that is going to be uploaded.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -147210,7 +147210,7 @@ declare module "sap/m/upload/UploaderTableItem" {
     /**
      * The item that was uploaded.
      */
-    item?: UploadSetwithTableItem;
+    item: UploadSetwithTableItem;
 
     /**
      * A JSON object containing the additional response parameters like response, responseXML, readyState, status
@@ -147226,7 +147226,7 @@ declare module "sap/m/upload/UploaderTableItem" {
      * }
      * ```
      */
-    responseXHR?: object;
+    responseXHR: object;
   }
 
   /**
@@ -147244,19 +147244,19 @@ declare module "sap/m/upload/UploaderTableItem" {
     /**
      * The item that is being uploaded.
      */
-    item?: UploadSetwithTableItem;
+    item: UploadSetwithTableItem;
 
     /**
      * The number of bytes transferred since the beginning of the operation. This doesn't include headers and
      * other overhead, but only the content itself
      */
-    loaded?: int;
+    loaded: int;
 
     /**
      * The total number of bytes of content that is transferred during the operation. If the total size is unknown,
      * this value is zero.
      */
-    total?: int;
+    total: int;
   }
 
   /**
@@ -147274,7 +147274,7 @@ declare module "sap/m/upload/UploaderTableItem" {
     /**
      * The item that is going to be uploaded.
      */
-    item?: UploadSetwithTableItem;
+    item: UploadSetwithTableItem;
   }
 
   /**
@@ -150351,7 +150351,7 @@ declare module "sap/m/upload/UploadSet" {
     /**
      * The file that has just been added.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -150369,7 +150369,7 @@ declare module "sap/m/upload/UploadSet" {
     /**
      * The item edited.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -150387,7 +150387,7 @@ declare module "sap/m/upload/UploadSet" {
     /**
      * The item removed from the set of items to be uploaded.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -150405,7 +150405,7 @@ declare module "sap/m/upload/UploadSet" {
     /**
      * The file to be added to the set of items to be uploaded.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -150423,7 +150423,7 @@ declare module "sap/m/upload/UploadSet" {
     /**
      * The item to be edited.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -150441,7 +150441,7 @@ declare module "sap/m/upload/UploadSet" {
     /**
      * The item to be removed from the set of items to be uploaded.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -150459,7 +150459,7 @@ declare module "sap/m/upload/UploadSet" {
     /**
      * The file whose upload is just about to start.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -150477,7 +150477,7 @@ declare module "sap/m/upload/UploadSet" {
     /**
      * The file whose upload is about to be terminated.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -150495,7 +150495,7 @@ declare module "sap/m/upload/UploadSet" {
     /**
      * The file that fails to meet the file name length restriction specified in the `maxFileNameLength` property.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -150513,7 +150513,7 @@ declare module "sap/m/upload/UploadSet" {
     /**
      * The renamed UI element as an UploadSetItem.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -150531,13 +150531,13 @@ declare module "sap/m/upload/UploadSet" {
     /**
      * The file that fails to meet the file size restriction specified in the `maxFileSize` property.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
 
     /**
      * The size of a file in MB, that fails to meet the file size restriction specified in the `maxFileSize`
      * property.
      */
-    fileSize?: float;
+    fileSize: float;
   }
 
   /**
@@ -150555,7 +150555,7 @@ declare module "sap/m/upload/UploadSet" {
     /**
      * The file that fails to meet the file type restriction specified in the `fileType` property.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -150599,7 +150599,7 @@ declare module "sap/m/upload/UploadSet" {
     /**
      * The file that fails to meet the media type restriction specified in the `mediaTypes` property.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -150617,7 +150617,7 @@ declare module "sap/m/upload/UploadSet" {
     /**
      * Items whose selection status has just been changed.
      */
-    items?: UploadSetItem[];
+    items: UploadSetItem[];
   }
 
   /**
@@ -150635,7 +150635,7 @@ declare module "sap/m/upload/UploadSet" {
     /**
      * The file whose upload has just been completed.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
 
     /**
      * Response message which comes from the server.
@@ -150644,7 +150644,7 @@ declare module "sap/m/upload/UploadSet" {
      * of the iFrame. It can consist of a return code and an optional message. This does not work in cross-domain
      * scenarios.
      */
-    response?: string;
+    response: string;
 
     /**
      * ReadyState of the XHR request.
@@ -150652,7 +150652,7 @@ declare module "sap/m/upload/UploadSet" {
      * Required for receiving a `readyState` is to set the property `sendXHR` to true. This property is not
      * supported by Internet Explorer 9.
      */
-    readyState?: int;
+    readyState: int;
 
     /**
      * Status of the XHR request.
@@ -150660,7 +150660,7 @@ declare module "sap/m/upload/UploadSet" {
      * Required for receiving a `status` is to set the property `sendXHR` to true. This property is not supported
      * by Internet Explorer 9.
      */
-    status?: int;
+    status: int;
 
     /**
      * Http-Response which comes from the server.
@@ -150669,7 +150669,7 @@ declare module "sap/m/upload/UploadSet" {
      *
      * This property is not supported by Internet Explorer 9.
      */
-    responseXML?: string;
+    responseXML: string;
 
     /**
      * Http-Response-Headers which come from the server.
@@ -150680,7 +150680,7 @@ declare module "sap/m/upload/UploadSet" {
      * Required for receiving `headers` is to set the property `sendXHR` to true. This property is not supported
      * by Internet Explorer 9.
      */
-    headers?: object;
+    headers: object;
   }
 
   /**
@@ -150698,7 +150698,7 @@ declare module "sap/m/upload/UploadSet" {
     /**
      * The file whose upload has just been terminated.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -151865,7 +151865,7 @@ declare module "sap/m/upload/UploadSetItem" {
     /**
      * The item on which the open action has been invoked.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -151883,7 +151883,7 @@ declare module "sap/m/upload/UploadSetItem" {
     /**
      * The item on which the open action has been invoked.
      */
-    item?: UploadSetItem;
+    item: UploadSetItem;
   }
 
   /**
@@ -153937,7 +153937,7 @@ declare module "sap/m/upload/UploadSetwithTable" {
     /**
      * Items in ready state for upload process
      */
-    item?: UploadSetwithTableItem;
+    item: UploadSetwithTableItem;
   }
 
   /**
@@ -153955,7 +153955,7 @@ declare module "sap/m/upload/UploadSetwithTable" {
     /**
      * The file whose upload is just about to start.
      */
-    item?: UploadSetwithTableItem;
+    item: UploadSetwithTableItem;
   }
 
   /**
@@ -153973,7 +153973,7 @@ declare module "sap/m/upload/UploadSetwithTable" {
     /**
      * The file that fails to meet the file name length restriction specified in the `maxFileNameLength` property.
      */
-    item?: UploadSetwithTableItem;
+    item: UploadSetwithTableItem;
   }
 
   /**
@@ -153991,7 +153991,7 @@ declare module "sap/m/upload/UploadSetwithTable" {
     /**
      * The file that fails to meet the file size restriction specified in the `maxFileSize` property.
      */
-    item?: UploadSetwithTableItem;
+    item: UploadSetwithTableItem;
   }
 
   /**
@@ -154009,7 +154009,7 @@ declare module "sap/m/upload/UploadSetwithTable" {
     /**
      * The file that fails to meet the file type restriction specified in the `fileType` property.
      */
-    item?: UploadSetwithTableItem;
+    item: UploadSetwithTableItem;
   }
 
   /**
@@ -154053,7 +154053,7 @@ declare module "sap/m/upload/UploadSetwithTable" {
     /**
      * The renamed UI element is of UploadSetwithTableItem type.
      */
-    item?: UploadSetwithTableItem;
+    item: UploadSetwithTableItem;
   }
 
   /**
@@ -154071,7 +154071,7 @@ declare module "sap/m/upload/UploadSetwithTable" {
     /**
      * The file that fails to meet the media type restriction specified in the `mediaTypes` property.
      */
-    item?: UploadSetwithTableItem;
+    item: UploadSetwithTableItem;
   }
 
   /**
@@ -154089,7 +154089,7 @@ declare module "sap/m/upload/UploadSetwithTable" {
     /**
      * The file whose upload has just been completed.
      */
-    item?: UploadSetwithTableItem;
+    item: UploadSetwithTableItem;
 
     /**
      * Response message that comes from the server.
@@ -154098,7 +154098,7 @@ declare module "sap/m/upload/UploadSetwithTable" {
      * of the iFrame. It can consist of a return code and an optional message. This does not work in cross-domain
      * scenarios.
      */
-    response?: string;
+    response: string;
 
     /**
      * ReadyState of the XHR request.
@@ -154106,7 +154106,7 @@ declare module "sap/m/upload/UploadSetwithTable" {
      * Required for receiving a `readyState` is to set the property `sendXHR` to true. This property is not
      * supported by Internet Explorer 9.
      */
-    readyState?: string;
+    readyState: string;
 
     /**
      * Status of the XHR request.
@@ -154114,7 +154114,7 @@ declare module "sap/m/upload/UploadSetwithTable" {
      * Required for receiving a `status` is to set the property `sendXHR` to true. This property is not supported
      * by Internet Explorer 9.
      */
-    status?: string;
+    status: string;
 
     /**
      * Http-Response which comes from the server.
@@ -154123,7 +154123,7 @@ declare module "sap/m/upload/UploadSetwithTable" {
      *
      * This property is not supported by Internet Explorer 9.
      */
-    responseXML?: string;
+    responseXML: string;
 
     /**
      * Http-Response which comes from the server.
@@ -154132,7 +154132,7 @@ declare module "sap/m/upload/UploadSetwithTable" {
      *
      * This property is not supported by Internet Explorer 9.
      */
-    responseText?: string;
+    responseText: string;
 
     /**
      * Http-Response-Headers which come from the server.
@@ -154143,7 +154143,7 @@ declare module "sap/m/upload/UploadSetwithTable" {
      * Required for receiving `headers` is to set the property `sendXHR` to true. This property is not supported
      * by Internet Explorer 9.
      */
-    headers?: object;
+    headers: object;
   }
 
   /**
@@ -156660,20 +156660,20 @@ declare module "sap/m/UploadCollection" {
     /**
      * Specifies the name of the file to be uploaded.
      */
-    fileName?: string;
+    fileName: string;
 
     /**
      * A function that adds a header parameter to the file that will be uploaded. The function accepts one parameter
      * of type `sap.m.UploadCollectionParameter` which specifies the header parameter that will be added.
      */
-    addHeaderParameter?: Function;
+    addHeaderParameter: Function;
 
     /**
      * A function that returns the corresponding header parameter (type `sap.m.UploadCollectionParameter`) if
      * available. The function accepts one optional parameter of type `string`, which is the name of the header
      * parameter. If no parameter is provided all header parameters are returned.
      */
-    getHeaderParameter?: Function;
+    getHeaderParameter: Function;
   }
 
   /**
@@ -156692,14 +156692,14 @@ declare module "sap/m/UploadCollection" {
      * A unique Id of the attached document. This parameter is deprecated since 1.28.0. Use the `files` parameter
      * instead.
      */
-    documentId?: string;
+    documentId: string;
 
     /**
      * A FileList of individually selected files from the underlying system. See www.w3.org for the FileList
      * Interface definition. Restriction: Internet Explorer 9 supports only single file with property file.name.
      * Since version 1.28.0.
      */
-    files?: object[];
+    files: object[];
   }
 
   /**
@@ -156718,12 +156718,12 @@ declare module "sap/m/UploadCollection" {
      * A unique Id of the attached document. This parameter is deprecated since 1.28.0. Use the `item` parameter
      * instead.
      */
-    documentId?: string;
+    documentId: string;
 
     /**
      * An item to be deleted from the collection. Since version 1.28.0.
      */
-    item?: UploadCollectionItem;
+    item: UploadCollectionItem;
   }
 
   /**
@@ -156742,13 +156742,13 @@ declare module "sap/m/UploadCollection" {
      * A unique Id of the attached document. This parameter is deprecated since 1.28.0. Use the `files` parameter
      * instead.
      */
-    documentId?: string;
+    documentId: string;
 
     /**
      * A FileList of individually selected files from the underlying system. Restriction: Internet Explorer
      * 9 supports only single file with property file.name. Since version 1.28.0.
      */
-    files?: object[];
+    files: object[];
   }
 
   /**
@@ -156767,17 +156767,17 @@ declare module "sap/m/UploadCollection" {
      * A unique Id of the attached document. This parameter is deprecated since 1.28.0. Use the `item` parameter
      * instead.
      */
-    documentId?: string;
+    documentId: string;
 
     /**
      * The new file name. This parameter is deprecated since 1.28.0. Use the `item` parameter instead.
      */
-    fileName?: string;
+    fileName: string;
 
     /**
      * The renamed UI element as an UploadCollectionItem. Since 1.28.0.
      */
-    item?: UploadCollectionItem;
+    item: UploadCollectionItem;
   }
 
   /**
@@ -156796,19 +156796,19 @@ declare module "sap/m/UploadCollection" {
      * A unique Id of the attached document. This parameter is deprecated since 1.28.0. Use the `files` parameter
      * instead.
      */
-    documentId?: string;
+    documentId: string;
 
     /**
      * The size in MB of a file to be uploaded. This parameter is deprecated since 1.28.0. Use the `files` parameter
      * instead.
      */
-    fileSize?: string;
+    fileSize: string;
 
     /**
      * A FileList of individually selected files from the underlying system. Restriction: Internet Explorer
      * 9 supports only single file with property file.name. Since 1.28.0.
      */
-    files?: object[];
+    files: object[];
   }
 
   /**
@@ -156827,17 +156827,17 @@ declare module "sap/m/UploadCollection" {
      * The item whose selection has changed. In `MultiSelect` mode, only the topmost selected item is returned.
      * This parameter can be used for single-selection modes.
      */
-    selectedItem?: UploadCollectionItem;
+    selectedItem: UploadCollectionItem;
 
     /**
      * Array of items whose selection has changed. This parameter can be used for `MultiSelect` mode.
      */
-    selectedItems?: UploadCollectionItem[];
+    selectedItems: UploadCollectionItem[];
 
     /**
      * Indicates whether the `listItem` parameter is selected or not.
      */
-    selected?: boolean;
+    selected: boolean;
   }
 
   /**
@@ -156856,23 +156856,23 @@ declare module "sap/m/UploadCollection" {
      * A unique Id of the attached document. This parameter is deprecated since 1.28.0. Use the `files` parameter
      * instead.
      */
-    documentId?: string;
+    documentId: string;
 
     /**
      * File type. This parameter is deprecated since 1.28.0. Use the `files` parameter instead.
      */
-    fileType?: string;
+    fileType: string;
 
     /**
      * MIME type. This parameter is deprecated since 1.28.0. Use the `files` parameter instead.
      */
-    mimeType?: string;
+    mimeType: string;
 
     /**
      * A FileList of individually selected files from the underlying system. Restriction: Internet Explorer
      * 9 supports only single file. Since 1.28.0.
      */
-    files?: object[];
+    files: object[];
   }
 
   /**
@@ -156890,19 +156890,19 @@ declare module "sap/m/UploadCollection" {
     /**
      * Ready state XHR. This parameter is deprecated since 1.28.0. Use the `files` parameter instead.
      */
-    readyStateXHR?: string;
+    readyStateXHR: string;
 
     /**
      * Response of the completed upload request. This parameter is deprecated since 1.28.0. Use the `files`
      * parameter instead.
      */
-    response?: string;
+    response: string;
 
     /**
      * Status Code of the completed upload event. This parameter is deprecated since 1.28.0. Use the `files`
      * parameter instead.
      */
-    status?: string;
+    status: string;
 
     /**
      * A list of uploaded files. Each entry contains the following members. fileName : The name of a file to
@@ -156916,7 +156916,7 @@ declare module "sap/m/UploadCollection" {
      * is reflected by a property in the header-object, with the property value reflecting the header-field's
      * content. This property is not supported by Internet Explorer 9 and lower. Since 1.28.0.
      */
-    files?: object[];
+    files: object[];
   }
 
   /**
@@ -156934,14 +156934,14 @@ declare module "sap/m/UploadCollection" {
     /**
      * Specifies the name of the file of which the upload is to be terminated.
      */
-    fileName?: string;
+    fileName: string;
 
     /**
      * A function that returns the corresponding header parameter (type `sap.m.UploadCollectionParameter`) if
      * available. The function accepts one optional parameter of type `string`, which is the name of the header
      * parameter. If no parameter is provided all header parameters are returned.
      */
-    getHeaderParameter?: Function;
+    getHeaderParameter: Function;
   }
 
   /**
@@ -160069,35 +160069,35 @@ declare module "sap/m/VariantManagement" {
      * List of changed variants. Each entry contains a 'key' - the variant key and a 'name' - the new title
      * of the variant
      */
-    renamed?: object[];
+    renamed: object[];
 
     /**
      * List of deleted variant keys
      */
-    deleted?: string[];
+    deleted: string[];
 
     /**
      * List of variant keys and the associated Execute on Selection indicator. Each entry contains a 'key' -
      * the variant key and a 'exe' - flag describing the intention
      */
-    exe?: object[];
+    exe: object[];
 
     /**
      * List of variant keys and the associated favorite indicator. Each entry contains a 'key' - the variant
      * key and a 'visible' - flag describing the intention
      */
-    fav?: object[];
+    fav: object[];
 
     /**
      * The default variant key
      */
-    def?: string;
+    def: string;
 
     /**
      * List of variant keys and the associated contexts array. Each entry contains a 'key' - the variant key
      * and a 'contexts' - array describing the contexts
      */
-    contexts?: object[];
+    contexts: object[];
   }
 
   /**
@@ -160128,43 +160128,43 @@ declare module "sap/m/VariantManagement" {
     /**
      * Variant title
      */
-    name?: string;
+    name: string;
 
     /**
      * Indicates if an existing variant is updated or if a new variant is created. Basically 'Save' operation
      * leads to overwrite `true`, while 'Save As' leads to overwrite `false`.
      */
-    overwrite?: boolean;
+    overwrite: boolean;
 
     /**
      * Variant key. This property is only set, when `overwrite` is set to `true`.
      */
-    key?: string;
+    key: string;
 
     /**
      * Apply Automatically indicator
      */
-    execute?: boolean;
+    execute: boolean;
 
     /**
      * The default variant indicator
      */
-    def?: boolean;
+    def: boolean;
 
     /**
      * Indicates the check box state for 'Public'.
      */
-    public?: boolean;
+    public: boolean;
 
     /**
      * Array describing the contexts.
      */
-    contexts?: object[];
+    contexts: object[];
 
     /**
      * Indicates the check box state for 'Create Tile'. **Note:** This event parameter is used only internally.
      */
-    tile?: boolean;
+    tile: boolean;
   }
 
   /**
@@ -160182,7 +160182,7 @@ declare module "sap/m/VariantManagement" {
     /**
      * Variant key
      */
-    key?: string;
+    key: string;
   }
 
   /**
@@ -161294,17 +161294,17 @@ declare module "sap/m/ViewSettingsItem" {
     /**
      * Instance of the item that changed.
      */
-    changedItem?: ViewSettingsItem;
+    changedItem: ViewSettingsItem;
 
     /**
      * Key of the changed property.
      */
-    propertyKey?: string;
+    propertyKey: string;
 
     /**
      * Value of the changed property.
      */
-    propertyValue?: any;
+    propertyValue: any;
   }
 
   /**
@@ -161900,7 +161900,7 @@ declare module "sap/m/WheelSlider" {
     /**
      * The new selected key
      */
-    newKey?: string;
+    newKey: string;
   }
 
   /**
@@ -163053,7 +163053,7 @@ declare module "sap/m/Wizard" {
     /**
      * The newly selected step.
      */
-    step?: WizardStep;
+    step: WizardStep;
   }
 
   /**
@@ -163071,7 +163071,7 @@ declare module "sap/m/Wizard" {
     /**
      * The index of the activated step as a parameter. One-based.
      */
-    index?: int;
+    index: int;
   }
 
   /**

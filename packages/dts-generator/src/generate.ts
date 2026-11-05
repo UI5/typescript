@@ -35,6 +35,7 @@ async function loadDirectives(directivesPaths: string[]) {
     overlays: {},
     deprecatedEnumAliases: {},
     modulesWithNamedExports: [],
+    eventsWithAllParamsOptional: [],
   };
 
   function mergeDirectives(loadedDirectives: Directives) {

@@ -42,6 +42,7 @@ export interface Directives {
     deprecatedEnumAliases: {
         [fqn: string]: string;
     };
+    eventsWithAllParamsOptional?: string[];
     forwardDeclarations: {
         [libraryName: string]: ConcreteSymbol[];
     };
