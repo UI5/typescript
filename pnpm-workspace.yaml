@@ -20,3 +20,6 @@ trustPolicyExclude:
   - chokidar
   - semver
   - undici-types
+minimumReleaseAgeExclude:
+  # Renovate security update: sanitize-html@2.18.1
+  - sanitize-html@2.18.1
